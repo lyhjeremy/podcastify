@@ -1,0 +1,13 @@
+# code only - never publish books or generated audio
+*.epub
+*.mp3
+*.m4a
+*.m4b
+*.wav
+*.transcript.md
+__pycache__/
+*.pyc
+.DS_Store
+.env
+venv/
+.venv/

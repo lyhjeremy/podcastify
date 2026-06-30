@@ -1,0 +1,8 @@
+# Core
+edge-tts
+ebooklib
+beautifulsoup4
+
+# Note: ffmpeg (a system binary, not a pip package) is recommended for clean
+# concatenation and .m4b export. See README for install commands.
+# Optional: set ANTHROPIC_API_KEY to enable --mode llm (natural conversation rewrite).
