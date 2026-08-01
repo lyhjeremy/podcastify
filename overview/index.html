@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Podcastify — turn an EPUB or article into a two-host show</title>
+<meta name="description" content="One host narrates, a co-host reacts, and the whole thing is voiced with free neural voices. Rule mode needs no API key; LLM mode lets Claude rewrite the source into a real conversation." />
+<meta name="theme-color" content="#FBF8F1" />
+<meta property="og:title" content="Podcastify" />
+<meta property="og:description" content="An audiobook is one voice reading at you. Two voices is easier to listen to on a walk." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyhjeremy.github.io/podcastify/overview/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #FBF8F1;
+    --card: #FFFFFF;
+    --plate: #FFFFFF;
+    --ink: #1a1a2e;
+    --ink2: #3d3d55;
+    --muted: #6B7280;
+    --rule: #E5DCC7;
+    --accent: #0E7490;
+    --accent2: #6D28D9;
+    --link: #7a1f2b;
+    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+    --shadow: 0 1px 2px rgba(26,26,46,.05), 0 10px 34px rgba(26,26,46,.07);
+    --spine:  92px;
+    --col:    min(100% - 2.6rem, 62rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14141f;
+      --card: #1c1c2a;
+      --plate: #f7f4ec;
+      --ink: #F2EFE6;
+      --ink2: #C9C4B6;
+      --muted: #918B7D;
+      --rule: #33313f;
+      --accent: #22D3EE;
+      --accent2: #A78BFA;
+      --link: #E0899A;
+      --shadow: 0 1px 2px rgba(0,0,0,.32), 0 10px 34px rgba(0,0,0,.4);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--serif); font-size: clamp(17px, 0.55rem + 0.6vw, 19.5px);
+    line-height: 1.68; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--link); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  strong { font-weight: 700; color: var(--ink); }
+  code { font-family: var(--mono); font-size: .86em;
+         background: color-mix(in srgb, var(--ink) 7%, transparent);
+         padding: .12em .38em; border-radius: 4px; }
+  .wrap { width: var(--col); margin: 0 auto; }
+
+  .eyebrow { font-family: var(--mono); font-weight: 600; font-size: 11.5px;
+             letter-spacing: .17em; text-transform: uppercase; color: var(--muted);
+             margin: 0 0 14px; }
+
+  .masthead { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding: 30px 0 0; }
+  .logo { font-family: var(--sans); font-weight: 800; font-size: 21px;
+          letter-spacing: -.02em; display: flex; align-items: center; gap: 9px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex: none; }
+  .tagline { font-size: 15px; color: var(--ink2); font-family: var(--sans); }
+
+  .hero { padding: 44px 0 54px; }
+  .kicker { font-family: var(--sans); font-size: clamp(18px, 2.1vw, 23px); font-weight: 600;
+            color: var(--muted); margin: 0 0 8px; letter-spacing: -.01em; }
+  .hero h1 { font-family: var(--sans); font-size: clamp(37px, 6vw, 72px); font-weight: 800;
+             letter-spacing: -.035em; line-height: 1.04; margin: 0; max-width: 17ch; }
+  .hero-sub { margin: 24px 0 0; font-size: 1.06em; color: var(--ink2); max-width: 60ch; }
+
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; align-items: center; }
+  .btn { display: inline-block; padding: 13px 26px; border-radius: 8px;
+         font-family: var(--sans); font-weight: 700; font-size: 16px;
+         text-decoration: none; border: 1px solid var(--ink); transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--ink); color: var(--paper); }
+  .textlink { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink2);
+              text-decoration: underline; text-underline-offset: 4px;
+              text-decoration-thickness: 1px; }
+  .textlink:hover { color: var(--ink); }
+
+  .claims { display: grid; grid-template-columns: 1fr; gap: 0 52px; margin: 50px 0 0; }
+  @media (min-width: 760px) { .claims { grid-template-columns: 1fr 1fr; } }
+  .claim { padding: 18px 0 20px; border-top: 1px solid var(--rule); }
+  .claim:first-child, .claim:nth-child(2) { border-top: 2px solid var(--ink); }
+  @media (max-width: 759px) { .claim:nth-child(2) { border-top: 1px solid var(--rule); } }
+  .claim .n { font-family: var(--sans); font-weight: 800; font-size: 40px; line-height: 1.05;
+              color: var(--accent); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .claim h3 { margin: 0 0 6px; }
+  .claim p { margin: 9px 0 0; font-size: 15.5px; color: var(--ink2); line-height: 1.5;
+             font-family: var(--sans); }
+
+  .route { position: relative; padding-bottom: 30px; }
+  .route::before { content: ""; position: absolute; left: calc(var(--spine) / 2); top: 8px;
+                   bottom: 80px; width: 2px; background: var(--rule); }
+  .stop { position: relative; padding: 0 0 76px var(--spine); }
+  .stop::before { content: ""; position: absolute; left: calc(var(--spine) / 2 - 7px); top: 7px;
+                  width: 16px; height: 16px; border-radius: 50%;
+                  background: var(--paper); border: 2px solid var(--ink); box-sizing: border-box; }
+  .stop--key::before { background: var(--accent); border-color: var(--accent); }
+  .stop--warn::before { background: var(--accent2); border-color: var(--accent2); }
+  .stop--end::before { background: var(--ink); }
+
+  h2 { font-family: var(--sans); font-size: clamp(27px, 3.7vw, 38px); font-weight: 800;
+       letter-spacing: -.027em; line-height: 1.13; margin: 12px 0 16px; max-width: 19ch; }
+  h3 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin: 0 0 7px;
+       letter-spacing: -.012em; }
+  .stop p { margin: 0 0 17px; max-width: 60ch; color: var(--ink2); }
+
+  .bignum { font-family: var(--sans); font-weight: 800; font-size: clamp(74px, 10vw, 128px);
+            line-height: .86; letter-spacing: -.05em; margin: 6px 0 4px; color: var(--accent);
+            font-variant-numeric: tabular-nums; }
+  .bignum-note { font-family: var(--sans); font-size: 16px; color: var(--muted); margin: 0 0 20px; }
+
+  /* A white-background chart would glow in dark mode; the plate makes it read
+     as a deliberately printed page instead. */
+  figure { margin: 28px 0 0; }
+  .plate { background: var(--plate); border: 1px solid var(--rule); border-radius: 10px;
+           padding: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .plate img { border-radius: 4px; }
+  .plate--flush { padding: 0; }
+  .shot { border-radius: 10px; border: 1px solid var(--rule); box-shadow: var(--shadow);
+          overflow: hidden; background: var(--card); }
+  /* min() so the cap never exceeds the column on a phone */
+  .shot--narrow { max-width: min(430px, 100%); }
+  figcaption { margin-top: 11px; font-family: var(--sans); font-size: 14.5px;
+               color: var(--muted); line-height: 1.5; }
+  .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+            gap: 22px; margin-top: 28px; }
+  .panels figure { margin: 0; }
+
+  .pull { margin: 30px 0 0; padding: 20px 25px; border-left: 3px solid var(--accent);
+          background: color-mix(in srgb, var(--accent) 7%, transparent);
+          border-radius: 0 8px 8px 0; }
+  .pull p { margin: 0 0 9px; color: var(--ink); max-width: none; }
+  .pull p:last-of-type { margin: 0; }
+  .pull .who { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+               text-transform: uppercase; color: var(--muted); display: block; margin-top: 9px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+          gap: 1px; margin-top: 28px; background: var(--rule);
+          border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+  .cell { background: var(--paper); padding: 22px 20px; }
+  .cell p { font-size: 15px; margin: 0; color: var(--ink2); max-width: none;
+            line-height: 1.55; font-family: var(--sans); }
+
+  /* results tables: scroll inside their own box, never the page */
+  .tablewrap { margin-top: 26px; overflow-x: auto; border: 1px solid var(--rule);
+               border-radius: 10px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 480px;
+          font-family: var(--sans); font-size: 15.5px; }
+  th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+  th { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+       text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  td { color: var(--ink2); font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+  .win td { color: var(--ink); font-weight: 700;
+            background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+  /* real terminal output, quoted verbatim */
+  .term { margin-top: 26px; background: #14141f; color: #e6e3da; border-radius: 10px;
+          padding: 18px 20px; overflow-x: auto; box-shadow: var(--shadow);
+          border: 1px solid #2a2a3a; }
+  .term pre { margin: 0; font-family: var(--mono); font-size: 13px; line-height: 1.62;
+              white-space: pre; }
+  .term .c { color: #9aa08f; }
+  .term .g { color: #7fd18f; }
+  .term .y { color: #E3BC5E; }
+
+  .specs { margin-top: 26px; border-top: 1px solid var(--rule); }
+  .spec { display: grid; grid-template-columns: 1fr; gap: 2px;
+          padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  @media (min-width: 700px) { .spec { grid-template-columns: 178px 1fr; gap: 24px; } }
+  .spec dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em;
+             text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .spec dd { margin: 0; font-size: 16px; color: var(--ink2); font-family: var(--sans); }
+
+  .close { padding: 6px 0 80px var(--spine); position: relative; }
+  .close h2 { max-width: 20ch; }
+  footer { border-top: 1px solid var(--rule); padding: 28px 0 60px;
+           font-family: var(--sans); font-size: 14.5px; color: var(--muted); }
+  footer a { color: var(--ink2); }
+  footer p { margin: 0 0 8px; }
+
+  @media (max-width: 640px) {
+    :root { --spine: 38px; }
+    .hero { padding: 36px 0 46px; }
+    .stop { padding-bottom: 58px; }
+    .plate { padding: 9px; }
+    .term { padding: 14px 14px; }
+    .term pre { font-size: 11.5px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="logo"><span class="dot" aria-hidden="true"></span>Podcastify</div>
+    <div class="tagline">any text, staged for two voices</div>
+  </header>
+
+  <section class="hero">
+    <p class="kicker">An audiobook is one voice reading at you for nine hours.</p>
+    <h1>Two voices is a much easier thing to listen to on a walk.</h1>
+
+    <p class="hero-sub">
+      Point Podcastify at an EPUB or an article and it stages the text as a
+      <strong>two-host show</strong>: one host narrates in short segments, a co-host
+      interjects between them, and the whole thing is rendered with free neural
+      voices and stitched into a single MP3. No API key needed. Optionally, let
+      Claude rewrite the source into a genuine back-and-forth instead.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
+      <a class="textlink" href="../">or the quick tour</a>
+    </div>
+
+    <div class="claims">
+      <div class="claim">
+        <div class="n">2 modes</div>
+        <p><code>rule</code> needs nothing but Python. <code>llm</code> hands the
+           text to Claude for a real conversation.</p>
+      </div>
+      <div class="claim">
+        <div class="n">$0</div>
+        <p>in rule mode. Free <code>edge-tts</code> neural voices, no key, no
+           per-character billing.</p>
+      </div>
+      <div class="claim">
+        <div class="n">1:58</div>
+        <p>of finished audio from a 1,800-character excerpt in a single command,
+           verified end to end.</p>
+      </div>
+      <div class="claim">
+        <div class="n">2 files</div>
+        <p>out: the MP3 and a readable transcript, so you can check the script
+           before committing to the audio.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+<div class="route">
+
+  <section class="stop stop--key">
+    <p class="eyebrow">↓ a real run</p>
+    <h2>One command, nine turns, a finished MP3</h2>
+    <p>
+      This is an actual run against a public-domain excerpt. It builds the script,
+      renders each turn with its own voice, and stitches the result:
+    </p>
+    <div class="term">
+<pre>$ python podcastify.py alice-excerpt.txt
+
+  <span class="c">[1/9]</span> A: Welcome to Podcastify. Today we're getting into alice-e...
+  <span class="c">[2/9]</span> B: That's right. Let's dive in....
+  <span class="c">[3/9]</span> A: Alice's Adventures in Wonderland, by Lewis Carroll (186...
+  <span class="c">[4/9]</span> A: There was nothing so VERY remarkable in that; nor did A...
+  <span class="c">[5/9]</span> B: And why does that matter?...
+  <span class="c">[6/9]</span> A: Exactly. Let me read on....
+  <span class="c">[7/9]</span> A: In another moment down went Alice after it, never once ...
+  <span class="c">[8/9]</span> B: That's a great place to wrap up. Thanks for listening t...
+  <span class="c">[9/9]</span> A: See you next time....
+  <span class="g">wrote alice-excerpt.podcast.mp3</span>
+
+$ ffprobe -show_entries format=duration alice-excerpt.podcast.mp3
+duration=<span class="g">118.584000</span></pre>
+    </div>
+    <p style="margin-top:22px">
+      Two minutes of two-voice audio from one command, with a transcript written
+      alongside it. The <code>--script-only</code> flag stops before synthesis if
+      you want to read the script first, which on a full-length book is the
+      difference between a ten-second check and a long render.
+    </p>
+  </section>
+
+  <section class="stop stop--warn">
+    <p class="eyebrow">↓ the honest limitation of the free mode</p>
+    <h2>The co-host in rule mode is a metronome</h2>
+    <p>
+      Rule mode is faithful to the source and needs no API key, and the price of
+      that is that the co-host has nothing to actually say. Its interjections come
+      from a fixed pool, and over a long transcript the repetition is obvious:
+    </p>
+    <div class="term">
+<pre><span class="c">**Sam:**</span> So what does that actually mean for the reader?
+<span class="c">**Alex:**</span> Exactly. Let me read on.
+  ...
+<span class="c">**Sam:**</span> And why does that matter?
+<span class="c">**Alex:**</span> So here's what comes next.
+  ...
+<span class="c">**Sam:**</span> Mm, that raises a question for me.
+<span class="c">**Alex:**</span> Good question. Here's the next part.
+  ...
+<span class="c">**Sam:**</span> Oh, I like where this is going.
+<span class="c">**Alex:**</span> <span class="y">Good question. Here's the next part.</span>   ← repeats</pre>
+    </div>
+    <p style="margin-top:22px">
+      That is what rule mode is: a structured two-voice <em>reading</em>, dramatised
+      rather than rewritten. It changes the texture of a long listen — a second
+      voice every few paragraphs genuinely does hold attention better than one — and
+      it is not a conversation, and this page is not going to pretend otherwise.
+    </p>
+    <p>
+      <strong><code>--mode llm</code> is the fix.</strong> With
+      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites the source into an actual
+      host-and-co-host discussion where the second voice responds to the content in
+      front of it. That mode costs money per book; rule mode costs nothing. Both
+      ship, and the trade-off is stated rather than buried.
+    </p>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">↓ the pieces</p>
+    <h2>Three files, one job each</h2>
+    <div class="grid">
+      <div class="cell">
+        <h3><code>podcastify.py</code></h3>
+        <p>The CLI. Reads the EPUB or text file, builds the script, synthesises the
+           audio.</p>
+      </div>
+      <div class="cell">
+        <h3><code>script_builder.py</code></h3>
+        <p>Turns source text into a two-host script, either rule-based or via
+           Claude.</p>
+      </div>
+      <div class="cell">
+        <h3><code>tts_engine.py</code></h3>
+        <p>Renders each turn with <code>edge-tts</code> and stitches them with
+           ffmpeg.</p>
+      </div>
+      <div class="cell">
+        <h3>Voices are yours to pick</h3>
+        <p><code>--voice-a</code> and <code>--voice-b</code> take any
+           <code>edge-tts</code> voice, so the pairing is whatever you find easy to
+           listen to.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stop stop--end">
+    <p class="eyebrow">Finish · what it is built on</p>
+    <h2>Free by default</h2>
+    <dl class="specs">
+      <div class="spec"><dt>Input</dt><dd><code>.epub</code>, <code>.txt</code>, <code>.md</code> or <code>.html</code></dd></div>
+      <div class="spec"><dt>Voices</dt><dd><code>edge-tts</code> neural voices, no API key</dd></div>
+      <div class="spec"><dt>Stitching</dt><dd>ffmpeg, recommended for clean joins</dd></div>
+      <div class="spec"><dt>Rule mode</dt><dd>Structured two-voice reading, faithful to the source, $0</dd></div>
+      <div class="spec"><dt>LLM mode</dt><dd>Claude rewrites the source into a genuine conversation; needs <code>ANTHROPIC_API_KEY</code></dd></div>
+      <div class="spec"><dt>Outputs</dt><dd>An MP3 and a transcript. <code>--script-only</code> skips synthesis</dd></div>
+      <div class="spec"><dt>Ships</dt><dd>Code only. No books, no audio — point it at something you own or a public-domain title</dd></div>
+      <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/epub-to-audiobook/">EPUB → Audiobook</a>, the same source text rendered as a single-voice audiobook with a read-along player</dd></div>
+    </dl>
+  </section>
+
+</div>
+</div>
+
+<div class="wrap">
+  <section class="close">
+    <h2>Give the material a second voice</h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
+      <a class="textlink" href="../">or the quick tour</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Podcastify ·
+      <a href="../">Showcase</a> ·
+      <a href="https://github.com/lyhjeremy/podcastify">Source</a> ·
+      MIT © 2026 Jeremy Lee
+    </p>
+    <p>Sample output generated from a Project Gutenberg public-domain text.</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -6,6 +6,7 @@ thing is voiced with free, natural neural voices. Optionally, let Claude rewrite
 the source into a genuine back-and-forth conversation.
 
 > 🌐 **Overview:** https://lyhjeremy.github.io/podcastify/
+> 📖 **Product overview:** https://lyhjeremy.github.io/podcastify/overview/
 
 ## Why
 Audiobooks are one voice reading at you. A two-host show is easier to listen to on
