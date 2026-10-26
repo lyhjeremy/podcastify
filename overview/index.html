@@ -3,55 +3,57 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Podcastify: turn an EPUB or article into a two-host show</title>
-<meta name="description" content="One host narrates, a co-host reacts, and the whole thing is voiced with free neural voices. Rule mode needs no API key; LLM mode lets Claude rewrite the source into a real conversation." />
-<meta name="theme-color" content="#EDEDE7" />
+<title>Podcastify: turn an EPUB or article into a two-host podcast</title>
+<meta name="description" content="A Python CLI that stages any EPUB or article for two voices, renders each turn with free edge-tts neural voices and stitches one MP3. A rule-based mode needs no API key; an LLM mode has Claude rewrite the text as a conversation." />
+<meta name="theme-color" content="#EEEDE6" />
 <meta property="og:title" content="Podcastify" />
-<meta property="og:description" content="An audiobook is one voice reading at you. Two voices is easier to listen to on a walk." />
+<meta property="og:description" content="Any EPUB or article as a two-voice MP3 and transcript: 1,800 characters of Alice in Wonderland became 1:59 of audio in one command." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyhjeremy.github.io/podcastify/overview/" />
+<link href="" rel="stylesheet" />
 <style>
-@font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-400.woff2")format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-600.woff2")format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-400.woff2")format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-600.woff2")format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"IBM Plex Mono";src:url("../fonts/IBMPlexMono-400.woff2")format("woff2");font-weight:400;font-display:swap}
-
   :root {
-    --paper: #EDEDE7;
-    --card: #F5F5F0;
-    --plate: #F5F5F0;
-    --ink: #1C1E1B;
-    --ink2: #3d3d55;
-    --muted: #52564E;
-    --rule: #C6C7BF;
-    --accent: #8C3A1E;
-    --accent2: #2C5852;
-    --link: #2C5852;
-    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-    --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
-    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
-    --shadow: 0 1px 2px rgba(26,26,46,.05), 0 10px 34px rgba(26,26,46,.07);
+    --paper: #EEEDE6;
+    --card: #F6F5EF;
+    --plate: #F6F5EF;
+    --ink: #1B1E24;
+    --ink2: #4F5560;
+    --muted: #4F5560;
+    --rule: #C8C9C2;
+    --accent: #9E3A2C;
+    --accent2: #284B73;
+    --link: #9E3A2C;
+    --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+    --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --edge: #757A80;
     --spine:  92px;
     --col:    min(100% - 2.6rem, 62rem);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #14141f;
-      --card: #1c1c2a;
-      --plate: #f7f4ec;
-      --ink: #F2EFE6;
-      --ink2: #C9C4B6;
-      --muted: #918B7D;
-      --rule: #33313f;
-      --accent: #22D3EE;
-      --accent2: #A78BFA;
-      --link: #E0899A;
-      --shadow: 0 1px 2px rgba(0,0,0,.32), 0 10px 34px rgba(0,0,0,.4);
+      --paper: #181A1F;
+      --card: #21242A;
+      --plate: #21242A;
+      --ink: #E5E6E2;
+      --ink2: #A5AAB3;
+      --muted: #A5AAB3;
+      --rule: #3A3E45;
+      --accent: #D88E80;
+      --accent2: #86A9D6;
+      --link: #D88E80;
+      --edge: #6B7079;
     }
   }
 
-  * { box-sizing: border-box; }
+  @font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Mono";src:url("../fonts/IBMPlexMono-400.woff2")format("woff2");font-weight:400;font-display:swap}
+
+  * { box-sizing: border-box; border-radius: 0; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--paper); color: var(--ink);
@@ -210,53 +212,103 @@
     html { scroll-behavior: auto; }
     .btn { }
   }
+  @font-face{font-family:"Newsreader";src:url("../fonts/Newsreader-600.woff2")format("woff2");font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:"Newsreader";src:url("../fonts/Newsreader-400i.woff2")format("woff2");font-weight:400;font-style:italic;font-display:swap}
 
+  .btn:hover { transform: none; background: var(--accent); border-color: var(--accent); color: var(--paper); }
+  .pull { border: 1px solid var(--edge); border-left: 1px solid var(--edge); background: transparent; }
+  .term { background: var(--card); color: var(--ink); border: 1px solid var(--rule); }
+  .term .c { color: var(--muted); } .term .g { color: var(--accent2); } .term .y { color: var(--accent); }
+  .logo, .hero h1, h2, .claim .n, .bignum { font-family: var(--display); }
+
+  /* Language: a well-set book. Newsreader display, italic glosses, notes in the margin. */
+  .logo { font-weight: 600; font-size: 23px; letter-spacing: 0; }
+  .hero h1 { font-weight: 600; font-size: clamp(42px, 6.6vw, 80px); letter-spacing: -.015em; line-height: 1.02; max-width: 16ch; }
+  .kicker { font-family: var(--display); font-style: italic; font-weight: 400; font-size: clamp(20px, 2.3vw, 25px); color: var(--accent2); }
+  h2 { font-weight: 600; letter-spacing: -.01em; font-size: clamp(29px, 3.9vw, 40px); }
+  .claim, .claim:first-child, .claim:nth-child(2) { border-top: 1px solid var(--rule); }
+  .claim .n { font-weight: 600; font-size: 44px; letter-spacing: -.01em; color: var(--accent2); }
+  .bignum { font-weight: 600; color: var(--accent2); }
+  .eyebrow { font-family: var(--display); font-style: italic; text-transform: none; letter-spacing: 0;
+             font-size: 18px; font-weight: 400; color: var(--accent); }
+  :root { --spine: 0px; }
+  .route::before, .stop::before { display: none; }
+  .stop { padding-left: 0; }
+  @media (min-width: 980px) {
+    .stop { display: grid; grid-template-columns: 11rem minmax(0, 1fr); column-gap: 40px; }
+    .stop > * { grid-column: 2; }
+    .stop > .eyebrow { grid-column: 1; grid-row: 1 / span 2; text-align: right; padding-top: 14px;
+                       border-top: 1px solid var(--rule); }
+  }
+
+
+  /* Signature: the generated transcript set as a play script, speaker names in the margin. */
+  .script { margin: 44px 0 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 8px 0 12px; }
+  .line { display: grid; grid-template-columns: 4.6rem minmax(0,1fr); gap: 0 18px; padding: 9px 0; }
+  .line .who { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent2); padding-top: 3px; text-align: right; }
+  .line.b .who { color: var(--accent); }
+  .line p { margin: 0; max-width: 62ch; font-size: 1em; color: var(--ink); }
+  .line.b p { font-family: var(--display); font-style: italic; font-size: 1.08em; }
+  .line .cut { color: var(--muted); }
+  .script-cap { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 12px 0 0; line-height: 1.5; max-width: 64ch; }
+  @media (max-width: 520px) { .line { grid-template-columns: 1fr; } .line .who { text-align: left; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="masthead">
-    <div class="logo"><span class="dot" aria-hidden="true"></span>Podcastify</div>
+    <div class="logo">Podcastify</div>
     <div class="tagline">any text, staged for two voices</div>
   </header>
 
   <section class="hero">
-    <p class="kicker">An audiobook is one voice reading at you for nine hours.</p>
-    <h1>Two voices is a much easier thing to listen to on a walk.</h1>
+    <p class="kicker">A Python command-line tool</p>
+    <h1>Turn an EPUB or article into a two-host podcast with one command.</h1>
 
     <p class="hero-sub">
-      Point Podcastify at an EPUB or an article and it stages the text as a
-      <strong>two-host show</strong>: one host narrates in short segments, a co-host
-      interjects between them, and the whole thing is rendered with free neural
-      voices and stitched into a single MP3. No API key needed. Optionally, let
-      Claude rewrite the source into a genuine back-and-forth instead.
+      Podcastify splits the text into short segments for a narrator, has a co-host
+      interject between them, renders every turn with free Microsoft edge-tts neural
+      voices, and stitches the result into one MP3 with a Markdown transcript. The
+      default mode needs no API key. An optional mode sends the text to Claude to be
+      rewritten as a real conversation.
     </p>
 
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
-      <a class="textlink" href="../">or the quick tour</a>
+      <a class="textlink" href="../">The short tour</a>
     </div>
+
+    <div class="script" aria-label="Excerpt from a generated transcript">
+      <div class="line b"><span class="who">Sam</span><p>Welcome to Podcastify. Today we're getting into alice-excerpt.</p></div>
+      <div class="line"><span class="who">Alex</span><p>That's right. Let's dive in.</p></div>
+      <div class="line"><span class="who">Alex</span><p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do <span class="cut">[...]</span> to hear the Rabbit say to itself, 'Oh dear! Oh dear!</p></div>
+      <div class="line"><span class="who">Alex</span><p>I shall be late!' <span class="cut">[...]</span> before she found herself falling down a very deep well.</p></div>
+      <div class="line b"><span class="who">Sam</span><p>Let me make sure I'm following.</p></div>
+      <div class="line"><span class="who">Alex</span><p>Stay with me, it builds.</p></div>
+    </div>
+    <p class="script-cap">The first six of nine turns from <code>alice-excerpt.transcript.md</code>, written by a run on
+      the first 1,800 characters of <em>Alice's Adventures in Wonderland</em> (Project Gutenberg) on
+      2026-10-26. Narration is cut where marked. Sam's lines come from a fixed pool, shuffled each run.</p>
 
     <div class="claims">
       <div class="claim">
-        <div class="n">2 modes</div>
-        <p><code>rule</code> needs nothing but Python. <code>llm</code> hands the
-           text to Claude for a real conversation.</p>
+        <div class="n">1:59</div>
+        <p>of two-voice audio (119.3 seconds by ffprobe) from that 1,800-character
+           excerpt, in nine turns.</p>
       </div>
       <div class="claim">
         <div class="n">$0</div>
-        <p>in rule mode. Free <code>edge-tts</code> neural voices, no key, no
-           per-character billing.</p>
+        <p>in rule mode: edge-tts needs no API key and has no per-character
+           billing.</p>
       </div>
       <div class="claim">
-        <div class="n">1:58</div>
-        <p>of finished audio from a 1,800-character excerpt in a single command,
-           verified end to end.</p>
+        <div class="n">2 modes</div>
+        <p><code>rule</code> reads the source faithfully; <code>llm</code> asks
+           Claude to rewrite it as a host and co-host discussion.</p>
       </div>
       <div class="claim">
-        <div class="n">2 files</div>
-        <p>out: the MP3 and a readable transcript, so you can check the script
-           before committing to the audio.</p>
+        <div class="n">339 lines</div>
+        <p>of Python across three files: CLI, script builder and TTS engine.</p>
       </div>
     </div>
   </section>
@@ -266,113 +318,88 @@
 <div class="route">
 
   <section class="stop stop--key">
-    <p class="eyebrow">↓ a real run</p>
-    <h2>One command, nine turns, a finished MP3</h2>
+    <p class="eyebrow">A real run</p>
+    <h2>One command, nine turns, one MP3</h2>
     <p>
-      This is an actual run against a public-domain excerpt. It builds the script,
-      renders each turn with its own voice, and stitches the result:
+      The run behind the transcript above. It builds the script, renders each turn
+      in its speaker's voice, and joins the pieces:
     </p>
     <div class="term">
-<pre>$ python podcastify.py alice-excerpt.txt
-
-  <span class="c">[1/9]</span> A: Welcome to Podcastify. Today we're getting into alice-e...
-  <span class="c">[2/9]</span> B: That's right. Let's dive in....
-  <span class="c">[3/9]</span> A: Alice's Adventures in Wonderland, by Lewis Carroll (186...
-  <span class="c">[4/9]</span> A: There was nothing so VERY remarkable in that; nor did A...
-  <span class="c">[5/9]</span> B: And why does that matter?...
-  <span class="c">[6/9]</span> A: Exactly. Let me read on....
-  <span class="c">[7/9]</span> A: In another moment down went Alice after it, never once ...
-  <span class="c">[8/9]</span> B: That's a great place to wrap up. Thanks for listening t...
-  <span class="c">[9/9]</span> A: See you next time....
+<pre><span class="c">$ python podcastify.py alice-excerpt.txt</span>
+Source: alice-excerpt  (1,800 chars)
+Transcript: alice-excerpt.transcript.md  (9 turns)
+  [1/9] B: Welcome to Podcastify. Today we're getting into alice-excerp...
+  [2/9] A: That's right. Let's dive in....
+  [3/9] A: Alice was beginning to get very tired of sitting by her sist...
+  [4/9] A: I shall be late!' (when she thought it over afterwards, it o...
+  [5/9] B: Let me make sure I'm following....
+  [6/9] A: Stay with me, it builds....
+  [7/9] A: Either the well was very deep, or she fell very slowly, for ...
+  [8/9] B: That's a great place to wrap up. Thanks for listening to Pod...
+  [9/9] A: See you next time....
   <span class="g">wrote alice-excerpt.podcast.mp3</span>
+Done: alice-excerpt.podcast.mp3
 
-$ ffprobe -show_entries format=duration alice-excerpt.podcast.mp3
-duration=<span class="g">118.584000</span></pre>
+<span class="c">$ ffprobe -v error -show_entries format=duration alice-excerpt.podcast.mp3</span>
+duration=<span class="g">119.304000</span></pre>
     </div>
     <p style="margin-top:22px">
-      Two minutes of two-voice audio from one command, with a transcript written
-      alongside it. The <code>--script-only</code> flag stops before synthesis if
-      you want to read the script first, which on a full-length book is the
-      difference between a ten-second check and a long render.
-    </p>
-  </section>
-
-  <section class="stop stop--warn">
-    <p class="eyebrow">↓ the honest limitation of the free mode</p>
-    <h2>The co-host in rule mode is a metronome</h2>
-    <p>
-      Rule mode is faithful to the source and needs no API key, and the price of
-      that is that the co-host has nothing to actually say. Its interjections come
-      from a fixed pool, and over a long transcript the repetition is obvious:
-    </p>
-    <div class="term">
-<pre><span class="c">**Sam:**</span> So what does that actually mean for the reader?
-<span class="c">**Alex:**</span> Exactly. Let me read on.
-  ...
-<span class="c">**Sam:**</span> And why does that matter?
-<span class="c">**Alex:**</span> So here's what comes next.
-  ...
-<span class="c">**Sam:**</span> Mm, that raises a question for me.
-<span class="c">**Alex:**</span> Good question. Here's the next part.
-  ...
-<span class="c">**Sam:**</span> Oh, I like where this is going.
-<span class="c">**Alex:**</span> <span class="y">Good question. Here's the next part.</span>   ← repeats</pre>
-    </div>
-    <p style="margin-top:22px">
-      That is what rule mode is: a structured two-voice <em>reading</em>, dramatised
-      rather than rewritten. It changes the texture of a long listen. A second
-      voice every few paragraphs genuinely does hold attention better than one, and
-      it is not a conversation, and this page is not going to pretend otherwise.
-    </p>
-    <p>
-      <strong><code>--mode llm</code> is the fix.</strong> With
-      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites the source into an actual
-      host-and-co-host discussion where the second voice responds to the content in
-      front of it. That mode costs money per book; rule mode costs nothing. Both
-      ship, and the trade-off is stated rather than buried.
+      Captured 2026-10-26 with edge-tts 7.3.1 and ffmpeg. The default voices are
+      en-US-AndrewNeural for the narrator and en-US-AvaNeural for the co-host;
+      <code>--voice-a</code> and <code>--voice-b</code> take any edge-tts voice. The
+      <code>--script-only</code> flag writes the transcript and stops, so you can
+      read a whole book's script before rendering hours of audio.
     </p>
   </section>
 
   <section class="stop">
-    <p class="eyebrow">↓ the pieces</p>
+    <p class="eyebrow">How it works</p>
     <h2>Three files, one job each</h2>
-    <div class="grid">
-      <div class="cell">
-        <h3><code>podcastify.py</code></h3>
-        <p>The CLI. Reads the EPUB or text file, builds the script, synthesises the
-           audio.</p>
-      </div>
-      <div class="cell">
-        <h3><code>script_builder.py</code></h3>
-        <p>Turns source text into a two-host script, either rule-based or via
-           Claude.</p>
-      </div>
-      <div class="cell">
-        <h3><code>tts_engine.py</code></h3>
-        <p>Renders each turn with <code>edge-tts</code> and stitches them with
-           ffmpeg.</p>
-      </div>
-      <div class="cell">
-        <h3>Voices are yours to pick</h3>
-        <p><code>--voice-a</code> and <code>--voice-b</code> take any
-           <code>edge-tts</code> voice, so the pairing is whatever you find easy to
-           listen to.</p>
-      </div>
-    </div>
+    <dl class="specs">
+      <div class="spec"><dt><code>podcastify.py</code></dt><dd>The CLI. Reads <code>.epub</code> (ebooklib and BeautifulSoup), <code>.txt</code>, <code>.md</code> or <code>.html</code>, builds the script, writes the transcript, calls the TTS engine</dd></div>
+      <div class="spec"><dt><code>script_builder.py</code></dt><dd>Splits the text into sentences with a regex, groups them three to a segment, and inserts a co-host reaction and a narrator bridge after every second segment. In <code>llm</code> mode it calls the Anthropic Messages API and asks for the conversation as a JSON array of turns</dd></div>
+      <div class="spec"><dt><code>tts_engine.py</code></dt><dd>Renders each turn to MP3 with edge-tts, then joins them with ffmpeg's concat demuxer without re-encoding, or byte-joins the MP3s if ffmpeg is missing</dd></div>
+    </dl>
+  </section>
+
+  <section class="stop stop--warn">
+    <p class="eyebrow">Limitations</p>
+    <h2>In rule mode the co-host has nothing to say</h2>
+    <p>
+      Rule mode is faithful to the source and costs nothing, and the price is a
+      co-host who isn't responding to anything. Its lines come from a pool of
+      twelve reactions and five narrator bridges, so over a long book they repeat,
+      and they can land oddly: "Let me make sure I'm following" after Alice falls
+      down a well. What rule mode produces is a two-voice reading. A second voice
+      every few paragraphs changes the texture of a long listen, but it isn't a
+      conversation.
+    </p>
+    <p>
+      The sentence splitter is a regular expression, and quoted speech trips it. In
+      the run above, the Rabbit's "Oh dear! Oh dear! I shall be late!" is cut across
+      two turns.
+    </p>
+    <p>
+      <code>--mode llm</code> addresses the first problem. With
+      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites up to 12,000 characters of
+      source into a host and co-host discussion, and the prompt tells it not to
+      invent facts. That mode costs API usage per run, and without a key it falls
+      back to rule mode. edge-tts is an unofficial Microsoft endpoint: version
+      7.2.8 returned HTTP 403 on 2026-10-26 and 7.3.1 worked, so keep it upgraded.
+    </p>
   </section>
 
   <section class="stop stop--end">
-    <p class="eyebrow">Finish · what it is built on</p>
+    <p class="eyebrow">Built with</p>
     <h2>Free by default</h2>
     <dl class="specs">
-      <div class="spec"><dt>Input</dt><dd><code>.epub</code>, <code>.txt</code>, <code>.md</code> or <code>.html</code></dd></div>
-      <div class="spec"><dt>Voices</dt><dd><code>edge-tts</code> neural voices, no API key</dd></div>
-      <div class="spec"><dt>Stitching</dt><dd>ffmpeg, recommended for clean joins</dd></div>
-      <div class="spec"><dt>Rule mode</dt><dd>Structured two-voice reading, faithful to the source, $0</dd></div>
-      <div class="spec"><dt>LLM mode</dt><dd>Claude rewrites the source into a genuine conversation; needs <code>ANTHROPIC_API_KEY</code></dd></div>
-      <div class="spec"><dt>Outputs</dt><dd>An MP3 and a transcript. <code>--script-only</code> skips synthesis</dd></div>
-      <div class="spec"><dt>Ships</dt><dd>Code only. No books, no audio, point it at something you own or a public-domain title</dd></div>
-      <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/epub-to-audiobook/">EPUB → Audiobook</a>, the same source text rendered as a single-voice audiobook with a read-along player</dd></div>
+      <div class="spec"><dt>Input</dt><dd><code>.epub</code>, <code>.txt</code>, <code>.md</code> or <code>.html</code>; <code>--max-chars</code> caps the length for a quick preview</dd></div>
+      <div class="spec"><dt>Voices</dt><dd>edge-tts neural voices, no API key</dd></div>
+      <div class="spec"><dt>Stitching</dt><dd>ffmpeg concat, with a byte-join fallback</dd></div>
+      <div class="spec"><dt>LLM mode</dt><dd>Anthropic Messages API over <code>urllib</code>, no SDK; needs <code>ANTHROPIC_API_KEY</code></dd></div>
+      <div class="spec"><dt>Outputs</dt><dd><code>&lt;name&gt;.podcast.mp3</code> and <code>&lt;name&gt;.transcript.md</code></dd></div>
+      <div class="spec"><dt>Ships</dt><dd>Code only, no books or audio. Use files you own or public-domain titles</dd></div>
+      <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/epub-to-audiobook/">EPUB to Audiobook</a>, which renders a book as a single-voice audiobook with a read-along player</dd></div>
     </dl>
   </section>
 
@@ -384,14 +411,14 @@ duration=<span class="g">118.584000</span></pre>
     <h2>Give the material a second voice</h2>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
-      <a class="textlink" href="../">or the quick tour</a>
+      <a class="textlink" href="../">The short tour</a>
     </div>
   </section>
 
   <footer>
     <p>
       Podcastify ·
-      <a href="../">Showcase</a> ·
+      <a href="../">Tour</a> ·
       <a href="https://github.com/lyhjeremy/podcastify">Source</a> ·
       MIT © 2026 Jeremy Lee
     </p>
