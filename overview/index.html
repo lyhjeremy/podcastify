@@ -478,7 +478,7 @@ duration=<span class="g">119.304000</span></pre>
     else { pending = true; aud.addEventListener("loadedmetadata", go, { once: true }); aud.preload = "metadata"; aud.load(); }
   }
   aud.addEventListener("timeupdate", function () {
-    if (pending) return;
+    if (pending || aud.seeking) return;
     var t = aud.currentTime, i = 0;
     for (var j = 0; j < starts.length; j++) if (t >= starts[j]) i = j;
     mark(i);
