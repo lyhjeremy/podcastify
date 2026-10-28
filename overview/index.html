@@ -269,8 +269,8 @@
       Podcastify splits the text into short segments for a narrator, has a co-host
       interject between them, renders every turn with free Microsoft edge-tts neural
       voices, and stitches the result into one MP3 with a Markdown transcript. The
-      default mode needs no API key. An optional mode sends the text to Claude to be
-      rewritten as a real conversation.
+      default mode needs no API key; an optional mode sends the text to Claude, which
+      rewrites it as a back-and-forth between the two hosts.
     </p>
 
     <div class="cta-row">
@@ -318,7 +318,7 @@
 <div class="route">
 
   <section class="stop stop--key">
-    <p class="eyebrow">A real run</p>
+    <p class="eyebrow">A sample run</p>
     <h2>One command, nine turns, one MP3</h2>
     <p>
       The run behind the transcript above. It builds the script, renders each turn
@@ -366,13 +366,13 @@ duration=<span class="g">119.304000</span></pre>
     <p class="eyebrow">Limitations</p>
     <h2>In rule mode the co-host has nothing to say</h2>
     <p>
-      Rule mode is faithful to the source and costs nothing, and the price is a
-      co-host who isn't responding to anything. Its lines come from a pool of
+      Rule mode is faithful to the source and costs nothing, and you pay for that
+      with a co-host who responds to nothing in particular. Its lines come from a pool of
       twelve reactions and five narrator bridges, so over a long book they repeat,
       and they can land oddly: "Let me make sure I'm following" after Alice falls
-      down a well. What rule mode produces is a two-voice reading. A second voice
-      every few paragraphs changes the texture of a long listen, but it isn't a
-      conversation.
+      down a well. What rule mode produces is a two-voice reading: a second voice every few
+paragraphs changes the texture of a long listen, though nobody would mistake
+it for a conversation.
     </p>
     <p>
       The sentence splitter is a regular expression, and quoted speech trips it. In
@@ -380,7 +380,7 @@ duration=<span class="g">119.304000</span></pre>
       two turns.
     </p>
     <p>
-      <code>--mode llm</code> addresses the first problem. With
+      <code>--mode llm</code> is the fix for the first problem. With
       <code>ANTHROPIC_API_KEY</code> set, Claude rewrites up to 12,000 characters of
       source into a host and co-host discussion, and the prompt tells it not to
       invent facts. That mode costs API usage per run, and without a key it falls

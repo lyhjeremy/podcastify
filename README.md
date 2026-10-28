@@ -25,7 +25,7 @@ $ ffprobe -v error -show_entries format=duration alice-excerpt.podcast.mp3
 duration=119.304000
 ```
 
-That is 1 minute 59 seconds of two-voice audio from one command, plus a Markdown transcript.
+One command produced 1 minute 59 seconds of two-voice audio and a Markdown transcript.
 
 ## Two modes
 
@@ -68,7 +68,7 @@ python podcastify.py book.epub --voice-a en-US-GuyNeural --voice-b en-US-JennyNe
 | `script_builder.py` | Rule-based or Claude script builder |
 | `tts_engine.py` | Per-turn edge-tts rendering and ffmpeg stitching |
 
-The repo ships code only, no books and no audio (`.gitignore` blocks `*.mp3` and transcripts). Use files you own or public-domain titles, for personal listening.
+The repo ships code only; `.gitignore` blocks `*.mp3` and transcripts, so books and audio stay out of it. Use files you own or public-domain titles, for personal listening.
 
 ## License
 
