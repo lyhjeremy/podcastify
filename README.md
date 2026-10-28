@@ -68,7 +68,7 @@ python podcastify.py book.epub --voice-a en-US-GuyNeural --voice-b en-US-JennyNe
 | `script_builder.py` | Rule-based or Claude script builder |
 | `tts_engine.py` | Per-turn edge-tts rendering and ffmpeg stitching |
 
-The repo ships code only; `.gitignore` blocks `*.mp3` and transcripts, so books and audio stay out of it. Use files you own or public-domain titles, for personal listening.
+`.gitignore` blocks `*.mp3` and transcripts, so books and audio stay out of the repo. The one exception is `overview/alice-excerpt.podcast.mp3`, the two-minute public-domain sample that plays on the write-up page. Use files you own or public-domain titles, for personal listening.
 
 ## License
 

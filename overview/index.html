@@ -242,16 +242,35 @@
   }
 
 
-  /* Signature: the generated transcript set as a play script, speaker names in the margin. */
-  .script { margin: 44px 0 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 8px 0 12px; }
-  .line { display: grid; grid-template-columns: 4.6rem minmax(0,1fr); gap: 0 18px; padding: 9px 0; }
+  /* Signature: the generated transcript set as a play script, speaker names in the margin, following the audio. */
+  .listen { margin: 40px 0 0; border-top: 2px solid var(--ink); padding-top: 14px; }
+  .listen audio { width: 100%; display: block; margin: 0 0 12px; }
+  .strip { display: flex; height: 26px; border: 1px solid var(--rule); margin: 0 0 4px; }
+  .strip button { border: 0; padding: 0; margin: 0; min-width: 3px; background: var(--accent2); cursor: pointer; position: relative; }
+  .strip button + button { border-left: 1px solid var(--paper); }
+  .strip button.b { background: var(--accent); }
+  .strip button.on { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .strip-key { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+  .script { border-bottom: 1px solid var(--rule); padding: 4px 0 10px; }
+  .line { display: grid; grid-template-columns: 4.6rem minmax(0,1fr) 3.4rem; gap: 0 18px; padding: 8px 0; border-top: 1px solid var(--rule); cursor: pointer; }
   .line .who { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent2); padding-top: 3px; text-align: right; }
   .line.b .who { color: var(--accent); }
-  .line p { margin: 0; max-width: 62ch; font-size: 1em; color: var(--ink); }
-  .line.b p { font-family: var(--display); font-style: italic; font-size: 1.08em; }
-  .line .cut { color: var(--muted); }
-  .script-cap { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 12px 0 0; line-height: 1.5; max-width: 64ch; }
-  @media (max-width: 520px) { .line { grid-template-columns: 1fr; } .line .who { text-align: left; } }
+  .line p { margin: 0; max-width: 62ch; font-size: .97em; color: var(--ink2); }
+  .line.b p { font-family: var(--display); font-style: italic; font-size: 1.05em; }
+  .line .t { font-family: var(--mono); font-size: 12.5px; color: var(--muted); padding-top: 4px; text-align: right; }
+  .line.on p { color: var(--ink); }
+  .line.on .t { color: var(--ink); }
+  .line.on { border-top: 2px solid var(--ink); }
+  .line:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .script-cap, .fig-cap { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 12px 0 0; line-height: 1.5; max-width: 64ch; }
+  .stage textarea { width: 100%; min-height: 8rem; resize: vertical; font: 16.5px/1.55 var(--serif); color: var(--ink); background: var(--card); border: 1px solid var(--edge); padding: 12px 14px; }
+  .stage label { display: block; font-family: var(--display); font-style: italic; font-size: 19px; color: var(--accent); margin: 22px 0 8px; }
+  .stage .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 0; }
+  .stage button { font: 600 14px/1.2 var(--sans); padding: 9px 14px; border: 1px solid var(--edge); background: var(--card); color: var(--ink); cursor: pointer; }
+  .stage button:hover { border-color: var(--ink); }
+  .stage .count { font-family: var(--mono); font-size: 13px; color: var(--ink2); }
+  .stage .script .line { cursor: default; grid-template-columns: 4.6rem minmax(0,1fr); }
+  @media (max-width: 520px) { .line { grid-template-columns: 1fr 3.2rem; } .line .who { text-align: left; grid-column: 1; } .line p { grid-column: 1 / span 2; } .line .t { grid-column: 2; grid-row: 1; } .stage .script .line { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -268,9 +287,9 @@
     <p class="hero-sub">
       Podcastify splits the text into short segments for a narrator, has a co-host
       interject between them, renders every turn with free Microsoft edge-tts neural
-      voices, and stitches the result into one MP3 with a Markdown transcript. The
-      default mode needs no API key; an optional mode sends the text to Claude, which
-      rewrites it as a back-and-forth between the two hosts.
+      voices, and stitches one MP3 with a Markdown transcript. The default mode needs no
+      API key. An optional mode sends the text to Claude, which rewrites it as a
+      back-and-forth between the two hosts.
     </p>
 
     <div class="cta-row">
@@ -278,38 +297,15 @@
       <a class="textlink" href="../">The short tour</a>
     </div>
 
-    <div class="script" aria-label="Excerpt from a generated transcript">
-      <div class="line b"><span class="who">Sam</span><p>Welcome to Podcastify. Today we're getting into alice-excerpt.</p></div>
-      <div class="line"><span class="who">Alex</span><p>That's right. Let's dive in.</p></div>
-      <div class="line"><span class="who">Alex</span><p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do <span class="cut">[...]</span> to hear the Rabbit say to itself, 'Oh dear! Oh dear!</p></div>
-      <div class="line"><span class="who">Alex</span><p>I shall be late!' <span class="cut">[...]</span> before she found herself falling down a very deep well.</p></div>
-      <div class="line b"><span class="who">Sam</span><p>Let me make sure I'm following.</p></div>
-      <div class="line"><span class="who">Alex</span><p>Stay with me, it builds.</p></div>
-    </div>
-    <p class="script-cap">The first six of nine turns from <code>alice-excerpt.transcript.md</code>, written by a run on
-      the first 1,800 characters of <em>Alice's Adventures in Wonderland</em> (Project Gutenberg) on
-      2026-10-26. Narration is cut where marked. Sam's lines come from a fixed pool, shuffled each run.</p>
-
-    <div class="claims">
-      <div class="claim">
-        <div class="n">1:59</div>
-        <p>of two-voice audio (119.3 seconds by ffprobe) from that 1,800-character
-           excerpt, in nine turns.</p>
-      </div>
-      <div class="claim">
-        <div class="n">$0</div>
-        <p>in rule mode: edge-tts needs no API key and has no per-character
-           billing.</p>
-      </div>
-      <div class="claim">
-        <div class="n">2 modes</div>
-        <p><code>rule</code> reads the source faithfully; <code>llm</code> asks
-           Claude to rewrite it as a host and co-host discussion.</p>
-      </div>
-      <div class="claim">
-        <div class="n">339 lines</div>
-        <p>of Python across three files: CLI, script builder and TTS engine.</p>
-      </div>
+    <div class="listen" id="listen">
+      <audio id="aud" controls preload="none" src="alice-excerpt.podcast.mp3"></audio>
+      <div class="strip" id="strip" role="group" aria-label="The nine turns, sized by length; select one to jump to it"></div>
+      <div class="strip-key"><span>0:00</span><span>Alex narrates (blue), Sam interjects (red)</span><span>1:59</span></div>
+      <div class="script" id="script" aria-label="Transcript of the sample, following the audio"></div>
+      <p class="script-cap">The tool's real output for the first 1,800 characters of <em>Alice's Adventures in
+        Wonderland</em> (Project Gutenberg, public domain), rule mode, default voices, rendered
+        2026-10-28 with edge-tts 7.3.1. The file is 119.3 seconds long, the same as the
+        2026-10-26 run below. Turn lengths come from <code>ffprobe</code> on each rendered segment. Select a line to jump to it.</p>
     </div>
   </section>
 </div>
@@ -321,8 +317,8 @@
     <p class="eyebrow">A sample run</p>
     <h2>One command, nine turns, one MP3</h2>
     <p>
-      The run behind the transcript above. It builds the script, renders each turn
-      in its speaker's voice, and joins the pieces:
+      The run behind the recording above. It builds the script, renders each turn in its
+      speaker's voice, and joins the pieces:
     </p>
     <div class="term">
 <pre><span class="c">$ python podcastify.py alice-excerpt.txt</span>
@@ -347,9 +343,27 @@ duration=<span class="g">119.304000</span></pre>
       Captured 2026-10-26 with edge-tts 7.3.1 and ffmpeg. The default voices are
       en-US-AndrewNeural for the narrator and en-US-AvaNeural for the co-host;
       <code>--voice-a</code> and <code>--voice-b</code> take any edge-tts voice. The
-      <code>--script-only</code> flag writes the transcript and stops, so you can
-      read a whole book's script before rendering hours of audio.
+      <code>--script-only</code> flag writes the transcript and stops, so you can read a
+      whole book's script before rendering hours of audio.
     </p>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">Try the staging</p>
+    <h2>See how rule mode cuts up your own text</h2>
+    <p>
+      Rule mode is simple enough to run in a web page. The box below is a JavaScript
+      port of <code>build_rule_based()</code> from <code>script_builder.py</code>: the same
+      sentence regex, three sentences to a segment, a co-host reaction and a narrator
+      bridge after every second segment, drawn from the same pools. It stages the text;
+      it does not synthesize audio.
+    </p>
+    <div class="stage">
+      <label for="src">Paste any English text</label>
+      <textarea id="src" spellcheck="false">Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled 'ORANGE MARMALADE', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody underneath, so managed to put it into one of the cupboards as she fell past it. 'Well!' thought Alice to herself, 'after such a fall as this, I shall think nothing of tumbling down stairs! How brave they'll all think me at home! Why, I wouldn't say anything about it, even if I fell off the top of the house!' Down, down, down. Would the fall never come to an end?</textarea>
+      <div class="row"><button type="button" id="restage">Shuffle the co-host's lines</button><span class="count" id="count" aria-live="polite"></span></div>
+      <div class="script" id="staged" aria-label="The staged script"></div>
+    </div>
   </section>
 
   <section class="stop">
@@ -366,26 +380,26 @@ duration=<span class="g">119.304000</span></pre>
     <p class="eyebrow">Limitations</p>
     <h2>In rule mode the co-host has nothing to say</h2>
     <p>
-      Rule mode is faithful to the source and costs nothing, and you pay for that
-      with a co-host who responds to nothing in particular. Its lines come from a pool of
-      twelve reactions and five narrator bridges, so over a long book they repeat,
-      and they can land oddly: "Let me make sure I'm following" after Alice falls
-      down a well. What rule mode produces is a two-voice reading: a second voice every few
-paragraphs changes the texture of a long listen, though nobody would mistake
-it for a conversation.
+      Rule mode is faithful to the source and costs nothing, and the price is a co-host
+      who responds to nothing in particular. Its lines come from a pool of twelve
+      reactions and five narrator bridges, so over a long book they repeat, and they can
+      land oddly: "Let me make sure I'm following" after Alice falls down a well. What
+      rule mode produces is a two-voice reading. A second voice every few paragraphs
+      changes the texture of a long listen, but nobody would mistake it for a
+      conversation.
     </p>
     <p>
-      The sentence splitter is a regular expression, and quoted speech trips it. In
-      the run above, the Rabbit's "Oh dear! Oh dear! I shall be late!" is cut across
-      two turns.
+      The sentence splitter is a regular expression, and quoted speech trips it. In the
+      sample, the Rabbit's "Oh dear! Oh dear! I shall be late!" is cut across two turns,
+      and the second narration turn runs 51 seconds.
     </p>
     <p>
       <code>--mode llm</code> is the fix for the first problem. With
-      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites up to 12,000 characters of
-      source into a host and co-host discussion, and the prompt tells it not to
-      invent facts. That mode costs API usage per run, and without a key it falls
-      back to rule mode. edge-tts is an unofficial Microsoft endpoint: version
-      7.2.8 returned HTTP 403 on 2026-10-26 and 7.3.1 worked, so keep it upgraded.
+      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites up to 12,000 characters of source
+      into a host and co-host discussion, and the prompt tells it not to invent facts.
+      That mode costs API usage per run, and without a key it falls back to rule mode.
+      edge-tts is an unofficial Microsoft endpoint: version 7.2.8 returned HTTP 403 on
+      2026-10-26 and 7.3.1 worked, so keep it upgraded.
     </p>
   </section>
 
@@ -398,7 +412,8 @@ it for a conversation.
       <div class="spec"><dt>Stitching</dt><dd>ffmpeg concat, with a byte-join fallback</dd></div>
       <div class="spec"><dt>LLM mode</dt><dd>Anthropic Messages API over <code>urllib</code>, no SDK; needs <code>ANTHROPIC_API_KEY</code></dd></div>
       <div class="spec"><dt>Outputs</dt><dd><code>&lt;name&gt;.podcast.mp3</code> and <code>&lt;name&gt;.transcript.md</code></dd></div>
-      <div class="spec"><dt>Ships</dt><dd>Code only, no books or audio. Use files you own or public-domain titles</dd></div>
+      <div class="spec"><dt>Ships</dt><dd>Code, plus the two-minute public-domain sample on this page. Use files you own or public-domain titles</dd></div>
+      <div class="spec"><dt>Size</dt><dd>339 lines of Python across the three files</dd></div>
       <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/epub-to-audiobook/">EPUB to Audiobook</a>, which renders a book as a single-voice audiobook with a read-along player</dd></div>
     </dl>
   </section>
@@ -408,7 +423,6 @@ it for a conversation.
 
 <div class="wrap">
   <section class="close">
-    <h2>Give the material a second voice</h2>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
       <a class="textlink" href="../">The short tour</a>
@@ -422,8 +436,95 @@ it for a conversation.
       <a href="https://github.com/lyhjeremy/podcastify">Source</a> ·
       MIT © 2026 Jeremy Lee
     </p>
-    <p>Sample output generated from a Project Gutenberg public-domain text.</p>
+    <p>Sample text from Project Gutenberg, public domain.</p>
   </footer>
 </div>
+
+<script>
+(function () {
+  var NAME = { A: "Alex", B: "Sam" };
+  function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  function mmss(t) { t = Math.round(t); return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
+
+  /* The sample: [speaker, text, seconds] for each rendered turn */
+  var T = [["B", "Welcome to Podcastify. Today we're getting into alice-excerpt.", 4.488], ["A", "That's right. Let's dive in.", 1.944], ["A", "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?' So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her. There was nothing so VERY remarkable in that; nor did Alice think it so VERY much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear!", 42.672], ["A", "I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge. In another moment down went Alice after it, never once considering how in the world she was to get out again. The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well.", 51.36], ["B", "Let me make sure I'm following.", 1.92], ["A", "Stay with me, it builds.", 1.872], ["A", "Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what w", 8.712], ["B", "That's a great place to wrap up. Thanks for listening to Podcastify.", 4.464], ["A", "See you next time.", 1.872]];
+  var aud = document.getElementById("aud"), strip = document.getElementById("strip"), script = document.getElementById("script");
+  var starts = [], acc = 0, lines = [], cells = [], on = -1;
+  T.forEach(function (t, i) {
+    starts.push(acc); acc += t[2];
+    var c = document.createElement("button");
+    c.type = "button"; c.className = t[0] === "B" ? "b" : "";
+    c.style.flex = t[2] + " 0 0";
+    c.setAttribute("aria-label", "Turn " + (i + 1) + ", " + NAME[t[0]] + ", starts " + mmss(starts[i]));
+    c.addEventListener("click", function () { jump(i); });
+    strip.appendChild(c); cells.push(c);
+    var d = document.createElement("div");
+    d.className = "line" + (t[0] === "B" ? " b" : ""); d.tabIndex = 0;
+    d.innerHTML = '<span class="who">' + NAME[t[0]] + '</span><p>' + esc(t[1]) + '</p><span class="t">' + mmss(starts[i]) + '</span>';
+    d.addEventListener("click", function () { jump(i); });
+    d.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(i); } });
+    script.appendChild(d); lines.push(d);
+  });
+  function mark(i) {
+    if (i === on) return; on = i;
+    lines.forEach(function (l, j) { l.classList.toggle("on", j === i); });
+    cells.forEach(function (c, j) { c.classList.toggle("on", j === i); });
+  }
+  var pending = false;
+  function jump(i) {
+    mark(i);
+    function go() { pending = false; aud.currentTime = starts[i] + 0.01; var p = aud.play(); if (p && p.catch) p.catch(function () {}); }
+    if (aud.readyState >= 1) go();
+    else { pending = true; aud.addEventListener("loadedmetadata", go, { once: true }); aud.preload = "metadata"; aud.load(); }
+  }
+  aud.addEventListener("timeupdate", function () {
+    if (pending) return;
+    var t = aud.currentTime, i = 0;
+    for (var j = 0; j < starts.length; j++) if (t >= starts[j]) i = j;
+    mark(i);
+  });
+
+  /* A port of build_rule_based() from script_builder.py */
+  var REACTIONS = ["Okay, that's fascinating.", "Huh, I did not know that.", "Wait, can you unpack that a little?", "So what does that actually mean for the reader?", "Interesting - and then what happens?", "Love that. Keep going.", "That's a great point.", "Mm, that raises a question for me.", "Right, that makes sense.", "Oh, I like where this is going.", "Let me make sure I'm following.", "And why does that matter?"];
+  var BRIDGES = ["Good question. Here's the next part.", "Exactly. Let me read on.", "Right - so it continues like this.", "So here's what comes next.", "Stay with me, it builds."];
+  function splitSentences(text) {
+    text = text.replace(/\s+/g, " ").trim();
+    return text.split(/(?<=[.!?])\s+(?=[A-Z0-9"'])/).map(function (p) { return p.trim(); }).filter(Boolean);
+  }
+  function segment(text) {
+    var segs = [], cur = [];
+    splitSentences(text).forEach(function (s) { cur.push(s); if (cur.length >= 3) { segs.push(cur.join(" ")); cur = []; } });
+    if (cur.length) segs.push(cur.join(" "));
+    return segs;
+  }
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
+  function build(text, title) {
+    var segs = segment(text), turns = [["B", "Welcome to Podcastify. Today we're getting into " + title + "."], ["A", "That's right. Let's dive in."]];
+    var r = shuffle(REACTIONS.slice()), ri = 0;
+    segs.forEach(function (seg, i) {
+      turns.push(["A", seg]);
+      if (i < segs.length - 1 && i % 2 === 1) {
+        turns.push(["B", r[ri % r.length]]); ri++;
+        turns.push(["A", BRIDGES[Math.floor(Math.random() * BRIDGES.length)]]);
+      }
+    });
+    turns.push(["B", "That's a great place to wrap up. Thanks for listening to Podcastify."]);
+    turns.push(["A", "See you next time."]);
+    return { turns: turns, segs: segs.length };
+  }
+  var src = document.getElementById("src"), staged = document.getElementById("staged"), count = document.getElementById("count");
+  function stage() {
+    if (!src.value.trim()) { staged.innerHTML = ""; count.textContent = "Nothing to stage."; return; }
+    var b = build(src.value, "your text");
+    count.textContent = b.segs + " narration segment" + (b.segs === 1 ? "" : "s") + ", " + b.turns.length + " turns";
+    staged.innerHTML = b.turns.map(function (t) {
+      return '<div class="line' + (t[0] === "B" ? " b" : "") + '"><span class="who">' + NAME[t[0]] + '</span><p>' + esc(t[1]) + "</p></div>";
+    }).join("");
+  }
+  var tm; src.addEventListener("input", function () { clearTimeout(tm); tm = setTimeout(stage, 250); });
+  document.getElementById("restage").addEventListener("click", stage);
+  stage();
+})();
+</script>
 </body>
 </html>
