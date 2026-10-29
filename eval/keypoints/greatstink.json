@@ -1,0 +1,54 @@
+{
+ "source": "greatstink",
+ "model": "opus (claude -p)",
+ "points": [
+  {
+   "id": "K1",
+   "point": "The Great Stink was an event in Central London in July and August 1858 when hot weather worsened the smell of untreated human waste and industrial effluent on the banks of the River Thames."
+  },
+  {
+   "id": "K2",
+   "point": "London's ageing and inadequate sewer system emptied directly into the Thames, and the problem was worsened by flushing toilets, a population rise from under one million to three million, and industrial outfalls."
+  },
+  {
+   "id": "K3",
+   "point": "Under the prevailing miasma theory, contaminated air was thought to spread diseases such as cholera, and three cholera outbreaks before 1858 (1831, 1848–49 and 1853–54) were blamed on the river's problems."
+  },
+  {
+   "id": "K4",
+   "point": "Physician John Snow argued that cholera was water-borne, supported by his work on the Broad Street pump in Soho, but little attention was initially paid to his theory."
+  },
+  {
+   "id": "K5",
+   "point": "Joseph Bazalgette joined the Metropolitan Commission of Sewers in 1849, became chief engineer after Frank Foster's death in 1852, and completed his definitive sewer plans by June 1856."
+  },
+  {
+   "id": "K6",
+   "point": "Sir Benjamin Hall objected that Bazalgette's planned outfalls were still within the capital, and consultant engineers proposed alternative outfalls costing over £5.4 million compared with Bazalgette's maximum estimate of £2.4 million."
+  },
+  {
+   "id": "K7",
+   "point": "In June 1858 extreme heat and dry weather lowered the Thames, leaving raw sewage on its banks, and the stench disrupted Parliament's work despite curtains soaked in lime chloride."
+  },
+  {
+   "id": "K8",
+   "point": "Disraeli introduced a bill on 15 June 1858, passed into law on 2 August, which made the Metropolitan Board of Works responsible for cleaning the Thames and allowed it to borrow £3 million, favouring Bazalgette's original plan."
+  },
+  {
+   "id": "K9",
+   "point": "Bazalgette's system moved sewage east through interconnecting high-, mid- and low-level sewers, using pumping stations such as Crossness (opened in April 1865) and Abbey Mills to lift sewage into higher pipes."
+  },
+  {
+   "id": "K10",
+   "point": "Bazalgette built the Victoria, Albert and Chelsea Embankments to carry sewers along the Thames, reclaiming over 52 acres of land from the river, and he was knighted shortly after the Chelsea Embankment opened in 1874."
+  },
+  {
+   "id": "K11",
+   "point": "The system became fully operational in 1875 at a final cost of about £6.5 million, and the 1866 cholera outbreak, confined to an area not yet connected to it, led to acceptance that cholera was water-borne and was the last outbreak in the capital."
+  },
+  {
+   "id": "K12",
+   "point": "Bazalgette's sewer system still operates in the 21st century, and historians such as John Doxat and Peter Ackroyd credit him with saving more lives than any other Victorian official and count him among London's heroes."
+  }
+ ]
+}

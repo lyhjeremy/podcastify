@@ -1,0 +1,54 @@
+{
+ "source": "civil",
+ "model": "opus (claude -p)",
+ "points": [
+  {
+   "id": "K1",
+   "point": "Thoreau accepts that the government is best which governs least, and ultimately believes the best government would govern not at all once people are prepared for it."
+  },
+  {
+   "id": "K2",
+   "point": "He argues that government is only an expedient that is easily abused, citing the Mexican war as the work of a few individuals using the government as their tool without the people's consent."
+  },
+  {
+   "id": "K3",
+   "point": "Speaking practically as a citizen, he asks not for no government at once but for a better government at once."
+  },
+  {
+   "id": "K4",
+   "point": "He contends that majority rule rests on physical strength rather than justice, and that citizens should not resign their conscience to the legislator but should be men first and subjects afterward."
+  },
+  {
+   "id": "K5",
+   "point": "He criticizes those who serve the State as machines with their bodies, like soldiers, or with their heads, like politicians, while praising the few who serve it with their consciences and are therefore treated as enemies."
+  },
+  {
+   "id": "K6",
+   "point": "He declares he cannot recognize as his government one that is also the slave's government, and holds that slavery and the invasion of Mexico justify honest men in rebelling."
+  },
+  {
+   "id": "K7",
+   "point": "He rejects Paley's view that civil obligation rests on expediency, insisting that a people must do justice whatever it costs, including ending slavery and the war on Mexico."
+  },
+  {
+   "id": "K8",
+   "point": "He blames ordinary Massachusetts merchants and farmers who oppose slavery and the war in opinion but do nothing, and he dismisses voting as merely a feeble expression of desire for the right."
+  },
+  {
+   "id": "K9",
+   "point": "He argues that if an unjust law requires a person to be the agent of injustice to another, that person should break the law and let his life be a counter friction to stop the machine."
+  },
+  {
+   "id": "K10",
+   "point": "He says that under a government which imprisons any unjustly, the true place for a just man is also a prison, and that if a thousand men refused to pay their taxes it would be a peaceable revolution."
+  },
+  {
+   "id": "K11",
+   "point": "Thoreau recounts that he refused to pay his poll-tax for six years and was jailed for one night, where he felt the State could only punish his body and lost all remaining respect for it, before someone else paid the tax and he was released."
+  },
+  {
+   "id": "K12",
+   "point": "He concludes that government's authority must have the consent of the governed, and that a truly free and enlightened State will only exist when it recognizes the individual as the higher and independent power from which its authority is derived."
+  }
+ ]
+}

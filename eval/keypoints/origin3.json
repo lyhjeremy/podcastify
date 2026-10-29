@@ -1,0 +1,54 @@
+{
+ "source": "origin3",
+ "model": "opus (claude -p)",
+ "points": [
+  {
+   "id": "K1",
+   "point": "Darwin argues that individual variability alone does not explain how species arise, and that the struggle for life explains how useful slight variations are preserved and inherited, a principle he calls Natural Selection by analogy with man's power of selection."
+  },
+  {
+   "id": "K2",
+   "point": "He uses 'Struggle for Existence' in a large and metaphorical sense that includes dependence of one being on another and, more importantly, success in leaving progeny, not just the life of the individual."
+  },
+  {
+   "id": "K3",
+   "point": "A struggle for existence follows inevitably from the high geometrical rate at which all organic beings tend to increase, since more individuals are produced than can possibly survive; he describes this as the doctrine of Malthus applied to the whole animal and vegetable kingdoms."
+  },
+  {
+   "id": "K4",
+   "point": "Calculations illustrate this: even the slow-breeding elephant would leave about fifteen million descendants from one pair after five centuries, and an annual plant producing only two seeds would yield a million plants in twenty years."
+  },
+  {
+   "id": "K5",
+   "point": "Real evidence comes from the astonishingly rapid spread of domestic animals run wild in South America and Australia and of introduced plants, explained by favourable conditions reducing destruction rather than by increased fertility."
+  },
+  {
+   "id": "K6",
+   "point": "The average number of a species depends only indirectly on how many eggs or seeds it produces, because large numbers mainly compensate for heavy destruction, usually early in life; the Fulmar petrel lays one egg yet is believed to be the most numerous bird in the world."
+  },
+  {
+   "id": "K7",
+   "point": "The exact checks on increase are obscure, but they include destruction of seedlings, as when 295 of 357 marked weed seedlings were destroyed chiefly by slugs and insects, and competition between plants, as when nine of twenty species on an unmown plot of turf perished."
+  },
+  {
+   "id": "K8",
+   "point": "Food sets the extreme limit to a species' increase, but being preyed upon often determines its average numbers, as with game animals whose stock depends chiefly on the destruction of vermin."
+  },
+  {
+   "id": "K9",
+   "point": "Climate is an important check, as when the winter of 1854-55 destroyed four-fifths of the birds on Darwin's grounds, but it acts largely indirectly by reducing food and by favouring competing species, except in Arctic regions, snow-capped summits or absolute deserts."
+  },
+  {
+   "id": "K10",
+   "point": "Organisms are linked by complex webs of relations: enclosure of a Staffordshire heath and planting it with Scotch fir greatly changed its plants and birds, and cats may affect the frequency of red clover and heartsease by controlling the mice that destroy humble-bee nests."
+  },
+  {
+   "id": "K11",
+   "point": "The struggle is most severe between individuals and varieties of the same species, and generally more severe between species of the same genus than between species of distinct genera, as shown by one thrush, rat or cockroach species displacing another."
+  },
+  {
+   "id": "K12",
+   "point": "The structure of every organic being is essentially related to that of the other organisms it competes with, escapes from or preys on, as in the dandelion's plumed seed and the water-beetle's legs, and imagining how to give a species an advantage reveals our ignorance of these mutual relations."
+  }
+ ]
+}

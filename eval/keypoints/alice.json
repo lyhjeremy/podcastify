@@ -1,0 +1,54 @@
+{
+ "source": "alice",
+ "model": "opus (claude -p)",
+ "points": [
+  {
+   "id": "K1",
+   "point": "Bored on a riverbank beside her sister, Alice follows a White Rabbit with a waistcoat and watch down a rabbit-hole and falls slowly down a deep well."
+  },
+  {
+   "id": "K2",
+   "point": "In a hall of locked doors she finds a tiny golden key that opens a fifteen-inch door to a lovely garden, but she is too large to pass through it."
+  },
+  {
+   "id": "K3",
+   "point": "Drinking from a bottle labelled 'DRINK ME' shrinks her to ten inches, but she has left the key on the glass table out of reach, and eating an 'EAT ME' cake makes her grow over nine feet tall."
+  },
+  {
+   "id": "K4",
+   "point": "Alice weeps a pool of tears, shrinks again by holding the Rabbit's fan, and swims in the pool with a Mouse and other creatures, repeatedly offending the Mouse by talking about her cat Dinah."
+  },
+  {
+   "id": "K5",
+   "point": "To get dry, the Dodo organises a Caucus-race in which everybody wins, and Alice hands out comfits as prizes and is given her own thimble back as a prize."
+  },
+  {
+   "id": "K6",
+   "point": "Mistaken by the White Rabbit for his housemaid Mary Ann, Alice drinks from a bottle in his house and grows so large she fills it, then kicks Bill the Lizard up the chimney and shrinks by eating pebbles that turn into cakes."
+  },
+  {
+   "id": "K7",
+   "point": "A hookah-smoking Caterpillar questions who Alice is and tells her that one side of a mushroom will make her taller and the other shorter, which lets her control her size."
+  },
+  {
+   "id": "K8",
+   "point": "At the Duchess's peppery kitchen, the Duchess hands Alice a baby that turns into a pig, and the grinning Cheshire Cat tells her everyone there is mad before vanishing until only its grin remains."
+  },
+  {
+   "id": "K9",
+   "point": "At a mad tea-party, the Hatter, March Hare and sleeping Dormouse are stuck at six o'clock forever because the Hatter quarrelled with Time, and Alice leaves in disgust at their rudeness."
+  },
+  {
+   "id": "K10",
+   "point": "Alice finally enters the garden, where the Queen of Hearts constantly orders beheadings during a croquet game played with flamingo mallets, hedgehog balls and soldier arches, and Alice hides three gardeners to save them."
+  },
+  {
+   "id": "K11",
+   "point": "The Gryphon takes Alice to the sobbing Mock Turtle, who describes his school under the sea and, with the Gryphon, performs the Lobster Quadrille and sings 'Beautiful Soup'."
+  },
+  {
+   "id": "K12",
+   "point": "At the trial of the Knave of Hearts for stealing the Queen's tarts, Alice grows to full size, calls the court 'nothing but a pack of cards', and wakes on the bank to find her adventures were a dream, which her sister then imagines in turn."
+  }
+ ]
+}
