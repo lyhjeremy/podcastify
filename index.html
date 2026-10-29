@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Podcastify: any EPUB or article as a two-host podcast</title>
-<meta name="description" content="A free Python tool that turns an EPUB or article into a two-voice podcast MP3 and transcript, with free edge-tts voices and an optional Claude rewrite." />
+<title>Podcastify: any EPUB or article as a two-host podcast, with citations</title>
+<meta name="description" content="A free Python tool that turns an EPUB or article into a two-host podcast MP3 with chapters. LLM mode cites the source sentence behind every claim and checks each line against it." />
 <link rel="stylesheet" href="assets/family.css"/>
 <style>
   *{box-sizing:border-box;border-radius:0}
@@ -25,6 +25,7 @@
   .cue .s{font-family:var(--font-display);font-weight:600;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal-2);padding-top:2px}
   .cue li.b .s{color:var(--signal)}
   .cue li.b .t{font-family:var(--font-display);font-style:italic}
+  .cue .t code{color:var(--ink-2);font-size:.78em;white-space:nowrap}
   .cue .t{overflow-wrap:anywhere}
   .cue .end{font-family:var(--font-mono);font-size:13.5px;color:var(--ink-2);margin:10px 0 0;border-top:2px solid var(--ink);padding-top:8px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .cap{font-family:var(--font-body);font-size:13.5px;color:var(--ink-2);margin:8px 0 0}
@@ -51,46 +52,44 @@
 <main class="page">
   <p class="eyebrow">A free, open-source Python tool</p>
   <h1>Podcastify</h1>
-  <p class="lede">Turns an e-book or article into a two-host podcast. One host narrates, a co-host chimes in, and free neural voices render it to a single MP3 with a transcript.</p>
+  <p class="lede">Turns an e-book or article into a two-host podcast. In LLM mode it reads the whole source, writes a conversation in which every factual line cites the sentences it rests on, checks each line against them, and renders an MP3 with chapters.</p>
 
   <div class="cue">
-    <h2>Running order of a sample episode</h2>
+    <h2>The opening of a sample episode, with its citations</h2>
     <ol>
-      <li class="b"><span class="s">Sam</span><span class="t">Welcome to Podcastify. Today we're getting into alice-excerpt.</span></li>
-      <li><span class="s">Alex</span><span class="t">That's right. Let's dive in.</span></li>
-      <li><span class="s">Alex</span><span class="t">Alice was beginning to get very tired of sitting by her sister on the bank...</span></li>
-      <li><span class="s">Alex</span><span class="t">I shall be late!' (when she thought it over afterwards...</span></li>
-      <li class="b"><span class="s">Sam</span><span class="t">Let me make sure I'm following.</span></li>
-      <li><span class="s">Alex</span><span class="t">Stay with me, it builds.</span></li>
-      <li><span class="s">Alex</span><span class="t">Either the well was very deep, or she fell very slowly...</span></li>
-      <li class="b"><span class="s">Sam</span><span class="t">That's a great place to wrap up. Thanks for listening to Podcastify.</span></li>
-      <li><span class="s">Alex</span><span class="t">See you next time.</span></li>
+      <li><span class="s">Alex</span><span class="t">Welcome. Today we're talking about Alice's Adventures in Wonderland, by Lewis Carroll, the whole book.</span></li>
+      <li class="b"><span class="s">Sam</span><span class="t">Let's start at the very beginning. How does Alice end up in Wonderland?</span></li>
+      <li><span class="s">Alex</span><span class="t">A Rabbit takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch... <code>S7</code></span></li>
+      <li class="b"><span class="s">Sam</span><span class="t">And then she just jumps in the hole? <code>S8</code></span></li>
+      <li><span class="s">Alex</span><span class="t">Right away. Down she goes, never once considering how in the world she was to get out again... <code>S8 S9</code></span></li>
+      <li class="b"><span class="s">Sam</span><span class="t">What does she find at the bottom?</span></li>
+      <li><span class="s">Alex</span><span class="t">A hall of locked doors. Then a little glass table with a tiny golden key... <code>S46-S49</code></span></li>
     </ol>
-    <p class="end"><span>alice-excerpt.podcast.mp3</span><span>119.3 s</span></p>
+    <p class="end"><span>alice.episode.mp3, 4 chapters</span><span>5:55</span></p>
   </div>
-  <p class="cap">From <code>python podcastify.py alice-excerpt.txt</code> on the first 1,800 characters of <em>Alice's Adventures in Wonderland</em> (Project Gutenberg), 2026-10-26. Duration measured with ffprobe.</p>
-
-  <h3>Why two hosts</h3>
-  <p>An audiobook is one voice reading at you. A second voice every few paragraphs is easier to stay with on a walk or a commute. Podcastify takes text you already have and stages it for two voices.</p>
+  <p class="cap">From the eval run (<code>eval/run_eval.py</code>, the same pipeline as <code>--mode llm --minutes 6</code>) on the whole of <em>Alice's Adventures in Wonderland</em> (Project Gutenberg, public domain), 2026-10-29. <code>S7</code> is the seventh sentence of the source; every claim line was checked against the sentences it cites. The write-up has the full episode, a transcript that opens each line onto its source, and the eval.</p>
 
   <h3>Two modes</h3>
   <dl class="modes">
-    <div><dt>rule</dt><dd>The default, with no API key. The narrator reads the source in three-sentence segments and the co-host interjects after every second one. Faithful to the text; the co-host's lines come from a fixed pool, so the result is a two-voice reading.</dd></div>
-    <div><dt>llm</dt><dd>Set <code>ANTHROPIC_API_KEY</code> and Claude rewrites the source as a host and co-host conversation, told to stay faithful and not invent facts. Costs API usage per run.</dd></div>
+    <div><dt>rule</dt><dd>The default, with no model. The narrator reads the source in three-sentence segments and the co-host interjects from a fixed pool. Faithful to the text, and a reading rather than a conversation.</dd></div>
+    <div><dt>llm</dt><dd>Maps the whole source to cited key points, picks an outline for the target length, writes the host and co-host script with citations, and checks every line; lines that fail are rewritten once or dropped. Runs through the local <code>claude -p</code> CLI on a Claude subscription, or the Anthropic API when <code>ANTHROPIC_API_KEY</code> is set.</dd></div>
   </dl>
 
-  <h3>Run it</h3>
-  <pre>pip install edge-tts ebooklib beautifulsoup4
-python podcastify.py book.epub                 # book.podcast.mp3 + transcript
-python podcastify.py article.txt --script-only # transcript only
-python podcastify.py book.epub --mode llm      # Claude rewrite</pre>
-  <p class="cap">ffmpeg is recommended for joining the segments. Voices default to en-US-AndrewNeural and en-US-AvaNeural; <code>--voice-a</code> and <code>--voice-b</code> take any edge-tts voice.</p>
+  <h3>What the eval found</h3>
+  <p>On four sources (a novel, an essay, a nonfiction chapter and a Wikipedia article), six-minute LLM episodes covered 7.4 of 12 frozen key points on average, against 4.4 for rule mode reading the same number of words. A blind judge preferred the LLM script on all four. The grounding check failed 9 of 151 claim lines, but a second checker found as many unsupported lines after the repair as before it, so what the check mainly adds is a record a reader can verify line by line.</p>
 
-  <div class="note"><b>Bring your own text.</b> Podcastify ships no books or audio. Use files you own or public-domain titles, for personal listening. The text of each turn is sent to Microsoft's edge-tts service to be voiced, and in <code>llm</code> mode the source goes to Anthropic's API.</div>
+  <h3>Run it</h3>
+  <pre>pip install -r requirements.txt
+python podcastify.py book.epub                  # rule mode, no LLM
+python podcastify.py book.epub --mode llm       # grounded conversation
+python podcastify.py book.epub --mode llm --minutes 12 -o book.m4b</pre>
+  <p class="cap">ffmpeg and ffprobe are required. Voices default to en-US-AndrewNeural and en-US-AvaNeural; <code>--voice-a</code> and <code>--voice-b</code> take any edge-tts voice.</p>
+
+  <div class="note"><b>Bring your own text.</b> Podcastify ships no books, and its only audio is the sample episode. Use files you own or public-domain titles, for personal listening. Each line is sent to Microsoft's edge-tts service to be voiced, and in <code>llm</code> mode the source goes to Anthropic, through the Claude CLI or the API.</div>
 
   <a class="btn" href="https://github.com/lyhjeremy/podcastify">Get it on GitHub</a>
 
-  <footer>Python, edge-tts, ffmpeg, optional Claude · MIT © 2026 Jeremy Lee</footer>
+  <footer>Python, edge-tts, ffmpeg, Claude through <code>claude -p</code>, sentence-transformers · MIT © 2026 Jeremy Lee</footer>
 </main>
 </body>
 </html>

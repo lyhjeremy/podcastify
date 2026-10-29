@@ -61,12 +61,15 @@ def _get(url: str) -> str:
 
 
 def unwrap(text: str) -> str:
-    """Join hard-wrapped lines into paragraphs; drop _italic_ markers."""
+    """Join hard-wrapped lines into paragraphs; drop _italic_ markers; em dash to "--"."""
     paras = re.split(r"\n\s*\n", text.replace("\r\n", "\n"))
     out = []
     for p in paras:
         p = re.sub(r"\s*\n\s*", " ", p).strip()
         p = re.sub(r"(?<!\w)_([^_]+)_(?!\w)", r"\1", p)
+        # Em dashes become "--", the old Project Gutenberg plain-text convention,
+        # so quoted source text can sit on the site under the no-em-dash rule.
+        p = p.replace("\u2014", "--")
         if p:
             out.append(p)
     return "\n\n".join(out) + "\n"

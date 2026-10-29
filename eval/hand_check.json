@@ -1,0 +1,85 @@
+{
+ "reader": "read by hand on 2026-10-29 against the cited sentences, before looking at either checker's verdict",
+ "verdicts": {
+  "alice:20": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "origin3:37": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "alice:51": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "origin3:31": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "civil:27": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "greatstink:52": {
+   "verdict": "supported",
+   "note": "Leans on the previous line; the cited sentence covers it."
+  },
+  "greatstink:32": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "origin3:39": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "greatstink:10": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "origin3:63": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "alice:61": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "civil:50": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "alice:46": {
+   "verdict": "supported",
+   "note": "\"gets bolder\" paraphrases \"surprised at her own courage\"; counted as supported."
+  },
+  "greatstink:59": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "greatstink:24": {
+   "verdict": "partly",
+   "note": "\"That points at the water, not the air\" is an inference the cited sentences do not state."
+  },
+  "civil:54": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "greatstink:18": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "alice:11": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "origin3:55": {
+   "verdict": "supported",
+   "note": ""
+  },
+  "alice:31": {
+   "verdict": "supported",
+   "note": ""
+  }
+ }
+}

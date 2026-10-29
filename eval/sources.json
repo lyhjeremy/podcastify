@@ -5,7 +5,7 @@
   "kind": "novel, whole book",
   "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
   "license": "Public domain (Project Gutenberg eBook #11)",
-  "chars": 143222,
+  "chars": 143485,
   "words": 26439
  },
  "civil": {
@@ -14,7 +14,7 @@
   "kind": "essay",
   "url": "https://www.gutenberg.org/cache/epub/71/pg71.txt",
   "license": "Public domain (Project Gutenberg eBook #71)",
-  "chars": 51091,
+  "chars": 51135,
   "words": 9337
  },
  "origin3": {
@@ -23,7 +23,7 @@
   "kind": "nonfiction chapter",
   "url": "https://www.gutenberg.org/cache/epub/1228/pg1228.txt",
   "license": "Public domain (Project Gutenberg eBook #1228, first edition)",
-  "chars": 35675,
+  "chars": 35685,
   "words": 6191
  },
  "greatstink": {
@@ -32,7 +32,7 @@
   "kind": "encyclopedia article",
   "url": "https://en.wikipedia.org/w/index.php?title=Great_Stink&oldid=1381900566",
   "license": "CC BY-SA 4.0, Wikipedia revision 1381900566 (2026-10-25)",
-  "chars": 26624,
+  "chars": 26640,
   "words": 4420
  }
 }

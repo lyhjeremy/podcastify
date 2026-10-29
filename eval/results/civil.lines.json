@@ -1,0 +1,2578 @@
+{
+"source": "civil",
+"lines": [
+{
+"speaker": "A",
+"text": "Today we're talking about \"On the Duty of Civil Disobedience,\" an essay by Henry David Thoreau.",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"check": {
+"local": {
+"sim": 0.301,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Only names the work and author.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+0.0,
+5.88
+],
+"spans": [
+[
+0,
+149
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Let's start at the beginning. How does he open?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S48",
+"S21"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking how the essay opens; presupposes nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+5.88,
+3.0
+],
+"spans": [],
+"auto_spans": [
+[
+7019,
+7091
+],
+[
+2967,
+3089
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He heartily accepts the motto, \"That government is best which governs least.\" Then he goes further. He believes the best government governs not at all, once men are prepared for it.",
+"section": 0,
+"claim": true,
+"src": [
+"S1",
+"S2"
+],
+"check": {
+"local": {
+"sim": 0.803,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S1 and S2 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+8.88,
+10.992
+],
+"spans": [
+[
+0,
+149
+],
+[
+150,
+356
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So he's against government entirely?",
+"section": 0,
+"claim": true,
+"src": [
+"S2"
+],
+"check": {
+"local": {
+"sim": 0.325,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question presupposing nothing beyond prior line.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+19.872,
+2.448
+],
+"spans": [
+[
+150,
+356
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not quite. He calls government at best an expedient. But most governments are usually, and all governments are sometimes, inexpedient.",
+"section": 0,
+"claim": true,
+"src": [
+"S3"
+],
+"check": {
+"local": {
+"sim": 0.74,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S3 states government is at best an expedient; most usually, all sometimes, inexpedient.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+22.32,
+8.52
+],
+"spans": [
+[
+357,
+478
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Okay. But in a democracy, the majority decides. Isn't that fair?",
+"section": 0,
+"claim": true,
+"src": [
+"S22"
+],
+"check": {
+"local": {
+"sim": 0.583,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "Question posing a challenge; no claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+30.84,
+5.496
+],
+"spans": [
+[
+3091,
+3396
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says majorities rule not because they are likely to be right, or because it seems fairest to the minority. They rule because they are physically the strongest.",
+"section": 0,
+"claim": true,
+"src": [
+"S22"
+],
+"check": {
+"local": {
+"sim": 0.612,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly paraphrases S22.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+36.336,
+8.688
+],
+"spans": [
+[
+3091,
+3396
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ouch. So what should majorities decide?",
+"section": 0,
+"claim": true,
+"src": [
+"S24"
+],
+"check": {
+"local": {
+"sim": 0.451,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "Reaction and question; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+45.024,
+3.528
+],
+"spans": [
+[
+3517,
+3723
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Only questions where expediency applies. Right and wrong should be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+"section": 0,
+"claim": true,
+"src": [
+"S24",
+"S25"
+],
+"check": {
+"local": {
+"sim": 0.811,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S24 and S25 support expediency, conscience, and the question about resigning conscience.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+48.552,
+10.872
+],
+"spans": [
+[
+3517,
+3723
+],
+[
+3724,
+3824
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And his answer?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S49",
+"S47"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking for his answer; presupposes nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+59.424,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+7092,
+7155
+],
+[
+6843,
+7017
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He asks why every man has a conscience, then. We should be men first, and subjects afterward. Respect the right more than the law.",
+"section": 0,
+"claim": true,
+"src": [
+"S26",
+"S27",
+"S28"
+],
+"check": {
+"local": {
+"sim": 0.813,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S26-S28 match; 'respect the right more than the law' paraphrases S28.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+61.296,
+7.68
+],
+"spans": [
+[
+3825,
+3862
+],
+[
+3863,
+3923
+],
+[
+3924,
+4005
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "That's a strong line. It puts the individual first.",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S27",
+"S2"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host's own reaction and opinion about the line.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+68.976,
+3.816
+],
+"spans": [],
+"auto_spans": [
+[
+3863,
+3923
+],
+[
+150,
+356
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "And it gets personal. He says he cannot for an instant recognize as his government one that is also the slave's government.",
+"section": 0,
+"claim": true,
+"src": [
+"S50"
+],
+"check": {
+"local": {
+"sim": 0.668,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S50.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+72.792,
+7.008
+],
+"spans": [
+[
+7156,
+7272
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So when is it right to rebel? Every government has flaws.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S57",
+"S51"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question and general remark; no specific claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+79.8,
+3.888
+],
+"spans": [],
+"auto_spans": [
+[
+8069,
+8367
+],
+[
+7274,
+7453
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says all men recognize the right of revolution, when tyranny or inefficiency is great and unendurable. Minor evils he can tolerate. All machines have their friction.",
+"section": 1,
+"claim": true,
+"src": [
+"S51",
+"S54"
+],
+"check": {
+"local": {
+"sim": 0.692,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S51 gives right of revolution; S54 shows tolerating minor evils and friction.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+83.688,
+11.064
+],
+"spans": [
+[
+7274,
+7453
+],
+[
+7565,
+7870
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Where is the line?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S137",
+"S59"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking where the line is.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+94.752,
+1.344
+],
+"spans": [],
+"auto_spans": [
+[
+19885,
+19982
+],
+[
+8495,
+9177
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "When the friction comes to have its machine, and oppression and robbery are organized. A sixth of the population enslaved, and a country unjustly conquered by a foreign army.",
+"section": 1,
+"claim": true,
+"src": [
+"S56",
+"S57"
+],
+"check": {
+"local": {
+"sim": 0.73,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S56 and S57.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+96.096,
+10.68
+],
+"spans": [
+[
+7928,
+8068
+],
+[
+8069,
+8367
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the army in question is American.",
+"section": 1,
+"claim": true,
+"src": [
+"S58"
+],
+"check": {
+"local": {
+"sim": 0.521,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S58 says ours is the invading army, i.e. America's.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+106.776,
+2.568
+],
+"spans": [
+[
+8368,
+8493
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. That makes the duty more urgent, he says, because ours is the invading army.",
+"section": 1,
+"claim": true,
+"src": [
+"S58"
+],
+"check": {
+"local": {
+"sim": 0.788,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S58 says the duty is more urgent because ours is the invading army.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+109.344,
+6.0
+],
+"spans": [
+[
+8368,
+8493
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he engage with other thinkers?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S103",
+"S104"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+115.344,
+2.064
+],
+"spans": [],
+"auto_spans": [
+[
+15042,
+15190
+],
+[
+15191,
+15259
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Paley. Paley resolves all civil obligation into expediency. But he never contemplated cases where a people, like an individual, must do justice, cost what it may.",
+"section": 1,
+"claim": true,
+"src": [
+"S59",
+"S61"
+],
+"check": {
+"local": {
+"sim": 0.824,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S59 and S61 state Paley's expediency view and his failure to contemplate cases of justice.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+117.408,
+11.4
+],
+"spans": [
+[
+8495,
+9177
+],
+[
+9231,
+9415
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Give me an example.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S52",
+"S105"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A request for an example; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+128.808,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+7454,
+7503
+],
+[
+15260,
+15302
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "If I have unjustly wrested a plank from a drowning man, I must restore it, though I drown myself. So this people must cease to hold slaves and make war on Mexico, though it cost them their existence.",
+"section": 1,
+"claim": true,
+"src": [
+"S62",
+"S65"
+],
+"check": {
+"local": {
+"sim": 0.979,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S62 and S65 match the plank example and the slaves and Mexico point.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+130.68,
+12.504
+],
+"spans": [
+[
+9416,
+9519
+],
+[
+9633,
+9747
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about voting? Isn't that the normal remedy?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S78",
+"S83"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+143.184,
+3.144
+],
+"spans": [],
+"auto_spans": [
+[
+11853,
+12038
+],
+[
+12293,
+12343
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He calls all voting a sort of gaming, like chequers or backgammon. The character of the voters is not staked. Even voting for the right is doing nothing for it.",
+"section": 1,
+"claim": true,
+"src": [
+"S78",
+"S79",
+"S83"
+],
+"check": {
+"local": {
+"sim": 0.792,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S78, S79 and S83 are restated nearly verbatim.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+146.328,
+9.792
+],
+"spans": [
+[
+11853,
+12038
+],
+[
+12039,
+12081
+],
+[
+12293,
+12343
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So must everyone devote their life to fighting every wrong?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S102",
+"S137"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+156.12,
+3.576
+],
+"spans": [],
+"auto_spans": [
+[
+14729,
+15041
+],
+[
+19885,
+19982
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. But it is his duty to wash his hands of it. He must not pursue his own contemplations sitting upon another man's shoulders.",
+"section": 1,
+"claim": true,
+"src": [
+"S102",
+"S103"
+],
+"check": {
+"local": {
+"sim": 0.65,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S102 and S103 support washing hands and not sitting on another man's shoulders.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+159.696,
+7.848
+],
+"spans": [
+[
+14729,
+15041
+],
+[
+15042,
+15190
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And if the injustice needs me to take part?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S135",
+"S134"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+167.544,
+2.688
+],
+"spans": [],
+"auto_spans": [
+[
+19535,
+19827
+],
+[
+19363,
+19534
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Then, he says, break the law. Let your life be a counter friction to stop the machine.",
+"section": 1,
+"claim": true,
+"src": [
+"S135",
+"S136"
+],
+"check": {
+"local": {
+"sim": 0.766,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S135 and S136 give 'break the law' and 'counter friction to stop the machine'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+170.232,
+5.712
+],
+"spans": [
+[
+19535,
+19827
+],
+[
+19828,
+19884
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Who should act first? Do people wait for a majority?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S149",
+"S163"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Questions that presuppose nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+175.944,
+3.456
+],
+"spans": [],
+"auto_spans": [
+[
+21338,
+21424
+],
+[
+24754,
+24902
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. Abolitionists should at once withdraw their support, in person and property, from the government of Massachusetts. Any man more right than his neighbors already constitutes a majority of one.",
+"section": 2,
+"claim": true,
+"src": [
+"S147",
+"S149"
+],
+"check": {
+"local": {
+"sim": 0.931,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S147 and S149 support not waiting for a majority and the majority of one.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+179.4,
+11.856
+],
+"spans": [
+[
+20948,
+21243
+],
+[
+21338,
+21424
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does one actually withdraw?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S147",
+"S162"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+191.256,
+2.016
+],
+"spans": [],
+"auto_spans": [
+[
+20948,
+21243
+],
+[
+24677,
+24753
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He meets the government once a year, face to face, in the tax-gatherer. The government says, recognize me. His answer is to deny it then.",
+"section": 2,
+"claim": true,
+"src": [
+"S150"
+],
+"check": {
+"local": {
+"sim": 0.668,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S150 describes meeting the government in the tax-gatherer once a year and denying it.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+193.272,
+8.712
+],
+"spans": [
+[
+21426,
+21925
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the consequence is prison.",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S158",
+"S160"
+],
+"check": {
+"local": null,
+"first": "partly",
+"why": "Prison as the just man's place is supported; that it is the consequence of refusing is implied, not stated.",
+"action": "dropped",
+"final": "dropped",
+"original": "And the consequence is prison."
+},
+"dropped": true,
+"spans": [],
+"auto_spans": [
+[
+23646,
+23742
+],
+[
+23996,
+24335
+]
+]
+},
+{
+"speaker": "A",
+"text": "He says under a government that imprisons any unjustly, the true place for a just man is also a prison. It's the only house in a slave state where a free man can abide with honor.",
+"section": 2,
+"claim": true,
+"src": [
+"S158",
+"S160"
+],
+"check": {
+"local": {
+"sim": 0.822,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S158 and S160 are quoted almost verbatim.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+201.984,
+11.376
+],
+"spans": [
+[
+23646,
+23742
+],
+[
+23996,
+24335
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Wouldn't a prisoner lose all influence?",
+"section": 2,
+"claim": true,
+"src": [
+"S161"
+],
+"check": {
+"local": {
+"sim": 0.515,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+213.36,
+2.304
+],
+"spans": [
+[
+24336,
+24676
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says that people don't know how much stronger truth is than error. One who has experienced injustice in his own person combats it more eloquently.",
+"section": 2,
+"claim": true,
+"src": [
+"S161"
+],
+"check": {
+"local": {
+"sim": 0.609,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S161 closely: truth stronger than error; one who experienced injustice combats it more eloquently.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+215.664,
+8.856
+],
+"spans": [
+[
+24336,
+24676
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But what can a few people really do?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S163",
+"S149"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+224.52,
+2.496
+],
+"spans": [],
+"auto_spans": [
+[
+24754,
+24902
+],
+[
+21338,
+21424
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A minority is powerless while it conforms. But it is irresistible when it clogs the machine by its whole weight. The State would have to choose between jailing all just men and giving up war and slavery.",
+"section": 2,
+"claim": true,
+"src": [
+"S163",
+"S164"
+],
+"check": {
+"local": {
+"sim": 0.9,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S163 and S164; 'the machine' is a minor paraphrase of 'clogs'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+227.016,
+12.048
+],
+"spans": [
+[
+24754,
+24902
+],
+[
+24903,
+25029
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What did he make of the State after his own night in jail?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S159",
+"S158"
+],
+"check": {
+"local": null,
+"first": "partly",
+"why": "Question presupposes a night in jail, which is not in the shown sentences.",
+"action": "dropped",
+"final": "dropped",
+"original": "What did he make of the State after his own night in jail?"
+},
+"dropped": true,
+"spans": [],
+"auto_spans": [
+[
+23743,
+23995
+],
+[
+23646,
+23742
+]
+]
+},
+{
+"speaker": "A",
+"text": "He saw the State was half-witted, timid as a lone woman with her silver spoons. He lost his respect for it and pitied it. It has superior physical strength, not superior wit or honesty.",
+"section": 2,
+"claim": true,
+"src": [
+"S217",
+"S219"
+],
+"check": {
+"local": {
+"sim": 0.793,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S217 and S219 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+239.064,
+12.048
+],
+"spans": [
+[
+32404,
+32610
+],
+[
+32726,
+32808
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "\"I was not born to be forced.\" That stays with you.",
+"section": 2,
+"claim": true,
+"src": [
+"S220"
+],
+"check": {
+"local": {
+"sim": 0.824,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Quotes S220 accurately; 'stays with you' is host opinion.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+251.112,
+3.648
+],
+"spans": [
+[
+32809,
+32837
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So is he just angry at the State, or does he hope for something?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S342",
+"S341"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposing nothing beyond asking about attitude or hope.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+254.76,
+4.128
+],
+"spans": [],
+"auto_spans": [
+[
+50579,
+50922
+],
+[
+50353,
+50578
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He hopes. He says the State's force is not wholly brute force, but partly human. So appeal is possible, to its Maker and to the people themselves.",
+"section": 3,
+"claim": true,
+"src": [
+"S288"
+],
+"check": {
+"local": {
+"sim": 0.473,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S288: not wholly brute, partly human; appeal to Maker and to themselves.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+258.888,
+9.816
+],
+"spans": [
+[
+42004,
+42355
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Unlike fire, I guess.",
+"section": 3,
+"claim": true,
+"src": [
+"S289"
+],
+"check": {
+"local": {
+"sim": 0.449,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Contrast with fire follows from S289: no appeal to fire.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+268.704,
+1.896
+],
+"spans": [
+[
+42356,
+42490
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. There is no appeal to fire. And he says he can resist this force with some effect. He cannot, like Orpheus, change the nature of rocks and trees and beasts.",
+"section": 3,
+"claim": true,
+"src": [
+"S289",
+"S291"
+],
+"check": {
+"local": {
+"sim": 0.754,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S289 and S291 on fire, resisting with effect, and Orpheus.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+270.6,
+10.656
+],
+"spans": [
+[
+42356,
+42490
+],
+[
+42846,
+43078
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he reject all authority?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S335",
+"S341"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposes nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+281.256,
+1.944
+],
+"spans": [],
+"auto_spans": [
+[
+49543,
+49848
+],
+[
+50353,
+50578
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is impure unless it has the sanction and consent of the governed.",
+"section": 3,
+"claim": true,
+"src": [
+"S335"
+],
+"check": {
+"local": {
+"sim": 0.6,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S335 on cheerful obedience and need for consent of the governed.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+283.2,
+9.864
+],
+"spans": [
+[
+49543,
+49848
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "B",
+"text": "So what would a good State look like?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S342",
+"S343"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+293.064,
+2.376
+],
+"spans": [],
+"auto_spans": [
+[
+50579,
+50922
+],
+[
+50923,
+51134
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "There will never be a really free and enlightened State until it recognizes the individual as a higher and independent power, from which all its own power is derived.",
+"section": 3,
+"claim": true,
+"src": [
+"S341"
+],
+"check": {
+"local": {
+"sim": 0.954,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S341 nearly verbatim.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+295.44,
+10.632
+],
+"spans": [
+[
+50353,
+50578
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "That flips the usual order.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S287",
+"S342"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host's reaction or opinion about the ordering.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+306.072,
+2.04
+],
+"spans": [],
+"auto_spans": [
+[
+41964,
+42003
+],
+[
+50579,
+50922
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He imagines a State just to all men, that treats the individual with respect as a neighbor. It would even tolerate a few living aloof from it, who still fulfill all the duties of neighbors.",
+"section": 3,
+"claim": true,
+"src": [
+"S342"
+],
+"check": {
+"local": {
+"sim": 0.839,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S342 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+308.112,
+11.88
+],
+"spans": [
+[
+50579,
+50922
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A conscience first, a state second. That's the whole essay in a line.",
+"section": 3,
+"claim": true,
+"src": [
+"S27",
+"S341"
+],
+"check": {
+"local": {
+"sim": 0.373,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Host's own summarizing opinion, framed as the host's view.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+319.992,
+5.136
+],
+"spans": [
+[
+3863,
+3923
+],
+[
+50353,
+50578
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but not yet seen anywhere.",
+"section": 3,
+"claim": true,
+"src": [
+"S343"
+],
+"check": {
+"local": {
+"sim": 0.517,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S343: prepares way for more perfect State imagined but not seen.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+325.128,
+7.296
+],
+"spans": [
+[
+50923,
+51134
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Thanks for walking us through Thoreau's essay.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S334",
+"S341"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A thank-you/closing remark that asserts nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+332.424,
+2.496
+],
+"spans": [],
+"auto_spans": [
+[
+49287,
+49541
+],
+[
+50353,
+50578
+]
+],
+"second_check": "no_claim"
+}
+],
+"draft": [
+{
+"speaker": "A",
+"text": "Today we're talking about \"On the Duty of Civil Disobedience,\" an essay by Henry David Thoreau.",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Let's start at the beginning. How does he open?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He heartily accepts the motto, \"That government is best which governs least.\" Then he goes further. He believes the best government governs not at all, once men are prepared for it.",
+"section": 0,
+"claim": true,
+"src": [
+"S1",
+"S2"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So he's against government entirely?",
+"section": 0,
+"claim": true,
+"src": [
+"S2"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not quite. He calls government at best an expedient. But most governments are usually, and all governments are sometimes, inexpedient.",
+"section": 0,
+"claim": true,
+"src": [
+"S3"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Okay. But in a democracy, the majority decides. Isn't that fair?",
+"section": 0,
+"claim": true,
+"src": [
+"S22"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says majorities rule not because they are likely to be right, or because it seems fairest to the minority. They rule because they are physically the strongest.",
+"section": 0,
+"claim": true,
+"src": [
+"S22"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ouch. So what should majorities decide?",
+"section": 0,
+"claim": true,
+"src": [
+"S24"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Only questions where expediency applies. Right and wrong should be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+"section": 0,
+"claim": true,
+"src": [
+"S24",
+"S25"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And his answer?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He asks why every man has a conscience, then. We should be men first, and subjects afterward. Respect the right more than the law.",
+"section": 0,
+"claim": true,
+"src": [
+"S26",
+"S27",
+"S28"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "That's a strong line. It puts the individual first.",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "And it gets personal. He says he cannot for an instant recognize as his government one that is also the slave's government.",
+"section": 0,
+"claim": true,
+"src": [
+"S50"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So when is it right to rebel? Every government has flaws.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says all men recognize the right of revolution, when tyranny or inefficiency is great and unendurable. Minor evils he can tolerate. All machines have their friction.",
+"section": 1,
+"claim": true,
+"src": [
+"S51",
+"S54"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Where is the line?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "When the friction comes to have its machine, and oppression and robbery are organized. A sixth of the population enslaved, and a country unjustly conquered by a foreign army.",
+"section": 1,
+"claim": true,
+"src": [
+"S56",
+"S57"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the army in question is American.",
+"section": 1,
+"claim": true,
+"src": [
+"S58"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. That makes the duty more urgent, he says, because ours is the invading army.",
+"section": 1,
+"claim": true,
+"src": [
+"S58"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he engage with other thinkers?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Paley. Paley resolves all civil obligation into expediency. But he never contemplated cases where a people, like an individual, must do justice, cost what it may.",
+"section": 1,
+"claim": true,
+"src": [
+"S59",
+"S61"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Give me an example.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "If I have unjustly wrested a plank from a drowning man, I must restore it, though I drown myself. So this people must cease to hold slaves and make war on Mexico, though it cost them their existence.",
+"section": 1,
+"claim": true,
+"src": [
+"S62",
+"S65"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about voting? Isn't that the normal remedy?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He calls all voting a sort of gaming, like chequers or backgammon. The character of the voters is not staked. Even voting for the right is doing nothing for it.",
+"section": 1,
+"claim": true,
+"src": [
+"S78",
+"S79",
+"S83"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So must everyone devote their life to fighting every wrong?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. But it is his duty to wash his hands of it. He must not pursue his own contemplations sitting upon another man's shoulders.",
+"section": 1,
+"claim": true,
+"src": [
+"S102",
+"S103"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And if the injustice needs me to take part?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Then, he says, break the law. Let your life be a counter friction to stop the machine.",
+"section": 1,
+"claim": true,
+"src": [
+"S135",
+"S136"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Who should act first? Do people wait for a majority?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. Abolitionists should at once withdraw their support, in person and property, from the government of Massachusetts. Any man more right than his neighbors already constitutes a majority of one.",
+"section": 2,
+"claim": true,
+"src": [
+"S147",
+"S149"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does one actually withdraw?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He meets the government once a year, face to face, in the tax-gatherer. The government says, recognize me. His answer is to deny it then.",
+"section": 2,
+"claim": true,
+"src": [
+"S150"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the consequence is prison.",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He says under a government that imprisons any unjustly, the true place for a just man is also a prison. It's the only house in a slave state where a free man can abide with honor.",
+"section": 2,
+"claim": true,
+"src": [
+"S158",
+"S160"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Wouldn't a prisoner lose all influence?",
+"section": 2,
+"claim": true,
+"src": [
+"S161"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He says that people don't know how much stronger truth is than error. One who has experienced injustice in his own person combats it more eloquently.",
+"section": 2,
+"claim": true,
+"src": [
+"S161"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But what can a few people really do?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A minority is powerless while it conforms. But it is irresistible when it clogs the machine by its whole weight. The State would have to choose between jailing all just men and giving up war and slavery.",
+"section": 2,
+"claim": true,
+"src": [
+"S163",
+"S164"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What did he make of the State after his own night in jail?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "unsupported"
+},
+{
+"speaker": "A",
+"text": "He saw the State was half-witted, timid as a lone woman with her silver spoons. He lost his respect for it and pitied it. It has superior physical strength, not superior wit or honesty.",
+"section": 2,
+"claim": true,
+"src": [
+"S217",
+"S219"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "\"I was not born to be forced.\" That stays with you.",
+"section": 2,
+"claim": true,
+"src": [
+"S220"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So is he just angry at the State, or does he hope for something?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He hopes. He says the State's force is not wholly brute force, but partly human. So appeal is possible, to its Maker and to the people themselves.",
+"section": 3,
+"claim": true,
+"src": [
+"S288"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Unlike fire, I guess.",
+"section": 3,
+"claim": true,
+"src": [
+"S289"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. There is no appeal to fire. And he says he can resist this force with some effect. He cannot, like Orpheus, change the nature of rocks and trees and beasts.",
+"section": 3,
+"claim": true,
+"src": [
+"S289",
+"S291"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he reject all authority?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is impure unless it has the sanction and consent of the governed.",
+"section": 3,
+"claim": true,
+"src": [
+"S335"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what would a good State look like?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "There will never be a really free and enlightened State until it recognizes the individual as a higher and independent power, from which all its own power is derived.",
+"section": 3,
+"claim": true,
+"src": [
+"S341"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "That flips the usual order.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He imagines a State just to all men, that treats the individual with respect as a neighbor. It would even tolerate a few living aloof from it, who still fulfill all the duties of neighbors.",
+"section": 3,
+"claim": true,
+"src": [
+"S342"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A conscience first, a state second. That's the whole essay in a line.",
+"section": 3,
+"claim": true,
+"src": [
+"S27",
+"S341"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but not yet seen anywhere.",
+"section": 3,
+"claim": true,
+"src": [
+"S343"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Thanks for walking us through Thoreau's essay.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+}
+],
+"points": [
+{
+"point": "The author embraces the motto that the best government governs least, and ultimately believes the best government governs not at all, once men are prepared for it.",
+"sents": [
+"S1",
+"S2"
+],
+"importance": 3,
+"part": 0,
+"id": "P1"
+},
+{
+"point": "Majorities rule because they are physically strongest, not because they are right or fair, so majority rule in all cases cannot rest on justice; majorities should decide only questions of expediency, and conscience should decide right and wrong.",
+"sents": [
+"S22",
+"S23",
+"S24"
+],
+"importance": 3,
+"part": 0,
+"id": "P6"
+},
+{
+"point": "The citizen should not resign his conscience to the legislator: we should be men first and subjects afterward, respecting the right more than the law, and bound only to do what he thinks right.",
+"sents": [
+"S25",
+"S26",
+"S27",
+"S28",
+"S29"
+],
+"importance": 3,
+"part": 0,
+"id": "P7"
+},
+{
+"point": "The author cannot recognize as his government one that is also the slave's government, and he cannot without disgrace be associated with it.",
+"sents": [
+"S48",
+"S49",
+"S50"
+],
+"importance": 3,
+"part": 0,
+"id": "P11"
+},
+{
+"point": "All men recognize the right of revolution against unendurable tyranny; minor evils may be tolerated as machine friction, but when oppression and robbery are organized, as with slavery and the unjust conquest of Mexico by an invading American army, honest men should rebel.",
+"sents": [
+"S51",
+"S54",
+"S56",
+"S57",
+"S58"
+],
+"importance": 3,
+"part": 0,
+"id": "P12"
+},
+{
+"point": "Paley reduces civil obligation to expediency, but ignores cases where justice must be done at any cost, like restoring a plank taken from a drowning man, so the nation must cease holding slaves and warring on Mexico even at the cost of its existence.",
+"sents": [
+"S59",
+"S61",
+"S62",
+"S64",
+"S65"
+],
+"importance": 3,
+"part": 0,
+"id": "P13"
+},
+{
+"point": "Voting is a form of gaming with right and wrong that does not stake one's character, leaves right to the majority, and amounts to doing nothing for it.",
+"sents": [
+"S78",
+"S79",
+"S80",
+"S81",
+"S82",
+"S83",
+"S84"
+],
+"importance": 3,
+"part": 1,
+"id": "P17"
+},
+{
+"point": "A man is not bound to devote himself to eradicating every wrong, but he must at least withdraw his own practical support from it and not live at another's expense.",
+"sents": [
+"S102",
+"S103",
+"S104"
+],
+"importance": 3,
+"part": 1,
+"id": "P21"
+},
+{
+"point": "If injustice is merely part of the machine's friction one may let it be, but if it requires you to be the agent of injustice to another, you should break the law and make your life a counter friction, refusing to lend yourself to the wrong you condemn.",
+"sents": [
+"S134",
+"S135",
+"S136",
+"S137"
+],
+"importance": 3,
+"part": 1,
+"id": "P28"
+},
+{
+"point": "Abolitionists should withdraw their support, in person and property, from the Massachusetts government without waiting for a majority, since anyone more right than his neighbors is already a majority of one.",
+"sents": [
+"S147",
+"S148",
+"S149"
+],
+"importance": 3,
+"part": 2,
+"id": "P31"
+},
+{
+"point": "Under a government that imprisons anyone unjustly, the true place for a just man is prison, which the author calls the only honorable place for a free man in a slave state.",
+"sents": [
+"S158",
+"S159",
+"S160"
+],
+"importance": 3,
+"part": 2,
+"id": "P36"
+},
+{
+"point": "A minority is powerless while it conforms but irresistible when it clogs the machinery with its whole weight, and the State would have to choose between jailing all just men and giving up war and slavery.",
+"sents": [
+"S162",
+"S163",
+"S164"
+],
+"importance": 3,
+"part": 2,
+"id": "P38"
+},
+{
+"point": "He concluded the State was half-witted and timid, lost his respect for it and pitied it, since it confronts only a man's body and relies on physical strength rather than wit or honesty.",
+"sents": [
+"S217",
+"S218",
+"S219"
+],
+"importance": 3,
+"part": 3,
+"id": "P53"
+},
+{
+"point": "Because the State's force is partly human, appeal is possible to its makers and to the people themselves, and it can be resisted with effect, unlike fire or nature, so he does not resign himself to things as they are.",
+"sents": [
+"S288",
+"S289",
+"S290",
+"S291"
+],
+"importance": 3,
+"part": 4,
+"id": "P68"
+},
+{
+"point": "Government authority, even that which he is willing to submit to, is impure unless it has the sanction and consent of the governed.",
+"sents": [
+"S335"
+],
+"importance": 3,
+"part": 4,
+"id": "P75"
+},
+{
+"point": "There will never be a truly free and enlightened State until it recognizes the individual as a higher, independent power from which all its own authority derives, and treats him accordingly.",
+"sents": [
+"S341"
+],
+"importance": 3,
+"part": 5,
+"id": "P79"
+},
+{
+"point": "The author imagines a State that is just to all, respects the individual as a neighbor, and tolerates a few living aloof from it while fulfilling their duties as neighbors and fellow-men.",
+"sents": [
+"S342"
+],
+"importance": 3,
+"part": 5,
+"id": "P80"
+}
+]
+}

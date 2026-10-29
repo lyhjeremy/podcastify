@@ -1,0 +1,148 @@
+{
+ "n": 20,
+ "agree_pipeline_exact": 18,
+ "agree_second_exact": 19,
+ "agree_pipeline_pass_fail": 18,
+ "rows": [
+  {
+   "id": "alice:20",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "origin3:37",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "alice:51",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "origin3:31",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "civil:27",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "greatstink:52",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": "Leans on the previous line; the cited sentence covers it."
+  },
+  {
+   "id": "greatstink:32",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "origin3:39",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "greatstink:10",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "origin3:63",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "alice:61",
+   "hand": "supported",
+   "pipeline": "partly",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "civil:50",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "alice:46",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": "\"gets bolder\" paraphrases \"surprised at her own courage\"; counted as supported."
+  },
+  {
+   "id": "greatstink:59",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "greatstink:24",
+   "hand": "partly",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": "\"That points at the water, not the air\" is an inference the cited sentences do not state."
+  },
+  {
+   "id": "civil:54",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "greatstink:18",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "alice:11",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "origin3:55",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  },
+  {
+   "id": "alice:31",
+   "hand": "supported",
+   "pipeline": "supported",
+   "second": "supported",
+   "note": ""
+  }
+ ]
+}

@@ -1,8 +1,10 @@
 # Core
-edge-tts
+edge-tts>=7.3.1
 ebooklib
 beautifulsoup4
 
-# Note: ffmpeg (a system binary, not a pip package) is recommended for clean
-# concatenation and .m4b export. See README for install commands.
-# Optional: set ANTHROPIC_API_KEY to enable --mode llm (natural conversation rewrite).
+# Grounding check, local half (all-MiniLM-L6-v2). Without it the LLM check still runs.
+sentence-transformers
+
+# System binaries, not pip packages: ffmpeg and ffprobe (joining, chapters, durations).
+# llm mode: the Claude CLI signed in (claude.com/claude-code), or ANTHROPIC_API_KEY set.

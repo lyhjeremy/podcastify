@@ -1,88 +1,142 @@
 """
-tts_engine.py - synthesize a two-host script into a single podcast audio file.
-=============================================================================
-Each turn is spoken by the voice assigned to its speaker (A / B) via Microsoft
-edge-tts (free, no API key). Per-turn MP3 segments are rendered, then stitched
-into one file with ffmpeg. ffmpeg is also used for the optional .m4b.
+tts_engine.py - synthesize a two-host script into one audio file with chapters.
+==============================================================================
+Each line is spoken by its speaker's voice (A / B) via Microsoft edge-tts (free,
+no API key), four lines at a time. The per-line MP3s are joined with ffmpeg's
+concat demuxer, then the outline's sections are written as chapters: ID3 CHAP
+frames in an MP3, or chapter atoms in an M4B (AAC) when the output ends in .m4b.
 
     pip install edge-tts
-    # ffmpeg on PATH (or discoverable) for concatenation / .m4b
+    # ffmpeg and ffprobe on PATH for joining, chapters and durations
 """
 from __future__ import annotations
-import os
-import re
-import shutil
+
 import asyncio
+import json
+import os
+import shutil
 import subprocess
 import tempfile
 
 import edge_tts
 
-# Two natural, conversational US voices by default.
 DEFAULT_VOICES = {"A": "en-US-AndrewNeural", "B": "en-US-AvaNeural"}
 
 
-def find_ffmpeg() -> str | None:
-    """Locate ffmpeg on PATH or in common install locations."""
-    exe = shutil.which("ffmpeg")
+def find_ffmpeg(name: str = "ffmpeg") -> str | None:
+    exe = shutil.which(name)
     if exe:
         return exe
-    candidates = [
-        os.environ.get("FFMPEG_DIR", ""),
-        r"C:\ffmpeg\bin", r"C:\Program Files\ffmpeg\bin",
-        "/usr/bin", "/usr/local/bin", "/opt/homebrew/bin",
-    ]
-    name = "ffmpeg.exe" if os.name == "nt" else "ffmpeg"
-    for c in candidates:
-        if c and os.path.exists(os.path.join(c, name)):
-            return os.path.join(c, name)
+    for c in [os.environ.get("FFMPEG_DIR", ""), r"C:\ffmpeg\bin", r"C:\Program Files\ffmpeg\bin",
+              "/usr/bin", "/usr/local/bin", "/opt/homebrew/bin"]:
+        p = os.path.join(c, name + (".exe" if os.name == "nt" else ""))
+        if c and os.path.exists(p):
+            return p
     return None
 
 
-async def _say(text: str, voice: str, path: str, rate: str = "+0%") -> None:
-    await edge_tts.Communicate(text, voice, rate=rate).save(path)
-
-
-def synthesize(turns, out_path: str, voices=None, rate: str = "+0%",
-               keep_segments: bool = False, progress=print) -> str:
-    """Render `turns` (list of (speaker, text)) to a single MP3 at out_path."""
-    voices = voices or DEFAULT_VOICES
-    ff = find_ffmpeg()
-    workdir = tempfile.mkdtemp(prefix="podcastify_")
-    seg_paths = []
+def duration(path: str) -> float | None:
+    probe = find_ffmpeg("ffprobe")
+    if not probe:
+        return None
+    r = subprocess.run([probe, "-v", "error", "-show_entries", "format=duration", "-of", "json", path],
+                       capture_output=True, text=True)
     try:
-        for i, (spk, text) in enumerate(turns):
-            text = text.strip()
-            if not text:
-                continue
-            seg = os.path.join(workdir, f"seg_{i:04d}.mp3")
-            voice = voices.get(spk, DEFAULT_VOICES["A"])
-            progress(f"  [{i+1}/{len(turns)}] {spk}: {text[:60]}...")
-            asyncio.run(_say(text, voice, seg, rate=rate))
-            seg_paths.append(seg)
+        return float(json.loads(r.stdout)["format"]["duration"])
+    except (KeyError, ValueError):
+        return None
 
-        if not seg_paths:
-            raise RuntimeError("Nothing to synthesize.")
 
-        if ff:
-            listfile = os.path.join(workdir, "list.txt")
-            with open(listfile, "w", encoding="utf-8") as fh:
-                for p in seg_paths:
-                    fh.write(f"file '{p}'\n")
-            subprocess.run(
-                [ff, "-y", "-f", "concat", "-safe", "0", "-i", listfile,
-                 "-c", "copy", out_path],
-                check=True, capture_output=True,
-            )
+async def _render_all(jobs, rate, progress, limit=4):
+    sem = asyncio.Semaphore(limit)
+    done = 0
+
+    async def one(text, voice, path):
+        nonlocal done
+        async with sem:
+            for attempt in range(3):
+                try:
+                    await edge_tts.Communicate(text, voice, rate=rate).save(path)
+                    break
+                except Exception:  # edge-tts drops connections now and then
+                    if attempt == 2:
+                        raise
+                    await asyncio.sleep(2 + attempt * 3)
+            done += 1
+            if done % 10 == 0 or done == len(jobs):
+                progress(f"  rendered {done}/{len(jobs)} lines")
+
+    await asyncio.gather(*(one(*j) for j in jobs))
+
+
+def _ffmeta(chapters: list[tuple[str, float, float]], title: str) -> str:
+    out = [";FFMETADATA1", f"title={_esc(title)}", "artist=Podcastify"]
+    for name, start, end in chapters:
+        out += ["[CHAPTER]", "TIMEBASE=1/1000", f"START={int(start * 1000)}", f"END={int(end * 1000)}",
+                f"title={_esc(name)}"]
+    return "\n".join(out) + "\n"
+
+
+def _esc(s: str) -> str:
+    return "".join("\\" + c if c in "=;#\\\n" else c for c in s)
+
+
+def synthesize(lines, out_path: str, voices=None, rate: str = "+0%", sections=None,
+               title: str = "Podcastify episode", progress=print) -> dict:
+    """Render lines (dicts with speaker/text/section, or (speaker, text) tuples) to out_path.
+
+    Returns {"path", "duration", "timings": [(start, dur) per line], "chapters": [...]}.
+    """
+    voices = voices or DEFAULT_VOICES
+    lines = [l if isinstance(l, dict) else {"speaker": l[0], "text": l[1], "section": 0} for l in lines]
+    lines = [l for l in lines if l["text"].strip()]
+    if not lines:
+        raise RuntimeError("Nothing to synthesize.")
+    ff = find_ffmpeg()
+    if not ff:
+        raise RuntimeError("ffmpeg is required (brew install ffmpeg | winget install Gyan.FFmpeg).")
+    work = tempfile.mkdtemp(prefix="podcastify_")
+    try:
+        jobs = [(l["text"].strip(), voices.get(l["speaker"], DEFAULT_VOICES["A"]),
+                 os.path.join(work, f"seg_{i:04d}.mp3")) for i, l in enumerate(lines)]
+        asyncio.run(_render_all(jobs, rate, progress))
+        durs = [duration(j[2]) or 0.0 for j in jobs]
+        timings, t = [], 0.0
+        for d in durs:
+            timings.append((round(t, 3), round(d, 3)))
+            t += d
+
+        listfile = os.path.join(work, "list.txt")
+        with open(listfile, "w", encoding="utf-8") as fh:
+            fh.writelines(f"file '{j[2]}'\n" for j in jobs)
+        joined = os.path.join(work, "joined.mp3")
+        subprocess.run([ff, "-y", "-f", "concat", "-safe", "0", "-i", listfile, "-c", "copy", joined],
+                       check=True, capture_output=True)
+        total = duration(joined) or t
+
+        chapters = []
+        if sections:
+            starts = {}
+            for l, (st, _) in zip(lines, timings):
+                starts.setdefault(l.get("section", 0), st)
+            keys = sorted(starts)
+            for k_i, k in enumerate(keys):
+                end = starts[keys[k_i + 1]] if k_i + 1 < len(keys) else total
+                name = sections[k]["title"] if k < len(sections) else f"Part {k + 1}"
+                chapters.append((name, 0.0 if k_i == 0 else starts[k], end))
+        meta = os.path.join(work, "meta.txt")
+        with open(meta, "w", encoding="utf-8") as fh:
+            fh.write(_ffmeta(chapters, title))
+
+        if out_path.lower().endswith((".m4b", ".m4a")):
+            cmd = [ff, "-y", "-i", joined, "-i", meta, "-map", "0:a", "-map_metadata", "1",
+                   "-map_chapters", "1", "-c:a", "aac", "-b:a", "64k", "-f", "mp4", out_path]
         else:
-            # Fallback: byte-concatenate MP3s (works for most players).
-            progress("  ffmpeg not found - byte-concatenating segments.")
-            with open(out_path, "wb") as out:
-                for p in seg_paths:
-                    with open(p, "rb") as fh:
-                        out.write(fh.read())
-        progress(f"  wrote {out_path}")
-        return out_path
+            cmd = [ff, "-y", "-i", joined, "-i", meta, "-map", "0:a", "-map_metadata", "1",
+                   "-map_chapters", "1", "-c", "copy", "-id3v2_version", "3", "-write_id3v1", "0", out_path]
+        subprocess.run(cmd, check=True, capture_output=True)
+        progress(f"  wrote {out_path} ({total / 60:.1f} min, {len(chapters)} chapters)")
+        return {"path": out_path, "duration": round(total, 3), "timings": timings,
+                "chapters": [{"title": c[0], "start": round(c[1], 3), "end": round(c[2], 3)} for c in chapters]}
     finally:
-        if not keep_segments:
-            shutil.rmtree(workdir, ignore_errors=True)
+        shutil.rmtree(work, ignore_errors=True)

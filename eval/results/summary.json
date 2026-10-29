@@ -1,0 +1,1655 @@
+{
+ "greatstink": {
+  "source": "greatstink",
+  "title": "Great Stink",
+  "kind": "encyclopedia article",
+  "license": "CC BY-SA 4.0, Wikipedia revision 1381900566 (2026-10-25)",
+  "chars": 26640,
+  "words_source": 4420,
+  "n_points_mapped": 40,
+  "sections": [
+   {
+    "title": "A River of Sewage",
+    "points": [
+     "P1",
+     "P6",
+     "P7",
+     "P2"
+    ]
+   },
+   {
+    "title": "Fear and Failed Fixes",
+    "points": [
+     "P10",
+     "P13",
+     "P17",
+     "P19"
+    ]
+   },
+   {
+    "title": "Parliament Finally Acts",
+    "points": [
+     "P22",
+     "P23",
+     "P3"
+    ]
+   },
+   {
+    "title": "Legacy of the Sewers",
+    "points": [
+     "P31",
+     "P34",
+     "P5",
+     "P40"
+    ]
+   }
+  ],
+  "pipeline_check": {
+   "lines": 70,
+   "claim_lines": 43,
+   "unflagged_claims": 3,
+   "first_pass": {
+    "supported": 40,
+    "partly": 3
+   },
+   "unsupported_rate_first": 0.0,
+   "not_supported_rate_first": 0.07,
+   "actions": {
+    "kept": 67,
+    "dropped": 3
+   },
+   "local_flags": 0,
+   "local_llm_agreement": 0.95
+  },
+  "conds": {
+   "rule": {
+    "lines": 34,
+    "words": 1338,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "yes",
+      "K5": "yes",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "yes",
+      "K10": "partly",
+      "K11": "partly",
+      "K12": "yes"
+     },
+     "score": 8.0,
+     "of": 12,
+     "yes": 7
+    },
+    "second_check": {
+     "note": "verbatim source; supported by construction",
+     "claim_lines": 16,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.0
+    },
+    "duration_s": 502.416,
+    "wpm": 159.8,
+    "chapters": []
+   },
+   "llm-nocheck": {
+    "lines": 70,
+    "words": 1279,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "yes",
+      "K5": "partly",
+      "K6": "partly",
+      "K7": "yes",
+      "K8": "yes",
+      "K9": "yes",
+      "K10": "yes",
+      "K11": "partly",
+      "K12": "yes"
+     },
+     "score": 10.5,
+     "of": 12,
+     "yes": 9
+    },
+    "second_check": {
+     "verdicts": [
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "supported",
+      "partly",
+      "no_claim"
+     ],
+     "claim_lines": 51,
+     "supported": 47,
+     "partly": 4,
+     "unsupported": 0,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.078
+    },
+    "duration_s": 496.896,
+    "wpm": 154.4,
+    "chapters": [
+     {
+      "title": "A River of Sewage",
+      "start": 0.0,
+      "end": 137.592
+     },
+     {
+      "title": "Fear and Failed Fixes",
+      "start": 137.592,
+      "end": 273.384
+     },
+     {
+      "title": "Parliament Finally Acts",
+      "start": 273.384,
+      "end": 384.432
+     },
+     {
+      "title": "Legacy of the Sewers",
+      "start": 384.432,
+      "end": 496.896
+     }
+    ]
+   },
+   "llm": {
+    "lines": 67,
+    "words": 1212,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "yes",
+      "K5": "partly",
+      "K6": "partly",
+      "K7": "yes",
+      "K8": "yes",
+      "K9": "yes",
+      "K10": "partly",
+      "K11": "partly",
+      "K12": "yes"
+     },
+     "score": 10.0,
+     "of": 12,
+     "yes": 8
+    },
+    "second_check": {
+     "verdicts": [
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "unsupported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "partly",
+      "no_claim"
+     ],
+     "claim_lines": 46,
+     "supported": 43,
+     "partly": 2,
+     "unsupported": 1,
+     "unsupported_rate": 0.022,
+     "not_supported_rate": 0.065
+    },
+    "duration_s": 473.448,
+    "wpm": 153.6,
+    "chapters": [
+     {
+      "title": "A River of Sewage",
+      "start": 0.0,
+      "end": 137.592
+     },
+     {
+      "title": "Fear and Failed Fixes",
+      "start": 137.592,
+      "end": 261.72
+     },
+     {
+      "title": "Parliament Finally Acts",
+      "start": 261.72,
+      "end": 373.2
+     },
+     {
+      "title": "Legacy of the Sewers",
+      "start": 373.2,
+      "end": 473.448
+     }
+    ]
+   }
+  },
+  "listen": [
+   {
+    "pair": [
+     "rule",
+     "llm"
+    ],
+    "winner": "llm",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm"
+      ],
+      "preferred": "llm",
+      "why": "Short conversational turns, natural questions and reactions; Script 1 has long dense monologues, filler interjections, and stray headings like 'Background' read aloud."
+     },
+     {
+      "order": [
+       "llm",
+       "rule"
+      ],
+      "preferred": "llm",
+      "why": "Script 1 uses short, natural exchanges with real questions; Script 2 has long dense monologues, filler interjections, and stray section headings read aloud."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "rule",
+     "llm-nocheck"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 uses short conversational turns and natural questions; Script 1 has dense monologues, artifact headings, and repetitive, mismatched filler interjections."
+     },
+     {
+      "order": [
+       "llm-nocheck",
+       "rule"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 uses short, conversational turns with natural questions. Script 2 has dense monologues, filler interjections, and leftover heading artifacts."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "llm-nocheck",
+     "llm"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "llm-nocheck",
+       "llm"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 drops John Snow's introduction and the Doxat quote, leaving a dangling 'he' and 'goes even further,' plus an abrupt jump to Parliament."
+     },
+     {
+      "order": [
+       "llm",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 has dangling references: 'he' with no John Snow introduction, Sam's 'goes even further' lacks setup, and Parliament's shift is unsignposted."
+     }
+    ]
+   }
+  ]
+ },
+ "civil": {
+  "source": "civil",
+  "title": "On the Duty of Civil Disobedience",
+  "kind": "essay",
+  "license": "Public domain (Project Gutenberg eBook #71)",
+  "chars": 51135,
+  "words_source": 9337,
+  "n_points_mapped": 81,
+  "sections": [
+   {
+    "title": "Government and Conscience",
+    "points": [
+     "P1",
+     "P6",
+     "P7",
+     "P11"
+    ]
+   },
+   {
+    "title": "The Duty to Withdraw",
+    "points": [
+     "P12",
+     "P13",
+     "P17",
+     "P21",
+     "P28"
+    ]
+   },
+   {
+    "title": "Refusal and Prison",
+    "points": [
+     "P31",
+     "P36",
+     "P38",
+     "P53"
+    ]
+   },
+   {
+    "title": "Toward a Better State",
+    "points": [
+     "P68",
+     "P75",
+     "P79",
+     "P80"
+    ]
+   }
+  ],
+  "pipeline_check": {
+   "lines": 55,
+   "claim_lines": 31,
+   "unflagged_claims": 2,
+   "first_pass": {
+    "supported": 29,
+    "partly": 2
+   },
+   "unsupported_rate_first": 0.0,
+   "not_supported_rate_first": 0.065,
+   "actions": {
+    "kept": 53,
+    "dropped": 2
+   },
+   "local_flags": 0,
+   "local_llm_agreement": 1.0
+  },
+  "conds": {
+   "rule": {
+    "lines": 26,
+    "words": 1023,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "yes",
+      "K5": "partly",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "no",
+      "K10": "no",
+      "K11": "no",
+      "K12": "no"
+     },
+     "score": 4.5,
+     "of": 12,
+     "yes": 4
+    },
+    "second_check": {
+     "note": "verbatim source; supported by construction",
+     "claim_lines": 12,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.0
+    },
+    "duration_s": 349.104,
+    "wpm": 175.8,
+    "chapters": []
+   },
+   "llm-nocheck": {
+    "lines": 55,
+    "words": 957,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "partly",
+      "K3": "no",
+      "K4": "yes",
+      "K5": "no",
+      "K6": "yes",
+      "K7": "yes",
+      "K8": "partly",
+      "K9": "yes",
+      "K10": "partly",
+      "K11": "partly",
+      "K12": "yes"
+     },
+     "score": 8.0,
+     "of": 12,
+     "yes": 6
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "unsupported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim"
+     ],
+     "claim_lines": 33,
+     "supported": 32,
+     "partly": 0,
+     "unsupported": 1,
+     "unsupported_rate": 0.03,
+     "not_supported_rate": 0.03
+    },
+    "duration_s": 340.392,
+    "wpm": 168.7,
+    "chapters": [
+     {
+      "title": "Government and Conscience",
+      "start": 0.0,
+      "end": 79.8
+     },
+     {
+      "title": "The Duty to Withdraw",
+      "start": 79.8,
+      "end": 176.472
+     },
+     {
+      "title": "Refusal and Prison",
+      "start": 176.472,
+      "end": 260.232
+     },
+     {
+      "title": "Toward a Better State",
+      "start": 260.232,
+      "end": 340.392
+     }
+    ]
+   },
+   "llm": {
+    "lines": 53,
+    "words": 939,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "partly",
+      "K3": "partly",
+      "K4": "yes",
+      "K5": "no",
+      "K6": "yes",
+      "K7": "yes",
+      "K8": "partly",
+      "K9": "yes",
+      "K10": "partly",
+      "K11": "partly",
+      "K12": "yes"
+     },
+     "score": 8.5,
+     "of": 12,
+     "yes": 6
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "partly",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim"
+     ],
+     "claim_lines": 31,
+     "supported": 30,
+     "partly": 1,
+     "unsupported": 0,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.032
+    },
+    "duration_s": 334.92,
+    "wpm": 168.2,
+    "chapters": [
+     {
+      "title": "Government and Conscience",
+      "start": 0.0,
+      "end": 79.8
+     },
+     {
+      "title": "The Duty to Withdraw",
+      "start": 79.8,
+      "end": 175.944
+     },
+     {
+      "title": "Refusal and Prison",
+      "start": 175.944,
+      "end": 254.76
+     },
+     {
+      "title": "Toward a Better State",
+      "start": 254.76,
+      "end": 334.92
+     }
+    ]
+   }
+  },
+  "listen": [
+   {
+    "pair": [
+     "rule",
+     "llm"
+    ],
+    "winner": "llm",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm"
+      ],
+      "preferred": "llm",
+      "why": "Script 2 is genuine conversational dialogue with short turns; Script 1 is long verbatim monologues with hollow, repetitive filler interjections and an abrupt cutoff."
+     },
+     {
+      "order": [
+       "llm",
+       "rule"
+      ],
+      "preferred": "llm",
+      "why": "Natural conversational back-and-forth with short turns; Script 2 reads dense archaic monologues, repetitive filler interjections, and ends abruptly mid-sentence."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "rule",
+     "llm-nocheck"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 is genuine dialogue in short, plain sentences. Script 1 reads long archaic passages aloud with repetitive filler interjections and cuts off mid-sentence."
+     },
+     {
+      "order": [
+       "llm-nocheck",
+       "rule"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 is conversational with short, paraphrased turns. Script 2 reads long dense quotations, uses repetitive filler, and cuts off mid-sentence."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "llm-nocheck",
+     "llm"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "llm-nocheck",
+       "llm"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 drops two Sam prompts, so Alex jumps abruptly to prison and the jailed State without transitions."
+     },
+     {
+      "order": [
+       "llm",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 adds Sam's bridging lines, avoiding back-to-back Alex turns, so prison and jail topic shifts are clearly signposted for listeners."
+     }
+    ]
+   }
+  ]
+ },
+ "origin3": {
+  "source": "origin3",
+  "title": "On the Origin of Species, Chapter III: Struggle for Existence",
+  "kind": "nonfiction chapter",
+  "license": "Public domain (Project Gutenberg eBook #1228, first edition)",
+  "chars": 35685,
+  "words_source": 6191,
+  "n_points_mapped": 53,
+  "sections": [
+   {
+    "title": "Natural Selection Introduced",
+    "points": [
+     "P3",
+     "P4",
+     "P7"
+    ]
+   },
+   {
+    "title": "Why Struggle Is Inevitable",
+    "points": [
+     "P9",
+     "P10",
+     "P16"
+    ]
+   },
+   {
+    "title": "Checks on Increase",
+    "points": [
+     "P21",
+     "P26",
+     "P28"
+    ]
+   },
+   {
+    "title": "Webs of Competition",
+    "points": [
+     "P42",
+     "P47",
+     "P53",
+     "P40"
+    ]
+   }
+  ],
+  "pipeline_check": {
+   "lines": 65,
+   "claim_lines": 39,
+   "unflagged_claims": 2,
+   "first_pass": {
+    "supported": 39
+   },
+   "unsupported_rate_first": 0.0,
+   "not_supported_rate_first": 0.0,
+   "actions": {
+    "kept": 65
+   },
+   "local_flags": 0,
+   "local_llm_agreement": 1.0
+  },
+  "conds": {
+   "rule": {
+    "lines": 30,
+    "words": 1179,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "partly",
+      "K4": "no",
+      "K5": "partly",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "no",
+      "K10": "no",
+      "K11": "partly",
+      "K12": "partly"
+     },
+     "score": 4.0,
+     "of": 12,
+     "yes": 2
+    },
+    "second_check": {
+     "note": "verbatim source; supported by construction",
+     "claim_lines": 14,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.0
+    },
+    "duration_s": 427.728,
+    "wpm": 165.4,
+    "chapters": []
+   },
+   "llm-nocheck": {
+    "lines": 65,
+    "words": 1002,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "no",
+      "K5": "no",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "yes",
+      "K10": "no",
+      "K11": "partly",
+      "K12": "partly"
+     },
+     "score": 5.0,
+     "of": 12,
+     "yes": 4
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "supported",
+      "supported",
+      "partly",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim"
+     ],
+     "claim_lines": 46,
+     "supported": 43,
+     "partly": 3,
+     "unsupported": 0,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.065
+    },
+    "duration_s": 374.904,
+    "wpm": 160.4,
+    "chapters": [
+     {
+      "title": "Natural Selection Introduced",
+      "start": 0.0,
+      "end": 108.504
+     },
+     {
+      "title": "Why Struggle Is Inevitable",
+      "start": 108.504,
+      "end": 193.728
+     },
+     {
+      "title": "Checks on Increase",
+      "start": 193.728,
+      "end": 282.24
+     },
+     {
+      "title": "Webs of Competition",
+      "start": 282.24,
+      "end": 374.904
+     }
+    ]
+   },
+   "llm": {
+    "lines": 65,
+    "words": 1002,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "yes",
+      "K4": "no",
+      "K5": "no",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "yes",
+      "K10": "no",
+      "K11": "partly",
+      "K12": "partly"
+     },
+     "score": 5.0,
+     "of": 12,
+     "yes": 4
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "supported",
+      "supported",
+      "partly",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "partly",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "no_claim"
+     ],
+     "claim_lines": 46,
+     "supported": 43,
+     "partly": 3,
+     "unsupported": 0,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.065
+    },
+    "duration_s": 376.392,
+    "wpm": 159.7,
+    "chapters": [
+     {
+      "title": "Natural Selection Introduced",
+      "start": 0.0,
+      "end": 108.504
+     },
+     {
+      "title": "Why Struggle Is Inevitable",
+      "start": 108.504,
+      "end": 193.728
+     },
+     {
+      "title": "Checks on Increase",
+      "start": 193.728,
+      "end": 282.864
+     },
+     {
+      "title": "Webs of Competition",
+      "start": 282.864,
+      "end": 376.392
+     }
+    ]
+   }
+  },
+  "listen": [
+   {
+    "pair": [
+     "rule",
+     "llm"
+    ],
+    "winner": "llm",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm"
+      ],
+      "preferred": "llm",
+      "why": "Script 2 uses short, conversational exchanges with genuine questions; Script 1 reads dense Victorian text verbatim with hollow, repetitive filler interjections."
+     },
+     {
+      "order": [
+       "llm",
+       "rule"
+      ],
+      "preferred": "llm",
+      "why": "Script 1 is natural, paced dialogue; Script 2 reads raw Victorian text in long blocks with mismatched, filler interjections."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "rule",
+     "llm-nocheck"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 uses short, conversational exchanges with genuine questions; Script 1 reads dense Victorian text verbatim with hollow, repetitive filler interjections."
+     },
+     {
+      "order": [
+       "llm-nocheck",
+       "rule"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 is natural, paced dialogue; Script 2 reads raw Victorian text in long blocks with mismatched, filler interjections."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "llm-nocheck",
+     "llm"
+    ],
+    "winner": null,
+    "orders": [
+     {
+      "order": [
+       "llm-nocheck",
+       "llm"
+      ],
+      "preferred": null,
+      "why": "The two scripts are word-for-word identical, so they would sound the same and be equally easy to follow."
+     },
+     {
+      "order": [
+       "llm",
+       "llm-nocheck"
+      ],
+      "preferred": null,
+      "why": "The two scripts are word-for-word identical, so they would sound the same and be equally easy to follow."
+     }
+    ]
+   }
+  ]
+ },
+ "alice": {
+  "source": "alice",
+  "title": "Alice's Adventures in Wonderland",
+  "kind": "novel, whole book",
+  "license": "Public domain (Project Gutenberg eBook #11)",
+  "chars": 143485,
+  "words_source": 26439,
+  "n_points_mapped": 169,
+  "sections": [
+   {
+    "title": "Down the Rabbit-Hole",
+    "points": [
+     "P2",
+     "P7",
+     "P9",
+     "P10"
+    ]
+   },
+   {
+    "title": "Changing Sizes, Changing Self",
+    "points": [
+     "P16",
+     "P37",
+     "P50",
+     "P57"
+    ]
+   },
+   {
+    "title": "Madness and Tea",
+    "points": [
+     "P62",
+     "P73",
+     "P75",
+     "P87"
+    ]
+   },
+   {
+    "title": "Court and Waking",
+    "points": [
+     "P98",
+     "P99",
+     "P163",
+     "P164",
+     "P169"
+    ]
+   }
+  ],
+  "pipeline_check": {
+   "lines": 63,
+   "claim_lines": 38,
+   "unflagged_claims": 0,
+   "first_pass": {
+    "supported": 34,
+    "partly": 4
+   },
+   "unsupported_rate_first": 0.0,
+   "not_supported_rate_first": 0.105,
+   "actions": {
+    "kept": 59,
+    "rewritten": 3,
+    "dropped after rewrite": 1
+   },
+   "local_flags": 3,
+   "local_llm_agreement": 0.816
+  },
+  "conds": {
+   "rule": {
+    "lines": 33,
+    "words": 1180,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "no",
+      "K3": "no",
+      "K4": "no",
+      "K5": "no",
+      "K6": "no",
+      "K7": "no",
+      "K8": "no",
+      "K9": "no",
+      "K10": "no",
+      "K11": "no",
+      "K12": "no"
+     },
+     "score": 1.0,
+     "of": 12,
+     "yes": 1
+    },
+    "second_check": {
+     "note": "verbatim source; supported by construction",
+     "claim_lines": 15,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.0
+    },
+    "duration_s": 367.248,
+    "wpm": 192.8,
+    "chapters": []
+   },
+   "llm-nocheck": {
+    "lines": 63,
+    "words": 1022,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "partly",
+      "K4": "no",
+      "K5": "no",
+      "K6": "partly",
+      "K7": "yes",
+      "K8": "partly",
+      "K9": "partly",
+      "K10": "partly",
+      "K11": "no",
+      "K12": "partly"
+     },
+     "score": 6.0,
+     "of": 12,
+     "yes": 3
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "no_claim"
+     ],
+     "claim_lines": 42,
+     "supported": 42,
+     "partly": 0,
+     "unsupported": 0,
+     "unsupported_rate": 0.0,
+     "not_supported_rate": 0.0
+    },
+    "duration_s": 355.464,
+    "wpm": 172.5,
+    "chapters": [
+     {
+      "title": "Down the Rabbit-Hole",
+      "start": 0.0,
+      "end": 93.336
+     },
+     {
+      "title": "Changing Sizes, Changing Self",
+      "start": 93.336,
+      "end": 169.944
+     },
+     {
+      "title": "Madness and Tea",
+      "start": 169.944,
+      "end": 242.592
+     },
+     {
+      "title": "Court and Waking",
+      "start": 242.592,
+      "end": 355.464
+     }
+    ]
+   },
+   "llm": {
+    "lines": 62,
+    "words": 1022,
+    "coverage": {
+     "marks": {
+      "K1": "yes",
+      "K2": "yes",
+      "K3": "partly",
+      "K4": "no",
+      "K5": "no",
+      "K6": "partly",
+      "K7": "yes",
+      "K8": "partly",
+      "K9": "partly",
+      "K10": "partly",
+      "K11": "no",
+      "K12": "partly"
+     },
+     "score": 6.0,
+     "of": 12,
+     "yes": 3
+    },
+    "second_check": {
+     "verdicts": [
+      "no_claim",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "supported",
+      "supported",
+      "supported",
+      "no_claim",
+      "unsupported",
+      "supported",
+      "no_claim",
+      "no_claim"
+     ],
+     "claim_lines": 42,
+     "supported": 41,
+     "partly": 0,
+     "unsupported": 1,
+     "unsupported_rate": 0.024,
+     "not_supported_rate": 0.024
+    },
+    "duration_s": 354.624,
+    "wpm": 172.9,
+    "chapters": [
+     {
+      "title": "Down the Rabbit-Hole",
+      "start": 0.0,
+      "end": 93.336
+     },
+     {
+      "title": "Changing Sizes, Changing Self",
+      "start": 93.336,
+      "end": 174.768
+     },
+     {
+      "title": "Madness and Tea",
+      "start": 174.768,
+      "end": 247.08
+     },
+     {
+      "title": "Court and Waking",
+      "start": 247.08,
+      "end": 354.624
+     }
+    ]
+   }
+  },
+  "listen": [
+   {
+    "pair": [
+     "rule",
+     "llm"
+    ],
+    "winner": "llm",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm"
+      ],
+      "preferred": "llm",
+      "why": "Script 2 is natural, short-turn dialogue; Script 1 reads long raw text with hollow, repetitive filler interjections that break mid-sentence."
+     },
+     {
+      "order": [
+       "llm",
+       "rule"
+      ],
+      "preferred": "llm",
+      "why": "Script 1 uses short, natural exchanges. Script 2 reads long raw text with mid-sentence splits and filler interjections that don't fit."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "rule",
+     "llm-nocheck"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "rule",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 uses short, natural back-and-forth; Script 1 reads long raw text blocks with filler interjections and awkward mid-sentence splits."
+     },
+     {
+      "order": [
+       "llm-nocheck",
+       "rule"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 uses short, natural conversational turns. Script 2 reads long raw text blocks with filler interjections and lines cut mid-sentence."
+     }
+    ]
+   },
+   {
+    "pair": [
+     "llm-nocheck",
+     "llm"
+    ],
+    "winner": "llm-nocheck",
+    "orders": [
+     {
+      "order": [
+       "llm-nocheck",
+       "llm"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 2 has Sam asking two questions back-to-back with the sister's answer missing, a jarring gap. Script 1 flows smoothly throughout."
+     },
+     {
+      "order": [
+       "llm",
+       "llm-nocheck"
+      ],
+      "preferred": "llm-nocheck",
+      "why": "Script 1 has Sam asking two questions back-to-back with no answer, a jarring gap. Script 2 flows smoothly throughout."
+     }
+    ]
+   }
+  ]
+ }
+}

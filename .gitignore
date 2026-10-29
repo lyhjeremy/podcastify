@@ -11,3 +11,6 @@ __pycache__/
 .env
 venv/
 .venv/
+*.episode.json
+# the one committed sample: the recorded episode on the write-up page
+!overview/*.episode.mp3

@@ -1,0 +1,3228 @@
+{
+"source": "greatstink",
+"lines": [
+{
+"speaker": "A",
+"text": "Welcome. Today we're walking through \"Great Stink,\" an encyclopedia article by Wikipedia contributors, about a summer when London's river became unbearable.",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1",
+"S3"
+],
+"check": {
+"local": null,
+"first": "supported",
+"why": "Summer 1858 Thames smell event; 'unbearable' is loose framing; title/author naming is fine.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+0.0,
+10.152
+],
+"spans": [],
+"auto_spans": [
+[
+0,
+221
+],
+[
+353,
+540
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A summer of smell. I'm in. So what exactly was the Great Stink?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1",
+"S4"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Reaction and question presupposing nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+10.152,
+4.992
+],
+"spans": [],
+"auto_spans": [
+[
+0,
+221
+],
+[
+541,
+703
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "An event in Central London during July and August 1858. Hot weather made the smell of untreated human waste and industrial effluent on the banks of the Thames much worse.",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"check": {
+"local": {
+"sim": 0.855,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Restates S1 faithfully; 'much worse' paraphrases exacerbated.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+15.144,
+11.136
+],
+"spans": [
+[
+0,
+221
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why was the river in that state to begin with?",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"check": {
+"local": {
+"sim": 0.144,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question presupposing nothing beyond the prior line.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+26.28,
+2.592
+],
+"spans": [
+[
+0,
+221
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The problem had been mounting for several years. An ageing, inadequate sewer system emptied directly into the Thames.",
+"section": 0,
+"claim": true,
+"src": [
+"S2"
+],
+"check": {
+"local": {
+"sim": 0.981,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly matches S2.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+28.872,
+7.296
+],
+"spans": [
+[
+222,
+352
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How inadequate are we talking?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S19",
+"S4"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question only; presupposes nothing new.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+36.168,
+2.04
+],
+"spans": [],
+"auto_spans": [
+[
+2817,
+2943
+],
+[
+541,
+703
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "By 1856 the city had around 200,000 cesspits and 360 sewers. Some cesspits leaked methane and other gases, which often caught fire and exploded. Many sewers were in a poor state of repair.",
+"section": 0,
+"claim": true,
+"src": [
+"S15",
+"S16"
+],
+"check": {
+"local": {
+"sim": 0.917,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S15 and S16 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+38.208,
+14.544
+],
+"spans": [
+[
+2102,
+2252
+],
+[
+2253,
+2393
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Exploding cesspits. That is a lot to take in. And it got worse over time?",
+"section": 0,
+"claim": true,
+"src": [
+"S16"
+],
+"check": {
+"local": {
+"sim": 0.477,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "Reaction and a question; 'worse over time' asserts nothing yet.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+52.752,
+5.424
+],
+"spans": [
+[
+2253,
+2393
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Yes. Water supply improved, and flushing toilets arrived. The population rose from just under one million to three million. So more water, and more effluent, was flushed into the sewers.",
+"section": 0,
+"claim": true,
+"src": [
+"S17",
+"S18"
+],
+"check": {
+"local": {
+"sim": 0.792,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S17 and S18: water supply, flushing toilets, population, more effluent.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+58.176,
+12.216
+],
+"spans": [
+[
+2394,
+2588
+],
+[
+2589,
+2816
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Factories, slaughterhouses and other industries added strain. Much of the outflow either overflowed or discharged directly into the Thames.",
+"section": 0,
+"claim": true,
+"src": [
+"S19",
+"S20"
+],
+"check": {
+"local": {
+"sim": 0.902,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S19 and S20.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+70.392,
+8.784
+],
+"spans": [
+[
+2817,
+2943
+],
+[
+2944,
+3024
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone notice how bad the river looked?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S24",
+"S3"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+79.176,
+2.568
+],
+"spans": [],
+"auto_spans": [
+[
+3581,
+3733
+],
+[
+353,
+540
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Michael Faraday did. In a July 1855 letter to The Times, he said he was shocked, and he dropped pieces of white paper into the river to \"test the degree of opacity\".",
+"section": 0,
+"claim": true,
+"src": [
+"S21"
+],
+"check": {
+"local": {
+"sim": 0.876,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S21: Faraday, July 1855, The Times, paper test.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+81.744,
+10.44
+],
+"spans": [
+[
+3025,
+3234
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ha, a science experiment in a sewer. Was the smell just unpleasant, or was it feared?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S4",
+"S26"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host reaction and a question presupposing nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+92.184,
+6.192
+],
+"spans": [],
+"auto_spans": [
+[
+541,
+703
+],
+[
+3949,
+4110
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Feared. It was thought that miasma from the effluent transmitted contagious diseases. Three cholera outbreaks before the Great Stink were blamed on the river's problems.",
+"section": 0,
+"claim": true,
+"src": [
+"S3"
+],
+"check": {
+"local": {
+"sim": 0.899,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S3 directly.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+98.376,
+9.84
+],
+"spans": [
+[
+353,
+540
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Remind me what miasma means.",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S27",
+"S25"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Request for explanation; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+108.216,
+2.256
+],
+"spans": [],
+"auto_spans": [
+[
+4111,
+4229
+],
+[
+3734,
+3948
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It was the prevailing Victorian theory. It held that most communicable diseases were caused by inhaling contaminated air, such as the odour of rotting corpses or sewage.",
+"section": 0,
+"claim": true,
+"src": [
+"S25",
+"S26"
+],
+"check": {
+"local": {
+"sim": 0.874,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S25 and S26; odour examples come from S26.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+110.472,
+10.368
+],
+"spans": [
+[
+3734,
+3948
+],
+[
+3949,
+4110
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And cholera was the big worry.",
+"section": 0,
+"claim": true,
+"src": [
+"S27"
+],
+"check": {
+"local": {
+"sim": 0.547,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Cholera linked to miasma and deeply feared; 'big worry' is fair framing.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+120.84,
+2.352
+],
+"spans": [
+[
+4111,
+4229
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Most believed miasma carried it. The disease was deeply feared because of how fast it spread and its high fatality rates. In 1857 the government even poured lime and carbolic acid into the river to ease the stench.",
+"section": 0,
+"claim": true,
+"src": [
+"S27",
+"S28",
+"S24"
+],
+"check": {
+"local": {
+"sim": 0.88,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S27, S28 and S24; 'lime and carbolic acid' abbreviates the list.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+123.192,
+14.4
+],
+"spans": [
+[
+4111,
+4229
+],
+[
+4230,
+4345
+],
+[
+3581,
+3733
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone challenge the miasma idea?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S32",
+"S33"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+137.592,
+2.448
+],
+"spans": [],
+"auto_spans": [
+[
+4788,
+4998
+],
+[
+4999,
+5141
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Southwark and Vauxhall water companies.",
+"section": 1,
+"claim": true,
+"src": [
+"S31"
+],
+"check": {
+"local": {
+"sim": 0.929,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Snow and the water companies are supported, but the source says this was during the second outbreak, not stated here; mostly fine. 'Answers challenge' is implied.",
+"action": "dropped",
+"final": "dropped",
+"original": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Southwark and Vauxhall water companies."
+},
+"dropped": true,
+"spans": [
+[
+4592,
+4787
+]
+]
+},
+{
+"speaker": "A",
+"text": "In 1849 he published a paper proposing water-borne transmission instead of miasma. But little attention was paid to it.",
+"section": 1,
+"claim": true,
+"src": [
+"S32"
+],
+"check": {
+"local": {
+"sim": 0.778,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S32: 1849 paper, water-borne theory, little attention.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+140.04,
+7.968
+],
+"spans": [
+[
+4788,
+4998
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what changed?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S73",
+"S71"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A transitional question presupposing nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+148.008,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+11739,
+11832
+],
+[
+11345,
+11475
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "After the 1854 outbreak, Snow focused on Broad Street in Soho. He removed the handle from the local water pump, and deaths fell. Later it was established that a leaking sewer ran near the well.",
+"section": 1,
+"claim": true,
+"src": [
+"S33",
+"S34",
+"S35"
+],
+"check": {
+"local": {
+"sim": 0.768,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S33-S35: Broad Street, pump handle removed, deaths fell, leaking sewer.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+149.88,
+12.048
+],
+"spans": [
+[
+4999,
+5141
+],
+[
+5142,
+5279
+],
+[
+5280,
+5375
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+"section": 1,
+"claim": true,
+"src": [
+"S34",
+"S35"
+],
+"check": {
+"local": {
+"sim": 0.561,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Host inference from S34-S35 pointing to water; follows directly from the sentences.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+161.928,
+7.488
+],
+"spans": [
+[
+5142,
+5279
+],
+[
+5280,
+5375
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Meanwhile, by June 1856 Bazalgette had completed his definitive plans. Small local sewers about three feet wide would feed larger ones, draining into main outflow pipes eleven feet high.",
+"section": 1,
+"claim": true,
+"src": [
+"S47"
+],
+"check": {
+"local": {
+"sim": 0.949,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S47 on date, 3-foot sewers, and 11-foot outflow pipes.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+169.416,
+12.84
+],
+"spans": [
+[
+7123,
+7354
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Sounds like a big system.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S50",
+"S36"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host reaction that asserts nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+182.256,
+1.944
+],
+"spans": [],
+"auto_spans": [
+[
+7638,
+7793
+],
+[
+5377,
+5393
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. London was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+"section": 1,
+"claim": true,
+"src": [
+"S48",
+"S49",
+"S50"
+],
+"check": {
+"local": {
+"sim": 0.839,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S48-S50: outfall sewers, three-level mapping, pumping east, 4.5 million.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+184.2,
+14.688
+],
+"spans": [
+[
+7355,
+7453
+],
+[
+7454,
+7637
+],
+[
+7638,
+7793
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But the stink came before the sewers. What happened in 1858?",
+"section": 1,
+"claim": true,
+"src": [
+"S1"
+],
+"check": {
+"local": {
+"sim": 0.611,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "A transition and question presupposing nothing beyond the 1858 event.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+198.888,
+4.656
+],
+"spans": [
+[
+0,
+221
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "In June, shade temperatures averaged 34 to 36 degrees Celsius. With an extended dry spell, the Thames dropped and raw effluent from the sewers stayed on the banks.",
+"section": 1,
+"claim": true,
+"src": [
+"S62",
+"S63"
+],
+"check": {
+"local": {
+"sim": 0.846,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S62-S63: June 1858 shade temperatures, dry spell, lowered Thames, effluent on banks.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+203.544,
+11.088
+],
+"spans": [
+[
+9810,
+9929
+],
+[
+9930,
+10078
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "I'm guessing even royalty noticed.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S64",
+"S74"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host guess and transition; asserts nothing about source content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+214.632,
+2.568
+],
+"spans": [],
+"auto_spans": [
+[
+10079,
+10240
+],
+[
+11833,
+12136
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Queen Victoria and Prince Albert tried a pleasure cruise on the Thames. They returned to shore within a few minutes because the smell was so terrible.",
+"section": 1,
+"claim": true,
+"src": [
+"S64"
+],
+"check": {
+"local": {
+"sim": 0.962,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S64 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+217.2,
+8.328
+],
+"spans": [
+[
+10079,
+10240
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The press named it \"The Great Stink\". The City Press wrote that whoever once inhales the stink \"can never forget it\".",
+"section": 1,
+"claim": true,
+"src": [
+"S65"
+],
+"check": {
+"local": {
+"sim": 0.801,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S65: press name and City Press quote.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+225.528,
+7.008
+],
+"spans": [
+[
+10241,
+10506
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about Parliament? It sits right on the river.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S70",
+"S73"
+],
+"check": {
+"local": null,
+"first": "partly",
+"why": "Parliament affected is supported, but 'sits right on the river' is not stated in the sources shown.",
+"action": "dropped",
+"final": "dropped",
+"original": "What about Parliament? It sits right on the river."
+},
+"dropped": true,
+"spans": [],
+"auto_spans": [
+[
+11148,
+11344
+],
+[
+11739,
+11832
+]
+]
+},
+{
+"speaker": "A",
+"text": "By June the stench was so bad that business was affected. Curtains on the river side were soaked in lime chloride. That failed, and there were discussions about moving government to Oxford or St Albans.",
+"section": 1,
+"claim": true,
+"src": [
+"S70",
+"S71"
+],
+"check": {
+"local": {
+"sim": 0.939,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S70-S71: June stench, lime chloride curtains, failure, Oxford or St Albans.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+232.536,
+11.856
+],
+"spans": [
+[
+11148,
+11344
+],
+[
+11345,
+11475
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Disraeli left a committee room with the other members, papers in one hand and a handkerchief pressed to his nose.",
+"section": 1,
+"claim": true,
+"src": [
+"S72"
+],
+"check": {
+"local": {
+"sim": 0.816,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S72: Disraeli left with members, papers and handkerchief to nose.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+244.392,
+6.768
+],
+"spans": [
+[
+11476,
+11738
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone complain officially?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S71",
+"S65"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+251.16,
+1.992
+],
+"spans": [],
+"auto_spans": [
+[
+11345,
+11475
+],
+[
+10241,
+10506
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "In the Commons, John Brady said members could not use the Committee Rooms or the Library because of the stench. He asked what measures were being taken.",
+"section": 1,
+"claim": true,
+"src": [
+"S74"
+],
+"check": {
+"local": {
+"sim": 0.81,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Brady's complaint about Committee Rooms, Library and asking for measures matches S74.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+253.152,
+8.568
+],
+"spans": [
+[
+11833,
+12136
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So Parliament finally acts. How?",
+"section": 2,
+"claim": true,
+"src": [
+"S73"
+],
+"check": {
+"local": {
+"sim": 0.468,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "Transitional question with no content claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+261.72,
+3.072
+],
+"spans": [
+[
+11739,
+11832
+]
+],
+"second_check": "unsupported"
+},
+{
+"speaker": "A",
+"text": "On 15 June Disraeli tabled an amendment bill. In the opening debate he called the Thames \"a Stygian pool, reeking with ineffable and intolerable horrors\".",
+"section": 2,
+"claim": true,
+"src": [
+"S81"
+],
+"check": {
+"local": {
+"sim": 0.835,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S81: 15 June, amendment bill, Stygian pool quote in opening debate.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+264.792,
+10.512
+],
+"spans": [
+[
+13039,
+13260
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What did the bill do?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S85",
+"S81"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond the bill's existence.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+275.304,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+13831,
+13901
+],
+[
+13039,
+13260
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It put responsibility for clearing up the Thames on the Metropolitan Board of Works. It allowed the Board to borrow £3 million, repaid by a three-penny levy on London households over forty years.",
+"section": 2,
+"claim": true,
+"src": [
+"S82"
+],
+"check": {
+"local": {
+"sim": 0.831,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S82 on MBW responsibility, £3 million loan, three-penny levy, forty years.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+277.176,
+12.696
+],
+"spans": [
+[
+13261,
+13585
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And whose plan did that money back?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S83",
+"S82"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing beyond the prior content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+289.872,
+2.136
+],
+"spans": [],
+"auto_spans": [
+[
+13586,
+13674
+],
+[
+13261,
+13585
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The terms favoured Bazalgette's original 1856 plan, and overcame Hall's objection to it. The bill passed into law on 2 August.",
+"section": 2,
+"claim": true,
+"src": [
+"S83",
+"S85"
+],
+"check": {
+"local": {
+"sim": 0.972,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S83 and S85 directly.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+292.008,
+9.168
+],
+"spans": [
+[
+13586,
+13674
+],
+[
+13831,
+13901
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So the smell basically forced their hand.",
+"section": 2,
+"claim": true,
+"src": [
+"S84"
+],
+"check": {
+"local": {
+"sim": 0.289,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Host's framing remark inviting confirmation; asserts nothing new beyond the Times quote context.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+301.176,
+2.784
+],
+"spans": [
+[
+13675,
+13830
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Times said so. Parliament was \"all but compelled to legislate upon the great London nuisance by the force of sheer stench\".",
+"section": 2,
+"claim": true,
+"src": [
+"S84"
+],
+"check": {
+"local": {
+"sim": 0.903,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S84, the Times quote, exactly.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+303.96,
+7.8
+],
+"spans": [
+[
+13675,
+13830
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What was being done about the smell in the meantime?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S4",
+"S84"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+311.76,
+2.616
+],
+"spans": [],
+"auto_spans": [
+[
+541,
+703
+],
+[
+13675,
+13830
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "At the height of it, 200 to 250 long tons of lime were used near the sewer mouths. Men spread lime on the foreshore at low tide. The cost was £1,500 per week.",
+"section": 2,
+"claim": true,
+"src": [
+"S80"
+],
+"check": {
+"local": {
+"sim": 0.841,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S80: lime tonnage, foreshore spreading at low tide, £1,500 weekly.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+314.376,
+11.952
+],
+"spans": [
+[
+12773,
+13038
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Now the real work. How big was the project?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S86",
+"S88"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Transition and question with no claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+326.328,
+3.456
+],
+"spans": [],
+"auto_spans": [
+[
+13903,
+13915
+],
+[
+14155,
+14271
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Plans covered 1,100 miles of street sewers feeding 82 miles of main sewers. They were put out to tender between 1859 and 1865. Four hundred draftsmen worked on the first phase's plans.",
+"section": 2,
+"claim": true,
+"src": [
+"S87",
+"S88"
+],
+"check": {
+"local": {
+"sim": 0.813,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S87 and S88 on miles, tender dates and draftsmen.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+329.784,
+14.232
+],
+"spans": [
+[
+13917,
+14154
+],
+[
+14155,
+14271
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Any engineering headaches?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S89",
+"S86"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond the existence of challenges.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+344.016,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+14272,
+14451
+],
+[
+13903,
+13915
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Parts of London, including Lambeth and Pimlico, lie below the high-water mark. So sewage from low-lying sewers was lifted into mid and high-level sewers, which drained by gravity toward the eastern outfalls.",
+"section": 2,
+"claim": true,
+"src": [
+"S89",
+"S90"
+],
+"check": {
+"local": {
+"sim": 0.791,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S89 and S90 on low-lying areas and lifting sewage then gravity drainage.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+345.888,
+13.248
+],
+"spans": [
+[
+14272,
+14451
+],
+[
+14452,
+14715
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Hence the pumping stations.",
+"section": 2,
+"claim": true,
+"src": [
+"S7"
+],
+"check": {
+"local": {
+"sim": 0.56,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Pumping stations lifting sewage to higher pipes, per S7.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+359.136,
+1.944
+],
+"spans": [
+[
+1060,
+1164
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. Work on the outfall sewers lasted from 1859 to 1875. Two ornate stations, Abbey Mills and Crossness, are listed for protection by English Heritage.",
+"section": 2,
+"claim": true,
+"src": [
+"S6",
+"S7",
+"S8"
+],
+"check": {
+"local": {
+"sim": 0.812,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S6 dates and S8 on Abbey Mills, Crossness, English Heritage listing.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+361.08,
+12.12
+],
+"spans": [
+[
+913,
+1059
+],
+[
+1060,
+1164
+],
+[
+1165,
+1376
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "The sewers ran along the river too, didn't they?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S127",
+"S124"
+],
+"check": {
+"local": null,
+"first": "supported",
+"why": "S127 says sewers ran along the Thames banks; question presupposes only that.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+373.2,
+2.856
+],
+"spans": [],
+"auto_spans": [
+[
+20333,
+20475
+],
+[
+19896,
+20038
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "In February 1864 Bazalgette began three embankments. The Victoria and Chelsea on the north side, the Albert on the south. He built up walls on the foreshore, ran sewer pipes inside, and infilled around them.",
+"section": 3,
+"claim": true,
+"src": [
+"S124",
+"S125",
+"S126",
+"S127"
+],
+"check": {
+"local": {
+"sim": 0.884,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Date, three embankments, locations, and construction method all match S124-S127.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+376.056,
+13.968
+],
+"spans": [
+[
+19896,
+20038
+],
+[
+20039,
+20226
+],
+[
+20227,
+20332
+],
+[
+20333,
+20475
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A bonus beyond sewage?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S160",
+"S10"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question prompting a transition; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+390.024,
+2.016
+],
+"spans": [],
+"auto_spans": [
+[
+25081,
+25353
+],
+[
+1509,
+1741
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The works claimed over 52 acres of land from the Thames. The Victoria Embankment also relieved congestion on the roads between Westminster and the City of London.",
+"section": 3,
+"claim": true,
+"src": [
+"S128"
+],
+"check": {
+"local": {
+"sim": 0.968,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S128: 52 acres claimed and Victoria Embankment relieved congestion.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+392.04,
+9.984
+],
+"spans": [
+[
+20476,
+20684
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did the cholera stop right away?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S140",
+"S137"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposing nothing beyond cholera's continuation.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+402.024,
+2.016
+],
+"spans": [],
+"auto_spans": [
+[
+22193,
+22316
+],
+[
+21635,
+21792
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "There was one more outbreak, in 1866. It claimed 5,596 lives, confined to an East End area between Aldgate and Bow. That area was not yet connected to Bazalgette's system.",
+"section": 3,
+"claim": true,
+"src": [
+"S137",
+"S138"
+],
+"check": {
+"local": {
+"sim": 0.692,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "1866 outbreak, 5,596 deaths, area, and unconnected status match S137-S138.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+404.04,
+13.176
+],
+"spans": [
+[
+21635,
+21792
+],
+[
+21793,
+21943
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What caused it?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S142",
+"S139"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A simple question presupposing nothing new.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+417.216,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+22572,
+22627
+],
+[
+21944,
+22192
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The East London Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+"section": 3,
+"claim": true,
+"src": [
+"S139"
+],
+"check": {
+"local": {
+"sim": 0.814,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S139 on discharge location, tide, and contamination of drinking water.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+419.088,
+10.728
+],
+"spans": [
+[
+21944,
+22192
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So that settled the argument.",
+"section": 3,
+"claim": true,
+"src": [
+"S140"
+],
+"check": {
+"local": {
+"sim": 0.134,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Host's reaction/transition; no source claim asserted.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+429.816,
+2.184
+],
+"spans": [
+[
+22193,
+22316
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "It led to acceptance that cholera was water-borne, not transmitted by miasma. And it was the last outbreak of the disease in the capital.",
+"section": 3,
+"claim": true,
+"src": [
+"S140",
+"S142"
+],
+"check": {
+"local": {
+"sim": 0.97,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Both points directly stated in S140 and S142.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+432.0,
+8.184
+],
+"spans": [
+[
+22193,
+22316
+],
+[
+22572,
+22627
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What's the verdict on Bazalgette?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S12",
+"S10"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposing nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+440.184,
+2.112
+],
+"spans": [],
+"auto_spans": [
+[
+1861,
+1950
+],
+[
+1509,
+1741
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "His work meant sewage was no longer dumped on the Thames shores and brought an end to the cholera outbreaks. His sewer system still operates, servicing a city of over nine million.",
+"section": 3,
+"claim": true,
+"src": [
+"S10",
+"S11"
+],
+"check": {
+"local": {
+"sim": 0.733,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S10 and S11 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+442.296,
+10.896
+],
+"spans": [
+[
+1509,
+1741
+],
+[
+1742,
+1860
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life.",
+"section": 3,
+"claim": true,
+"src": [
+"S160",
+"S165"
+],
+"check": {
+"local": {
+"sim": 0.83,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Doxat quote supported; 'The Times obituarist' attribution is not in shown sentences.",
+"action": "dropped",
+"final": "dropped",
+"original": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life."
+},
+"dropped": true,
+"spans": [
+[
+25081,
+25353
+],
+[
+26266,
+26378
+]
+]
+},
+{
+"speaker": "B",
+"text": "And Peter Ackroyd goes even further.",
+"section": 3,
+"claim": true,
+"src": [
+"S12"
+],
+"check": {
+"local": {
+"sim": 0.366,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Transition; 'goes even further' is host framing, no content asserted.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+453.192,
+2.736
+],
+"spans": [
+[
+1861,
+1950
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He writes that with Nash and Wren, Bazalgette \"enters the pantheon of London heroes\".",
+"section": 3,
+"claim": true,
+"src": [
+"S166"
+],
+"check": {
+"local": {
+"sim": 0.754,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S166 quotes Ackroyd on Nash, Wren, and the pantheon of London heroes.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+455.928,
+6.192
+],
+"spans": [
+[
+26379,
+26639
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So a foul summer pushed Parliament to act, and the sewers outlasted it. That's the Great Stink.",
+"section": 3,
+"claim": true,
+"src": [
+"S84",
+"S11"
+],
+"check": {
+"local": {
+"sim": 0.618,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Times said Parliament compelled by stench (S84); sewers still operate (S11).",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+462.12,
+6.552
+],
+"spans": [
+[
+13675,
+13830
+],
+[
+1742,
+1860
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "Thanks for listening. That was \"Great Stink,\" from Wikipedia contributors.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S165",
+"S160"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Sign-off naming the work and author; no content claim.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+468.672,
+4.776
+],
+"spans": [],
+"auto_spans": [
+[
+26266,
+26378
+],
+[
+25081,
+25353
+]
+],
+"second_check": "no_claim"
+}
+],
+"draft": [
+{
+"speaker": "A",
+"text": "Welcome. Today we're walking through \"Great Stink,\" an encyclopedia article by Wikipedia contributors, about a summer when London's river became unbearable.",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A summer of smell. I'm in. So what exactly was the Great Stink?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "An event in Central London during July and August 1858. Hot weather made the smell of untreated human waste and industrial effluent on the banks of the Thames much worse.",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why was the river in that state to begin with?",
+"section": 0,
+"claim": true,
+"src": [
+"S1"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The problem had been mounting for several years. An ageing, inadequate sewer system emptied directly into the Thames.",
+"section": 0,
+"claim": true,
+"src": [
+"S2"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How inadequate are we talking?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "By 1856 the city had around 200,000 cesspits and 360 sewers. Some cesspits leaked methane and other gases, which often caught fire and exploded. Many sewers were in a poor state of repair.",
+"section": 0,
+"claim": true,
+"src": [
+"S15",
+"S16"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Exploding cesspits. That is a lot to take in. And it got worse over time?",
+"section": 0,
+"claim": true,
+"src": [
+"S16"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Yes. Water supply improved, and flushing toilets arrived. The population rose from just under one million to three million. So more water, and more effluent, was flushed into the sewers.",
+"section": 0,
+"claim": true,
+"src": [
+"S17",
+"S18"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Factories, slaughterhouses and other industries added strain. Much of the outflow either overflowed or discharged directly into the Thames.",
+"section": 0,
+"claim": true,
+"src": [
+"S19",
+"S20"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone notice how bad the river looked?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Michael Faraday did. In a July 1855 letter to The Times, he said he was shocked, and he dropped pieces of white paper into the river to \"test the degree of opacity\".",
+"section": 0,
+"claim": true,
+"src": [
+"S21"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ha, a science experiment in a sewer. Was the smell just unpleasant, or was it feared?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Feared. It was thought that miasma from the effluent transmitted contagious diseases. Three cholera outbreaks before the Great Stink were blamed on the river's problems.",
+"section": 0,
+"claim": true,
+"src": [
+"S3"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Remind me what miasma means.",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It was the prevailing Victorian theory. It held that most communicable diseases were caused by inhaling contaminated air, such as the odour of rotting corpses or sewage.",
+"section": 0,
+"claim": true,
+"src": [
+"S25",
+"S26"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And cholera was the big worry.",
+"section": 0,
+"claim": true,
+"src": [
+"S27"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Most believed miasma carried it. The disease was deeply feared because of how fast it spread and its high fatality rates. In 1857 the government even poured lime and carbolic acid into the river to ease the stench.",
+"section": 0,
+"claim": true,
+"src": [
+"S27",
+"S28",
+"S24"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone challenge the miasma idea?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Southwark and Vauxhall water companies.",
+"section": 1,
+"claim": true,
+"src": [
+"S31"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "In 1849 he published a paper proposing water-borne transmission instead of miasma. But little attention was paid to it.",
+"section": 1,
+"claim": true,
+"src": [
+"S32"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what changed?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "After the 1854 outbreak, Snow focused on Broad Street in Soho. He removed the handle from the local water pump, and deaths fell. Later it was established that a leaking sewer ran near the well.",
+"section": 1,
+"claim": true,
+"src": [
+"S33",
+"S34",
+"S35"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+"section": 1,
+"claim": true,
+"src": [
+"S34",
+"S35"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Meanwhile, by June 1856 Bazalgette had completed his definitive plans. Small local sewers about three feet wide would feed larger ones, draining into main outflow pipes eleven feet high.",
+"section": 1,
+"claim": true,
+"src": [
+"S47"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Sounds like a big system.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. London was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+"section": 1,
+"claim": true,
+"src": [
+"S48",
+"S49",
+"S50"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But the stink came before the sewers. What happened in 1858?",
+"section": 1,
+"claim": true,
+"src": [
+"S1"
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "In June, shade temperatures averaged 34 to 36 degrees Celsius. With an extended dry spell, the Thames dropped and raw effluent from the sewers stayed on the banks.",
+"section": 1,
+"claim": true,
+"src": [
+"S62",
+"S63"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "I'm guessing even royalty noticed.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Queen Victoria and Prince Albert tried a pleasure cruise on the Thames. They returned to shore within a few minutes because the smell was so terrible.",
+"section": 1,
+"claim": true,
+"src": [
+"S64"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The press named it \"The Great Stink\". The City Press wrote that whoever once inhales the stink \"can never forget it\".",
+"section": 1,
+"claim": true,
+"src": [
+"S65"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about Parliament? It sits right on the river.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "By June the stench was so bad that business was affected. Curtains on the river side were soaked in lime chloride. That failed, and there were discussions about moving government to Oxford or St Albans.",
+"section": 1,
+"claim": true,
+"src": [
+"S70",
+"S71"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Disraeli left a committee room with the other members, papers in one hand and a handkerchief pressed to his nose.",
+"section": 1,
+"claim": true,
+"src": [
+"S72"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did anyone complain officially?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "In the Commons, John Brady said members could not use the Committee Rooms or the Library because of the stench. He asked what measures were being taken.",
+"section": 1,
+"claim": true,
+"src": [
+"S74"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So Parliament finally acts. How?",
+"section": 2,
+"claim": true,
+"src": [
+"S73"
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "On 15 June Disraeli tabled an amendment bill. In the opening debate he called the Thames \"a Stygian pool, reeking with ineffable and intolerable horrors\".",
+"section": 2,
+"claim": true,
+"src": [
+"S81"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What did the bill do?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It put responsibility for clearing up the Thames on the Metropolitan Board of Works. It allowed the Board to borrow £3 million, repaid by a three-penny levy on London households over forty years.",
+"section": 2,
+"claim": true,
+"src": [
+"S82"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And whose plan did that money back?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The terms favoured Bazalgette's original 1856 plan, and overcame Hall's objection to it. The bill passed into law on 2 August.",
+"section": 2,
+"claim": true,
+"src": [
+"S83",
+"S85"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So the smell basically forced their hand.",
+"section": 2,
+"claim": true,
+"src": [
+"S84"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Times said so. Parliament was \"all but compelled to legislate upon the great London nuisance by the force of sheer stench\".",
+"section": 2,
+"claim": true,
+"src": [
+"S84"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What was being done about the smell in the meantime?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "At the height of it, 200 to 250 long tons of lime were used near the sewer mouths. Men spread lime on the foreshore at low tide. The cost was £1,500 per week.",
+"section": 2,
+"claim": true,
+"src": [
+"S80"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Now the real work. How big was the project?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Plans covered 1,100 miles of street sewers feeding 82 miles of main sewers. They were put out to tender between 1859 and 1865. Four hundred draftsmen worked on the first phase's plans.",
+"section": 2,
+"claim": true,
+"src": [
+"S87",
+"S88"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Any engineering headaches?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Parts of London, including Lambeth and Pimlico, lie below the high-water mark. So sewage from low-lying sewers was lifted into mid and high-level sewers, which drained by gravity toward the eastern outfalls.",
+"section": 2,
+"claim": true,
+"src": [
+"S89",
+"S90"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Hence the pumping stations.",
+"section": 2,
+"claim": true,
+"src": [
+"S7"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. Work on the outfall sewers lasted from 1859 to 1875. Two ornate stations, Abbey Mills and Crossness, are listed for protection by English Heritage.",
+"section": 2,
+"claim": true,
+"src": [
+"S6",
+"S7",
+"S8"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "The sewers ran along the river too, didn't they?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "In February 1864 Bazalgette began three embankments. The Victoria and Chelsea on the north side, the Albert on the south. He built up walls on the foreshore, ran sewer pipes inside, and infilled around them.",
+"section": 3,
+"claim": true,
+"src": [
+"S124",
+"S125",
+"S126",
+"S127"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A bonus beyond sewage?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The works claimed over 52 acres of land from the Thames. The Victoria Embankment also relieved congestion on the roads between Westminster and the City of London.",
+"section": 3,
+"claim": true,
+"src": [
+"S128"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Did the cholera stop right away?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "There was one more outbreak, in 1866. It claimed 5,596 lives, confined to an East End area between Aldgate and Bow. That area was not yet connected to Bazalgette's system.",
+"section": 3,
+"claim": true,
+"src": [
+"S137",
+"S138"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What caused it?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The East London Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+"section": 3,
+"claim": true,
+"src": [
+"S139"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So that settled the argument.",
+"section": 3,
+"claim": true,
+"src": [
+"S140"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "It led to acceptance that cholera was water-borne, not transmitted by miasma. And it was the last outbreak of the disease in the capital.",
+"section": 3,
+"claim": true,
+"src": [
+"S140",
+"S142"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What's the verdict on Bazalgette?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "His work meant sewage was no longer dumped on the Thames shores and brought an end to the cholera outbreaks. His sewer system still operates, servicing a city of over nine million.",
+"section": 3,
+"claim": true,
+"src": [
+"S10",
+"S11"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life.",
+"section": 3,
+"claim": true,
+"src": [
+"S160",
+"S165"
+],
+"second_check": "partly"
+},
+{
+"speaker": "B",
+"text": "And Peter Ackroyd goes even further.",
+"section": 3,
+"claim": true,
+"src": [
+"S12"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He writes that with Nash and Wren, Bazalgette \"enters the pantheon of London heroes\".",
+"section": 3,
+"claim": true,
+"src": [
+"S166"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So a foul summer pushed Parliament to act, and the sewers outlasted it. That's the Great Stink.",
+"section": 3,
+"claim": true,
+"src": [
+"S84",
+"S11"
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "Thanks for listening. That was \"Great Stink,\" from Wikipedia contributors.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+}
+],
+"points": [
+{
+"point": "The Great Stink was an event in July and August 1858 in which hot weather worsened the smell of untreated human waste and industrial effluent on the banks of the Thames, caused by an ageing, inadequate sewer system that emptied directly into the river.",
+"sents": [
+"S1",
+"S2"
+],
+"importance": 3,
+"part": 0,
+"id": "P1"
+},
+{
+"point": "Miasma was believed to spread disease, and three cholera outbreaks before the Great Stink were blamed on the river's problems, so the smell and fears of its effects prompted action by authorities.",
+"sents": [
+"S3",
+"S4",
+"S25",
+"S27"
+],
+"importance": 3,
+"part": 0,
+"id": "P2"
+},
+{
+"point": "Authorities accepted Joseph Bazalgette's proposal for interconnecting sewers sloping eastwards to outfalls beyond the metropolitan area, with work on the Northern and Southern Outfall Sewers lasting from 1859 to 1875 and pumping stations built to lift sewage.",
+"sents": [
+"S5",
+"S6",
+"S7"
+],
+"importance": 3,
+"part": 0,
+"id": "P3"
+},
+{
+"point": "Bazalgette's work ended sewage dumping on the Thames shores and the cholera outbreaks, is thought to have saved more lives than any other Victorian official's efforts, still operates for a city of over nine million, and Peter Ackroyd argues he should be considered a hero of London.",
+"sents": [
+"S10",
+"S11",
+"S12"
+],
+"importance": 3,
+"part": 0,
+"id": "P5"
+},
+{
+"point": "London's old system was inadequate: by 1856 there were around 200,000 cesspits and 360 sewers, some cesspits leaked explosive gases, and many sewers were in poor repair.",
+"sents": [
+"S14",
+"S15",
+"S16"
+],
+"importance": 2,
+"part": 0,
+"id": "P6"
+},
+{
+"point": "Water improvements, flushing toilets, population growth from under one million to three million and industrial outfalls sent far more waste into the sewers, much of which overflowed or discharged directly into the Thames.",
+"sents": [
+"S17",
+"S18",
+"S19",
+"S20"
+],
+"importance": 2,
+"part": 0,
+"id": "P7"
+},
+{
+"point": "John Snow proposed water-borne transmission of cholera, which got little attention at first, but in 1854 removing the Broad Street pump handle was followed by fewer deaths, and a leaking sewer was later found near the well.",
+"sents": [
+"S31",
+"S32",
+"S33",
+"S34",
+"S35"
+],
+"importance": 2,
+"part": 0,
+"id": "P10"
+},
+{
+"point": "Bazalgette's 1856 plan used local sewers feeding larger ones into main outflow pipes, with Northern and Southern Outfall Sewers and pumping stations across high, middle and low-level areas, and it allowed for a population of 4.5 million.",
+"sents": [
+"S47",
+"S48",
+"S49",
+"S50"
+],
+"importance": 2,
+"part": 0,
+"id": "P13"
+},
+{
+"point": "Dry weather lowered the Thames and left raw sewage on its banks, producing the Great Stink, which was so foul that Queen Victoria and Prince Albert cut short a river cruise.",
+"sents": [
+"S63",
+"S64",
+"S65"
+],
+"importance": 3,
+"part": 1,
+"id": "P17"
+},
+{
+"point": "By June the stench disrupted Parliament, where curtains were soaked in lime chloride without success and moving government to Oxford or St Albans was discussed.",
+"sents": [
+"S70",
+"S71",
+"S72",
+"S73"
+],
+"importance": 3,
+"part": 1,
+"id": "P19"
+},
+{
+"point": "Disraeli tabled a bill giving the MBW responsibility for cleaning the Thames, allowing it to borrow £3 million repaid by a levy over forty years, which favoured Bazalgette's 1856 plan; it passed on 2 August, with The Times saying the stench compelled Parliament to act.",
+"sents": [
+"S81",
+"S82",
+"S83",
+"S84",
+"S85"
+],
+"importance": 3,
+"part": 1,
+"id": "P22"
+},
+{
+"point": "Bazalgette's plan for 1,100 miles of street sewers feeding 82 miles of main sewers was put out to tender from 1859 to 1865, and low-lying areas required sewage to be lifted to higher sewers that drained by gravity.",
+"sents": [
+"S87",
+"S88",
+"S89",
+"S90"
+],
+"importance": 2,
+"part": 1,
+"id": "P23"
+},
+{
+"point": "From 1864 Bazalgette built the Victoria, Albert and Chelsea Embankments along the Thames to carry the low-level sewers, reclaiming over 52 acres of land and, in the case of the Victoria Embankment, easing road congestion.",
+"sents": [
+"S124",
+"S125",
+"S126",
+"S127",
+"S128"
+],
+"importance": 3,
+"part": 2,
+"id": "P31"
+},
+{
+"point": "The 1866 cholera outbreak in the East End, which killed 5,596 people in an area not yet connected to Bazalgette's system, was traced to the East London Water Company's contaminated water, which established that cholera was water-borne rather than spread by miasma, and it was London's last outbreak.",
+"sents": [
+"S137",
+"S138",
+"S139",
+"S140",
+"S142"
+],
+"importance": 3,
+"part": 2,
+"id": "P34"
+},
+{
+"point": "Historians and obituarists praised Bazalgette highly, with Doxat saying he probably saved more lives than any other Victorian official, The Times crediting the sewer with adding some 20 years to Londoners' life chances, and Ackroyd placing him among London's heroes.",
+"sents": [
+"S160",
+"S163",
+"S164",
+"S165",
+"S166"
+],
+"importance": 3,
+"part": 2,
+"id": "P40"
+}
+]
+}

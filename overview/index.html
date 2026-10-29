@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Podcastify: turn an EPUB or article into a two-host podcast</title>
-<meta name="description" content="A Python CLI that stages any EPUB or article for two voices, renders each turn with free edge-tts neural voices and stitches one MP3. A rule-based mode needs no API key; an LLM mode has Claude rewrite the text as a conversation." />
+<title>Podcastify: a two-host episode of a whole book, every claim tied to its source</title>
+<meta name="description" content="A Python CLI that maps a whole EPUB or article to cited key points, writes a host and co-host script through claude -p, checks every line against the sentences it cites, and renders an MP3 with chapters. Evaluated against rule mode on four public-domain and CC BY-SA sources." />
 <meta name="theme-color" content="#EEEDE6" />
 <meta property="og:title" content="Podcastify" />
-<meta property="og:description" content="Any EPUB or article as a two-voice MP3 and transcript: 1,800 characters of Alice in Wonderland became 1:59 of audio in one command." />
+<meta property="og:description" content="A six-minute two-host episode of all of Alice in Wonderland, each line linked to the sentences it rests on and checked against them. LLM episodes covered 7.4 of 12 frozen key points on average; rule mode, 4.4." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyhjeremy.github.io/podcastify/overview/" />
-<link href="" rel="stylesheet" />
 <style>
   :root {
     --paper: #EEEDE6;
@@ -242,35 +241,63 @@
   }
 
 
-  /* Signature: the generated transcript set as a play script, speaker names in the margin, following the audio. */
+  /* Signature: the episode transcript as a play script, speaker in the margin, each line opening onto the source it cites. */
   .listen { margin: 40px 0 0; border-top: 2px solid var(--ink); padding-top: 14px; }
   .listen audio { width: 100%; display: block; margin: 0 0 12px; }
-  .strip { display: flex; height: 26px; border: 1px solid var(--rule); margin: 0 0 4px; }
-  .strip button { border: 0; padding: 0; margin: 0; min-width: 3px; background: var(--accent2); cursor: pointer; position: relative; }
-  .strip button + button { border-left: 1px solid var(--paper); }
-  .strip button.b { background: var(--accent); }
-  .strip button.on { outline: 2px solid var(--ink); outline-offset: -2px; }
-  .strip-key { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 10px; }
-  .script { border-bottom: 1px solid var(--rule); padding: 4px 0 10px; }
-  .line { display: grid; grid-template-columns: 4.6rem minmax(0,1fr) 3.4rem; gap: 0 18px; padding: 8px 0; border-top: 1px solid var(--rule); cursor: pointer; }
+  .chap { display: flex; border: 1px solid var(--rule); margin: 0 0 8px; }
+  .chap button { border: 0; margin: 0; padding: 7px 8px 6px; min-width: 0; background: var(--card); color: var(--ink); cursor: pointer; text-align: left; font: 13px/1.3 var(--sans); display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+  .chap button + button { border-left: 1px solid var(--rule); }
+  .chap button:hover { background: var(--paper); }
+  .chap .n { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+  .chap .nm { font-family: var(--display); font-style: italic; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .chap .tm { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .key { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .script { border-bottom: 1px solid var(--rule); padding: 4px 0 10px; max-height: 760px; overflow-y: auto; }
+  .sec { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--accent); margin: 18px 0 4px; }
+  .line { display: grid; grid-template-columns: 4.2rem minmax(0,1fr) 6.6rem; gap: 0 16px; padding: 7px 0; border-top: 1px solid var(--rule); }
   .line .who { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent2); padding-top: 3px; text-align: right; }
   .line.b .who { color: var(--accent); }
-  .line p { margin: 0; max-width: 62ch; font-size: .97em; color: var(--ink2); }
-  .line.b p { font-family: var(--display); font-style: italic; font-size: 1.05em; }
-  .line .t { font-family: var(--mono); font-size: 12.5px; color: var(--muted); padding-top: 4px; text-align: right; }
-  .line.on p { color: var(--ink); }
-  .line.on .t { color: var(--ink); }
+  .line .say { all: unset; cursor: pointer; max-width: 62ch; font-size: .97em; color: var(--ink2); line-height: 1.5; }
+  .line .say:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .line .say:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  .line.b .say { font-family: var(--display); font-style: italic; font-size: 1.05em; }
+  .line.gone .say { text-decoration: line-through; color: var(--muted); }
+  .line .meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; padding-top: 3px; }
+  .line .t { font: 12.5px var(--mono); color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+  .line button.t:hover { color: var(--ink); text-decoration: underline; }
+  .v { font: 11px var(--mono); letter-spacing: .04em; padding: 1px 5px; border: 1px solid var(--rule); color: var(--muted); }
+  .v-partly, .v-rewritten { border-color: var(--accent2); color: var(--accent2); }
+  .v-unsupported, .v-dropped { border-color: var(--accent); color: var(--accent); }
+  .line.on .say { color: var(--ink); }
   .line.on { border-top: 2px solid var(--ink); }
-  .line:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .script-cap, .fig-cap { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 12px 0 0; line-height: 1.5; max-width: 64ch; }
-  .stage textarea { width: 100%; min-height: 8rem; resize: vertical; font: 16.5px/1.55 var(--serif); color: var(--ink); background: var(--card); border: 1px solid var(--edge); padding: 12px 14px; }
-  .stage label { display: block; font-family: var(--display); font-style: italic; font-size: 19px; color: var(--accent); margin: 22px 0 8px; }
-  .stage .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 0; }
-  .stage button { font: 600 14px/1.2 var(--sans); padding: 9px 14px; border: 1px solid var(--edge); background: var(--card); color: var(--ink); cursor: pointer; }
-  .stage button:hover { border-color: var(--ink); }
-  .stage .count { font-family: var(--mono); font-size: 13px; color: var(--ink2); }
-  .stage .script .line { cursor: default; grid-template-columns: 4.6rem minmax(0,1fr); }
-  @media (max-width: 520px) { .line { grid-template-columns: 1fr 3.2rem; } .line .who { text-align: left; grid-column: 1; } .line p { grid-column: 1 / span 2; } .line .t { grid-column: 2; grid-row: 1; } .stage .script .line { grid-template-columns: 1fr; } }
+  .src { grid-column: 2 / span 2; margin: 8px 0 4px; padding: 10px 14px; border-left: 3px solid var(--accent2); background: var(--card); font-family: var(--sans); font-size: 14.5px; }
+  .src .lbl { margin: 0 0 6px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .src blockquote { margin: 0 0 8px; font-family: var(--serif); font-size: 15.5px; color: var(--ink); }
+  .src .sid { display: block; font: 11.5px var(--mono); color: var(--muted); margin-bottom: 2px; }
+  .src .chk { margin: 6px 0 0; color: var(--ink2); max-width: none; }
+  .fig-cap { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 12px 0 0; line-height: 1.5; max-width: 64ch; }
+  #evaltable th, #evaltable td { padding-left: 10px; padding-right: 10px; }
+  td.num, th.num { text-align: right; font-family: var(--mono); font-size: 13.5px; white-space: nowrap; }
+  td .sub { color: var(--muted); font-size: 12px; }
+  tbody th { text-align: left; font-family: var(--sans); font-size: 14.5px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); vertical-align: top; }
+  tbody th .kind { display: block; font-family: var(--display); font-style: italic; font-weight: 400; color: var(--muted); font-size: 14px; }
+  tr.first td, tr.first th { border-top: 2px solid var(--ink); }
+  .chart { margin-top: 24px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .chart .grid { stroke: var(--rule); stroke-width: 1; }
+  .chart .row { stroke: var(--rule); stroke-dasharray: 2 3; }
+  .chart .ax { font: 11px var(--mono); fill: var(--muted); }
+  .chart .lab { font: 13px var(--sans); fill: var(--ink); }
+  .chart .m-rule rect { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+  .chart .m-draft circle { fill: var(--paper); stroke: var(--accent2); stroke-width: 2; }
+  .chart .m-llm circle { fill: var(--accent); }
+  .chart g:focus-visible { outline: 2px solid var(--accent); }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 13px var(--sans); color: var(--ink2); margin: 10px 0 0; }
+  .legend i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+  .legend .lr { border: 1.5px solid var(--ink); }
+  .legend .ld { border: 2px solid var(--accent2); }
+  .legend .ll { background: var(--accent); }
+  @media (max-width: 560px) { .line { grid-template-columns: 1fr auto; } .line .who { text-align: left; grid-column: 1; } .line .meta { grid-column: 2; grid-row: 1; flex-direction: row; } .line .say { grid-column: 1 / span 2; } .src { grid-column: 1 / span 2; } .chap .nm { display: none; } }
 </style>
 </head>
 <body>
@@ -281,15 +308,15 @@
   </header>
 
   <section class="hero">
-    <p class="kicker">A Python command-line tool</p>
-    <h1>Turn an EPUB or article into a two-host podcast with one command.</h1>
+    <p class="kicker">A Python command-line tool, rebuilt in October 2026</p>
+    <h1>A two-host episode of a whole book, with every claim tied to the sentences it came from.</h1>
 
     <p class="hero-sub">
-      Podcastify splits the text into short segments for a narrator, has a co-host
-      interject between them, renders every turn with free Microsoft edge-tts neural
-      voices, and stitches one MP3 with a Markdown transcript. The default mode needs no
-      API key. An optional mode sends the text to Claude, which rewrites it as a
-      back-and-forth between the two hosts.
+      Podcastify reads an EPUB or article end to end, pulls out key points that cite their source
+      sentences, plans an episode of a set length, and has Claude write a conversation between a host
+      and a co-host in which every factual line carries the ids of the sentences it rests on. A second
+      model call then checks each line against those sentences; lines that fail are rewritten once or
+      dropped. Free edge-tts voices render the result as an MP3 with a chapter per section.
     </p>
 
     <div class="cta-row">
@@ -298,14 +325,41 @@
     </div>
 
     <div class="listen" id="listen">
-      <audio id="aud" controls preload="none" src="alice-excerpt.podcast.mp3"></audio>
-      <div class="strip" id="strip" role="group" aria-label="The nine turns, sized by length; select one to jump to it"></div>
-      <div class="strip-key"><span>0:00</span><span>Alex narrates (blue), Sam interjects (red)</span><span>1:59</span></div>
-      <div class="script" id="script" aria-label="Transcript of the sample, following the audio"></div>
-      <p class="script-cap">The tool's real output for the first 1,800 characters of <em>Alice's Adventures in
-        Wonderland</em> (Project Gutenberg, public domain), rule mode, default voices, rendered
-        2026-10-28 with edge-tts 7.3.1. The file is 119.3 seconds long, the same as the
-        2026-10-26 run below. Turn lengths come from <code>ffprobe</code> on each rendered segment. Select a line to jump to it.</p>
+      <audio id="aud" controls preload="none" src="alice.episode.mp3"></audio>
+      <div class="chap" id="chap" role="group" aria-label="Chapters, one per outline section"></div>
+      <p class="key"><span>Select a line to see the source it cites and how it was checked.</span><span>Select a time to play from there.</span></p>
+      <div class="script" id="script" aria-label="Transcript of the episode"></div>
+      <p class="fig-cap">The tool's real output for the whole of <em>Alice's Adventures in Wonderland</em>
+        (Project Gutenberg eBook #11, public domain; 143,485 characters, 1,431 sentences), LLM mode with a
+        six-minute target, Claude Sonnet through <code>claude -p</code>, default voices, rendered on
+        2026-10-29 with edge-tts 7.3.1. The file is 5 minutes 55 seconds, re-encoded at 40 kbps for this
+        page; the chapter markers are the outline's four sections. Struck-out lines were cut by the check
+        and are not in the audio. Character offsets refer to the cleaned text that
+        <code>eval/fetch_sources.py</code> writes.</p>
+    </div>
+
+    <div class="claims">
+      <div class="claim">
+        <div class="n">7.4 of 12</div>
+        <p>frozen key points covered, on average over four sources, by the LLM episodes. Rule mode,
+          reading the same number of words from the start, covered 4.4.</p>
+      </div>
+      <div class="claim">
+        <div class="n">9 of 151</div>
+        <p>claim lines failed the pipeline's own check (6.0%), all as "partly". Three were rewritten
+          and kept; six were dropped.</p>
+      </div>
+      <div class="claim">
+        <div class="n">8 and 8</div>
+        <p>claim lines that a second checker (Opus) marked not fully supported, before the repair step
+          (of 172) and after it (of 165). The repair fixed what the first checker flagged, and the two
+          checkers mostly flag different lines.</p>
+      </div>
+      <div class="claim">
+        <div class="n">18 of 20</div>
+        <p>randomly drawn claim lines where my own reading against the source agreed with the
+          pipeline's checker on pass or fail. Only one of the 20 was a fail by my reading.</p>
+      </div>
     </div>
   </section>
 </div>
@@ -314,106 +368,156 @@
 <div class="route">
 
   <section class="stop stop--key">
-    <p class="eyebrow">A sample run</p>
-    <h2>One command, nine turns, one MP3</h2>
+    <p class="eyebrow">How an episode is made</p>
+    <h2>Map the whole source, pick an outline, write with citations</h2>
     <p>
-      The run behind the recording above. It builds the script, renders each turn in its
-      speaker's voice, and joins the pieces:
+      The old LLM mode sent the first 12,000 characters of a source to the Anthropic API and asked for
+      a conversation. For <em>Alice</em> that is the first chapter and a half. The new pipeline reads
+      everything, in four steps, each a separate model call:
     </p>
-    <div class="term">
-<pre><span class="c">$ python podcastify.py alice-excerpt.txt</span>
-Source: alice-excerpt  (1,800 chars)
-Transcript: alice-excerpt.transcript.md  (9 turns)
-  [1/9] B: Welcome to Podcastify. Today we're getting into alice-excerp...
-  [2/9] A: That's right. Let's dive in....
-  [3/9] A: Alice was beginning to get very tired of sitting by her sist...
-  [4/9] A: I shall be late!' (when she thought it over afterwards, it o...
-  [5/9] B: Let me make sure I'm following....
-  [6/9] A: Stay with me, it builds....
-  [7/9] A: Either the well was very deep, or she fell very slowly, for ...
-  [8/9] B: That's a great place to wrap up. Thanks for listening to Pod...
-  [9/9] A: See you next time....
-  <span class="g">wrote alice-excerpt.podcast.mp3</span>
-Done: alice-excerpt.podcast.mp3
-
-<span class="c">$ ffprobe -v error -show_entries format=duration alice-excerpt.podcast.mp3</span>
-duration=<span class="g">119.304000</span></pre>
-    </div>
-    <p style="margin-top:22px">
-      Captured 2026-10-26 with edge-tts 7.3.1 and ffmpeg. The default voices are
-      en-US-AndrewNeural for the narrator and en-US-AvaNeural for the co-host;
-      <code>--voice-a</code> and <code>--voice-b</code> take any edge-tts voice. The
-      <code>--script-only</code> flag writes the transcript and stops, so you can read a
-      whole book's script before rendering hours of audio.
-    </p>
-  </section>
-
-  <section class="stop">
-    <p class="eyebrow">Try the staging</p>
-    <h2>See how rule mode cuts up your own text</h2>
-    <p>
-      Rule mode is simple enough to run in a web page. The box below is a JavaScript
-      port of <code>build_rule_based()</code> from <code>script_builder.py</code>: the same
-      sentence regex, three sentences to a segment, a co-host reaction and a narrator
-      bridge after every second segment, drawn from the same pools. It stages the text;
-      it does not synthesize audio.
-    </p>
-    <div class="stage">
-      <label for="src">Paste any English text</label>
-      <textarea id="src" spellcheck="false">Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled 'ORANGE MARMALADE', but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody underneath, so managed to put it into one of the cupboards as she fell past it. 'Well!' thought Alice to herself, 'after such a fall as this, I shall think nothing of tumbling down stairs! How brave they'll all think me at home! Why, I wouldn't say anything about it, even if I fell off the top of the house!' Down, down, down. Would the fall never come to an end?</textarea>
-      <div class="row"><button type="button" id="restage">Shuffle the co-host's lines</button><span class="count" id="count" aria-live="polite"></span></div>
-      <div class="script" id="staged" aria-label="The staged script"></div>
-    </div>
-  </section>
-
-  <section class="stop">
-    <p class="eyebrow">How it works</p>
-    <h2>Three files, one job each</h2>
     <dl class="specs">
-      <div class="spec"><dt><code>podcastify.py</code></dt><dd>The CLI. Reads <code>.epub</code> (ebooklib and BeautifulSoup), <code>.txt</code>, <code>.md</code> or <code>.html</code>, builds the script, writes the transcript, calls the TTS engine</dd></div>
-      <div class="spec"><dt><code>script_builder.py</code></dt><dd>Splits the text into sentences with a regex, groups them three to a segment, and inserts a co-host reaction and a narrator bridge after every second segment. In <code>llm</code> mode it calls the Anthropic Messages API and asks for the conversation as a JSON array of turns</dd></div>
-      <div class="spec"><dt><code>tts_engine.py</code></dt><dd>Renders each turn to MP3 with edge-tts, then joins them with ffmpeg's concat demuxer without re-encoding, or byte-joins the MP3s if ffmpeg is missing</dd></div>
+      <div class="spec"><dt>1. Spans</dt><dd>The text is split into numbered sentences with character offsets. These are the only things a line can cite. <em>Alice</em> has 1,431 of them, grouped into 15 chunks of about 10,000 characters.</dd></div>
+      <div class="spec"><dt>2. Map</dt><dd>Each chunk goes to the model with its sentences numbered, four chunks at a time. It returns key points, each citing the sentence ids it comes from and rated 1 to 3 for importance. <em>Alice</em> gave 169.</dd></div>
+      <div class="spec"><dt>3. Reduce</dt><dd>The model sees every key point and picks about two per target minute, in source order, grouped into three to five titled sections. For six minutes of <em>Alice</em> it chose 17 points in four sections, from the rabbit-hole to the trial.</dd></div>
+      <div class="spec"><dt>4. Script</dt><dd>The model writes the conversation from the outline and the cited sentences (plus one neighbor on each side). Each line comes back as JSON with a speaker, the text, whether it makes a claim about the source, and the ids it rests on.</dd></div>
+      <div class="spec"><dt>5. Check</dt><dd>Every line, claim or not, is checked against its cited sentences; see the next section. Lines that fail are sent back once for a rewrite and checked again, and dropped if they still fail.</dd></div>
+      <div class="spec"><dt>6. Audio</dt><dd>edge-tts renders each line, four at a time; ffmpeg joins them and writes the sections as ID3 chapter frames in the MP3, or as chapter atoms in an M4B with <code>-o book.m4b</code>.</dd></div>
     </dl>
+    <p style="margin-top:22px">
+      All LLM calls go through the local <code>claude -p</code> CLI on a Claude subscription, with built-in tools
+      off and no user settings loaded (<code>--tools "" --setting-sources ""</code>), so the model sees the
+      prompt and nothing on disk. With <code>ANTHROPIC_API_KEY</code> set, the same prompts go to the Messages
+      API instead. Rule mode, which needs no model at all, is still the default.
+    </p>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">The grounding check</p>
+    <h2>Two checks per line, and what they catch</h2>
+    <p>
+      The local check embeds the line and its cited sentences with sentence-transformers
+      all-MiniLM-L6-v2 and flags a cosine similarity below 0.40 (a threshold set before any eval run),
+      or any figure written in digits that does not appear in the cited text. It flagged 3 of 151 claim
+      lines and agreed with the LLM verdict on 82% to 100% of claim lines per source, mostly because both
+      call nearly everything fine. It is a cheap screen for a line that cites the wrong place, which the
+      script writer rarely did.
+    </p>
+    <p>
+      The LLM check is a separate <code>claude -p</code> call that reads each line with its cited sentences
+      (and the line before it, since a short answer leans on its question) and returns supported, partly,
+      unsupported or no claim. Lines the writer marked as non-claims are checked too, against their two
+      nearest outline sentences, so a factual line cannot skip the check by being labeled a reaction. Seven
+      lines across the four episodes were claims the writer had not marked.
+    </p>
+    <p>
+      What failed was rarely an invented fact. The nine failures were a question that presupposed something
+      from outside the cited sentences ("It sits right on the river"), a quote attributed to a source the
+      cited sentence does not name, or an inference stated as fact ("the consequence is prison"). The check
+      also made one plain mistake, visible in the episode above: in the last paragraph of <em>Alice</em> the
+      sister pictures "this same little sister of hers" grown up, which is Alice. The checker read it as the
+      sister picturing herself, marked a correct line "partly", and the line was dropped after its rewrite.
+      The second checker, Opus, made the same misreading of the next line.
+    </p>
+  </section>
+
+  <section class="stop stop--key">
+    <p class="eyebrow">The eval</p>
+    <h2>Four sources, three modes, five measures</h2>
+    <p>
+      Each source was run three ways at a six-minute target: rule mode reading from the start until it had
+      used as many words as the LLM episode, the LLM pipeline with the grounding pass, and the same LLM
+      draft before the grounding pass. Before any episode existed, Opus wrote 12 key points for each source
+      from the full text; I checked the figures in them against the sources and committed them
+      (<code>eval/keypoints/</code>). Opus then marked each point as covered (1), partly covered (0.5) or
+      missing in each script.
+    </p>
+    <div class="tablewrap" role="region" aria-label="Eval results by source and mode" tabindex="0">
+      <table id="evaltable">
+        <thead><tr><th scope="col">Source</th><th scope="col">Mode</th><th scope="col" class="num">Key points</th><th scope="col" class="num">Not fully supported</th><th scope="col" class="num">Words</th><th scope="col" class="num">Length</th><th scope="col" class="num">Wpm</th></tr></thead>
+        <tbody id="evalrows"></tbody>
+      </table>
+    </div>
+    <p class="fig-cap">"Not fully supported" is the share of claim lines that Opus, as a second checker kept out
+      of the pipeline, rated partly or unsupported against their cited sentences. Rule-mode narration is the
+      source read verbatim, so it is supported by construction and was not sent. Length and words per minute
+      come from rendering every script with edge-tts and measuring it with ffprobe.</p>
+
+    <figure class="chart">
+      <svg id="covchart" role="img" aria-labelledby="covtitle" viewBox="0 0 640 250"></svg>
+      <div class="legend"><span><i class="lr"></i>Rule mode</span><span><i class="ld"></i>LLM draft, before the check</span><span><i class="ll"></i>LLM checked</span></div>
+      <figcaption>Key points covered out of 12. The LLM episodes cover more of every source than rule mode, and the gap is widest on the longest source: six minutes of rule mode do not get to the end of the first chapter of <em>Alice</em>. Origin of Species is the weak case for the LLM, at 5 of 12.</figcaption>
+    </figure>
+
+    <h3 style="margin-top:34px">Listenability, judged blind</h3>
+    <p>
+      Opus compared each pair of scripts for each source, labeled only "Script 1" and "Script 2", once in
+      each order. A mode wins a source only if it is preferred in both orders.
+    </p>
+    <div class="tablewrap" role="region" aria-label="Pairwise listenability results" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Pair</th><th scope="col" class="num">First wins</th><th scope="col" class="num">Second wins</th><th scope="col" class="num">No consistent winner</th></tr></thead>
+        <tbody id="listenrows"></tbody>
+      </table>
+    </div>
+    <p class="fig-cap">Counts are sources, out of four. The judge preferred the unchecked draft over the checked
+      episode in three of four sources, in both orders; on the fourth the two scripts were identical because
+      nothing failed. Dropping a line can leave a question without its answer, and the judge noticed.</p>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">Checking the checker</p>
+    <h2>Twenty lines read by hand</h2>
+    <p>
+      <code>eval/hand_check.py</code> drew 20 claim lines at random (seed 19) from the four drafts, before any
+      repair, and printed each with the sentences it cites and no verdict. I read all 20 and recorded my own
+      verdict in <code>eval/hand_check.json</code> before scoring. My reading agreed with the pipeline's
+      checker on pass or fail for <span id="hand">18 of 20</span> lines, and with Opus on 19. The two
+      disagreements with the pipeline went both ways: it called a correct paraphrase of the end of
+      <em>Alice</em> "partly", and passed "That points at the water, not the air", an inference the cited
+      sentences about John Snow's pump do not state.
+    </p>
+    <p>
+      Twenty lines with one real failure among them says the checker passes good lines; it says little about
+      how many bad lines it misses. That would need a sample built around failures.
+    </p>
   </section>
 
   <section class="stop stop--warn">
     <p class="eyebrow">Limitations</p>
-    <h2>In rule mode the co-host has nothing to say</h2>
+    <h2>What four sources can and cannot show</h2>
     <p>
-      Rule mode is faithful to the source and costs nothing, and the price is a co-host
-      who responds to nothing in particular. Its lines come from a pool of twelve
-      reactions and five narrator bridges, so over a long book they repeat, and they can
-      land oddly: "Let me make sure I'm following" after Alice falls down a well. What
-      rule mode produces is a two-voice reading. A second voice every few paragraphs
-      changes the texture of a long listen, but nobody would mistake it for a
-      conversation.
+      Four sources, one run each, one six-minute target. The coverage gap between rule mode and LLM mode is
+      large and consistent; the grounding numbers are small counts (8 lines of 172), and a different run
+      would move them by a few lines. The key points, the coverage grading, the second check and the
+      listenability judge are all Claude models, and the scripts are Claude's too, so the judge may favor
+      writing like its own.
     </p>
     <p>
-      The sentence splitter is a regular expression, and quoted speech trips it. In the
-      sample, the Rabbit's "Oh dear! Oh dear! I shall be late!" is cut across two turns,
-      and the second narration turn runs 51 seconds.
+      The grounding pass, as built, did not lower the second checker's not-supported rate. It removes what
+      one model flags, which is a narrow filter: Sonnet and Opus mostly disagree about which lines are
+      partly supported, and both are sometimes wrong. What the pass does give is a record: every line in the
+      transcript carries its source offsets and verdict, so a reader can check any line in a few seconds.
     </p>
     <p>
-      <code>--mode llm</code> is the fix for the first problem. With
-      <code>ANTHROPIC_API_KEY</code> set, Claude rewrites up to 12,000 characters of source
-      into a host and co-host discussion, and the prompt tells it not to invent facts.
-      That mode costs API usage per run, and without a key it falls back to rule mode.
-      edge-tts is an unofficial Microsoft endpoint: version 7.2.8 returned HTTP 403 on
-      2026-10-26 and 7.3.1 worked, so keep it upgraded.
+      A "supported" verdict means the cited sentences back the line, not that the line is a fair summary of
+      the work. The outline step decides what an episode leaves out, and nothing checks that. Six minutes of
+      <em>Alice</em> skip the pool of tears, the Caucus-race and the croquet game. Episodes ran 5.6 to 7.9
+      minutes against the six-minute target. edge-tts is an unofficial Microsoft endpoint; 7.2.8 returned
+      HTTP 403 on 2026-10-26 and 7.3.1 works.
     </p>
   </section>
 
   <section class="stop stop--end">
     <p class="eyebrow">Built with</p>
-    <h2>Free by default</h2>
+    <h2>Free to run on a Claude subscription</h2>
     <dl class="specs">
-      <div class="spec"><dt>Input</dt><dd><code>.epub</code>, <code>.txt</code>, <code>.md</code> or <code>.html</code>; <code>--max-chars</code> caps the length for a quick preview</dd></div>
-      <div class="spec"><dt>Voices</dt><dd>edge-tts neural voices, no API key</dd></div>
-      <div class="spec"><dt>Stitching</dt><dd>ffmpeg concat, with a byte-join fallback</dd></div>
-      <div class="spec"><dt>LLM mode</dt><dd>Anthropic Messages API over <code>urllib</code>, no SDK; needs <code>ANTHROPIC_API_KEY</code></dd></div>
-      <div class="spec"><dt>Outputs</dt><dd><code>&lt;name&gt;.podcast.mp3</code> and <code>&lt;name&gt;.transcript.md</code></dd></div>
-      <div class="spec"><dt>Ships</dt><dd>Code, plus the two-minute public-domain sample on this page. Use files you own or public-domain titles</dd></div>
-      <div class="spec"><dt>Size</dt><dd>339 lines of Python across the three files</dd></div>
+      <div class="spec"><dt>Input</dt><dd><code>.epub</code>, <code>.txt</code>, <code>.md</code> or <code>.html</code>, whole books included</dd></div>
+      <div class="spec"><dt>LLM</dt><dd><code>claude -p</code> (Sonnet by default, <code>--model</code> to change), or the Anthropic Messages API over <code>urllib</code> when <code>ANTHROPIC_API_KEY</code> is set. Replies are cached on disk by prompt hash</dd></div>
+      <div class="spec"><dt>Local check</dt><dd>sentence-transformers all-MiniLM-L6-v2</dd></div>
+      <div class="spec"><dt>Voices</dt><dd>edge-tts neural voices, en-US-AndrewNeural and en-US-AvaNeural by default, no API key</dd></div>
+      <div class="spec"><dt>Outputs</dt><dd>MP3 with ID3 chapters or M4B with chapters; a Markdown transcript with offsets and verdicts; an episode JSON with every line, span and check</dd></div>
+      <div class="spec"><dt>Eval sources</dt><dd><em>Alice's Adventures in Wonderland</em>, Thoreau's <em>On the Duty of Civil Disobedience</em> and chapter III of Darwin's <em>On the Origin of Species</em> (first edition) from Project Gutenberg, public domain; and the Wikipedia article <a href="https://en.wikipedia.org/w/index.php?title=Great_Stink&amp;oldid=1381900566">Great Stink</a>, revision 1381900566, by Wikipedia contributors under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, quoted in the eval files</dd></div>
+      <div class="spec"><dt>Rule mode</dt><dd>Still the default and still free: the narrator reads three sentences at a time and the co-host interjects from a fixed pool. Its earlier sample run, 1,800 characters of <em>Alice</em> as 1 minute 59 seconds of audio, is in <a href="https://github.com/lyhjeremy/podcastify/blob/main/writeup.md">the write-up</a></dd></div>
       <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/epub-to-audiobook/">EPUB to Audiobook</a>, which renders a book as a single-voice audiobook with a read-along player</dd></div>
     </dl>
   </section>
@@ -436,94 +540,163 @@ duration=<span class="g">119.304000</span></pre>
       <a href="https://github.com/lyhjeremy/podcastify">Source</a> ·
       MIT © 2026 Jeremy Lee
     </p>
-    <p>Sample text from Project Gutenberg, public domain.</p>
+    <p>Episode text from Project Gutenberg, public domain. Great Stink text from Wikipedia, CC BY-SA 4.0.</p>
   </footer>
 </div>
 
 <script>
 (function () {
   var NAME = { A: "Alex", B: "Sam" };
-  function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  var COND = { "rule": "Rule mode", "llm-nocheck": "LLM draft", "llm": "LLM checked" };
+  var SHORT = { alice: "Alice in Wonderland", civil: "Civil Disobedience", origin3: "Origin of Species, ch. III", greatstink: "Great Stink" };
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); }
   function mmss(t) { t = Math.round(t); return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
+  function pct(x) { return (100 * x).toFixed(1) + "%"; }
+  function num(n) { return n.toLocaleString("en-US"); }
+  function verdictLabel(l) {
+    if (l.dropped) return "dropped";
+    if (l.action === "rewritten") return "rewritten";
+    if (l.first === "no_claim") return "";
+    return l.first;
+  }
 
-  /* The sample: [speaker, text, seconds] for each rendered turn */
-  var T = [["B", "Welcome to Podcastify. Today we're getting into alice-excerpt.", 4.488], ["A", "That's right. Let's dive in.", 1.944], ["A", "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?' So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her. There was nothing so VERY remarkable in that; nor did Alice think it so VERY much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear!", 42.672], ["A", "I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge. In another moment down went Alice after it, never once considering how in the world she was to get out again. The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well.", 51.36], ["B", "Let me make sure I'm following.", 1.92], ["A", "Stay with me, it builds.", 1.872], ["A", "Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what w", 8.712], ["B", "That's a great place to wrap up. Thanks for listening to Podcastify.", 4.464], ["A", "See you next time.", 1.872]];
-  var aud = document.getElementById("aud"), strip = document.getElementById("strip"), script = document.getElementById("script");
-  var starts = [], acc = 0, lines = [], cells = [], on = -1;
-  T.forEach(function (t, i) {
-    starts.push(acc); acc += t[2];
-    var c = document.createElement("button");
-    c.type = "button"; c.className = t[0] === "B" ? "b" : "";
-    c.style.flex = t[2] + " 0 0";
-    c.setAttribute("aria-label", "Turn " + (i + 1) + ", " + NAME[t[0]] + ", starts " + mmss(starts[i]));
-    c.addEventListener("click", function () { jump(i); });
-    strip.appendChild(c); cells.push(c);
-    var d = document.createElement("div");
-    d.className = "line" + (t[0] === "B" ? " b" : ""); d.tabIndex = 0;
-    d.innerHTML = '<span class="who">' + NAME[t[0]] + '</span><p>' + esc(t[1]) + '</p><span class="t">' + mmss(starts[i]) + '</span>';
-    d.addEventListener("click", function () { jump(i); });
-    d.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(i); } });
-    script.appendChild(d); lines.push(d);
-  });
-  function mark(i) {
-    if (i === on) return; on = i;
-    lines.forEach(function (l, j) { l.classList.toggle("on", j === i); });
-    cells.forEach(function (c, j) { c.classList.toggle("on", j === i); });
-  }
-  var pending = false;
-  function jump(i) {
-    mark(i);
-    function go() { pending = false; aud.currentTime = starts[i] + 0.01; var p = aud.play(); if (p && p.catch) p.catch(function () {}); }
-    if (aud.readyState >= 1) go();
-    else { pending = true; aud.addEventListener("loadedmetadata", go, { once: true }); aud.preload = "metadata"; aud.load(); }
-  }
-  aud.addEventListener("timeupdate", function () {
-    if (pending || aud.seeking) return;
-    var t = aud.currentTime, i = 0;
-    for (var j = 0; j < starts.length; j++) if (t >= starts[j]) i = j;
-    mark(i);
-  });
-
-  /* A port of build_rule_based() from script_builder.py */
-  var REACTIONS = ["Okay, that's fascinating.", "Huh, I did not know that.", "Wait, can you unpack that a little?", "So what does that actually mean for the reader?", "Interesting - and then what happens?", "Love that. Keep going.", "That's a great point.", "Mm, that raises a question for me.", "Right, that makes sense.", "Oh, I like where this is going.", "Let me make sure I'm following.", "And why does that matter?"];
-  var BRIDGES = ["Good question. Here's the next part.", "Exactly. Let me read on.", "Right - so it continues like this.", "So here's what comes next.", "Stay with me, it builds."];
-  function splitSentences(text) {
-    text = text.replace(/\s+/g, " ").trim();
-    return text.split(/(?<=[.!?])\s+(?=[A-Z0-9"'])/).map(function (p) { return p.trim(); }).filter(Boolean);
-  }
-  function segment(text) {
-    var segs = [], cur = [];
-    splitSentences(text).forEach(function (s) { cur.push(s); if (cur.length >= 3) { segs.push(cur.join(" ")); cur = []; } });
-    if (cur.length) segs.push(cur.join(" "));
-    return segs;
-  }
-  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
-  function build(text, title) {
-    var segs = segment(text), turns = [["B", "Welcome to Podcastify. Today we're getting into " + title + "."], ["A", "That's right. Let's dive in."]];
-    var r = shuffle(REACTIONS.slice()), ri = 0;
-    segs.forEach(function (seg, i) {
-      turns.push(["A", seg]);
-      if (i < segs.length - 1 && i % 2 === 1) {
-        turns.push(["B", r[ri % r.length]]); ri++;
-        turns.push(["A", BRIDGES[Math.floor(Math.random() * BRIDGES.length)]]);
-      }
+  /* ---- the recorded episode ---- */
+  var aud = document.getElementById("aud"), script = document.getElementById("script"), chap = document.getElementById("chap");
+  fetch("episode.json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (E) {
+    var rows = [], spoken = [], on = -1;
+    var total = E.duration || 1;
+    (E.chapters || []).forEach(function (c, i) {
+      var b = document.createElement("button");
+      b.type = "button"; b.style.flex = (c.end - c.start) + " 0 0";
+      b.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="nm">' + esc(c.title) + '</span><span class="tm">' + mmss(c.start) + '</span>';
+      b.setAttribute("aria-label", "Chapter " + (i + 1) + ", " + c.title + ", starts " + mmss(c.start));
+      b.addEventListener("click", function () { seek(c.start); });
+      chap.appendChild(b);
     });
-    turns.push(["B", "That's a great place to wrap up. Thanks for listening to Podcastify."]);
-    turns.push(["A", "See you next time."]);
-    return { turns: turns, segs: segs.length };
-  }
-  var src = document.getElementById("src"), staged = document.getElementById("staged"), count = document.getElementById("count");
-  function stage() {
-    if (!src.value.trim()) { staged.innerHTML = ""; count.textContent = "Nothing to stage."; return; }
-    var b = build(src.value, "your text");
-    count.textContent = b.segs + " narration segment" + (b.segs === 1 ? "" : "s") + ", " + b.turns.length + " turns";
-    staged.innerHTML = b.turns.map(function (t) {
-      return '<div class="line' + (t[0] === "B" ? " b" : "") + '"><span class="who">' + NAME[t[0]] + '</span><p>' + esc(t[1]) + "</p></div>";
-    }).join("");
-  }
-  var tm; src.addEventListener("input", function () { clearTimeout(tm); tm = setTimeout(stage, 250); });
-  document.getElementById("restage").addEventListener("click", stage);
-  stage();
+    var cur = -1;
+    E.lines.forEach(function (l, i) {
+      if (l.sec !== cur) {
+        cur = l.sec;
+        var h = document.createElement("p"); h.className = "sec";
+        h.textContent = (cur + 1) + ". " + (E.sections[cur] || "");
+        script.appendChild(h);
+      }
+      var d = document.createElement("div");
+      var v = verdictLabel(l);
+      d.className = "line" + (l.who === "B" ? " b" : "") + (l.dropped ? " gone" : "");
+      var head = '<span class="who">' + NAME[l.who] + '</span>' +
+        '<button type="button" class="say" aria-expanded="false">' + esc(l.dropped ? l.was : l.text) + '</button>' +
+        '<span class="meta">' + (l.t ? '<button type="button" class="t" aria-label="Play from ' + mmss(l.t[0]) + '">' + mmss(l.t[0]) + '</button>' : '<span class="t">cut</span>') +
+        (v ? '<span class="v v-' + v + '">' + v + '</span>' : '') + '</span>';
+      d.innerHTML = head + '<div class="src" hidden></div>';
+      var say = d.querySelector(".say"), src = d.querySelector(".src");
+      say.addEventListener("click", function () {
+        var open = src.hidden;
+        if (open && !src.innerHTML) src.innerHTML = detail(l);
+        src.hidden = !open; say.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      var tb = d.querySelector("button.t");
+      if (tb) tb.addEventListener("click", function () { seek(l.t[0] + 0.01); });
+      script.appendChild(d);
+      if (l.t) { spoken.push(l.t[0]); rows.push(d); }
+    });
+    function detail(l) {
+      var h = "";
+      if (l.spans.length) {
+        h += '<p class="lbl">' + (l.auto ? "No citation in the script; the checker read it against the two closest outline sentences" : "Cited source") + '</p>';
+        l.spans.forEach(function (s) {
+          h += '<blockquote><span class="sid">' + s[0] + ', characters ' + num(s[1]) + ' to ' + num(s[2]) + '</span>' + esc(s[3]) + '</blockquote>';
+        });
+      }
+      var chk = "Pipeline check (Sonnet): <b>" + l.first.replace("_", " ") + "</b>" + (l.why ? ", " + esc(l.why) : "");
+      if (l.sim !== null && l.sim !== undefined) chk += ". MiniLM similarity " + l.sim.toFixed(2);
+      h += '<p class="chk">' + chk + '.</p>';
+      if (l.action === "rewritten") h += '<p class="chk">Rewritten once; the rewrite came back <b>' + l.after + '</b>. The script first said: <i>' + esc(l.was) + '</i></p>';
+      if (l.dropped) h += '<p class="chk">Dropped from the audio' + (l.after ? ' after its rewrite came back <b>' + l.after + '</b>' : '') + '.</p>';
+      if (l.second && !l.dropped) h += '<p class="chk">Second checker (Opus, eval only): <b>' + l.second.replace("_", " ") + '</b>.</p>';
+      return h;
+    }
+    function mark(i) {
+      if (i === on) return;
+      if (on >= 0) rows[on].classList.remove("on");
+      on = i; if (i >= 0) rows[i].classList.add("on");
+    }
+    function seek(t) {
+      function go() { aud.currentTime = t; var p = aud.play(); if (p && p.catch) p.catch(function () {}); }
+      if (aud.readyState >= 1) go();
+      else { aud.addEventListener("loadedmetadata", go, { once: true }); aud.preload = "metadata"; aud.load(); }
+    }
+    aud.addEventListener("timeupdate", function () {
+      if (aud.seeking) return;
+      var t = aud.currentTime, i = -1;
+      for (var j = 0; j < spoken.length; j++) if (t >= spoken[j]) i = j;
+      mark(i);
+    });
+  }).catch(function () { script.innerHTML = '<p class="fig-cap">The transcript could not be loaded. It is in <code>overview/episode.json</code> in the repository.</p>'; });
+
+  /* ---- the eval ---- */
+  fetch("eval.json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (D) {
+    var order = ["rule", "llm-nocheck", "llm"];
+    var tb = document.getElementById("evalrows"), h = "";
+    D.sources.forEach(function (s) {
+      order.forEach(function (c, k) {
+        var r = s.conds[c];
+        h += "<tr" + (k === 0 ? ' class="first"' : "") + ">" +
+          (k === 0 ? '<th scope="rowgroup" rowspan="3">' + esc(SHORT[s.key] || s.title) + '<span class="kind">' + esc(s.kind) + "</span></th>" : "") +
+          "<td>" + COND[c] + "</td>" +
+          '<td class="num">' + r.coverage.toFixed(1) + " / " + r.of + "</td>" +
+          '<td class="num">' + (c === "rule" ? "0 (verbatim)" : pct(r.not_supported_rate) + ' <span class="sub">' + (r.partly + r.unsupported) + " of " + r.claim_lines + "</span>") + "</td>" +
+          '<td class="num">' + num(r.words) + "</td>" +
+          '<td class="num">' + (r.duration_s ? mmss(r.duration_s) : "") + "</td>" +
+          '<td class="num">' + (r.wpm ? Math.round(r.wpm) : "") + "</td></tr>";
+      });
+    });
+    tb.innerHTML = h;
+
+    /* listenability: wins across sources */
+    var pairs = {}, lt = document.getElementById("listenrows"), lh = "";
+    D.sources.forEach(function (s) {
+      s.listen.forEach(function (p) {
+        var k = p.pair.join("|");
+        pairs[k] = pairs[k] || { pair: p.pair, a: 0, b: 0, tie: 0 };
+        if (p.winner === p.pair[0]) pairs[k].a++; else if (p.winner === p.pair[1]) pairs[k].b++; else pairs[k].tie++;
+      });
+    });
+    Object.keys(pairs).forEach(function (k) {
+      var p = pairs[k];
+      lh += "<tr><td>" + COND[p.pair[0]] + " vs " + COND[p.pair[1]] + '</td><td class="num">' + p.a + '</td><td class="num">' + p.b + '</td><td class="num">' + p.tie + "</td></tr>";
+    });
+    lt.innerHTML = lh;
+
+    /* dot chart: coverage by source and mode */
+    var svg = document.getElementById("covchart"), W = 640, rowH = 46, top = 30, left = 190, right = 24;
+    var H = top + rowH * D.sources.length + 34, x = function (v) { return left + (W - left - right) * v / 12; };
+    var g = '<title id="covtitle">Key points covered out of 12, by source and mode</title>';
+    for (var t = 0; t <= 12; t += 2) {
+      g += '<line x1="' + x(t) + '" x2="' + x(t) + '" y1="' + (top - 8) + '" y2="' + (H - 30) + '" class="grid"/>' +
+        '<text x="' + x(t) + '" y="' + (H - 12) + '" class="ax" text-anchor="middle">' + t + "</text>";
+    }
+    var cls = { "rule": "m-rule", "llm-nocheck": "m-draft", "llm": "m-llm" };
+    D.sources.forEach(function (s, i) {
+      var y = top + rowH * i + rowH / 2;
+      g += '<text x="' + (left - 12) + '" y="' + (y + 4) + '" class="lab" text-anchor="end">' + esc(SHORT[s.key] || s.title) + "</text>";
+      g += '<line x1="' + x(0) + '" x2="' + x(12) + '" y1="' + y + '" y2="' + y + '" class="row"/>';
+      order.forEach(function (c, k) {
+        var r = s.conds[c], cy = y + (k - 1) * 7;
+        g += '<g class="' + cls[c] + '" tabindex="0" role="img" aria-label="' + esc(s.title) + ", " + COND[c] + ": " + r.coverage + ' of 12">' +
+          (c === "rule" ? '<rect x="' + (x(r.coverage) - 5) + '" y="' + (cy - 5) + '" width="10" height="10"/>' :
+            '<circle cx="' + x(r.coverage) + '" cy="' + cy + '" r="5.5"/>') +
+          "<title>" + COND[c] + ": " + r.coverage + " of 12</title></g>";
+      });
+    });
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    svg.innerHTML = g;
+
+    if (D.hand_check) {
+      var hc = D.hand_check;
+      document.getElementById("hand").textContent = hc.agree_pipeline_pass_fail + " of " + hc.n;
+    }
+  }).catch(function () { document.getElementById("evalrows").innerHTML = '<tr><td colspan="7">The eval table could not be loaded; it is in overview/eval.json.</td></tr>'; });
 })();
 </script>
 </body>

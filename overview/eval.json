@@ -1,0 +1,707 @@
+{
+"sources": [
+{
+"key": "greatstink",
+"title": "Great Stink",
+"kind": "encyclopedia article",
+"license": "CC BY-SA 4.0, Wikipedia revision 1381900566 (2026-10-25)",
+"chars": 26640,
+"pipeline": {
+"lines": 70,
+"claim_lines": 43,
+"unflagged_claims": 3,
+"first_pass": {
+"supported": 40,
+"partly": 3
+},
+"unsupported_rate_first": 0.0,
+"not_supported_rate_first": 0.07,
+"actions": {
+"kept": 67,
+"dropped": 3
+},
+"local_flags": 0,
+"local_llm_agreement": 0.95
+},
+"listen": [
+{
+"pair": [
+"rule",
+"llm"
+],
+"winner": "llm",
+"orders": [
+{
+"order": [
+"rule",
+"llm"
+],
+"preferred": "llm",
+"why": "Short conversational turns, natural questions and reactions; Script 1 has long dense monologues, filler interjections, and stray headings like 'Background' read aloud."
+},
+{
+"order": [
+"llm",
+"rule"
+],
+"preferred": "llm",
+"why": "Script 1 uses short, natural exchanges with real questions; Script 2 has long dense monologues, filler interjections, and stray section headings read aloud."
+}
+]
+},
+{
+"pair": [
+"rule",
+"llm-nocheck"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"rule",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 uses short conversational turns and natural questions; Script 1 has dense monologues, artifact headings, and repetitive, mismatched filler interjections."
+},
+{
+"order": [
+"llm-nocheck",
+"rule"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 uses short, conversational turns with natural questions. Script 2 has dense monologues, filler interjections, and leftover heading artifacts."
+}
+]
+},
+{
+"pair": [
+"llm-nocheck",
+"llm"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"llm-nocheck",
+"llm"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 drops John Snow's introduction and the Doxat quote, leaving a dangling 'he' and 'goes even further,' plus an abrupt jump to Parliament."
+},
+{
+"order": [
+"llm",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 has dangling references: 'he' with no John Snow introduction, Sam's 'goes even further' lacks setup, and Parliament's shift is unsignposted."
+}
+]
+}
+],
+"conds": {
+"rule": {
+"coverage": 8.0,
+"of": 12,
+"yes": 7,
+"words": 1338,
+"duration_s": 502.416,
+"wpm": 159.8,
+"claim_lines": 16,
+"partly": null,
+"unsupported": null,
+"not_supported_rate": 0.0
+},
+"llm-nocheck": {
+"coverage": 10.5,
+"of": 12,
+"yes": 9,
+"words": 1279,
+"duration_s": 496.896,
+"wpm": 154.4,
+"claim_lines": 51,
+"partly": 4,
+"unsupported": 0,
+"not_supported_rate": 0.078
+},
+"llm": {
+"coverage": 10.0,
+"of": 12,
+"yes": 8,
+"words": 1212,
+"duration_s": 473.448,
+"wpm": 153.6,
+"claim_lines": 46,
+"partly": 2,
+"unsupported": 1,
+"not_supported_rate": 0.065
+}
+}
+},
+{
+"key": "civil",
+"title": "On the Duty of Civil Disobedience",
+"kind": "essay",
+"license": "Public domain (Project Gutenberg eBook #71)",
+"chars": 51135,
+"pipeline": {
+"lines": 55,
+"claim_lines": 31,
+"unflagged_claims": 2,
+"first_pass": {
+"supported": 29,
+"partly": 2
+},
+"unsupported_rate_first": 0.0,
+"not_supported_rate_first": 0.065,
+"actions": {
+"kept": 53,
+"dropped": 2
+},
+"local_flags": 0,
+"local_llm_agreement": 1.0
+},
+"listen": [
+{
+"pair": [
+"rule",
+"llm"
+],
+"winner": "llm",
+"orders": [
+{
+"order": [
+"rule",
+"llm"
+],
+"preferred": "llm",
+"why": "Script 2 is genuine conversational dialogue with short turns; Script 1 is long verbatim monologues with hollow, repetitive filler interjections and an abrupt cutoff."
+},
+{
+"order": [
+"llm",
+"rule"
+],
+"preferred": "llm",
+"why": "Natural conversational back-and-forth with short turns; Script 2 reads dense archaic monologues, repetitive filler interjections, and ends abruptly mid-sentence."
+}
+]
+},
+{
+"pair": [
+"rule",
+"llm-nocheck"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"rule",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 is genuine dialogue in short, plain sentences. Script 1 reads long archaic passages aloud with repetitive filler interjections and cuts off mid-sentence."
+},
+{
+"order": [
+"llm-nocheck",
+"rule"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 is conversational with short, paraphrased turns. Script 2 reads long dense quotations, uses repetitive filler, and cuts off mid-sentence."
+}
+]
+},
+{
+"pair": [
+"llm-nocheck",
+"llm"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"llm-nocheck",
+"llm"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 drops two Sam prompts, so Alex jumps abruptly to prison and the jailed State without transitions."
+},
+{
+"order": [
+"llm",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 adds Sam's bridging lines, avoiding back-to-back Alex turns, so prison and jail topic shifts are clearly signposted for listeners."
+}
+]
+}
+],
+"conds": {
+"rule": {
+"coverage": 4.5,
+"of": 12,
+"yes": 4,
+"words": 1023,
+"duration_s": 349.104,
+"wpm": 175.8,
+"claim_lines": 12,
+"partly": null,
+"unsupported": null,
+"not_supported_rate": 0.0
+},
+"llm-nocheck": {
+"coverage": 8.0,
+"of": 12,
+"yes": 6,
+"words": 957,
+"duration_s": 340.392,
+"wpm": 168.7,
+"claim_lines": 33,
+"partly": 0,
+"unsupported": 1,
+"not_supported_rate": 0.03
+},
+"llm": {
+"coverage": 8.5,
+"of": 12,
+"yes": 6,
+"words": 939,
+"duration_s": 334.92,
+"wpm": 168.2,
+"claim_lines": 31,
+"partly": 1,
+"unsupported": 0,
+"not_supported_rate": 0.032
+}
+}
+},
+{
+"key": "origin3",
+"title": "On the Origin of Species, Chapter III: Struggle for Existence",
+"kind": "nonfiction chapter",
+"license": "Public domain (Project Gutenberg eBook #1228, first edition)",
+"chars": 35685,
+"pipeline": {
+"lines": 65,
+"claim_lines": 39,
+"unflagged_claims": 2,
+"first_pass": {
+"supported": 39
+},
+"unsupported_rate_first": 0.0,
+"not_supported_rate_first": 0.0,
+"actions": {
+"kept": 65
+},
+"local_flags": 0,
+"local_llm_agreement": 1.0
+},
+"listen": [
+{
+"pair": [
+"rule",
+"llm"
+],
+"winner": "llm",
+"orders": [
+{
+"order": [
+"rule",
+"llm"
+],
+"preferred": "llm",
+"why": "Script 2 uses short, conversational exchanges with genuine questions; Script 1 reads dense Victorian text verbatim with hollow, repetitive filler interjections."
+},
+{
+"order": [
+"llm",
+"rule"
+],
+"preferred": "llm",
+"why": "Script 1 is natural, paced dialogue; Script 2 reads raw Victorian text in long blocks with mismatched, filler interjections."
+}
+]
+},
+{
+"pair": [
+"rule",
+"llm-nocheck"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"rule",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 uses short, conversational exchanges with genuine questions; Script 1 reads dense Victorian text verbatim with hollow, repetitive filler interjections."
+},
+{
+"order": [
+"llm-nocheck",
+"rule"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 is natural, paced dialogue; Script 2 reads raw Victorian text in long blocks with mismatched, filler interjections."
+}
+]
+},
+{
+"pair": [
+"llm-nocheck",
+"llm"
+],
+"winner": null,
+"orders": [
+{
+"order": [
+"llm-nocheck",
+"llm"
+],
+"preferred": null,
+"why": "The two scripts are word-for-word identical, so they would sound the same and be equally easy to follow."
+},
+{
+"order": [
+"llm",
+"llm-nocheck"
+],
+"preferred": null,
+"why": "The two scripts are word-for-word identical, so they would sound the same and be equally easy to follow."
+}
+]
+}
+],
+"conds": {
+"rule": {
+"coverage": 4.0,
+"of": 12,
+"yes": 2,
+"words": 1179,
+"duration_s": 427.728,
+"wpm": 165.4,
+"claim_lines": 14,
+"partly": null,
+"unsupported": null,
+"not_supported_rate": 0.0
+},
+"llm-nocheck": {
+"coverage": 5.0,
+"of": 12,
+"yes": 4,
+"words": 1002,
+"duration_s": 374.904,
+"wpm": 160.4,
+"claim_lines": 46,
+"partly": 3,
+"unsupported": 0,
+"not_supported_rate": 0.065
+},
+"llm": {
+"coverage": 5.0,
+"of": 12,
+"yes": 4,
+"words": 1002,
+"duration_s": 376.392,
+"wpm": 159.7,
+"claim_lines": 46,
+"partly": 3,
+"unsupported": 0,
+"not_supported_rate": 0.065
+}
+}
+},
+{
+"key": "alice",
+"title": "Alice's Adventures in Wonderland",
+"kind": "novel, whole book",
+"license": "Public domain (Project Gutenberg eBook #11)",
+"chars": 143485,
+"pipeline": {
+"lines": 63,
+"claim_lines": 38,
+"unflagged_claims": 0,
+"first_pass": {
+"supported": 34,
+"partly": 4
+},
+"unsupported_rate_first": 0.0,
+"not_supported_rate_first": 0.105,
+"actions": {
+"kept": 59,
+"rewritten": 3,
+"dropped after rewrite": 1
+},
+"local_flags": 3,
+"local_llm_agreement": 0.816
+},
+"listen": [
+{
+"pair": [
+"rule",
+"llm"
+],
+"winner": "llm",
+"orders": [
+{
+"order": [
+"rule",
+"llm"
+],
+"preferred": "llm",
+"why": "Script 2 is natural, short-turn dialogue; Script 1 reads long raw text with hollow, repetitive filler interjections that break mid-sentence."
+},
+{
+"order": [
+"llm",
+"rule"
+],
+"preferred": "llm",
+"why": "Script 1 uses short, natural exchanges. Script 2 reads long raw text with mid-sentence splits and filler interjections that don't fit."
+}
+]
+},
+{
+"pair": [
+"rule",
+"llm-nocheck"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"rule",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 uses short, natural back-and-forth; Script 1 reads long raw text blocks with filler interjections and awkward mid-sentence splits."
+},
+{
+"order": [
+"llm-nocheck",
+"rule"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 uses short, natural conversational turns. Script 2 reads long raw text blocks with filler interjections and lines cut mid-sentence."
+}
+]
+},
+{
+"pair": [
+"llm-nocheck",
+"llm"
+],
+"winner": "llm-nocheck",
+"orders": [
+{
+"order": [
+"llm-nocheck",
+"llm"
+],
+"preferred": "llm-nocheck",
+"why": "Script 2 has Sam asking two questions back-to-back with the sister's answer missing, a jarring gap. Script 1 flows smoothly throughout."
+},
+{
+"order": [
+"llm",
+"llm-nocheck"
+],
+"preferred": "llm-nocheck",
+"why": "Script 1 has Sam asking two questions back-to-back with no answer, a jarring gap. Script 2 flows smoothly throughout."
+}
+]
+}
+],
+"conds": {
+"rule": {
+"coverage": 1.0,
+"of": 12,
+"yes": 1,
+"words": 1180,
+"duration_s": 367.248,
+"wpm": 192.8,
+"claim_lines": 15,
+"partly": null,
+"unsupported": null,
+"not_supported_rate": 0.0
+},
+"llm-nocheck": {
+"coverage": 6.0,
+"of": 12,
+"yes": 3,
+"words": 1022,
+"duration_s": 355.464,
+"wpm": 172.5,
+"claim_lines": 42,
+"partly": 0,
+"unsupported": 0,
+"not_supported_rate": 0.0
+},
+"llm": {
+"coverage": 6.0,
+"of": 12,
+"yes": 3,
+"words": 1022,
+"duration_s": 354.624,
+"wpm": 172.9,
+"claim_lines": 42,
+"partly": 0,
+"unsupported": 1,
+"not_supported_rate": 0.024
+}
+}
+}
+],
+"hand_check": {
+"n": 20,
+"agree_pipeline_exact": 18,
+"agree_second_exact": 19,
+"agree_pipeline_pass_fail": 18,
+"rows": [
+{
+"id": "alice:20",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "origin3:37",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "alice:51",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "origin3:31",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "civil:27",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "greatstink:52",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": "Leans on the previous line; the cited sentence covers it."
+},
+{
+"id": "greatstink:32",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "origin3:39",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "greatstink:10",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "origin3:63",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "alice:61",
+"hand": "supported",
+"pipeline": "partly",
+"second": "supported",
+"note": ""
+},
+{
+"id": "civil:50",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "alice:46",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": "\"gets bolder\" paraphrases \"surprised at her own courage\"; counted as supported."
+},
+{
+"id": "greatstink:59",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "greatstink:24",
+"hand": "partly",
+"pipeline": "supported",
+"second": "supported",
+"note": "\"That points at the water, not the air\" is an inference the cited sentences do not state."
+},
+{
+"id": "civil:54",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "greatstink:18",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "alice:11",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "origin3:55",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+},
+{
+"id": "alice:31",
+"hand": "supported",
+"pipeline": "supported",
+"second": "supported",
+"note": ""
+}
+]
+}
+}

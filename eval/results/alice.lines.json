@@ -1,0 +1,3160 @@
+{
+"source": "alice",
+"lines": [
+{
+"speaker": "A",
+"text": "Welcome. Today we're talking about Alice's Adventures in Wonderland, by Lewis Carroll, the whole book.",
+"section": 0,
+"claim": true,
+"src": [],
+"auto_src": [
+"S46",
+"S53"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Greeting and naming the work and author; asserts nothing about content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+0.0,
+6.024
+],
+"spans": [],
+"auto_spans": [
+[
+5625,
+5853
+],
+[
+6988,
+7134
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Let's start at the very beginning. How does Alice end up in Wonderland?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S9",
+"S8"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond Alice being in Wonderland.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+6.024,
+4.224
+],
+"spans": [],
+"auto_spans": [
+[
+1474,
+1693
+],
+[
+1363,
+1472
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A Rabbit takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch. She burns with curiosity and runs after it.",
+"section": 0,
+"claim": true,
+"src": [
+"S7"
+],
+"check": {
+"local": {
+"sim": 0.799,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S7: watch, waistcoat-pocket, never seen, burning curiosity, ran after it.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+10.248,
+10.704
+],
+"spans": [
+[
+778,
+1361
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she just jumps in the hole?",
+"section": 0,
+"claim": true,
+"src": [
+"S8"
+],
+"check": {
+"local": {
+"sim": 0.422,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S8 says down went Alice after it, consistent with jumping in the hole.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+20.952,
+2.088
+],
+"spans": [
+[
+1363,
+1472
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Right away. Down she goes, never once considering how in the world she was to get out again. The tunnel dips so suddenly that she finds herself falling down a very deep well.",
+"section": 0,
+"claim": true,
+"src": [
+"S8",
+"S9"
+],
+"check": {
+"local": {
+"sim": 0.624,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly matches S8 and S9.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+23.04,
+10.944
+],
+"spans": [
+[
+1363,
+1472
+],
+[
+1474,
+1693
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does she find at the bottom?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S66",
+"S48"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific beyond something at the bottom.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+33.984,
+1.896
+],
+"spans": [],
+"auto_spans": [
+[
+9328,
+9844
+],
+[
+6183,
+6413
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A hall of locked doors. Then a little glass table with a tiny golden key. It fits a door about fifteen inches high, hidden behind a low curtain. Beyond it is the loveliest garden.",
+"section": 0,
+"claim": true,
+"src": [
+"S46",
+"S47",
+"S48",
+"S49"
+],
+"check": {
+"local": {
+"sim": 0.643,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S46-S49: locked doors, glass table, key, small door, garden.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+35.88,
+10.968
+],
+"spans": [
+[
+5625,
+5853
+],
+[
+5855,
+6182
+],
+[
+6183,
+6413
+],
+[
+6415,
+6597
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But she can't fit through, can she?",
+"section": 0,
+"claim": true,
+"src": [
+"S50"
+],
+"check": {
+"local": {
+"sim": 0.45,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "A question; its presupposition that she's too big is consistent with S50.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+46.848,
+2.136
+],
+"spans": [
+[
+6598,
+6891
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. She can't even get her head through the doorway. Then she finds a bottle with a label that says \"DRINK ME,\" beautifully printed in large letters.",
+"section": 0,
+"claim": true,
+"src": [
+"S50",
+"S54"
+],
+"check": {
+"local": {
+"sim": 0.572,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S50 head can't get through; S54 bottle with DRINK ME label in large letters.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+48.984,
+9.336
+],
+"spans": [
+[
+6598,
+6891
+],
+[
+7136,
+7559
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does she just gulp it down?",
+"section": 0,
+"claim": true,
+"src": [
+"S55"
+],
+"check": {
+"local": {
+"sim": 0.391,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question presupposing nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+58.32,
+1.872
+],
+"spans": [
+[
+7561,
+7663
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not at all. She says, \"I'll look first,\" to see whether it's marked \"poison.\" She remembers the simple rules her friends taught her. It isn't marked, so she tastes it and finds it very nice.",
+"section": 0,
+"claim": true,
+"src": [
+"S55",
+"S56",
+"S57"
+],
+"check": {
+"local": {
+"sim": 0.748,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S55-S57: looks first for poison, remembers rules, not marked, tastes nice.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+60.192,
+11.784
+],
+"spans": [
+[
+7561,
+7663
+],
+[
+7664,
+8254
+],
+[
+8256,
+8515
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does it taste like?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S57",
+"S56"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A simple question about taste.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+71.976,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+8256,
+8515
+],
+[
+7664,
+8254
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast, all mixed together.",
+"section": 0,
+"claim": true,
+"src": [
+"S57"
+],
+"check": {
+"local": {
+"sim": 0.489,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Flavours listed exactly in S57.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+73.848,
+7.008
+],
+"spans": [
+[
+8256,
+8515
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ha! And then she shrinks?",
+"section": 0,
+"claim": true,
+"src": [
+"S61",
+"S62"
+],
+"check": {
+"local": {
+"sim": 0.38,
+"numbers_missing": [],
+"flag": true
+},
+"first": "supported",
+"why": "S61-S62 show she shrinks after drinking.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+80.856,
+2.304
+],
+"spans": [
+[
+8645,
+8724
+],
+[
+8726,
+8914
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Yes, to ten inches high, the right size for the little door. But she gets nervous. It might end, she says, in her going out altogether, like a candle.",
+"section": 0,
+"claim": true,
+"src": [
+"S62",
+"S63"
+],
+"check": {
+"local": {
+"sim": 0.608,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S62 ten inches, right size; S63 nervous, going out like a candle.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+83.16,
+10.176
+],
+"spans": [
+[
+8726,
+8914
+],
+[
+8915,
+9141
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Poor Alice. Does her size make her doubt who she is?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S407",
+"S308"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question, with host's sympathy; nothing asserted about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+93.336,
+3.792
+],
+"spans": [],
+"auto_spans": [
+[
+46209,
+46391
+],
+[
+35227,
+35471
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Very much. She asks, \"Who in the world am I?\" and calls it the great puzzle. She wonders if she's been changed in the night.",
+"section": 1,
+"claim": true,
+"src": [
+"S105",
+"S108",
+"S109"
+],
+"check": {
+"local": {
+"sim": 0.634,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S105, S108, S109 quotes.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+97.128,
+7.392
+],
+"spans": [
+[
+14200,
+14243
+],
+[
+14359,
+14428
+],
+[
+14429,
+14458
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does she test it?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S119",
+"S462"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond a test.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+104.52,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+15314,
+15547
+],
+[
+51504,
+51693
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She thinks over the children she knows, like Ada and Mabel. Then she tries her lessons. Four times five is twelve, she says, and London is the capital of Paris.",
+"section": 1,
+"claim": true,
+"src": [
+"S110",
+"S111",
+"S114",
+"S117"
+],
+"check": {
+"local": {
+"sim": 0.773,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S110, S111, S114, S117: Ada, Mabel, four times five twelve, London capital of Paris.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+106.392,
+10.248
+],
+"spans": [
+[
+14459,
+14605
+],
+[
+14607,
+14828
+],
+[
+14948,
+15052
+],
+[
+15167,
+15277
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So she decides she must be Mabel.",
+"section": 1,
+"claim": true,
+"src": [
+"S118",
+"S122"
+],
+"check": {
+"local": {
+"sim": 0.726,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S118 and S122: Alice concludes she must have been changed for Mabel.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+116.64,
+2.52
+],
+"spans": [
+[
+15278,
+15313
+],
+[
+15782,
+16058
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She does. Even the poem about the little crocodile comes out wrong, and her voice sounds hoarse and strange.",
+"section": 1,
+"claim": true,
+"src": [
+"S119",
+"S120",
+"S122"
+],
+"check": {
+"local": {
+"sim": 0.578,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S119-S122: poem comes out wrong, voice hoarse and strange.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+119.16,
+6.792
+],
+"spans": [
+[
+15314,
+15547
+],
+[
+15549,
+15660
+],
+[
+15782,
+16058
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Later she goes the other way, right?",
+"section": 1,
+"claim": true,
+"src": [
+"S302"
+],
+"check": {
+"local": {
+"sim": 0.319,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question for clarification; presupposes nothing beyond a transition.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+125.952,
+2.184
+],
+"spans": [
+[
+34361,
+34557
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She grows so fast that her head presses against the ceiling. Still she keeps growing, and puts one arm out of the window and one foot up the chimney. Then the bottle's effect stops, but there seems no chance of her getting out of the room again.",
+"section": 1,
+"claim": true,
+"src": [
+"S302",
+"S306",
+"S308"
+],
+"check": {
+"local": {
+"sim": 0.734,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Head against ceiling, arm out window, foot up chimney supported; 'can't get out' is only implied by S308 but 'grows so fast' fine; she stops growing is omitted but ok. Main points hold, though 'In the end' glosses stopping.",
+"action": "rewritten",
+"final": "supported",
+"original": "She grows so fast that her head presses against the ceiling. In the end she puts one arm out of the window and one foot up the chimney. She still can't get out of the room.",
+"local_after": {
+"sim": 0.688,
+"numbers_missing": [],
+"flag": false
+},
+"after": "supported",
+"why_after": "Matches S302, S306, S308: head against ceiling, arm out window, foot up chimney, bottle effect ends."
+},
+"t": [
+128.136,
+13.608
+],
+"spans": [
+[
+34361,
+34557
+],
+[
+35024,
+35200
+],
+[
+35227,
+35471
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she meets the Caterpillar.",
+"section": 1,
+"claim": true,
+"src": [
+"S399"
+],
+"check": {
+"local": {
+"sim": 0.578,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S399 shows Alice and the Caterpillar meeting and looking at each other.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+141.744,
+2.28
+],
+"spans": [
+[
+45540,
+45716
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He asks, \"Who are you?\" She says she hardly knows. She knew who she was that morning, but she's been changed several times since.",
+"section": 1,
+"claim": true,
+"src": [
+"S400",
+"S402"
+],
+"check": {
+"local": {
+"sim": 0.669,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S400 and S402 match the question and Alice's reply.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+144.024,
+7.968
+],
+"spans": [
+[
+45718,
+45754
+],
+[
+45812,
+45999
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he understand?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S404",
+"S407"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing substantive about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+151.992,
+1.488
+],
+"spans": [],
+"auto_spans": [
+[
+46059,
+46078
+],
+[
+46209,
+46391
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. She says, \"I'm not myself, you see.\" He answers, \"I don't see.\" She says being so many different sizes in a day is very confusing. He says it isn't.",
+"section": 1,
+"claim": true,
+"src": [
+"S405",
+"S406",
+"S407",
+"S408"
+],
+"check": {
+"local": {
+"sim": 0.661,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S405-S408 match the exchange: not myself, I don't see, confusing, it isn't.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+153.48,
+10.704
+],
+"spans": [
+[
+46080,
+46169
+],
+[
+46171,
+46207
+],
+[
+46209,
+46391
+],
+[
+46393,
+46426
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he give her any help?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S460",
+"S302"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing beyond a transition.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+164.184,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+51332,
+51382
+],
+[
+34361,
+34557
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Before he crawls away, he says one side of the mushroom will make her grow taller and the other side shorter. She then breaks off a bit of the edge with each hand.",
+"section": 1,
+"claim": true,
+"src": [
+"S458",
+"S461",
+"S463"
+],
+"check": {
+"local": {
+"sim": 0.731,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Mushroom sides and breaking pieces supported; 'from each edge' is slightly off, she broke a bit of the edge with each hand.",
+"action": "rewritten",
+"final": "supported",
+"original": "Before he crawls away, he says one side of the mushroom will make her taller and the other shorter. She breaks off a bit from each edge with each hand.",
+"local_after": {
+"sim": 0.758,
+"numbers_missing": [],
+"flag": false
+},
+"after": "supported",
+"why_after": "S458 gives the sides advice; S463 says she broke off a bit of the edge with each hand."
+},
+"t": [
+166.056,
+8.712
+],
+"spans": [
+[
+51132,
+51311
+],
+[
+51384,
+51502
+],
+[
+51694,
+51815
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does the mushroom work?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S507",
+"S606"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+174.768,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+56283,
+56571
+],
+[
+66827,
+66930
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It does. She nibbles first one piece, then the other, until she's back to her usual height. Then she says, \"there's half my plan done now.\"",
+"section": 2,
+"claim": true,
+"src": [
+"S507",
+"S509"
+],
+"check": {
+"local": {
+"sim": 0.666,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S507 and S509 match nibbling, usual height, and half the plan done.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+176.64,
+9.48
+],
+"spans": [
+[
+56283,
+56571
+],
+[
+56755,
+56792
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the other half?",
+"section": 2,
+"claim": true,
+"src": [
+"S512"
+],
+"check": {
+"local": {
+"sim": 0.117,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question that presupposes nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+186.12,
+1.392
+],
+"spans": [
+[
+56894,
+57023
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "To get into that beautiful garden. Instead she comes upon a little house about four feet high.",
+"section": 2,
+"claim": true,
+"src": [
+"S512",
+"S513"
+],
+"check": {
+"local": {
+"sim": 0.772,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S512 and S513: the garden is next; she comes upon a house four feet high.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+187.512,
+5.376
+],
+"spans": [
+[
+56894,
+57023
+],
+[
+57024,
+57127
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "I hear there's a baby that turns into something.",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S507",
+"S607"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host's tease or question about a baby; asserts nothing about the source content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+192.888,
+2.784
+],
+"spans": [],
+"auto_spans": [
+[
+56283,
+56571
+],
+[
+66931,
+67064
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+"section": 2,
+"claim": true,
+"src": [
+"S604",
+"S605",
+"S606"
+],
+"check": {
+"local": {
+"sim": 0.787,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S604-S606 match the grunting, pig, setting it down, and trotting into the wood.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+195.672,
+8.592
+],
+"spans": [
+[
+66472,
+66666
+],
+[
+66667,
+66825
+],
+[
+66827,
+66930
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Then she sees the Cheshire Cat.",
+"section": 2,
+"claim": true,
+"src": [
+"S608"
+],
+"check": {
+"local": {
+"sim": 0.653,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S608: she is startled by seeing the Cheshire Cat on a bough.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+204.264,
+2.112
+],
+"spans": [
+[
+67065,
+67335
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Sitting on a bough of a tree. She asks what sort of people live nearby. It waves a paw each way. A Hatter lives one way, a March Hare the other.",
+"section": 2,
+"claim": true,
+"src": [
+"S608",
+"S620",
+"S621"
+],
+"check": {
+"local": {
+"sim": 0.725,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Cat on bough, Alice asks, paws point to Hatter and March Hare.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+206.376,
+8.52
+],
+"spans": [
+[
+67065,
+67335
+],
+[
+68176,
+68214
+],
+[
+68216,
+68362
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And they're friendly?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S622",
+"S620"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking if they're friendly; presupposes nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+214.896,
+1.344
+],
+"spans": [],
+"auto_spans": [
+[
+68363,
+68404
+],
+[
+68176,
+68214
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The Cat says they're both mad. Alice doesn't want mad people. The Cat says, \"we're all mad here.\" Even Alice, because she wouldn't have come here otherwise.",
+"section": 2,
+"claim": true,
+"src": [
+"S622",
+"S623",
+"S624",
+"S628"
+],
+"check": {
+"local": {
+"sim": 0.836,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Cat says both mad, Alice objects, Cat says all mad, Alice must be or wouldn't have come.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+216.24,
+9.336
+],
+"spans": [
+[
+68363,
+68404
+],
+[
+68406,
+68464
+],
+[
+68466,
+68527
+],
+[
+68591,
+68653
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What's the Hatter's story about time?",
+"section": 2,
+"claim": true,
+"src": [
+"S744"
+],
+"check": {
+"local": {
+"sim": 0.315,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question about the Hatter's story; asserts nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+225.576,
+2.136
+],
+"spans": [
+[
+77856,
+77885
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "At the Queen of Hearts' great concert, he had to sing \"Twinkle, twinkle, little bat.\" He'd hardly finished the first verse when the Queen bawled, \"He's murdering the time! Off with his head!\"",
+"section": 2,
+"claim": true,
+"src": [
+"S731",
+"S732",
+"S740",
+"S741"
+],
+"check": {
+"local": {
+"sim": 0.825,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Concert, singing Twinkle, hardly finished first verse, Queen bawled 'murdering the time'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+227.712,
+11.184
+],
+"spans": [
+[
+76933,
+77124
+],
+[
+77126,
+77156
+],
+[
+77571,
+77700
+],
+[
+77701,
+77721
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Yikes. What happened after that?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S625",
+"S604"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Reaction and a question; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+238.896,
+2.616
+],
+"spans": [],
+"auto_spans": [
+[
+68528,
+68536
+],
+[
+66472,
+66666
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Ever since, he says, Time won't do a thing he asks. It's always six o'clock now.",
+"section": 2,
+"claim": true,
+"src": [
+"S743",
+"S744"
+],
+"check": {
+"local": {
+"sim": 0.658,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Hatter says ever since, he won't do a thing; always six o'clock.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+241.512,
+5.568
+],
+"spans": [
+[
+77766,
+77855
+],
+[
+77856,
+77885
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Let's jump to the Queen's court. How does Alice handle her?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S851",
+"S843"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Transition and question; no claim about the source content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+247.08,
+3.72
+],
+"spans": [],
+"auto_spans": [
+[
+87916,
+87992
+],
+[
+87070,
+87187
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Politely at first. \"My name is Alice, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S844",
+"S845"
+],
+"check": {
+"local": {
+"sim": 0.92,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Alice says name politely, then tells herself they're only a pack of cards.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+250.8,
+9.744
+],
+"spans": [
+[
+87189,
+87332
+],
+[
+87333,
+87362
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she gets bolder.",
+"section": 3,
+"claim": true,
+"src": [
+"S847"
+],
+"check": {
+"local": {
+"sim": 0.32,
+"numbers_missing": [],
+"flag": true
+},
+"first": "supported",
+"why": "Alice 'surprised at her own courage' supports getting bolder.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+260.544,
+1.92
+],
+"spans": [
+[
+87693,
+87755
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Queen asks about the three gardeners. Alice says, \"It's no business of mine,\" surprised at her own courage. The Queen screams, \"Off with her head!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S846",
+"S847",
+"S848",
+"S849"
+],
+"check": {
+"local": {
+"sim": 0.692,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Queen asks about gardeners, Alice replies, surprised at courage; Queen screams 'Off with her head!'",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+262.464,
+9.552
+],
+"spans": [
+[
+87364,
+87691
+],
+[
+87693,
+87755
+],
+[
+87756,
+87783
+],
+[
+87785,
+87907
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Yikes. What does Alice do?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1424",
+"S1425"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Reaction and question; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+272.016,
+2.568
+],
+"spans": [],
+"auto_spans": [
+[
+140440,
+140516
+],
+[
+140518,
+140853
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She says \"Nonsense!\" very loudly and decidedly, and the Queen is silent. The King timidly says, \"Consider, my dear: she is only a child!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S851",
+"S852"
+],
+"check": {
+"local": {
+"sim": 0.814,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Alice says 'Nonsense!', Queen silent, King timidly says 'Consider, my dear'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+274.584,
+10.728
+],
+"spans": [
+[
+87916,
+87992
+],
+[
+87994,
+88089
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about the poor gardeners?",
+"section": 3,
+"claim": true,
+"src": [
+"S861"
+],
+"check": {
+"local": {
+"sim": 0.297,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "A question about the gardeners; presupposes nothing beyond the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+285.312,
+1.872
+],
+"spans": [
+[
+88730,
+88892
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Queen sees the roses and says, \"Off with their heads!\" The gardeners run to Alice. She puts them into a large flower-pot. The soldiers search, then march off.",
+"section": 3,
+"claim": true,
+"src": [
+"S860",
+"S861",
+"S862",
+"S863"
+],
+"check": {
+"local": {
+"sim": 0.793,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Queen sees roses, orders beheading, gardeners run to Alice, flower-pot, soldiers search and leave.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+287.184,
+10.632
+],
+"spans": [
+[
+88661,
+88729
+],
+[
+88730,
+88892
+],
+[
+88894,
+88989
+],
+[
+88990,
+89109
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the Queen believes the heads are gone.",
+"section": 3,
+"claim": true,
+"src": [
+"S864",
+"S865",
+"S866"
+],
+"check": {
+"local": {
+"sim": 0.7,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Queen asks if heads are off and is told they're gone, replying 'That's right!'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+297.816,
+2.568
+],
+"spans": [
+[
+89111,
+89152
+],
+[
+89154,
+89235
+],
+[
+89237,
+89271
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. The soldiers shout, \"Their heads are gone,\" and the Queen shouts, \"That's right!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S865",
+"S866"
+],
+"check": {
+"local": {
+"sim": 0.831,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Soldiers shout heads are gone; Queen shouts 'That's right!'.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+300.384,
+5.832
+],
+"spans": [
+[
+89154,
+89235
+],
+[
+89237,
+89271
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does it all end?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1423",
+"S861"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking how it ends; asserts nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+306.216,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+140098,
+140438
+],
+[
+88730,
+88892
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Alice, now full size, says, \"You're nothing but a pack of cards!\" The whole pack rises into the air and flies down upon her.",
+"section": 3,
+"claim": true,
+"src": [
+"S1421",
+"S1422",
+"S1423"
+],
+"check": {
+"local": {
+"sim": 0.796,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S1421-S1423: full size, the quote, pack rises and flies down upon her.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+308.088,
+8.496
+],
+"spans": [
+[
+139979,
+140058
+],
+[
+140059,
+140096
+],
+[
+140098,
+140438
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she wakes up?",
+"section": 3,
+"claim": true,
+"src": [
+"S1423"
+],
+"check": {
+"local": {
+"sim": 0.324,
+"numbers_missing": [],
+"flag": true
+},
+"first": "supported",
+"why": "S1423 shows she finds herself on the bank, implying waking; question presupposes little.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+316.584,
+1.872
+],
+"spans": [
+[
+140098,
+140438
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She finds herself on the bank, her head in her sister's lap. Her sister is brushing dead leaves from her face. Alice says, \"I've had such a curious dream!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S1423",
+"S1425"
+],
+"check": {
+"local": {
+"sim": 0.753,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S1423 and S1425 support the bank, sister's lap, leaves, and the dream quote.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+318.456,
+10.032
+],
+"spans": [
+[
+140098,
+140438
+],
+[
+140518,
+140853
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does the sister think of it?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1431",
+"S1425"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond the sister's reaction; asserts no source content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+328.488,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+142931,
+143484
+],
+[
+140518,
+140853
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She sits with closed eyes and half believes herself in Wonderland. Then she pictures her little sister grown, keeping the simple and loving heart of her childhood.",
+"section": 3,
+"claim": true,
+"src": [
+"S1430",
+"S1431"
+],
+"check": {
+"local": {
+"sim": 0.685,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Closed eyes and half-believing are supported, but the sister pictures her own self grown, not Alice.",
+"action": "dropped after rewrite",
+"final": "dropped",
+"original": "She sits with closed eyes and half believes herself in Wonderland. She pictures Alice grown, keeping the simple and loving heart of her childhood.",
+"local_after": {
+"sim": 0.786,
+"numbers_missing": [],
+"flag": false
+},
+"after": "partly",
+"why_after": "Source says Alice's sister sits and pictures her little sister; line wrongly implies the sister is separate from Wonderland pictured, but 'she' is ambiguous; the content matches."
+},
+"dropped": true,
+"spans": [
+[
+142293,
+142929
+],
+[
+142931,
+143484
+]
+]
+},
+{
+"speaker": "B",
+"text": "What would grown-up Alice do?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S1421",
+"S1424"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing unsupported; it only asks what grown-up Alice would do.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+330.36,
+1.944
+],
+"spans": [],
+"auto_spans": [
+[
+139979,
+140058
+],
+[
+140440,
+140516
+]
+],
+"second_check": "unsupported"
+},
+{
+"speaker": "A",
+"text": "She'd gather other little children about her and make their eyes bright with strange tales, perhaps even the dream of Wonderland. She'd feel their simple sorrows and joys, remembering her own child-life and the happy summer days.",
+"section": 3,
+"claim": true,
+"src": [
+"S1431"
+],
+"check": {
+"local": {
+"sim": 0.747,
+"numbers_missing": [],
+"flag": false
+},
+"first": "partly",
+"why": "Content matches S1431, but it's the sister who'd do this, not Alice, as the line attributes.",
+"action": "rewritten",
+"final": "supported",
+"original": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would share their sorrows and joys, remembering the happy summer days.",
+"local_after": {
+"sim": 0.839,
+"numbers_missing": [],
+"flag": false
+},
+"after": "supported",
+"why_after": "Closely paraphrases S1431 about the little sister gathering children, strange tales, and remembering childhood; 'grown-up Alice' framing is from the question."
+},
+"t": [
+332.304,
+14.544
+],
+"spans": [
+[
+142931,
+143484
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A lovely ending. Thanks for walking us through it, Alex.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S861",
+"S1425"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Closing pleasantry and opinion about the ending; no source claim.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+346.848,
+3.936
+],
+"spans": [],
+"auto_spans": [
+[
+88730,
+88892
+],
+[
+140518,
+140853
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Thanks, Sam. That was Alice's Adventures in Wonderland.",
+"section": 3,
+"claim": true,
+"src": [],
+"auto_src": [
+"S1424",
+"S843"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Sign-off naming the work; asserts nothing about content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+350.784,
+3.84
+],
+"spans": [],
+"auto_spans": [
+[
+140440,
+140516
+],
+[
+87070,
+87187
+]
+],
+"second_check": "no_claim"
+}
+],
+"draft": [
+{
+"speaker": "A",
+"text": "Welcome. Today we're talking about Alice's Adventures in Wonderland, by Lewis Carroll, the whole book.",
+"section": 0,
+"claim": true,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Let's start at the very beginning. How does Alice end up in Wonderland?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A Rabbit takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch. She burns with curiosity and runs after it.",
+"section": 0,
+"claim": true,
+"src": [
+"S7"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she just jumps in the hole?",
+"section": 0,
+"claim": true,
+"src": [
+"S8"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Right away. Down she goes, never once considering how in the world she was to get out again. The tunnel dips so suddenly that she finds herself falling down a very deep well.",
+"section": 0,
+"claim": true,
+"src": [
+"S8",
+"S9"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does she find at the bottom?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A hall of locked doors. Then a little glass table with a tiny golden key. It fits a door about fifteen inches high, hidden behind a low curtain. Beyond it is the loveliest garden.",
+"section": 0,
+"claim": true,
+"src": [
+"S46",
+"S47",
+"S48",
+"S49"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But she can't fit through, can she?",
+"section": 0,
+"claim": true,
+"src": [
+"S50"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. She can't even get her head through the doorway. Then she finds a bottle with a label that says \"DRINK ME,\" beautifully printed in large letters.",
+"section": 0,
+"claim": true,
+"src": [
+"S50",
+"S54"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does she just gulp it down?",
+"section": 0,
+"claim": true,
+"src": [
+"S55"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not at all. She says, \"I'll look first,\" to see whether it's marked \"poison.\" She remembers the simple rules her friends taught her. It isn't marked, so she tastes it and finds it very nice.",
+"section": 0,
+"claim": true,
+"src": [
+"S55",
+"S56",
+"S57"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does it taste like?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast, all mixed together.",
+"section": 0,
+"claim": true,
+"src": [
+"S57"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Ha! And then she shrinks?",
+"section": 0,
+"claim": true,
+"src": [
+"S61",
+"S62"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Yes, to ten inches high, the right size for the little door. But she gets nervous. It might end, she says, in her going out altogether, like a candle.",
+"section": 0,
+"claim": true,
+"src": [
+"S62",
+"S63"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Poor Alice. Does her size make her doubt who she is?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Very much. She asks, \"Who in the world am I?\" and calls it the great puzzle. She wonders if she's been changed in the night.",
+"section": 1,
+"claim": true,
+"src": [
+"S105",
+"S108",
+"S109"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does she test it?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She thinks over the children she knows, like Ada and Mabel. Then she tries her lessons. Four times five is twelve, she says, and London is the capital of Paris.",
+"section": 1,
+"claim": true,
+"src": [
+"S110",
+"S111",
+"S114",
+"S117"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So she decides she must be Mabel.",
+"section": 1,
+"claim": true,
+"src": [
+"S118",
+"S122"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She does. Even the poem about the little crocodile comes out wrong, and her voice sounds hoarse and strange.",
+"section": 1,
+"claim": true,
+"src": [
+"S119",
+"S120",
+"S122"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Later she goes the other way, right?",
+"section": 1,
+"claim": true,
+"src": [
+"S302"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She grows so fast that her head presses against the ceiling. In the end she puts one arm out of the window and one foot up the chimney. She still can't get out of the room.",
+"section": 1,
+"claim": true,
+"src": [
+"S302",
+"S305",
+"S306",
+"S308"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she meets the Caterpillar.",
+"section": 1,
+"claim": true,
+"src": [
+"S399"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He asks, \"Who are you?\" She says she hardly knows. She knew who she was that morning, but she's been changed several times since.",
+"section": 1,
+"claim": true,
+"src": [
+"S400",
+"S402"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he understand?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. She says, \"I'm not myself, you see.\" He answers, \"I don't see.\" She says being so many different sizes in a day is very confusing. He says it isn't.",
+"section": 1,
+"claim": true,
+"src": [
+"S405",
+"S406",
+"S407",
+"S408"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he give her any help?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Before he crawls away, he says one side of the mushroom will make her taller and the other shorter. She breaks off a bit from each edge with each hand.",
+"section": 1,
+"claim": true,
+"src": [
+"S458",
+"S461",
+"S463"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does the mushroom work?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "It does. She nibbles first one piece, then the other, until she's back to her usual height. Then she says, \"there's half my plan done now.\"",
+"section": 2,
+"claim": true,
+"src": [
+"S507",
+"S509"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the other half?",
+"section": 2,
+"claim": true,
+"src": [
+"S512"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "To get into that beautiful garden. Instead she comes upon a little house about four feet high.",
+"section": 2,
+"claim": true,
+"src": [
+"S512",
+"S513"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "I hear there's a baby that turns into something.",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+"section": 2,
+"claim": true,
+"src": [
+"S604",
+"S605",
+"S606"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Then she sees the Cheshire Cat.",
+"section": 2,
+"claim": true,
+"src": [
+"S608"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Sitting on a bough of a tree. She asks what sort of people live nearby. It waves a paw each way. A Hatter lives one way, a March Hare the other.",
+"section": 2,
+"claim": true,
+"src": [
+"S608",
+"S620",
+"S621"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And they're friendly?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "The Cat says they're both mad. Alice doesn't want mad people. The Cat says, \"we're all mad here.\" Even Alice, because she wouldn't have come here otherwise.",
+"section": 2,
+"claim": true,
+"src": [
+"S622",
+"S623",
+"S624",
+"S628"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What's the Hatter's story about time?",
+"section": 2,
+"claim": true,
+"src": [
+"S744"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "At the Queen of Hearts' great concert, he had to sing \"Twinkle, twinkle, little bat.\" He'd hardly finished the first verse when the Queen bawled, \"He's murdering the time! Off with his head!\"",
+"section": 2,
+"claim": true,
+"src": [
+"S731",
+"S732",
+"S740",
+"S741"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Yikes. What happened after that?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Ever since, he says, Time won't do a thing he asks. It's always six o'clock now.",
+"section": 2,
+"claim": true,
+"src": [
+"S743",
+"S744"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Let's jump to the Queen's court. How does Alice handle her?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Politely at first. \"My name is Alice, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S844",
+"S845"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she gets bolder.",
+"section": 3,
+"claim": true,
+"src": [
+"S847"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Queen asks about the three gardeners. Alice says, \"It's no business of mine,\" surprised at her own courage. The Queen screams, \"Off with her head!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S846",
+"S847",
+"S848",
+"S849"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Yikes. What does Alice do?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She says \"Nonsense!\" very loudly and decidedly, and the Queen is silent. The King timidly says, \"Consider, my dear: she is only a child!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S851",
+"S852"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about the poor gardeners?",
+"section": 3,
+"claim": true,
+"src": [
+"S861"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The Queen sees the roses and says, \"Off with their heads!\" The gardeners run to Alice. She puts them into a large flower-pot. The soldiers search, then march off.",
+"section": 3,
+"claim": true,
+"src": [
+"S860",
+"S861",
+"S862",
+"S863"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And the Queen believes the heads are gone.",
+"section": 3,
+"claim": true,
+"src": [
+"S864",
+"S865",
+"S866"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. The soldiers shout, \"Their heads are gone,\" and the Queen shouts, \"That's right!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S865",
+"S866"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "How does it all end?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Alice, now full size, says, \"You're nothing but a pack of cards!\" The whole pack rises into the air and flies down upon her.",
+"section": 3,
+"claim": true,
+"src": [
+"S1421",
+"S1422",
+"S1423"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And then she wakes up?",
+"section": 3,
+"claim": true,
+"src": [
+"S1423"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "She finds herself on the bank, her head in her sister's lap. Her sister is brushing dead leaves from her face. Alice says, \"I've had such a curious dream!\"",
+"section": 3,
+"claim": true,
+"src": [
+"S1423",
+"S1425"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What does the sister think of it?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "She sits with closed eyes and half believes herself in Wonderland. She pictures Alice grown, keeping the simple and loving heart of her childhood.",
+"section": 3,
+"claim": true,
+"src": [
+"S1430",
+"S1431"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What would grown-up Alice do?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would share their sorrows and joys, remembering the happy summer days.",
+"section": 3,
+"claim": true,
+"src": [
+"S1431"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "A lovely ending. Thanks for walking us through it, Alex.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Thanks, Sam. That was Alice's Adventures in Wonderland.",
+"section": 3,
+"claim": true,
+"src": [],
+"second_check": "no_claim"
+}
+],
+"points": [
+{
+"point": "When the Rabbit takes a watch out of its waistcoat-pocket, Alice is filled with curiosity, runs after it, and follows it down a rabbit-hole without thinking how she will get out.",
+"sents": [
+"S7",
+"S8"
+],
+"importance": 3,
+"part": 0,
+"id": "P2"
+},
+{
+"point": "Alice finds a glass table with a tiny golden key, which fits a little fifteen-inch door behind a curtain that opens onto a lovely garden.",
+"sents": [
+"S47",
+"S48",
+"S49"
+],
+"importance": 3,
+"part": 0,
+"id": "P7"
+},
+{
+"point": "Alice finds a bottle labelled \"DRINK ME\", checks that it is not marked poison, because she remembers the rules she has been taught, and then drinks it, finding it tasty.",
+"sents": [
+"S54",
+"S55",
+"S56",
+"S57"
+],
+"importance": 3,
+"part": 0,
+"id": "P9"
+},
+{
+"point": "The potion shrinks Alice to ten inches high, the right size for the little door, but she worries that she might go out like a candle.",
+"sents": [
+"S61",
+"S62",
+"S63",
+"S64",
+"S65"
+],
+"importance": 3,
+"part": 0,
+"id": "P10"
+},
+{
+"point": "Confused about her identity, Alice wonders if she has been changed into another child, and her recitations of arithmetic, geography and the poem come out wrong.",
+"sents": [
+"S105",
+"S108",
+"S111",
+"S114",
+"S117",
+"S119",
+"S122"
+],
+"importance": 3,
+"part": 1,
+"id": "P16"
+},
+{
+"point": "Alice grows so large that she fills the room, with an arm out of the window and a foot up the chimney, and cannot get out.",
+"sents": [
+"S302",
+"S305",
+"S306",
+"S308"
+],
+"importance": 3,
+"part": 3,
+"id": "P37"
+},
+{
+"point": "The Caterpillar asks Alice who she is, and she says she hardly knows because she has changed several times that day.",
+"sents": [
+"S400",
+"S402",
+"S405",
+"S407"
+],
+"importance": 3,
+"part": 4,
+"id": "P50"
+},
+{
+"point": "Before leaving, the Caterpillar tells Alice that one side of the mushroom will make her grow taller and the other side shorter, and she breaks off a piece from each edge.",
+"sents": [
+"S458",
+"S461",
+"S463"
+],
+"importance": 3,
+"part": 5,
+"id": "P57"
+},
+{
+"point": "Alice uses the mushroom pieces to return to her usual height, notes that her plan is half done and that she next needs to reach the beautiful garden.",
+"sents": [
+"S507",
+"S509",
+"S512"
+],
+"importance": 3,
+"part": 5,
+"id": "P62"
+},
+{
+"point": "The baby turns fully into a pig, and Alice sets it down and watches it trot away into the wood.",
+"sents": [
+"S605",
+"S606",
+"S607"
+],
+"importance": 3,
+"part": 6,
+"id": "P73"
+},
+{
+"point": "The Cat says a Hatter lives in one direction and a March Hare in another, both mad, and that everyone there is mad, including Alice.",
+"sents": [
+"S621",
+"S622",
+"S624",
+"S628"
+],
+"importance": 3,
+"part": 6,
+"id": "P75"
+},
+{
+"point": "The Hatter explains that at the Queen of Hearts' concert he sang 'Twinkle, twinkle, little bat', and the Queen ordered his beheading for murdering the time, since when Time refuses to help him and it is always six o'clock.",
+"sents": [
+"S731",
+"S732",
+"S733",
+"S740",
+"S741",
+"S743",
+"S744"
+],
+"importance": 3,
+"part": 7,
+"id": "P87"
+},
+{
+"point": "Alice, realising they are only a pack of cards, answers the Queen politely and then boldly, and when the Queen screams for her beheading Alice says 'Nonsense!' and the Queen falls silent while the King pleads that she is a child.",
+"sents": [
+"S843",
+"S844",
+"S845",
+"S847",
+"S849",
+"S851",
+"S852"
+],
+"importance": 3,
+"part": 8,
+"id": "P98"
+},
+{
+"point": "The Queen sees the painted roses, orders the gardeners beheaded, but Alice hides them in a flower-pot and the soldiers return reporting the heads are gone.",
+"sents": [
+"S860",
+"S861",
+"S862",
+"S863",
+"S865"
+],
+"importance": 3,
+"part": 8,
+"id": "P99"
+},
+{
+"point": "Alice, now full size, defies the court, declaring they are nothing but a pack of cards.",
+"sents": [
+"S1421",
+"S1422"
+],
+"importance": 3,
+"part": 13,
+"id": "P163"
+},
+{
+"point": "Alice wakes from her dream as the pack of cards flies at her, finding herself on the bank with her head in her sister's lap while her sister brushes dead leaves from her face.",
+"sents": [
+"S1423",
+"S1424"
+],
+"importance": 3,
+"part": 14,
+"id": "P164"
+},
+{
+"point": "The sister finally imagines Alice as a grown woman who keeps her loving childhood heart, gathers other children, tells them strange tales perhaps including Wonderland, and shares their sorrows and joys while remembering her happy childhood.",
+"sents": [
+"S1431"
+],
+"importance": 3,
+"part": 14,
+"id": "P169"
+}
+]
+}

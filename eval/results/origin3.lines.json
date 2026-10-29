@@ -1,0 +1,2884 @@
+{
+"source": "origin3",
+"lines": [
+{
+"speaker": "A",
+"text": "Welcome. Today we look at Chapter Three of On the Origin of Species by Charles Darwin. The chapter is called Struggle for Existence.",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S36",
+"S28"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Greeting plus title and author; names the work only.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+0.0,
+7.728
+],
+"spans": [],
+"auto_spans": [
+[
+4989,
+5238
+],
+[
+3624,
+3695
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Sounds intense. Where does he start?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S28",
+"S36"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Reaction and a question presupposing nothing about content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+7.728,
+2.784
+],
+"spans": [],
+"auto_spans": [
+[
+3624,
+3695
+],
+[
+4989,
+5238
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "With a big claim. Owing to the struggle for life, any variation that is profitable to an individual, however slight, will tend to preserve that individual.",
+"section": 0,
+"claim": true,
+"src": [
+"S23"
+],
+"check": {
+"local": {
+"sim": 0.573,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S23 closely; 'big claim' is framing.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+10.512,
+9.6
+],
+"spans": [
+[
+2518,
+2867
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And that advantage gets passed on?",
+"section": 0,
+"claim": true,
+"src": [
+"S23"
+],
+"check": {
+"local": {
+"sim": 0.195,
+"numbers_missing": [],
+"flag": true
+},
+"first": "no_claim",
+"why": "Question asking whether advantage is inherited; presupposes nothing unsupported.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+20.112,
+2.208
+],
+"spans": [
+[
+2518,
+2867
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Generally, yes. It will generally be inherited by its offspring. And the offspring also have a better chance of surviving.",
+"section": 0,
+"claim": true,
+"src": [
+"S23",
+"S24"
+],
+"check": {
+"local": {
+"sim": 0.619,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S23 says generally inherited; S24 says offspring have better survival chance.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+22.32,
+7.152
+],
+"spans": [
+[
+2518,
+2867
+],
+[
+2868,
+3038
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why a better chance?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S24",
+"S26"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Simple question asking for reason.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+29.472,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+2868,
+3038
+],
+[
+3219,
+3430
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Because of the many individuals periodically born, only a small number can survive.",
+"section": 0,
+"claim": true,
+"src": [
+"S24"
+],
+"check": {
+"local": {
+"sim": 0.78,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly matches S24.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+31.344,
+5.376
+],
+"spans": [
+[
+2868,
+3038
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what does he call this principle?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S25",
+"S27"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question asking for the principle's name.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+36.72,
+2.352
+],
+"spans": [],
+"auto_spans": [
+[
+3039,
+3218
+],
+[
+3431,
+3622
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Natural Selection. He chose the name to mark its relation to man's power of selection.",
+"section": 0,
+"claim": true,
+"src": [
+"S25"
+],
+"check": {
+"local": {
+"sim": 0.629,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S25 states the name and the reason for choosing it.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+39.072,
+5.4
+],
+"spans": [
+[
+3039,
+3218
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So human breeding is the comparison.",
+"section": 0,
+"claim": true,
+"src": [
+"S25",
+"S26"
+],
+"check": {
+"local": {
+"sim": 0.464,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Natural selection named to mark relation to man's selection; comparison follows.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+44.472,
+2.736
+],
+"spans": [
+[
+3039,
+3218
+],
+[
+3219,
+3430
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. Man can produce great results by piling up slight but useful variations, given to him by the hand of Nature.",
+"section": 0,
+"claim": true,
+"src": [
+"S26"
+],
+"check": {
+"local": {
+"sim": 0.726,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S26 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+47.208,
+7.968
+],
+"spans": [
+[
+3219,
+3430
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But nature does it better?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S27",
+"S26"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question prompting comparison; asserts nothing beyond context.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+55.176,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+3431,
+3622
+],
+[
+3219,
+3430
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Far better. Natural Selection is \"incessantly ready for action,\" and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+"section": 0,
+"claim": true,
+"src": [
+"S27"
+],
+"check": {
+"local": {
+"sim": 0.822,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Quotes and paraphrases S27 accurately.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+57.048,
+10.608
+],
+"spans": [
+[
+3431,
+3622
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Then he turns to the struggle itself.",
+"section": 0,
+"claim": true,
+"src": [
+"S28"
+],
+"check": {
+"local": {
+"sim": 0.421,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S28 says he now discusses the struggle for existence in more detail.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+67.656,
+2.568
+],
+"spans": [
+[
+3624,
+3695
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He does, with a warning. We see nature bright with gladness. But the singing birds mostly live on insects or seeds, so they are constantly destroying life.",
+"section": 0,
+"claim": true,
+"src": [
+"S35"
+],
+"check": {
+"local": {
+"sim": 0.658,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S35 covers nature bright with gladness and singing birds destroying life; 'warning' is fair framing.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+70.224,
+10.104
+],
+"spans": [
+[
+4504,
+4987
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what does he mean by struggle?",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S36",
+"S43"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question about meaning of struggle; presupposes nothing unsupported.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+80.328,
+2.232
+],
+"spans": [],
+"auto_spans": [
+[
+4989,
+5238
+],
+[
+6330,
+6453
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He uses it in a large and metaphorical sense. It includes one being depending on another. And, more important, it includes success in leaving progeny, not only the life of the individual.",
+"section": 0,
+"claim": true,
+"src": [
+"S36"
+],
+"check": {
+"local": {
+"sim": 0.455,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Faithful restatement of S36.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+82.56,
+11.736
+],
+"spans": [
+[
+4989,
+5238
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Give me an example.",
+"section": 0,
+"claim": false,
+"src": [],
+"auto_src": [
+"S43",
+"S25"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Request for an example; asserts nothing.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+94.296,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+6330,
+6453
+],
+[
+3039,
+3218
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Two canine animals in a time of dearth truly struggle over which gets food and lives. The mistletoe depends on birds, so it metaphorically struggles with other plants to tempt birds to spread its seeds.",
+"section": 0,
+"claim": true,
+"src": [
+"S37",
+"S42"
+],
+"check": {
+"local": {
+"sim": 0.842,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Both sentences are closely paraphrased from S37 and S42.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+96.168,
+12.336
+],
+"spans": [
+[
+5239,
+5355
+],
+[
+6076,
+6329
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why is struggle unavoidable?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S43",
+"S46"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+108.504,
+2.04
+],
+"spans": [],
+"auto_spans": [
+[
+6330,
+6453
+],
+[
+6893,
+7155
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Because all organic beings tend to increase at a high rate. A struggle for existence inevitably follows from that.",
+"section": 1,
+"claim": true,
+"src": [
+"S44"
+],
+"check": {
+"local": {
+"sim": 0.877,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly restates S44.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+110.544,
+7.224
+],
+"spans": [
+[
+6455,
+6563
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What if nothing held them back?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S48",
+"S45"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question that presupposes nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+117.768,
+1.968
+],
+"spans": [],
+"auto_spans": [
+[
+7363,
+7494
+],
+[
+6564,
+6892
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+"section": 1,
+"claim": true,
+"src": [
+"S45"
+],
+"check": {
+"local": {
+"sim": 0.912,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Accurate paraphrase of S45.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+119.736,
+12.24
+],
+"spans": [
+[
+6564,
+6892
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So more are born than can possibly survive.",
+"section": 1,
+"claim": true,
+"src": [
+"S46"
+],
+"check": {
+"local": {
+"sim": 0.605,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S46 states more individuals are produced than can survive.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+131.976,
+2.976
+],
+"spans": [
+[
+6893,
+7155
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. So there must be a struggle with the same species, with distinct species, or with the physical conditions of life.",
+"section": 1,
+"claim": true,
+"src": [
+"S46"
+],
+"check": {
+"local": {
+"sim": 0.787,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Restates the three kinds of struggle in S46.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+134.952,
+7.344
+],
+"spans": [
+[
+6893,
+7155
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he tie this to anyone else's ideas?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S43",
+"S44"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing about the source's content beyond asking.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+142.296,
+2.544
+],
+"spans": [],
+"auto_spans": [
+[
+6330,
+6453
+],
+[
+6455,
+6563
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Malthus. He calls it the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms. There is no artificial increase of food, and no prudential restraint from marriage.",
+"section": 1,
+"claim": true,
+"src": [
+"S47"
+],
+"check": {
+"local": {
+"sim": 0.884,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S47 on Malthus, food, and restraint from marriage.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+144.84,
+12.576
+],
+"spans": [
+[
+7156,
+7362
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But some species really are increasing.",
+"section": 1,
+"claim": true,
+"src": [
+"S48"
+],
+"check": {
+"local": {
+"sim": 0.743,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S48 says some species may be increasing; line's framing is the host's pushback.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+157.416,
+2.688
+],
+"spans": [
+[
+7363,
+7494
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "Some may be, but all cannot, for the world would not hold them.",
+"section": 1,
+"claim": true,
+"src": [
+"S48"
+],
+"check": {
+"local": {
+"sim": 0.499,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Restates S48 directly.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+160.104,
+4.152
+],
+"spans": [
+[
+7363,
+7494
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why is he so sure about plants and animals in general?",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S60",
+"S62"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond asking for his reasons.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+164.256,
+3.144
+],
+"spans": [],
+"auto_spans": [
+[
+10253,
+10374
+],
+[
+10668,
+10940
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "In a state of nature almost every plant produces seed. Very few animals do not annually pair. So all tend to increase geometrically, and that tendency must be checked by destruction at some period of life.",
+"section": 1,
+"claim": true,
+"src": [
+"S60",
+"S61"
+],
+"check": {
+"local": {
+"sim": 0.817,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S60 and S61 on seeds, pairing, geometric increase, and checks.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+167.4,
+13.248
+],
+"spans": [
+[
+10253,
+10374
+],
+[
+10375,
+10667
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Our cows and horses do not seem to suffer that.",
+"section": 1,
+"claim": false,
+"src": [],
+"auto_src": [
+"S62",
+"S47"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Host's remark about cows and horses, not a claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+180.648,
+3.216
+],
+"spans": [],
+"auto_spans": [
+[
+10668,
+10940
+],
+[
+7156,
+7362
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "He says familiarity with larger domestic animals misleads us. We forget thousands are slaughtered for food, and in nature an equal number would have to be disposed of.",
+"section": 1,
+"claim": true,
+"src": [
+"S62"
+],
+"check": {
+"local": {
+"sim": 0.816,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Faithful paraphrase of S62.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+183.864,
+9.864
+],
+"spans": [
+[
+10668,
+10940
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what should we keep in mind when looking at nature?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S71",
+"S74"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing beyond asking.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+193.728,
+3.024
+],
+"spans": [],
+"auto_spans": [
+[
+12610,
+13004
+],
+[
+13369,
+13456
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "That every organic being is striving to the utmost to increase. Each lives by a struggle at some period, and heavy destruction falls on the young or the old.",
+"section": 2,
+"claim": true,
+"src": [
+"S71"
+],
+"check": {
+"local": {
+"sim": 0.788,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S71 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+196.752,
+9.912
+],
+"spans": [
+[
+12610,
+13004
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And if a check weakens?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S72",
+"S88"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking what happens, presupposing nothing about content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+206.664,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+13005,
+13146
+],
+[
+16014,
+16195
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Lighten any check, even a little, and the number of the species will almost instantaneously increase to any amount.",
+"section": 2,
+"claim": true,
+"src": [
+"S72"
+],
+"check": {
+"local": {
+"sim": 0.922,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Near-verbatim restatement of S72.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+208.536,
+7.32
+],
+"spans": [
+[
+13005,
+13146
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "He has a picture for this, right?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S73",
+"S92"
+],
+"check": {
+"local": null,
+"first": "supported",
+"why": "Presupposes a picture/metaphor; S73 gives the wedge comparison.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+215.856,
+1.992
+],
+"spans": [],
+"auto_spans": [
+[
+13147,
+13367
+],
+[
+16909,
+17180
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Nature as a yielding surface with ten thousand sharp wedges packed close together, driven inward by incessant blows.",
+"section": 2,
+"claim": true,
+"src": [
+"S73"
+],
+"check": {
+"local": {
+"sim": 0.869,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S73's wedge image accurately.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+217.848,
+7.8
+],
+"spans": [
+[
+13147,
+13367
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What is the strongest check?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S88",
+"S72"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposes nothing beyond a strongest check.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+225.648,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+16014,
+16195
+],
+[
+13005,
+13146
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Climate. He believes periodical seasons of extreme cold or drought are the most effective of all checks.",
+"section": 2,
+"claim": true,
+"src": [
+"S88"
+],
+"check": {
+"local": {
+"sim": 0.679,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S88: climate, extreme cold or drought most effective checks.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+227.52,
+6.624
+],
+"spans": [
+[
+16014,
+16195
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he have numbers?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S70",
+"S74"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question asking for numbers presupposes nothing specific.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+234.144,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+12485,
+12608
+],
+[
+13369,
+13456
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He estimated the winter of 1854-55 destroyed four-fifths of the birds in his own grounds. He notes ten per cent is an extraordinarily severe mortality from epidemics with man.",
+"section": 2,
+"claim": true,
+"src": [
+"S89"
+],
+"check": {
+"local": {
+"sim": 0.884,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S89 on four-fifths of birds and ten per cent.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+236.016,
+12.024
+],
+"spans": [
+[
+16196,
+16426
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But is climate separate from the struggle?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S90",
+"S96"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question; presupposes nothing beyond the topic discussed.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+248.04,
+2.544
+],
+"spans": [],
+"auto_spans": [
+[
+16427,
+16727
+],
+[
+18175,
+18316
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not really. Climate chiefly acts by reducing food, and that brings on the most severe struggle between individuals living on the same food.",
+"section": 2,
+"claim": true,
+"src": [
+"S90"
+],
+"check": {
+"local": {
+"sim": 0.814,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S90: climate acts by reducing food, bringing severe struggle.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+250.584,
+8.664
+],
+"spans": [
+[
+16427,
+16727
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about a species getting rarer as you travel south?",
+"section": 2,
+"claim": true,
+"src": [
+"S92"
+],
+"check": {
+"local": {
+"sim": 0.601,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Question about species rarer southward; S94 discusses southward decrease (S92 says south to north, but question is neutral).",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+259.248,
+3.12
+],
+"spans": [
+[
+16909,
+17180
+]
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "He says the cause lies quite as much in other species being favoured as in this one being hurt. Enemies or competitors may gain from a slight change of climate.",
+"section": 2,
+"claim": true,
+"src": [
+"S93",
+"S94"
+],
+"check": {
+"local": {
+"sim": 0.76,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S93 and S94 on other species favoured and slight climate change.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+262.368,
+9.744
+],
+"spans": [
+[
+17181,
+17629
+],
+[
+17630,
+17806
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Always?",
+"section": 2,
+"claim": false,
+"src": [],
+"auto_src": [
+"S71",
+"S72"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "One-word question; presupposes nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+272.112,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+12610,
+13004
+],
+[
+13005,
+13146
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. In the Arctic regions, on snow-capped summits, or in absolute deserts, the struggle is almost exclusively with the elements.",
+"section": 2,
+"claim": true,
+"src": [
+"S96"
+],
+"check": {
+"local": {
+"sim": 0.818,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S96 on Arctic, summits, deserts and struggle with elements.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+273.984,
+8.88
+],
+"spans": [
+[
+18175,
+18316
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Who struggles hardest against whom?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S145",
+"S177"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "Question presupposes nothing beyond a struggle between beings.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+282.864,
+2.52
+],
+"spans": [],
+"auto_spans": [
+[
+29066,
+29263
+],
+[
+35437,
+35684
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The dependence of one being on another usually lies between forms remote in nature. But the struggle is almost invariably most severe between individuals of the same species.",
+"section": 3,
+"claim": true,
+"src": [
+"S143",
+"S145"
+],
+"check": {
+"local": {
+"sim": 0.713,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S143 and S145 closely.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+285.384,
+10.896
+],
+"spans": [
+[
+28767,
+28905
+],
+[
+29066,
+29263
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S175",
+"S157"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A bare 'Why?' question presupposes nothing new.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+296.28,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+34997,
+35147
+],
+[
+31455,
+31723
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "They frequent the same districts, require the same food, and face the same dangers.",
+"section": 3,
+"claim": true,
+"src": [
+"S145"
+],
+"check": {
+"local": {
+"sim": 0.717,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Matches S145's reasons verbatim.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+298.152,
+5.4
+],
+"spans": [
+[
+29066,
+29263
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he give a case with varieties?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S146",
+"S137"
+],
+"check": {
+"local": null,
+"first": "supported",
+"why": "S146 gives the wheat varieties case.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+303.552,
+2.088
+],
+"spans": [],
+"auto_spans": [
+[
+29264,
+29714
+],
+[
+27374,
+27480
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are most fertile beat the others, and in a few years quite supplant them.",
+"section": 3,
+"claim": true,
+"src": [
+"S146"
+],
+"check": {
+"local": {
+"sim": 0.599,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Paraphrases S146: wheat varieties sown together, best suited or most fertile supplant others in few years.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+305.64,
+10.848
+],
+"spans": [
+[
+29264,
+29714
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And what is the big lesson?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S145",
+"S175"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question asking for the lesson; presupposes nothing about content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+316.488,
+2.016
+],
+"spans": [],
+"auto_spans": [
+[
+29066,
+29263
+],
+[
+34997,
+35147
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A corollary of the highest importance. The structure of every organic being is related, often in hidden ways, to all the beings it competes with, escapes from, or preys on.",
+"section": 3,
+"claim": true,
+"src": [
+"S158"
+],
+"check": {
+"local": {
+"sim": 0.944,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Closely paraphrases S158's corollary about structure related to competitors, escapes, and prey.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+318.504,
+11.784
+],
+"spans": [
+[
+31725,
+32065
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Like a tiger's teeth?",
+"section": 3,
+"claim": true,
+"src": [
+"S159"
+],
+"check": {
+"local": {
+"sim": 0.636,
+"numbers_missing": [],
+"flag": false
+},
+"first": "no_claim",
+"why": "A question offering an example; asserts nothing about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+330.288,
+1.872
+],
+"spans": [
+[
+32066,
+32232
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes, and the legs and claws of the parasite clinging to the tiger's hair. But with the dandelion's plumed seed, the relation seems at first confined to air.",
+"section": 3,
+"claim": true,
+"src": [
+"S159",
+"S160"
+],
+"check": {
+"local": {
+"sim": 0.842,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "S159 and S160 state tiger parasite and dandelion seed relation seeming confined to air.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+332.16,
+9.768
+],
+"spans": [
+[
+32066,
+32232
+],
+[
+32233,
+32415
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So many checks, then.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S137",
+"S136"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A brief reaction/transition remark, not asserting source content.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+341.928,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+27374,
+27480
+],
+[
+27069,
+27373
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Many checks act at different life stages and seasons. Some one or few are generally most potent, and different checks may act on the same species in different districts.",
+"section": 3,
+"claim": true,
+"src": [
+"S136",
+"S137"
+],
+"check": {
+"local": {
+"sim": 0.882,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Restates S136 and S137 accurately.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+343.8,
+10.248
+],
+"spans": [
+[
+27069,
+27373
+],
+[
+27374,
+27480
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he end on a grim note?",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S159",
+"S177"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A question presupposing nothing specific about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+354.048,
+1.872
+],
+"spans": [],
+"auto_spans": [
+[
+32066,
+32232
+],
+[
+35437,
+35684
+]
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He offers consolation. The war of nature is not incessant, no fear is felt, death is generally prompt, and the vigorous, the healthy, and the happy survive and multiply.",
+"section": 3,
+"claim": true,
+"src": [
+"S177"
+],
+"check": {
+"local": {
+"sim": 0.716,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Directly matches S177's consolation statements.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+355.92,
+11.832
+],
+"spans": [
+[
+35437,
+35684
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So life multiplies, and only some of it survives. Thanks, Alex.",
+"section": 3,
+"claim": true,
+"src": [
+"S46"
+],
+"check": {
+"local": {
+"sim": 0.44,
+"numbers_missing": [],
+"flag": false
+},
+"first": "supported",
+"why": "Summary follows S46: more individuals produced than can survive.",
+"action": "kept",
+"final": "supported"
+},
+"t": [
+367.752,
+5.112
+],
+"spans": [
+[
+6893,
+7155
+]
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Thanks for listening to Darwin on the struggle for existence.",
+"section": 3,
+"claim": false,
+"src": [],
+"auto_src": [
+"S177",
+"S175"
+],
+"check": {
+"local": null,
+"first": "no_claim",
+"why": "A sign-off thanking listeners; no content claim about the source.",
+"action": "kept",
+"final": "no_claim"
+},
+"t": [
+372.864,
+3.528
+],
+"spans": [],
+"auto_spans": [
+[
+35437,
+35684
+],
+[
+34997,
+35147
+]
+],
+"second_check": "no_claim"
+}
+],
+"draft": [
+{
+"speaker": "A",
+"text": "Welcome. Today we look at Chapter Three of On the Origin of Species by Charles Darwin. The chapter is called Struggle for Existence.",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "B",
+"text": "Sounds intense. Where does he start?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "With a big claim. Owing to the struggle for life, any variation that is profitable to an individual, however slight, will tend to preserve that individual.",
+"section": 0,
+"claim": true,
+"src": [
+"S23"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And that advantage gets passed on?",
+"section": 0,
+"claim": true,
+"src": [
+"S23"
+],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Generally, yes. It will generally be inherited by its offspring. And the offspring also have a better chance of surviving.",
+"section": 0,
+"claim": true,
+"src": [
+"S23",
+"S24"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why a better chance?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Because of the many individuals periodically born, only a small number can survive.",
+"section": 0,
+"claim": true,
+"src": [
+"S24"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what does he call this principle?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Natural Selection. He chose the name to mark its relation to man's power of selection.",
+"section": 0,
+"claim": true,
+"src": [
+"S25"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So human breeding is the comparison.",
+"section": 0,
+"claim": true,
+"src": [
+"S25",
+"S26"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes. Man can produce great results by piling up slight but useful variations, given to him by the hand of Nature.",
+"section": 0,
+"claim": true,
+"src": [
+"S26"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But nature does it better?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Far better. Natural Selection is \"incessantly ready for action,\" and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+"section": 0,
+"claim": true,
+"src": [
+"S27"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Then he turns to the struggle itself.",
+"section": 0,
+"claim": true,
+"src": [
+"S28"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "He does, with a warning. We see nature bright with gladness. But the singing birds mostly live on insects or seeds, so they are constantly destroying life.",
+"section": 0,
+"claim": true,
+"src": [
+"S35"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what does he mean by struggle?",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He uses it in a large and metaphorical sense. It includes one being depending on another. And, more important, it includes success in leaving progeny, not only the life of the individual.",
+"section": 0,
+"claim": true,
+"src": [
+"S36"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Give me an example.",
+"section": 0,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Two canine animals in a time of dearth truly struggle over which gets food and lives. The mistletoe depends on birds, so it metaphorically struggles with other plants to tempt birds to spread its seeds.",
+"section": 0,
+"claim": true,
+"src": [
+"S37",
+"S42"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why is struggle unavoidable?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Because all organic beings tend to increase at a high rate. A struggle for existence inevitably follows from that.",
+"section": 1,
+"claim": true,
+"src": [
+"S44"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What if nothing held them back?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+"section": 1,
+"claim": true,
+"src": [
+"S45"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So more are born than can possibly survive.",
+"section": 1,
+"claim": true,
+"src": [
+"S46"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Right. So there must be a struggle with the same species, with distinct species, or with the physical conditions of life.",
+"section": 1,
+"claim": true,
+"src": [
+"S46"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he tie this to anyone else's ideas?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Malthus. He calls it the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms. There is no artificial increase of food, and no prudential restraint from marriage.",
+"section": 1,
+"claim": true,
+"src": [
+"S47"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But some species really are increasing.",
+"section": 1,
+"claim": true,
+"src": [
+"S48"
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "Some may be, but all cannot, for the world would not hold them.",
+"section": 1,
+"claim": true,
+"src": [
+"S48"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why is he so sure about plants and animals in general?",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "In a state of nature almost every plant produces seed. Very few animals do not annually pair. So all tend to increase geometrically, and that tendency must be checked by destruction at some period of life.",
+"section": 1,
+"claim": true,
+"src": [
+"S60",
+"S61"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Our cows and horses do not seem to suffer that.",
+"section": 1,
+"claim": false,
+"src": [],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "He says familiarity with larger domestic animals misleads us. We forget thousands are slaughtered for food, and in nature an equal number would have to be disposed of.",
+"section": 1,
+"claim": true,
+"src": [
+"S62"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So what should we keep in mind when looking at nature?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "That every organic being is striving to the utmost to increase. Each lives by a struggle at some period, and heavy destruction falls on the young or the old.",
+"section": 2,
+"claim": true,
+"src": [
+"S71"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And if a check weakens?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Lighten any check, even a little, and the number of the species will almost instantaneously increase to any amount.",
+"section": 2,
+"claim": true,
+"src": [
+"S72"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "He has a picture for this, right?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Nature as a yielding surface with ten thousand sharp wedges packed close together, driven inward by incessant blows.",
+"section": 2,
+"claim": true,
+"src": [
+"S73"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What is the strongest check?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Climate. He believes periodical seasons of extreme cold or drought are the most effective of all checks.",
+"section": 2,
+"claim": true,
+"src": [
+"S88"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he have numbers?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He estimated the winter of 1854-55 destroyed four-fifths of the birds in his own grounds. He notes ten per cent is an extraordinarily severe mortality from epidemics with man.",
+"section": 2,
+"claim": true,
+"src": [
+"S89"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "But is climate separate from the struggle?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Not really. Climate chiefly acts by reducing food, and that brings on the most severe struggle between individuals living on the same food.",
+"section": 2,
+"claim": true,
+"src": [
+"S90"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "What about a species getting rarer as you travel south?",
+"section": 2,
+"claim": true,
+"src": [
+"S92"
+],
+"second_check": "partly"
+},
+{
+"speaker": "A",
+"text": "He says the cause lies quite as much in other species being favoured as in this one being hurt. Enemies or competitors may gain from a slight change of climate.",
+"section": 2,
+"claim": true,
+"src": [
+"S93",
+"S94"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Always?",
+"section": 2,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "No. In the Arctic regions, on snow-capped summits, or in absolute deserts, the struggle is almost exclusively with the elements.",
+"section": 2,
+"claim": true,
+"src": [
+"S96"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Who struggles hardest against whom?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "The dependence of one being on another usually lies between forms remote in nature. But the struggle is almost invariably most severe between individuals of the same species.",
+"section": 3,
+"claim": true,
+"src": [
+"S143",
+"S145"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Why?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "They frequent the same districts, require the same food, and face the same dangers.",
+"section": 3,
+"claim": true,
+"src": [
+"S145"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he give a case with varieties?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are most fertile beat the others, and in a few years quite supplant them.",
+"section": 3,
+"claim": true,
+"src": [
+"S146"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "And what is the big lesson?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "A corollary of the highest importance. The structure of every organic being is related, often in hidden ways, to all the beings it competes with, escapes from, or preys on.",
+"section": 3,
+"claim": true,
+"src": [
+"S158"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Like a tiger's teeth?",
+"section": 3,
+"claim": true,
+"src": [
+"S159"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Yes, and the legs and claws of the parasite clinging to the tiger's hair. But with the dandelion's plumed seed, the relation seems at first confined to air.",
+"section": 3,
+"claim": true,
+"src": [
+"S159",
+"S160"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So many checks, then.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Many checks act at different life stages and seasons. Some one or few are generally most potent, and different checks may act on the same species in different districts.",
+"section": 3,
+"claim": true,
+"src": [
+"S136",
+"S137"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "Does he end on a grim note?",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+},
+{
+"speaker": "A",
+"text": "He offers consolation. The war of nature is not incessant, no fear is felt, death is generally prompt, and the vigorous, the healthy, and the happy survive and multiply.",
+"section": 3,
+"claim": true,
+"src": [
+"S177"
+],
+"second_check": "supported"
+},
+{
+"speaker": "B",
+"text": "So life multiplies, and only some of it survives. Thanks, Alex.",
+"section": 3,
+"claim": true,
+"src": [
+"S46"
+],
+"second_check": "supported"
+},
+{
+"speaker": "A",
+"text": "Thanks for listening to Darwin on the struggle for existence.",
+"section": 3,
+"claim": false,
+"src": [],
+"second_check": "no_claim"
+}
+],
+"points": [
+{
+"point": "Because of the struggle for life, any slight variation that is useful to an individual tends to preserve it and is generally inherited, and since only a small number of those born survive, the offspring have a better chance too.",
+"sents": [
+"S23",
+"S24"
+],
+"importance": 3,
+"part": 0,
+"id": "P3"
+},
+{
+"point": "Darwin names this principle Natural Selection, by analogy with human selection, and claims it is incessantly ready for action and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+"sents": [
+"S25",
+"S26",
+"S27"
+],
+"importance": 3,
+"part": 0,
+"id": "P4"
+},
+{
+"point": "Darwin uses 'struggle for existence' in a large and metaphorical sense, including dependence of one being on another and, more importantly, success in leaving progeny, not only the life of the individual.",
+"sents": [
+"S36",
+"S43"
+],
+"importance": 3,
+"part": 0,
+"id": "P7"
+},
+{
+"point": "A struggle for existence follows inevitably because all organic beings tend to increase at a high rate, so more individuals are produced than can survive and each must struggle with its own species, other species, or the physical conditions of life.",
+"sents": [
+"S44",
+"S45",
+"S46"
+],
+"importance": 3,
+"part": 0,
+"id": "P9"
+},
+{
+"point": "Darwin describes this as the doctrine of Malthus applied to the whole animal and vegetable kingdoms, where there can be no artificial increase of food and no prudential restraint from marriage.",
+"sents": [
+"S47"
+],
+"importance": 2,
+"part": 0,
+"id": "P10"
+},
+{
+"point": "Because almost all plants and animals reproduce yearly, all tend to increase geometrically and would fill every available station, so this tendency must be checked by destruction at some period of life.",
+"sents": [
+"S60",
+"S61"
+],
+"importance": 3,
+"part": 1,
+"id": "P16"
+},
+{
+"point": "Every organic being strives to increase and lives by a struggle with heavy destruction falling on young or old, so lightening any check would make numbers rise almost instantly; nature is likened to ten thousand wedges driven together by blows.",
+"sents": [
+"S71",
+"S72",
+"S73"
+],
+"importance": 3,
+"part": 1,
+"id": "P21"
+},
+{
+"point": "Climate, especially periodic extreme cold or drought, is the most effective check; the winter of 1854-55 destroyed about four-fifths of the birds in the author's grounds.",
+"sents": [
+"S88",
+"S89"
+],
+"importance": 2,
+"part": 1,
+"id": "P26"
+},
+{
+"point": "A species' decline along a climatic gradient is due as much to competitors and enemies being favoured as to direct harm from climate, except in Arctic, mountain or desert extremes where the struggle is with the elements.",
+"sents": [
+"S92",
+"S93",
+"S94",
+"S95",
+"S96"
+],
+"importance": 3,
+"part": 1,
+"id": "P28"
+},
+{
+"point": "Many checks acting at different life stages and seasons determine each species' numbers or existence, with some checks usually most potent, and different checks may act in different districts.",
+"sents": [
+"S136",
+"S137"
+],
+"importance": 2,
+"part": 2,
+"id": "P40"
+},
+{
+"point": "Dependence between beings usually lies between forms remote in nature, but the struggle is almost always most severe between individuals of the same species, which share districts, food and dangers.",
+"sents": [
+"S143",
+"S144",
+"S145"
+],
+"importance": 3,
+"part": 2,
+"id": "P42"
+},
+{
+"point": "A corollary of the highest importance is that the structure of every organic being is related, often in hidden ways, to that of all other beings it competes with, escapes from or preys on.",
+"sents": [
+"S158",
+"S159"
+],
+"importance": 3,
+"part": 3,
+"id": "P47"
+},
+{
+"point": "We must keep in mind that every being strives to increase geometrically and suffers destruction at some period, yet the war of nature is not incessant, death is generally prompt, and the vigorous, healthy and happy survive and multiply.",
+"sents": [
+"S176",
+"S177"
+],
+"importance": 3,
+"part": 3,
+"id": "P53"
+}
+]
+}
