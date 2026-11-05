@@ -49,6 +49,8 @@ The transcript (`<name>.transcript.md`) shows each line's sentence ids and chara
 ## How to run
 
 ```bash
+git clone https://github.com/lyhjeremy/podcastify && cd podcastify
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt          # edge-tts, ebooklib, beautifulsoup4, sentence-transformers
 # ffmpeg and ffprobe on PATH:  brew install ffmpeg  |  winget install Gyan.FFmpeg
 
