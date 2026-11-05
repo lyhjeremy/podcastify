@@ -1,0 +1,12 @@
+stage,wall_s,duration_ms,cost_usd,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,model
+map,9.34,8729,0.029368000000000002,2,4326,0,1206,claude-sonnet-5-5
+map,9.91,9298,0.02331,2,3189,0,1055,claude-sonnet-5-5
+map,10.64,10026,0.031025999999999998,2,4363,0,1357,claude-sonnet-5-5
+reduce,4.2,3393,0.016804,2,3845,0,142,claude-sonnet-5-5
+script,37.89,37287,0.09981800000000002,2,8356,0,6639,claude-sonnet-5-5
+check,9.77,9165,0.024986,2,4273,0,789,claude-sonnet-5-5
+check,10.43,9681,0.026716,2,4958,0,688,claude-sonnet-5-5
+check,7.79,7219,0.028258000000000002,2,5046,0,807,claude-sonnet-5-5
+check,7.13,6408,0.01849,2,3154,0,587,claude-sonnet-5-5
+repair,4.1,3497,0.035595999999999996,2,8003,0,358,claude-sonnet-5-5
+check,3.53,2556,0.01086,2,2104,0,244,claude-sonnet-5-5

@@ -1,0 +1,318 @@
+{
+ "alice_end": [
+  {
+   "i": 57,
+   "speaker": "B",
+   "text": "What does the sister think of it?",
+   "src": [],
+   "first": "no_claim",
+   "why": "A question presupposing nothing beyond the sister's reaction; asserts no source content.",
+   "action": "kept",
+   "original": null,
+   "why_after": null,
+   "opus_on_draft": "no_claim",
+   "opus_on_checked": "no_claim"
+  },
+  {
+   "i": 58,
+   "speaker": "A",
+   "text": "She sits with closed eyes and half believes herself in Wonderland. Then she pictures her little sister grown, keeping the simple and loving heart of her childhood.",
+   "src": [
+    "S1430",
+    "S1431"
+   ],
+   "first": "partly",
+   "why": "Closed eyes and half-believing are supported, but the sister pictures her own self grown, not Alice.",
+   "action": "dropped after rewrite",
+   "original": "She sits with closed eyes and half believes herself in Wonderland. She pictures Alice grown, keeping the simple and loving heart of her childhood.",
+   "why_after": "Source says Alice's sister sits and pictures her little sister; line wrongly implies the sister is separate from Wonderland pictured, but 'she' is ambiguous; the content matches.",
+   "opus_on_draft": "supported",
+   "opus_on_checked": null
+  },
+  {
+   "i": 59,
+   "speaker": "B",
+   "text": "What would grown-up Alice do?",
+   "src": [],
+   "first": "no_claim",
+   "why": "A question presupposing nothing unsupported; it only asks what grown-up Alice would do.",
+   "action": "kept",
+   "original": null,
+   "why_after": null,
+   "opus_on_draft": "no_claim",
+   "opus_on_checked": "unsupported"
+  },
+  {
+   "i": 60,
+   "speaker": "A",
+   "text": "She'd gather other little children about her and make their eyes bright with strange tales, perhaps even the dream of Wonderland. She'd feel their simple sorrows and joys, remembering her own child-life and the happy summer days.",
+   "src": [
+    "S1431"
+   ],
+   "first": "partly",
+   "why": "Content matches S1431, but it's the sister who'd do this, not Alice, as the line attributes.",
+   "action": "rewritten",
+   "original": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would share their sorrows and joys, remembering the happy summer days.",
+   "why_after": "Closely paraphrases S1431 about the little sister gathering children, strange tales, and remembering childhood; 'grown-up Alice' framing is from the question.",
+   "opus_on_draft": "supported",
+   "opus_on_checked": "supported"
+  },
+  {
+   "i": 61,
+   "speaker": "B",
+   "text": "A lovely ending. Thanks for walking us through it, Alex.",
+   "src": [],
+   "first": "no_claim",
+   "why": "Closing pleasantry and opinion about the ending; no source claim.",
+   "action": "kept",
+   "original": null,
+   "why_after": null,
+   "opus_on_draft": "no_claim",
+   "opus_on_checked": "no_claim"
+  }
+ ],
+ "darwin": {
+  "frozen_missing": {
+   "K4": "Calculations illustrate this: even the slow-breeding elephant would leave about fifteen million descendants from one pair after five centuries, and an annual plant producing only two seeds would yield a million plants in twenty years.",
+   "K5": "Real evidence comes from the astonishingly rapid spread of domestic animals run wild in South America and Australia and of introduced plants, explained by favourable conditions reducing destruction rather than by increased fertility.",
+   "K6": "The average number of a species depends only indirectly on how many eggs or seeds it produces, because large numbers mainly compensate for heavy destruction, usually early in life; the Fulmar petrel lays one egg yet is believed to be the most numerous bird in the world.",
+   "K7": "The exact checks on increase are obscure, but they include destruction of seedlings, as when 295 of 357 marked weed seedlings were destroyed chiefly by slugs and insects, and competition between plants, as when nine of twenty species on an unmown plot of turf perished.",
+   "K8": "Food sets the extreme limit to a species' increase, but being preyed upon often determines its average numbers, as with game animals whose stock depends chiefly on the destruction of vermin.",
+   "K10": "Organisms are linked by complex webs of relations: enclosure of a Staffordshire heath and planting it with Scotch fir greatly changed its plants and birds, and cats may affect the frequency of red clover and heartsease by controlling the mice that destroy humble-bee nests."
+  },
+  "coverage_llm": 5.0,
+  "outline_points": 13,
+  "mapped_points": 53,
+  "mapped_but_not_chosen": [
+   {
+    "point": "In Staffordshire, a barren heath enclosed and planted with Scotch fir developed very different plant life, with twelve new plant species and six insectivorous bird species absent from the open heath.",
+    "importance": 2,
+    "sents": [
+     "S107",
+     "S108",
+     "S109",
+     "S110"
+    ]
+   },
+   {
+    "point": "Near Farnham, enclosing heath let self-sown Scotch firs spring up in multitudes, because on unenclosed heath cattle had perpetually browsed the seedlings down, so cattle determine the existence of the fir.",
+    "importance": 2,
+    "sents": [
+     "S111",
+     "S112",
+     "S114",
+     "S115",
+     "S116",
+     "S118"
+    ]
+   },
+   {
+    "point": "Humble-bees are needed to fertilise heartsease and red clover, so their extinction would make these plants rare or wipe them out.",
+    "importance": 2,
+    "sents": [
+     "S129",
+     "S130",
+     "S131"
+    ]
+   },
+   {
+    "point": "Slow breeders differ from prolific ones only in needing a few more years to fill a district, and egg number does not determine abundance, as shown by the condor, ostrich, Fulmar petrel and flies.",
+    "importance": 2,
+    "sents": [
+     "S63",
+     "S64",
+     "S65"
+    ]
+   },
+   {
+    "point": "Eggs and young generally suffer most, and seedlings are destroyed in vast numbers by crowding and enemies; of 357 marked weed seedlings, 295 were destroyed chiefly by slugs and insects.",
+    "importance": 2,
+    "sents": [
+     "S80",
+     "S81",
+     "S82"
+    ]
+   },
+   {
+    "point": "Food sets the extreme limit, but being prey to other animals more often determines a species' numbers, as with game depending on destruction of vermin, whereas elephants and rhinoceroses escape predators.",
+    "importance": 2,
+    "sents": [
+     "S84",
+     "S85",
+     "S86",
+     "S87"
+    ]
+   },
+   {
+    "point": "He gives examples of the rates: man doubling in twenty-five years, Linnæus's calculation of a million plants in twenty years from an annual plant producing two seeds, and about fifteen million elephants descended from one pair in five centuries.",
+    "importance": 2,
+    "sents": [
+     "S50",
+     "S51",
+     "S52"
+    ]
+   },
+   {
+    "point": "Recorded cases of rapid increase in nature and of feral cattle and horses in South America and Australia give better evidence than calculations.",
+    "importance": 2,
+    "sents": [
+     "S53",
+     "S54"
+    ]
+   }
+  ]
+ },
+ "length": {
+  "target_minutes": 6,
+  "target_words": 930,
+  "wpm_assumed": 155,
+  "sources": {
+   "greatstink": {
+    "draft_words": 1279,
+    "checked_words": 1212,
+    "checked_minutes": 7.89,
+    "checked_wpm": 153.6
+   },
+   "civil": {
+    "draft_words": 957,
+    "checked_words": 939,
+    "checked_minutes": 5.58,
+    "checked_wpm": 168.2
+   },
+   "origin3": {
+    "draft_words": 1002,
+    "checked_words": 1002,
+    "checked_minutes": 6.27,
+    "checked_wpm": 159.7
+   },
+   "alice": {
+    "draft_words": 1022,
+    "checked_words": 1022,
+    "checked_minutes": 5.91,
+    "checked_wpm": 172.9
+   }
+  }
+ },
+ "questions": {
+  "question_lines": 88,
+  "pipeline_rated": [
+   {
+    "source": "greatstink",
+    "text": "The sewers ran along the river too, didn't they?",
+    "claim_flag": false,
+    "src": [],
+    "first": "supported",
+    "why": "S127 says sewers ran along the Thames banks; question presupposes only that.",
+    "opus": "supported"
+   },
+   {
+    "source": "civil",
+    "text": "Only questions where expediency applies. Right and wrong should be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+    "claim_flag": true,
+    "src": [
+     "S24",
+     "S25"
+    ],
+    "first": "supported",
+    "why": "S24 and S25 support expediency, conscience, and the question about resigning conscience.",
+    "opus": "supported"
+   },
+   {
+    "source": "civil",
+    "text": "What did he make of the State after his own night in jail?",
+    "claim_flag": false,
+    "src": [],
+    "first": "partly",
+    "why": "Question presupposes a night in jail, which is not in the shown sentences.",
+    "opus": null
+   },
+   {
+    "source": "origin3",
+    "text": "He has a picture for this, right?",
+    "claim_flag": false,
+    "src": [],
+    "first": "supported",
+    "why": "Presupposes a picture/metaphor; S73 gives the wedge comparison.",
+    "opus": "supported"
+   },
+   {
+    "source": "origin3",
+    "text": "What about a species getting rarer as you travel south?",
+    "claim_flag": true,
+    "src": [
+     "S92"
+    ],
+    "first": "supported",
+    "why": "Question about species rarer southward; S94 discusses southward decrease (S92 says south to north, but question is neutral).",
+    "opus": "partly"
+   },
+   {
+    "source": "origin3",
+    "text": "Does he give a case with varieties?",
+    "claim_flag": false,
+    "src": [],
+    "first": "supported",
+    "why": "S146 gives the wheat varieties case.",
+    "opus": "no_claim"
+   },
+   {
+    "source": "alice",
+    "text": "And then she just jumps in the hole?",
+    "claim_flag": true,
+    "src": [
+     "S8"
+    ],
+    "first": "supported",
+    "why": "S8 says down went Alice after it, consistent with jumping in the hole.",
+    "opus": "no_claim"
+   },
+   {
+    "source": "alice",
+    "text": "Ha! And then she shrinks?",
+    "claim_flag": true,
+    "src": [
+     "S61",
+     "S62"
+    ],
+    "first": "supported",
+    "why": "S61-S62 show she shrinks after drinking.",
+    "opus": "no_claim"
+   },
+   {
+    "source": "alice",
+    "text": "And then she wakes up?",
+    "claim_flag": true,
+    "src": [
+     "S1423"
+    ],
+    "first": "supported",
+    "why": "S1423 shows she finds herself on the bank, implying waking; question presupposes little.",
+    "opus": "supported"
+   }
+  ],
+  "opus_rated_as_claims_in_drafts": 22,
+  "opus_flagged_questions_in_drafts": [
+   {
+    "source": "greatstink",
+    "text": "But the stink came before the sewers. What happened in 1858?",
+    "opus": "partly"
+   },
+   {
+    "source": "greatstink",
+    "text": "So Parliament finally acts. How?",
+    "opus": "partly"
+   },
+   {
+    "source": "civil",
+    "text": "What did he make of the State after his own night in jail?",
+    "opus": "unsupported"
+   },
+   {
+    "source": "origin3",
+    "text": "What about a species getting rarer as you travel south?",
+    "opus": "partly"
+   }
+  ],
+  "opus_claim_lines_in_drafts": 172
+ }
+}

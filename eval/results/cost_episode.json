@@ -1,0 +1,62 @@
+{
+ "date": "2026-11-04",
+ "machine": "Apple M4, macOS 26.5.2",
+ "source": "greatstink (26,640 chars), 6-minute target, empty cache, n = 1 episode",
+ "cost_note": "total_cost_usd from claude -p --output-format json: the API-equivalent cost; the run used a Claude subscription",
+ "model_calls": 11,
+ "cost_usd": 0.3452,
+ "wall_s_total": 222.8,
+ "wall_s_by_stage": {
+  "map": 10.6,
+  "reduce": 4.2,
+  "script": 37.9,
+  "check and repair": 57.9,
+  "audio (edge-tts)": 112.1
+ },
+ "calls_by_stage": {
+  "map": {
+   "calls": 3,
+   "cost_usd": 0.08371,
+   "output_tokens": 3618
+  },
+  "reduce": {
+   "calls": 1,
+   "cost_usd": 0.0168,
+   "output_tokens": 142
+  },
+  "script": {
+   "calls": 1,
+   "cost_usd": 0.09982,
+   "output_tokens": 6639
+  },
+  "check": {
+   "calls": 5,
+   "cost_usd": 0.10932,
+   "output_tokens": 3115
+  },
+  "repair": {
+   "calls": 1,
+   "cost_usd": 0.0356,
+   "output_tokens": 358
+  }
+ },
+ "episode_minutes": 7.8,
+ "spoken_words": 1167,
+ "check_rates": {
+  "lines": 65,
+  "claim_lines": 36,
+  "unflagged_claims": 0,
+  "first_pass": {
+   "supported": 32,
+   "partly": 4
+  },
+  "unsupported_rate_first": 0.0,
+  "not_supported_rate_first": 0.111,
+  "actions": {
+   "kept": 61,
+   "rewritten": 4
+  },
+  "local_flags": 1,
+  "local_llm_agreement": 0.917
+ }
+}

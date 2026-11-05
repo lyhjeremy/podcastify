@@ -306,6 +306,49 @@
 </style>
 </head>
 <body>
+<style>
+  .hero-sub.result { font-size: clamp(19px, 2.1vw, 22px); color: var(--ink); max-width: 60ch; }
+  .hero-sub.result b { font-weight: 600; color: var(--accent2); }
+  .hero-sub.how { margin-top: 30px; }
+  .evalfig { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 8px 36px;
+             margin: 28px 0 0; padding: 18px 0 4px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
+  .evalfig figure { margin: 0; }
+  .evalfig .ft { font: 600 clamp(19px, 2vw, 22px)/1.2 var(--display); margin: 0 0 2px; color: var(--ink); }
+  .evalfig .fs { font: italic 15px/1.4 var(--display); color: var(--muted); margin: 0 0 8px; }
+  .evalfig .key i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+  .evalfig .key .kr { border: 1.5px solid var(--ink); }
+  .evalfig .key .kd { border: 2px solid var(--accent2); }
+  .evalfig .key .kl { background: var(--accent); }
+  .evalfig svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .evalfig .grid { stroke: var(--rule); stroke-width: 1; }
+  .evalfig .ax { font: 11px var(--mono); fill: var(--muted); }
+  .evalfig .lab { font: 12.5px var(--sans); fill: var(--ink); }
+  .evalfig .tot .lab { font-weight: 700; }
+  .evalfig .link { stroke: var(--muted); stroke-width: 2; }
+  .evalfig .hit { fill: transparent; }
+  .evalfig .pair:hover .hit, .evalfig .pair:focus .hit { fill: color-mix(in srgb, var(--accent) 9%, transparent); }
+  .evalfig .pair:focus { outline: none; }
+  .evalfig .pair:focus-visible .hit { stroke: var(--accent); stroke-width: 1.5; }
+  .evalfig circle.m-rule { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+  .evalfig circle.m-draft { fill: var(--paper); stroke: var(--accent2); stroke-width: 2; }
+  .evalfig circle.m-llm { fill: var(--accent); }
+  .evalfig .fig-cap { grid-column: 1 / -1; margin-top: 4px; }
+  .evalfig .readout { grid-column: 1 / -1; font: 13.5px/1.4 var(--mono); color: var(--ink); min-height: 1.4em; margin: 0; }
+  .colophon { margin: 26px 0 0; padding: 0; max-width: 62rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); column-gap: 40px; }
+  .colophon > div { display: grid; grid-template-columns: 6.4rem minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+  .colophon dt { font: italic 16px/1.35 var(--display); color: var(--accent); }
+  .colophon dd { margin: 0; font: 14.5px/1.45 var(--sans); color: var(--ink2); }
+  .colophon code { font-size: 12.5px; white-space: nowrap; }
+  .errs { list-style: none; margin: 18px 0 0; padding: 0; counter-reset: err; }
+  .errs > li { counter-increment: err; border-top: 1px solid var(--rule); padding: 16px 0 6px; }
+  .errs h3 { font: 600 clamp(19px, 2vw, 22px)/1.25 var(--display); margin: 0 0 6px; }
+  .errs h3::before { content: counter(err) ". "; color: var(--accent2); }
+  .errs .count { font: 13px var(--mono); color: var(--muted); margin: 0 0 8px; }
+  .errs blockquote { margin: 10px 0; padding: 8px 0 8px 16px; border-left: 2px solid var(--accent2); font: italic 16px/1.5 var(--display); color: var(--ink); }
+  .errs blockquote .who { font: 12px var(--mono); font-style: normal; color: var(--muted); display: block; margin-top: 4px; }
+  .errs table { margin-top: 8px; }
+</style>
+
 <div class="wrap">
   <header class="masthead">
     <div class="logo">Podcastify</div>
@@ -316,18 +359,51 @@
     <p class="kicker">A Python command-line tool, rebuilt in October 2026</p>
     <h1>A two-host episode of a whole book, with every claim tied to the sentences it came from.</h1>
 
-    <p class="hero-sub">
+    <p class="hero-sub result">
+      On four sources, the LLM episodes covered <b>7.4 of 12</b> frozen key points on average, against
+      <b>4.4</b> for rule mode reading the same number of words. A second checker kept out of the pipeline
+      (Opus) found <b>8 of 172</b> claim lines not fully supported before the repair step and <b>8 of 165</b>
+      after it. The repair did not lower the rate.
+    </p>
+    <div class="evalfig" role="group" aria-label="The grounding eval in two charts">
+      <figure class="chart">
+        <p class="ft">LLM mode covers more of every source</p>
+        <p class="fs">Key points covered, of 12</p>
+        <div class="key"><span><i class="kr"></i>Rule mode</span><span><i class="kl"></i>LLM mode, checked</span></div>
+        <svg viewBox="0 0 340 224" role="group" aria-label="Key points covered out of 12, rule mode against LLM mode"><line class="grid" x1="128.0" x2="128.0" y1="8" y2="198"/><text class="ax" x="128.0" y="214" text-anchor="middle">0</text><line class="grid" x1="173.5" x2="173.5" y1="8" y2="198"/><text class="ax" x="173.5" y="214" text-anchor="middle">3</text><line class="grid" x1="219.0" x2="219.0" y1="8" y2="198"/><text class="ax" x="219.0" y="214" text-anchor="middle">6</text><line class="grid" x1="264.5" x2="264.5" y1="8" y2="198"/><text class="ax" x="264.5" y="214" text-anchor="middle">9</text><line class="grid" x1="310.0" x2="310.0" y1="8" y2="198"/><text class="ax" x="310.0" y="214" text-anchor="middle">12</text><g class="pair" tabindex="0" role="img" aria-label="Great Stink: rule mode 8 of 12, LLM mode 10 of 12"><title>Great Stink: rule mode 8 of 12, LLM mode 10 of 12</title><rect class="hit" x="0" y="16.0" width="340" height="32"/><text class="lab" x="118" y="36.0" text-anchor="end">Great Stink</text><line class="link" x1="249.3" x2="279.7" y1="32.0" y2="32.0"/><circle class="m-rule" cx="249.3" cy="32.0" r="5.5"/><circle class="m-llm" cx="279.7" cy="32.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Civil Disobedience: rule mode 4.5 of 12, LLM mode 8.5 of 12"><title>Civil Disobedience: rule mode 4.5 of 12, LLM mode 8.5 of 12</title><rect class="hit" x="0" y="52.0" width="340" height="32"/><text class="lab" x="118" y="72.0" text-anchor="end">Civil Disobedience</text><line class="link" x1="196.2" x2="256.9" y1="68.0" y2="68.0"/><circle class="m-rule" cx="196.2" cy="68.0" r="5.5"/><circle class="m-llm" cx="256.9" cy="68.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Origin, ch. III: rule mode 4 of 12, LLM mode 5 of 12"><title>Origin, ch. III: rule mode 4 of 12, LLM mode 5 of 12</title><rect class="hit" x="0" y="88.0" width="340" height="32"/><text class="lab" x="118" y="108.0" text-anchor="end">Origin, ch. III</text><line class="link" x1="188.7" x2="203.8" y1="104.0" y2="104.0"/><circle class="m-rule" cx="188.7" cy="104.0" r="5.5"/><circle class="m-llm" cx="203.8" cy="104.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Alice (whole book): rule mode 1 of 12, LLM mode 6 of 12"><title>Alice (whole book): rule mode 1 of 12, LLM mode 6 of 12</title><rect class="hit" x="0" y="124.0" width="340" height="32"/><text class="lab" x="118" y="144.0" text-anchor="end">Alice (whole book)</text><line class="link" x1="143.2" x2="219.0" y1="140.0" y2="140.0"/><circle class="m-rule" cx="143.2" cy="140.0" r="5.5"/><circle class="m-llm" cx="219.0" cy="140.0" r="5.5"/></g><g class="pair tot" tabindex="0" role="img" aria-label="Mean of four: rule mode 4.4 of 12, LLM mode 7.4 of 12"><title>Mean of four: rule mode 4.4 of 12, LLM mode 7.4 of 12</title><rect class="hit" x="0" y="160.0" width="340" height="32"/><text class="lab" x="118" y="180.0" text-anchor="end">Mean of four</text><line class="link" x1="194.4" x2="239.9" y1="176.0" y2="176.0"/><circle class="m-rule" cx="194.4" cy="176.0" r="5.5"/><circle class="m-llm" cx="239.9" cy="176.0" r="5.5"/></g></svg>
+      </figure>
+      <figure class="chart">
+        <p class="ft">The repair step left the unsupported share flat</p>
+        <p class="fs">Claim lines not fully supported, by Opus</p>
+        <div class="key"><span><i class="kd"></i>Draft, before repair</span><span><i class="kl"></i>After repair</span></div>
+        <svg viewBox="0 0 340 224" role="group" aria-label="Share of claim lines not fully supported, before and after the repair step"><line class="grid" x1="128.0" x2="128.0" y1="8" y2="198"/><text class="ax" x="128.0" y="214" text-anchor="middle">0%</text><line class="grid" x1="173.5" x2="173.5" y1="8" y2="198"/><text class="ax" x="173.5" y="214" text-anchor="middle">2.5%</text><line class="grid" x1="219.0" x2="219.0" y1="8" y2="198"/><text class="ax" x="219.0" y="214" text-anchor="middle">5%</text><line class="grid" x1="264.5" x2="264.5" y1="8" y2="198"/><text class="ax" x="264.5" y="214" text-anchor="middle">7.5%</text><line class="grid" x1="310.0" x2="310.0" y1="8" y2="198"/><text class="ax" x="310.0" y="214" text-anchor="middle">10%</text><g class="pair" tabindex="0" role="img" aria-label="Great Stink: before repair 4 of 51, after repair 3 of 46"><title>Great Stink: before repair 4 of 51, after repair 3 of 46</title><rect class="hit" x="0" y="16.0" width="340" height="32"/><text class="lab" x="118" y="36.0" text-anchor="end">Great Stink</text><line class="link" x1="246.7" x2="270.7" y1="32.0" y2="32.0"/><circle class="m-draft" cx="270.7" cy="32.0" r="5.5"/><circle class="m-llm" cx="246.7" cy="32.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Civil Disobedience: before repair 1 of 33, after repair 1 of 31"><title>Civil Disobedience: before repair 1 of 33, after repair 1 of 31</title><rect class="hit" x="0" y="52.0" width="340" height="32"/><text class="lab" x="118" y="72.0" text-anchor="end">Civil Disobedience</text><line class="link" x1="183.2" x2="186.7" y1="68.0" y2="68.0"/><circle class="m-draft" cx="183.2" cy="68.0" r="5.5"/><circle class="m-llm" cx="186.7" cy="68.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Origin, ch. III: before repair 3 of 46, after repair 3 of 46"><title>Origin, ch. III: before repair 3 of 46, after repair 3 of 46</title><rect class="hit" x="0" y="88.0" width="340" height="32"/><text class="lab" x="118" y="108.0" text-anchor="end">Origin, ch. III</text><line class="link" x1="246.7" x2="246.7" y1="104.0" y2="104.0"/><circle class="m-draft" cx="246.7" cy="104.0" r="5.5"/><circle class="m-llm" cx="246.7" cy="104.0" r="5.5"/></g><g class="pair" tabindex="0" role="img" aria-label="Alice (whole book): before repair 0 of 42, after repair 1 of 42"><title>Alice (whole book): before repair 0 of 42, after repair 1 of 42</title><rect class="hit" x="0" y="124.0" width="340" height="32"/><text class="lab" x="118" y="144.0" text-anchor="end">Alice (whole book)</text><line class="link" x1="128.0" x2="171.3" y1="140.0" y2="140.0"/><circle class="m-draft" cx="128.0" cy="140.0" r="5.5"/><circle class="m-llm" cx="171.3" cy="140.0" r="5.5"/></g><g class="pair tot" tabindex="0" role="img" aria-label="All four: before repair 8 of 172 (4.7%), after repair 8 of 165 (4.8%)"><title>All four: before repair 8 of 172 (4.7%), after repair 8 of 165 (4.8%)</title><rect class="hit" x="0" y="160.0" width="340" height="32"/><text class="lab" x="118" y="180.0" text-anchor="end">All four</text><line class="link" x1="212.7" x2="216.2" y1="176.0" y2="176.0"/><circle class="m-draft" cx="212.7" cy="176.0" r="5.5"/><circle class="m-llm" cx="216.2" cy="176.0" r="5.5"/></g></svg>
+      </figure>
+      <p class="fig-cap">From <code>eval/results/summary.json</code> (eval run of 2026-10-29, one run per source and
+        mode, six-minute target). Coverage was graded by Opus against 12 key points per source that were written
+        and committed before any episode existed.</p>
+      <p class="readout" id="evr" aria-live="polite">Focus or hover a row for its counts.</p>
+    </div>
+    <dl class="colophon" aria-label="At a glance">
+      <div><dt>Task</dt><dd>Turn a long text into a six-minute two-host episode in which every factual line cites the source sentences it rests on.</dd></div>
+      <div><dt>Eval set</dt><dd>4 sources (all of <em>Alice</em>, Thoreau's essay, Darwin's chapter III, a pinned Wikipedia article), 12 key points each, committed in <code>db27eca</code> before any generation.</dd></div>
+      <div><dt>Baseline</dt><dd>Rule mode: the source read aloud from the start, capped at the LLM episode's word count.</dd></div>
+      <div><dt>Result</dt><dd>7.4 of 12 key points against 4.4. Not fully supported: 8 of 172 claim lines before repair, 8 of 165 after.</dd></div>
+      <div><dt>Cost</dt><dd>$0.35 per episode, API-equivalent, from 11 <code>claude -p</code> calls (Sonnet). One fresh Great Stink episode, n&nbsp;=&nbsp;1.</dd></div>
+      <div><dt>Wall time</dt><dd>3 min 43 s for that episode on an Apple M4: 1 min 51 s writing and checking, 1 min 52 s rendering audio. n&nbsp;=&nbsp;1, so no p95.</dd></div>
+      <div><dt>Main failure</dt><dd>The checkers disagree with each other: half the lines Opus flagged in the drafts were host questions, and both models misread the last paragraph of <em>Alice</em>.</dd></div>
+    </dl>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
+      <a class="textlink" href="../">The short tour</a>
+    </div>
+
+    <p class="hero-sub how">
       Podcastify reads an EPUB or article end to end, pulls out key points that cite their source
       sentences, plans an episode of a set length, and has Claude write a conversation between a host
       and a co-host in which every factual line carries the ids of the sentences it rests on. A second
       model call then checks each line against those sentences; lines that fail are rewritten once or
       dropped. Free edge-tts voices render the result as an MP3 with a chapter per section.
     </p>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
-      <a class="textlink" href="../">The short tour</a>
-    </div>
 
     <div class="listen" id="listen">
       <audio id="aud" controls preload="none" src="alice.episode.mp3"></audio>
@@ -418,10 +494,7 @@
       What failed was rarely an invented fact. The nine failures were a question that presupposed something
       from outside the cited sentences ("It sits right on the river"), a quote attributed to a source the
       cited sentence does not name, or an inference stated as fact ("the consequence is prison"). The check
-      also made one plain mistake, visible in the episode above: in the last paragraph of <em>Alice</em> the
-      sister pictures "this same little sister of hers" grown up, which is Alice. The checker read it as the
-      sister picturing herself, marked a correct line "partly", and the line was dropped after its rewrite.
-      The second checker, Opus, made the same misreading of the next line.
+      also made one plain mistake, visible in the episode above and set out under "Where it goes wrong" below.
     </p>
   </section>
 
@@ -487,6 +560,93 @@
     </p>
   </section>
 
+  <section class="stop" id="errors">
+    <p class="eyebrow">Error analysis</p>
+    <h2>Where it goes wrong</h2>
+    <p>
+      Four kinds of failure show up in the saved eval outputs. Each example below is copied from
+      <code>eval/results/</code>; <code>eval/error_examples.py</code> pulls them into
+      <code>error_examples.json</code> without calling a model.
+    </p>
+    <ol class="errs">
+      <li>
+        <h3>Both checkers misread the end of <em>Alice</em></h3>
+        <p class="count">1 correct line dropped, 1 rewritten, 1 question rated unsupported, all in the last paragraph</p>
+        <p>Carroll's last paragraph has Alice's sister picture "this same little sister of hers" grown up. The draft line got it right:</p>
+        <blockquote>She sits with closed eyes and half believes herself in Wonderland. She pictures Alice grown, keeping the simple and loving heart of her childhood.<span class="who">Draft line, cites S1430 and S1431</span></blockquote>
+        <p>The pipeline's checker (Sonnet) rated it "partly": "the sister pictures her own self grown, not Alice." The rewrite
+          swapped in "her little sister", the check failed it again, and the line was dropped. It made the same
+          misreading of the next line, which was rewritten. In the checked episode Opus then rated the bridging question,
+          "What would grown-up Alice do?", unsupported.</p>
+      </li>
+      <li>
+        <h3>The reduce step drops Darwin's worked examples</h3>
+        <p class="count">6 of 12 frozen key points missed in Origin, ch. III; the outline kept 13 of 53 mapped points</p>
+        <p>Every one of the six missed points rests on a worked example or a count: the elephant calculation, feral cattle in
+          South America and Australia, the Fulmar petrel, the marked seedlings, game and vermin, the Staffordshire heath and the
+          cats and clover. The map step had found all of them, at importance 2 of 3, for example:</p>
+        <blockquote>Eggs and young generally suffer most, and seedlings are destroyed in vast numbers by crowding and enemies; of 357 marked weed seedlings, 295 were destroyed chiefly by slugs and insects.<span class="who">Map-step key point, S80 to S82, not chosen for the outline</span></blockquote>
+        <p>The reduce prompt asks for about two points per minute and the model picked the general claims over the
+          evidence. A coverage-aware reduce prompt is untested.</p>
+      </li>
+      <li>
+        <h3>Episodes run past the target length</h3>
+        <p class="count">4 of 4 drafts over the 930-word target; 2 of 4 checked episodes over six minutes</p>
+        <div class="tablewrap" role="region" aria-label="Words and minutes against the target" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Source</th><th scope="col" class="num">Draft words</th><th scope="col" class="num">Over target</th><th scope="col" class="num">Checked episode</th></tr></thead>
+            <tbody>
+              <tr><td>Great Stink</td><td class="num">1,279</td><td class="num">+38%</td><td class="num">7.9 min</td></tr>
+              <tr><td>Civil Disobedience</td><td class="num">957</td><td class="num">+3%</td><td class="num">5.6 min</td></tr>
+              <tr><td>Origin, ch. III</td><td class="num">1,002</td><td class="num">+8%</td><td class="num">6.3 min</td></tr>
+              <tr><td>Alice</td><td class="num">1,022</td><td class="num">+10%</td><td class="num">5.9 min</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The script prompt asks for six minutes at 155 words a minute, 930 words. The writer goes over every time, and the
+          voices run 154 to 173 words a minute, so the two errors only sometimes cancel. The fresh Great Stink run for the
+          cost measurement below came out at 7.8 minutes again.</p>
+      </li>
+      <li>
+        <h3>Host questions get claim verdicts</h3>
+        <p class="count">Opus rated 22 question lines as claims in the drafts; 4 of its 8 not-fully-supported lines are questions</p>
+        <p>A question can presuppose a fact, so both checkers grade questions. The pipeline's checker rated 9 of the 88
+          question lines in the checked episodes, 8 of them "supported", for example:</p>
+        <blockquote>And then she wakes up?<span class="who">Alice, rated supported, cites S1423</span></blockquote>
+        <p>Opus counted 22 questions among its 172 draft claim lines and marked 4 of them partly or unsupported, among them
+          "So Parliament finally acts. How?" and "What did he make of the State after his own night in jail?". Half of the
+          8 lines behind the headline rate are questions like these, so the rate says more about how a checker reads a
+          question than about invented facts.</p>
+      </li>
+    </ol>
+  </section>
+  <section class="stop" id="cost">
+    <p class="eyebrow">Cost and time</p>
+    <h2>One episode: $0.35 and under four minutes</h2>
+    <p>
+      The eval did not record cost or time, and its disk cache means a rerun makes no model calls. So
+      <code>eval/measure_cost.py</code> made one fresh episode from the shortest source, the Great Stink article
+      (26,640 characters), with an empty cache, on 2026-11-04, on an Apple M4. Cost is what
+      <code>claude -p --output-format json</code> reports as <code>total_cost_usd</code>: the API-equivalent price, since
+      the run used a Claude subscription. This is one episode (n&nbsp;=&nbsp;1), so there is no spread to report; a
+      whole book maps more chunks and costs more.
+    </p>
+    <div class="tablewrap" role="region" aria-label="Cost and time by stage" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Stage</th><th scope="col" class="num">Model calls</th><th scope="col" class="num">Cost</th><th scope="col" class="num">Wall time</th></tr></thead>
+        <tbody>
+          <tr><td>Map (3 chunks)</td><td class="num">3</td><td class="num">$0.084</td><td class="num">10.6 s</td></tr>
+          <tr><td>Reduce</td><td class="num">1</td><td class="num">$0.017</td><td class="num">4.2 s</td></tr>
+          <tr><td>Script</td><td class="num">1</td><td class="num">$0.100</td><td class="num">37.9 s</td></tr>
+          <tr><td>Check, repair, recheck</td><td class="num">6</td><td class="num">$0.145</td><td class="num">57.9 s</td></tr>
+          <tr><td>Audio (edge-tts, free)</td><td class="num">0</td><td class="num">$0</td><td class="num">112.1 s</td></tr>
+          <tr class="first"><td><b>Episode</b></td><td class="num"><b>11</b></td><td class="num"><b>$0.345</b></td><td class="num"><b>222.8 s</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fig-cap">From <code>eval/results/cost_episode.json</code> and <code>cost_calls.csv</code> (one row per call). The
+      episode had 36 claim lines; the checker rated 4 "partly", and all 4 were rewritten and kept. It ran 7.8 minutes.</p>
+  </section>
   <section class="stop stop--warn">
     <p class="eyebrow">Limitations</p>
     <h2>What four sources can and cannot show</h2>
@@ -565,6 +725,10 @@
     return l.first;
   }
 
+  [].forEach.call(document.querySelectorAll(".evalfig .pair"), function (g) {
+    var f = function () { document.getElementById("evr").textContent = g.getAttribute("aria-label"); };
+    g.addEventListener("focus", f); g.addEventListener("mouseenter", f);
+  });
   /* ---- the recorded episode ---- */
   var aud = document.getElementById("aud"), script = document.getElementById("script"), chap = document.getElementById("chap");
   fetch("episode.json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (E) {

@@ -1,6 +1,8 @@
 # Podcastify
 
-A Python command-line tool that turns an EPUB or article into a two-host podcast. In LLM mode it reads the whole source, writes a host and co-host conversation in which every factual line cites the source sentences it rests on, checks each line against those sentences, and renders an MP3 (or M4B) with a chapter per section. Rule mode, which needs no model, reads the source aloud in two voices.
+Podcastify turns a whole book or article into a two-host podcast in which every factual line cites the source sentences it rests on. On four sources its LLM episodes covered 7.4 of 12 frozen key points against 4.4 for rule mode; an independent Opus checker found 8 of 172 claim lines not fully supported before the repair step and 8 of 165 after, so the repair did not lower the rate. A six-minute episode of a 26,640-character article cost $0.35 at API-equivalent prices (11 `claude -p` calls, measured once).
+
+It is a Python command-line tool. In LLM mode it reads the whole source, writes the host and co-host conversation with sentence ids on each line, checks each line against those sentences, and renders an MP3 (or M4B) with a chapter per section. Rule mode, which needs no model, reads the source aloud in two voices.
 
 [Live site](https://lyhjeremy.github.io/podcastify/) · [Write-up](https://lyhjeremy.github.io/podcastify/overview/) · [Narrative](writeup.md)
 
@@ -78,6 +80,17 @@ python eval/export_web.py alice               # overview/episode.json, eval.json
 ## Rule mode
 
 The default. The narrator reads three sentences at a time; after every second segment the co-host adds a reaction and the narrator a bridge line, both from fixed pools. It is the source verbatim, it costs nothing, and the co-host responds to nothing in particular. The 2026-10-26 sample run (1,800 characters of *Alice* as 1 minute 59 seconds of audio) is described in [writeup.md](writeup.md).
+
+## Cost and known failures
+
+One fresh episode of the Great Stink article (6-minute target, empty cache, Apple M4, 2026-11-04) made 11 `claude -p` calls and cost $0.345 API-equivalent (`total_cost_usd`; the run used a Claude subscription). It took 222.8 s: 110.6 s for map, reduce, script and check, 112.1 s for edge-tts. n = 1. Script: `eval/measure_cost.py`; data: `eval/results/cost_episode.json`, `cost_calls.csv`.
+
+The known failures, with examples, are pulled from the saved outputs by `eval/error_examples.py` into `eval/results/error_examples.json`:
+
+1. Both checkers misread the last paragraph of *Alice* ("this same little sister of hers" is Alice); one correct line was dropped.
+2. The reduce step dropped all six of Darwin's worked-example key points (Origin ch. III covered 5 of 12), although the map step had found them.
+3. All four drafts ran over the 930-word target (by 3% to 38%); Great Stink came out at 7.9 minutes against 6.
+4. Host questions get claim verdicts: 4 of the 8 lines Opus flagged in the drafts are questions.
 
 ## Limitations
 
