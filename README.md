@@ -50,7 +50,7 @@ Four sources and one run each: treat the grounding counts (single digits) as ind
 | Number check (local) | 8.9% (all 5 number edits) | 0% | 0 | | $0 |
 | MiniLM similarity < 0.40 (local) | 5.4% | 1.8% | 0 | | $0, 6.9 ms |
 
-Cost is API-equivalent as reported by the Claude CLI, averaged over runs. LLM judges agree with each other at kappa 0.76 to 0.84; the local checks agree with nothing (kappa -0.05 to 0.12). The majority vote did worse than Opus alone. Sonnet's misses are all negations, and its reasons show it forgave them ("'yet seen' is a minor typo for 'not yet seen'").
+Cost is API-equivalent as reported by the Claude CLI, averaged over runs. LLM judges agree with each other at kappa 0.76 to 0.84; the local checks agree with nothing (kappa -0.05 to 0.12). The majority vote did worse than Opus alone. On runs 1 and 2 Sonnet's 7 misses were all negations; run 3 missed 12 (10 negations, 1 of 5 number edits, 1 of 17 name swaps). Its reasons show it forgave the negations ("'yet seen' is a minor typo for 'not yet seen'").
 
 Two fixes came out of it. `llm.parse_json` took the first `{` to the last `}`, so when Sonnet followed its JSON with "Correction to line 10: ..." and a second object, a whole batch came back unchecked (33 of 124 lines on one run); it now takes the last complete object, and `run_judges.py reparse` rescored the saved replies without new calls. And `grounding.is_question` keeps lines that only ask out of the claim-line rates: the published second-check counts become 6 of 155 statement lines before repair and 6 of 149 after.
 

@@ -366,6 +366,14 @@
   .jt-fig .ft, .jv .ft { font: 600 1.1rem/1.3 var(--display); color: var(--ink); margin: 0 0 2px; }
   .jt-fig .fs, .jv .fs { font: 13.5px/1.4 var(--sans); color: var(--muted); margin: 0 0 12px; }
   .jt td:first-child { min-width: 9rem; }
+  /* fit all seven columns in the 774px text column at desktop width; still scrolls on a phone */
+  .jt { min-width: 640px; }
+  .jt th, .jt td { padding: 10px 8px; vertical-align: top; }
+  .jt th { letter-spacing: .05em; }
+  .jt th.num { white-space: normal; }
+  .jt td.num { font-size: 12.5px; }
+  .jt td.num .sub { white-space: normal; }
+  .jt td:first-child { min-width: 7.5rem; }
   .jv-list { list-style: none; margin: 0; padding: 0; max-height: 640px; overflow-y: auto; border-right: 1px solid var(--rule); }
   .jv-list li { margin: 0; border-bottom: 1px solid var(--rule); }
   .jv-list button { all: unset; display: block; box-sizing: border-box; width: 100%; padding: 9px 12px; cursor: pointer; font: 13.5px/1.4 var(--sans); color: var(--ink2); }
@@ -448,7 +456,7 @@
       <div><dt>Result</dt><dd>7.4 of 12 key points against 4.4. Not fully supported: 8 of 172 claim lines before repair, 8 of 165 after.</dd></div>
       <div><dt>Cost</dt><dd>$0.35 per episode, API-equivalent, from 11 <code>claude -p</code> calls (Sonnet). One fresh Great Stink episode, n&nbsp;=&nbsp;1.</dd></div>
       <div><dt>Wall time</dt><dd>3 min 43 s for that episode on an Apple M4: 1 min 51 s writing and checking, 1 min 52 s rendering audio. n&nbsp;=&nbsp;1, so no p95.</dd></div>
-      <div><dt>Main failure</dt><dd>The pipeline's checker forgives errors: it passed 7 broken lines, all negations, calling one "a minor typo". A parser bug also left 33 lines unchecked on one run until it was fixed.</dd></div>
+      <div><dt>Main failure</dt><dd>The pipeline's checker forgives errors: on runs 1 and 2 it passed 7 broken lines, all negations, calling one "a minor typo"; run 3 passed 12. A parser bug also left 33 lines unchecked on one run until it was fixed.</dd></div>
     </dl>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
@@ -497,7 +505,8 @@
       <div class="claim">
         <div class="n">56 of 56</div>
         <p>lines broken on purpose that Opus flagged, on both of its runs. The pipeline's Sonnet checker
-          flagged 44 to 49 over three runs and missed only negations.</p>
+          flagged 44 to 49 over three runs. On runs 1 and 2 it missed only negations; run 3 also missed
+          one number edit and one name swap.</p>
       </div>
     </div>
   </section>
@@ -554,7 +563,7 @@
         the published eval had Opus rate about 5% of claim lines partly supported, so a false flag here may be a real catch.
         "Same call across runs" is the share of all 124 lines flagged the same way in every run, with Cohen's kappa between
         runs 1 and 2. Cost is API-equivalent, as reported by the Claude CLI, averaged over runs (repeat runs hit the prompt
-        cache and cost less); time is batch wall time divided by lines, Apple M4. The majority costs the sum of its three judges.</p>
+        cache and cost less); time is the summed wall time of a run's 8 calls divided by its 124 lines (15.5 lines per call on average, at most 18), Apple M4. The majority costs the sum of its three judges.</p>
     </figure>
 
     <p style="margin-top:24px">
