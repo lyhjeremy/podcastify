@@ -42,7 +42,7 @@ Listenability, judged blind by Opus with each pair shown in both orders: the LLM
 
 Length: the LLM episodes ran 5.6 to 7.9 minutes against the six-minute target, at 154 to 173 words a minute; rule mode ran 160 to 193 words a minute, fastest on *Alice*'s short dialogue sentences.
 
-Hand check: 20 claim lines drawn at random from the drafts, read against their cited sentences before looking at any verdict. My reading agreed with the pipeline's checker on pass or fail for 18 and with Opus for 19. One disagreement was the *Alice* ending above; in the other the checker passed "That points at the water, not the air", an inference the cited sentences about John Snow's pump do not make. Only one of the 20 lines failed by my reading, so the sample shows the checker passes good lines and says little about how many bad lines it misses.
+Model read of 20 lines (corrected 2026-11-13: this used to be called a hand check, but the verdicts were written by the Claude agent that built the eval, not by a person): 20 claim lines drawn at random from the drafts, read against their cited sentences before looking at any verdict. That reading agreed with the pipeline's checker on pass or fail for 18 and with Opus for 19. One disagreement was the *Alice* ending above; in the other the checker passed "That points at the water, not the air", an inference the cited sentences about John Snow's pump do not make. Only one of the 20 lines failed by that reading, so the sample shows the checker passes good lines and says little about how many bad lines it misses.
 
 ### What the numbers do not show
 

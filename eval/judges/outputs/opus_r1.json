@@ -1,0 +1,995 @@
+{
+ "judge": "opus",
+ "run": 1,
+ "prompt": "grounding.CHECK_PROMPT",
+ "batches": [
+  {
+   "source": "greatstink",
+   "ids": [
+    "J012",
+    "J009",
+    "J013",
+    "J004",
+    "J025",
+    "J024",
+    "J001",
+    "J021",
+    "J031",
+    "J028",
+    "J005",
+    "J008",
+    "J020",
+    "J017",
+    "J016",
+    "J033",
+    "J029"
+   ],
+   "verdicts": {
+    "J012": {
+     "verdict": "partly",
+     "why": "Ackroyd says Bazalgette, not Doxat, enters the pantheon."
+    },
+    "J009": {
+     "verdict": "supported",
+     "why": "Miasma belief, fear of cholera and 1857 lime treatment all stated."
+    },
+    "J013": {
+     "verdict": "supported",
+     "why": "Matches Snow's observation about the two water companies."
+    },
+    "J004": {
+     "verdict": "partly",
+     "why": "Source says February 1864, not 1874."
+    },
+    "J025": {
+     "verdict": "supported",
+     "why": "Mileages, tender dates and draftsmen all match."
+    },
+    "J024": {
+     "verdict": "partly",
+     "why": "Source says water-borne, NOT transmitted by miasma."
+    },
+    "J001": {
+     "verdict": "supported",
+     "why": "Matches the Examiner's report about Disraeli."
+    },
+    "J021": {
+     "verdict": "supported",
+     "why": "Matches the East London Water Company account."
+    },
+    "J031": {
+     "verdict": "supported",
+     "why": "The Times says the stench compelled Parliament to legislate."
+    },
+    "J028": {
+     "verdict": "partly",
+     "why": "Source says miasma WAS the prevailing theory."
+    },
+    "J005": {
+     "verdict": "supported",
+     "why": "Restates the pump handle and leaking sewer facts."
+    },
+    "J008": {
+     "verdict": "partly",
+     "why": "Source says June 1856, not 1866."
+    },
+    "J020": {
+     "verdict": "partly",
+     "why": "Source says £3 million, not £4 million."
+    },
+    "J017": {
+     "verdict": "supported",
+     "why": "Ackroyd argues Bazalgette should be considered a London hero."
+    },
+    "J016": {
+     "verdict": "partly",
+     "why": "Source says London was mapped, not the Thames."
+    },
+    "J033": {
+     "verdict": "partly",
+     "why": "Shown sentences don't identify the speaker as the Times obituarist."
+    },
+    "J029": {
+     "verdict": "supported",
+     "why": "The Great Stink occurred in 1858."
+    }
+   },
+   "cost_usd": 0.064188,
+   "duration_ms": 12811,
+   "wall_s": 13.35,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4555,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1387,
+    "output_tokens_details": {
+     "thinking_tokens": 688
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 4555,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1387,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 4555,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 4555
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "```json\n{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"partly\", \"why\": \"Ackroyd says Bazalgette, not Doxat, enters the pantheon.\"},\n{\"n\": 2, \"verdict\": \"supported\", \"why\": \"Miasma belief, fear of cholera and 1857 lime treatment all stated.\"},\n{\"n\": 3, \"verdict\": \"supported\", \"why\": \"Matches Snow's observation about the two water companies.\"},\n{\"n\": 4, \"verdict\": \"partly\", \"why\": \"Source says February 1864, not 1874.\"},\n{\"n\": 5, \"verdict\": \"supported\", \"why\": \"Mileages, tender dates and draftsmen all match.\"},\n{\"n\": 6, \"verdict\": \"partly\", \"why\": \"Source says water-borne, NOT transmitted by miasma.\"},\n{\"n\": 7, \"verdict\": \"supported\", \"why\": \"Matches the Examiner's report about Disraeli.\"},\n{\"n\": 8, \"verdict\": \"supported\", \"why\": \"Matches the East London Water Company account.\"},\n{\"n\": 9, \"verdict\": \"supported\", \"why\": \"The Times says the stench compelled Parliament to legislate.\"},\n{\"n\": 10, \"verdict\": \"partly\", \"why\": \"Source says miasma WAS the prevailing theory.\"},\n{\"n\": 11, \"verdict\": \"supported\", \"why\": \"Restates the pump handle and leaking sewer facts.\"},\n{\"n\": 12, \"verdict\": \"partly\", \"why\": \"Source says June 1856, not 1866.\"},\n{\"n\": 13, \"verdict\": \"partly\", \"why\": \"Source says £3 million, not £4 million.\"},\n{\"n\": 14, \"verdict\": \"supported\", \"why\": \"Ackroyd argues Bazalgette should be considered a London hero.\"},\n{\"n\": 15, \"verdict\": \"partly\", \"why\": \"Source says London was mapped, not the Thames.\"},\n{\"n\": 16, \"verdict\": \"partly\", \"why\": \"Shown sentences don't identify the speaker as the Times obituarist.\"},\n{\"n\": 17, \"verdict\": \"supported\", \"why\": \"The Great Stink occurred in 1858.\"}\n]}\n```",
+   "verdicts_at_run_time": 17
+  },
+  {
+   "source": "greatstink",
+   "ids": [
+    "J007",
+    "J011",
+    "J027",
+    "J010",
+    "J015",
+    "J014",
+    "J018",
+    "J003",
+    "J002",
+    "J034",
+    "J006",
+    "J032",
+    "J019",
+    "J023",
+    "J022",
+    "J030",
+    "J026"
+   ],
+   "verdicts": {
+    "J007": {
+     "verdict": "supported",
+     "why": "Matches S47 plans, sewer sizes and outflow pipes."
+    },
+    "J011": {
+     "verdict": "supported",
+     "why": "Ackroyd quote matches S166."
+    },
+    "J027": {
+     "verdict": "supported",
+     "why": "Miasma definition and examples match S25-S26."
+    },
+    "J010": {
+     "verdict": "partly",
+     "why": "Source says 1857, not 1867; omits chalk lime."
+    },
+    "J015": {
+     "verdict": "supported",
+     "why": "Outfall sewers, levels, pumping east, 4.5 million all stated."
+    },
+    "J014": {
+     "verdict": "partly",
+     "why": "Source says Southwark and Vauxhall, not Westminster."
+    },
+    "J018": {
+     "verdict": "unsupported",
+     "why": "Source credits Ackroyd, not Disraeli."
+    },
+    "J003": {
+     "verdict": "supported",
+     "why": "Embankments, dates and construction method match S124-S127."
+    },
+    "J002": {
+     "verdict": "partly",
+     "why": "Source names Disraeli, not Faraday."
+    },
+    "J034": {
+     "verdict": "supported",
+     "why": "Stench compelled legislation; the sewers still operate."
+    },
+    "J006": {
+     "verdict": "partly",
+     "why": "Pump and sewer supported; 'the air' wrongly implicates miasma."
+    },
+    "J032": {
+     "verdict": "supported",
+     "why": "S140: led to acceptance cholera was water-borne."
+    },
+    "J019": {
+     "verdict": "supported",
+     "why": "MBW responsibility, £3m loan and levy match S82."
+    },
+    "J023": {
+     "verdict": "supported",
+     "why": "Matches S140 and S142."
+    },
+    "J022": {
+     "verdict": "partly",
+     "why": "Source says East London Water Company, not East Southwark."
+    },
+    "J030": {
+     "verdict": "supported",
+     "why": "Loose framing of the Commons questions leading to action."
+    },
+    "J026": {
+     "verdict": "partly",
+     "why": "Source says 1,100 miles, not 1,110."
+    }
+   },
+   "cost_usd": 0.060536,
+   "duration_ms": 12263,
+   "wall_s": 12.81,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4396,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1268,
+    "output_tokens_details": {
+     "thinking_tokens": 561
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 4396,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1268,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 4396,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 4396
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "```json\n{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"supported\", \"why\": \"Matches S47 plans, sewer sizes and outflow pipes.\"},\n{\"n\": 2, \"verdict\": \"supported\", \"why\": \"Ackroyd quote matches S166.\"},\n{\"n\": 3, \"verdict\": \"supported\", \"why\": \"Miasma definition and examples match S25-S26.\"},\n{\"n\": 4, \"verdict\": \"partly\", \"why\": \"Source says 1857, not 1867; omits chalk lime.\"},\n{\"n\": 5, \"verdict\": \"supported\", \"why\": \"Outfall sewers, levels, pumping east, 4.5 million all stated.\"},\n{\"n\": 6, \"verdict\": \"partly\", \"why\": \"Source says Southwark and Vauxhall, not Westminster.\"},\n{\"n\": 7, \"verdict\": \"unsupported\", \"why\": \"Source credits Ackroyd, not Disraeli.\"},\n{\"n\": 8, \"verdict\": \"supported\", \"why\": \"Embankments, dates and construction method match S124-S127.\"},\n{\"n\": 9, \"verdict\": \"partly\", \"why\": \"Source names Disraeli, not Faraday.\"},\n{\"n\": 10, \"verdict\": \"supported\", \"why\": \"Stench compelled legislation; the sewers still operate.\"},\n{\"n\": 11, \"verdict\": \"partly\", \"why\": \"Pump and sewer supported; 'the air' wrongly implicates miasma.\"},\n{\"n\": 12, \"verdict\": \"supported\", \"why\": \"S140: led to acceptance cholera was water-borne.\"},\n{\"n\": 13, \"verdict\": \"supported\", \"why\": \"MBW responsibility, £3m loan and levy match S82.\"},\n{\"n\": 14, \"verdict\": \"supported\", \"why\": \"Matches S140 and S142.\"},\n{\"n\": 15, \"verdict\": \"partly\", \"why\": \"Source says East London Water Company, not East Southwark.\"},\n{\"n\": 16, \"verdict\": \"supported\", \"why\": \"Loose framing of the Commons questions leading to action.\"},\n{\"n\": 17, \"verdict\": \"partly\", \"why\": \"Source says 1,100 miles, not 1,110.\"}\n]}\n```",
+   "verdicts_at_run_time": 17
+  },
+  {
+   "source": "civil",
+   "ids": [
+    "J038",
+    "J043",
+    "J047",
+    "J035",
+    "J058",
+    "J039",
+    "J063",
+    "J055",
+    "J051",
+    "J042",
+    "J054",
+    "J062",
+    "J046",
+    "J050",
+    "J059"
+   ],
+   "verdicts": {
+    "J038": {
+     "verdict": "partly",
+     "why": "Source says majorities rule NOT because they're right or fairest."
+    },
+    "J043": {
+     "verdict": "supported",
+     "why": "Matches S288: partly human force, appeal to Maker and themselves."
+    },
+    "J047": {
+     "verdict": "supported",
+     "why": "Close paraphrase of S341."
+    },
+    "J035": {
+     "verdict": "supported",
+     "why": "Paraphrases S163 and S164 accurately."
+    },
+    "J058": {
+     "verdict": "partly",
+     "why": "Source names Orpheus, not Luther."
+    },
+    "J039": {
+     "verdict": "supported",
+     "why": "Matches S1 and S2."
+    },
+    "J063": {
+     "verdict": "supported",
+     "why": "Host summary reflecting 'men first, subjects afterward' (S27)."
+    },
+    "J055": {
+     "verdict": "supported",
+     "why": "Matches S343."
+    },
+    "J051": {
+     "verdict": "supported",
+     "why": "Paraphrases S24 and S25 accurately."
+    },
+    "J042": {
+     "verdict": "partly",
+     "why": "Source says war on Mexico, not Concord."
+    },
+    "J054": {
+     "verdict": "partly",
+     "why": "Source says authority is still impure; consent needed to be just."
+    },
+    "J062": {
+     "verdict": "partly",
+     "why": "Source says right applies when tyranny IS great and unendurable."
+    },
+    "J046": {
+     "verdict": "partly",
+     "why": "Source says government of Massachusetts, not Mexico."
+    },
+    "J050": {
+     "verdict": "partly",
+     "why": "Source says oppression and robbery ARE organized."
+    },
+    "J059": {
+     "verdict": "supported",
+     "why": "Matches S26, S27, S28."
+    }
+   },
+   "cost_usd": 0.054232,
+   "duration_ms": 11070,
+   "wall_s": 11.71,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3878,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1160,
+    "output_tokens_details": {
+     "thinking_tokens": 575
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 3878,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1160,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 3878,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 3878
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"partly\", \"why\": \"Source says majorities rule NOT because they're right or fairest.\"},\n{\"n\": 2, \"verdict\": \"supported\", \"why\": \"Matches S288: partly human force, appeal to Maker and themselves.\"},\n{\"n\": 3, \"verdict\": \"supported\", \"why\": \"Close paraphrase of S341.\"},\n{\"n\": 4, \"verdict\": \"supported\", \"why\": \"Paraphrases S163 and S164 accurately.\"},\n{\"n\": 5, \"verdict\": \"partly\", \"why\": \"Source names Orpheus, not Luther.\"},\n{\"n\": 6, \"verdict\": \"supported\", \"why\": \"Matches S1 and S2.\"},\n{\"n\": 7, \"verdict\": \"supported\", \"why\": \"Host summary reflecting 'men first, subjects afterward' (S27).\"},\n{\"n\": 8, \"verdict\": \"supported\", \"why\": \"Matches S343.\"},\n{\"n\": 9, \"verdict\": \"supported\", \"why\": \"Paraphrases S24 and S25 accurately.\"},\n{\"n\": 10, \"verdict\": \"partly\", \"why\": \"Source says war on Mexico, not Concord.\"},\n{\"n\": 11, \"verdict\": \"partly\", \"why\": \"Source says authority is still impure; consent needed to be just.\"},\n{\"n\": 12, \"verdict\": \"partly\", \"why\": \"Source says right applies when tyranny IS great and unendurable.\"},\n{\"n\": 13, \"verdict\": \"partly\", \"why\": \"Source says government of Massachusetts, not Mexico.\"},\n{\"n\": 14, \"verdict\": \"partly\", \"why\": \"Source says oppression and robbery ARE organized.\"},\n{\"n\": 15, \"verdict\": \"supported\", \"why\": \"Matches S26, S27, S28.\"}\n]}",
+   "verdicts_at_run_time": 15
+  },
+  {
+   "source": "civil",
+   "ids": [
+    "J045",
+    "J041",
+    "J036",
+    "J060",
+    "J061",
+    "J053",
+    "J040",
+    "J057",
+    "J037",
+    "J052",
+    "J048",
+    "J044",
+    "J056",
+    "J049"
+   ],
+   "verdicts": {
+    "J045": {
+     "verdict": "supported",
+     "why": "Matches S147 and S149 closely."
+    },
+    "J041": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of S62 and S65."
+    },
+    "J036": {
+     "verdict": "partly",
+     "why": "S164 says the State won't hesitate to choose, not that it needn't choose."
+    },
+    "J060": {
+     "verdict": "partly",
+     "why": "Reverses S27: should be men first, subjects afterward."
+    },
+    "J061": {
+     "verdict": "supported",
+     "why": "Matches S51; tolerating minor evils follows from S54."
+    },
+    "J053": {
+     "verdict": "supported",
+     "why": "Accurate paraphrase of S335."
+    },
+    "J040": {
+     "verdict": "partly",
+     "why": "S2 says best government governs not at all."
+    },
+    "J057": {
+     "verdict": "supported",
+     "why": "Paraphrases S289 and S291 accurately."
+    },
+    "J037": {
+     "verdict": "supported",
+     "why": "Faithful to S22."
+    },
+    "J052": {
+     "verdict": "partly",
+     "why": "Reverses S24: right and wrong should be decided by conscience."
+    },
+    "J048": {
+     "verdict": "unsupported",
+     "why": "S341 says there will never be such a State until then."
+    },
+    "J044": {
+     "verdict": "partly",
+     "why": "S288 says the force is not wholly brute."
+    },
+    "J056": {
+     "verdict": "partly",
+     "why": "S343 says not yet seen anywhere."
+    },
+    "J049": {
+     "verdict": "supported",
+     "why": "Matches S56 and S57."
+    }
+   },
+   "cost_usd": 0.051096,
+   "duration_ms": 10361,
+   "wall_s": 10.89,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3686,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1080,
+    "output_tokens_details": {
+     "thinking_tokens": 535
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 3686,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1080,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 3686,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 3686
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "```json\n{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"supported\", \"why\": \"Matches S147 and S149 closely.\"},\n{\"n\": 2, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of S62 and S65.\"},\n{\"n\": 3, \"verdict\": \"partly\", \"why\": \"S164 says the State won't hesitate to choose, not that it needn't choose.\"},\n{\"n\": 4, \"verdict\": \"partly\", \"why\": \"Reverses S27: should be men first, subjects afterward.\"},\n{\"n\": 5, \"verdict\": \"supported\", \"why\": \"Matches S51; tolerating minor evils follows from S54.\"},\n{\"n\": 6, \"verdict\": \"supported\", \"why\": \"Accurate paraphrase of S335.\"},\n{\"n\": 7, \"verdict\": \"partly\", \"why\": \"S2 says best government governs not at all.\"},\n{\"n\": 8, \"verdict\": \"supported\", \"why\": \"Paraphrases S289 and S291 accurately.\"},\n{\"n\": 9, \"verdict\": \"supported\", \"why\": \"Faithful to S22.\"},\n{\"n\": 10, \"verdict\": \"partly\", \"why\": \"Reverses S24: right and wrong should be decided by conscience.\"},\n{\"n\": 11, \"verdict\": \"unsupported\", \"why\": \"S341 says there will never be such a State until then.\"},\n{\"n\": 12, \"verdict\": \"partly\", \"why\": \"S288 says the force is not wholly brute.\"},\n{\"n\": 13, \"verdict\": \"partly\", \"why\": \"S343 says not yet seen anywhere.\"},\n{\"n\": 14, \"verdict\": \"supported\", \"why\": \"Matches S56 and S57.\"}\n]}\n```",
+   "verdicts_at_run_time": 14
+  },
+  {
+   "source": "origin3",
+   "ids": [
+    "J071",
+    "J068",
+    "J080",
+    "J091",
+    "J075",
+    "J079",
+    "J064",
+    "J084",
+    "J072",
+    "J087",
+    "J076",
+    "J067",
+    "J088",
+    "J083"
+   ],
+   "verdicts": {
+    "J071": {
+     "verdict": "unsupported",
+     "why": "Source says most effective; line says not most effective."
+    },
+    "J068": {
+     "verdict": "supported",
+     "why": "Source says some species may be increasing."
+    },
+    "J080": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of S23."
+    },
+    "J091": {
+     "verdict": "partly",
+     "why": "Says 'only' the individual's life; source says 'not only'."
+    },
+    "J075": {
+     "verdict": "partly",
+     "why": "Says 'not most fertile'; source says most fertile; drops climate."
+    },
+    "J079": {
+     "verdict": "unsupported",
+     "why": "Source says structure is related; line says not related."
+    },
+    "J064": {
+     "verdict": "supported",
+     "why": "Matches S177 consolation closely."
+    },
+    "J084": {
+     "verdict": "supported",
+     "why": "Matches S48 directly."
+    },
+    "J072": {
+     "verdict": "supported",
+     "why": "S46 states more produced than can survive."
+    },
+    "J087": {
+     "verdict": "partly",
+     "why": "Inserts 'not', reversing the consequence of geometrical increase."
+    },
+    "J076": {
+     "verdict": "supported",
+     "why": "Matches S136 and S137."
+    },
+    "J067": {
+     "verdict": "partly",
+     "why": "Says not incessantly ready; source says incessantly ready."
+    },
+    "J088": {
+     "verdict": "supported",
+     "why": "Matches S143 and S145."
+    },
+    "J083": {
+     "verdict": "unsupported",
+     "why": "Source says man can produce great results; line says cannot."
+    }
+   },
+   "cost_usd": 0.037488,
+   "duration_ms": 6308,
+   "wall_s": 6.94,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3360,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 530,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 3360,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 530,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 3360,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 3360
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "{\"verdicts\": [{\"n\": 1, \"verdict\": \"unsupported\", \"why\": \"Source says most effective; line says not most effective.\"}, {\"n\": 2, \"verdict\": \"supported\", \"why\": \"Source says some species may be increasing.\"}, {\"n\": 3, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of S23.\"}, {\"n\": 4, \"verdict\": \"partly\", \"why\": \"Says 'only' the individual's life; source says 'not only'.\"}, {\"n\": 5, \"verdict\": \"partly\", \"why\": \"Says 'not most fertile'; source says most fertile; drops climate.\"}, {\"n\": 6, \"verdict\": \"unsupported\", \"why\": \"Source says structure is related; line says not related.\"}, {\"n\": 7, \"verdict\": \"supported\", \"why\": \"Matches S177 consolation closely.\"}, {\"n\": 8, \"verdict\": \"supported\", \"why\": \"Matches S48 directly.\"}, {\"n\": 9, \"verdict\": \"supported\", \"why\": \"S46 states more produced than can survive.\"}, {\"n\": 10, \"verdict\": \"partly\", \"why\": \"Inserts 'not', reversing the consequence of geometrical increase.\"}, {\"n\": 11, \"verdict\": \"supported\", \"why\": \"Matches S136 and S137.\"}, {\"n\": 12, \"verdict\": \"partly\", \"why\": \"Says not incessantly ready; source says incessantly ready.\"}, {\"n\": 13, \"verdict\": \"supported\", \"why\": \"Matches S143 and S145.\"}, {\"n\": 14, \"verdict\": \"unsupported\", \"why\": \"Source says man can produce great results; line says cannot.\"}]}",
+   "verdicts_at_run_time": 14
+  },
+  {
+   "source": "origin3",
+   "ids": [
+    "J090",
+    "J081",
+    "J065",
+    "J073",
+    "J069",
+    "J074",
+    "J082",
+    "J070",
+    "J066",
+    "J085",
+    "J089",
+    "J086",
+    "J077",
+    "J078"
+   ],
+   "verdicts": {
+    "J090": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of S36."
+    },
+    "J081": {
+     "verdict": "unsupported",
+     "why": "Source says profitable variations preserve; line says not profitable."
+    },
+    "J065": {
+     "verdict": "partly",
+     "why": "Source says war is not incessant; line says incessant."
+    },
+    "J073": {
+     "verdict": "unsupported",
+     "why": "Source says more are produced than can survive."
+    },
+    "J069": {
+     "verdict": "unsupported",
+     "why": "Source says some may be increasing, not 'not increasing'."
+    },
+    "J074": {
+     "verdict": "partly",
+     "why": "Omits climate; otherwise matches S146."
+    },
+    "J082": {
+     "verdict": "supported",
+     "why": "Matches S26."
+    },
+    "J070": {
+     "verdict": "supported",
+     "why": "Matches S88."
+    },
+    "J066": {
+     "verdict": "supported",
+     "why": "Matches S27 with accurate quote."
+    },
+    "J085": {
+     "verdict": "unsupported",
+     "why": "Source says all cannot increase; line says all can."
+    },
+    "J089": {
+     "verdict": "partly",
+     "why": "First part fine; negates S145's claim about same-species struggle."
+    },
+    "J086": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of S45."
+    },
+    "J077": {
+     "verdict": "partly",
+     "why": "Negates S136's claim that one or few checks are most potent."
+    },
+    "J078": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of S158."
+    }
+   },
+   "cost_usd": 0.037360000000000004,
+   "duration_ms": 5795,
+   "wall_s": 6.46,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3354,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 526,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 3354,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 526,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 3354,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 3354
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "{\"verdicts\": [{\"n\": 1, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of S36.\"}, {\"n\": 2, \"verdict\": \"unsupported\", \"why\": \"Source says profitable variations preserve; line says not profitable.\"}, {\"n\": 3, \"verdict\": \"partly\", \"why\": \"Source says war is not incessant; line says incessant.\"}, {\"n\": 4, \"verdict\": \"unsupported\", \"why\": \"Source says more are produced than can survive.\"}, {\"n\": 5, \"verdict\": \"unsupported\", \"why\": \"Source says some may be increasing, not 'not increasing'.\"}, {\"n\": 6, \"verdict\": \"partly\", \"why\": \"Omits climate; otherwise matches S146.\"}, {\"n\": 7, \"verdict\": \"supported\", \"why\": \"Matches S26.\"}, {\"n\": 8, \"verdict\": \"supported\", \"why\": \"Matches S88.\"}, {\"n\": 9, \"verdict\": \"supported\", \"why\": \"Matches S27 with accurate quote.\"}, {\"n\": 10, \"verdict\": \"unsupported\", \"why\": \"Source says all cannot increase; line says all can.\"}, {\"n\": 11, \"verdict\": \"partly\", \"why\": \"First part fine; negates S145's claim about same-species struggle.\"}, {\"n\": 12, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of S45.\"}, {\"n\": 13, \"verdict\": \"partly\", \"why\": \"Negates S136's claim that one or few checks are most potent.\"}, {\"n\": 14, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of S158.\"}]}",
+   "verdicts_at_run_time": 14
+  },
+  {
+   "source": "alice",
+   "ids": [
+    "J115",
+    "J107",
+    "J103",
+    "J100",
+    "J111",
+    "J120",
+    "J124",
+    "J108",
+    "J122",
+    "J119",
+    "J099",
+    "J096",
+    "J095",
+    "J116",
+    "J104",
+    "J092",
+    "J112"
+   ],
+   "verdicts": {
+    "J115": {
+     "verdict": "partly",
+     "why": "Source says she would feel with their sorrows, not 'not share'."
+    },
+    "J107": {
+     "verdict": "unsupported",
+     "why": "She concludes she must be Mabel, not Cat."
+    },
+    "J103": {
+     "verdict": "partly",
+     "why": "Says sides 'will not' change size; source says they will."
+    },
+    "J100": {
+     "verdict": "supported",
+     "why": "Matches waking on bank, sister brushing leaves, quote."
+    },
+    "J111": {
+     "verdict": "partly",
+     "why": "It was the Rabbit, not a Queen, with the watch."
+    },
+    "J120": {
+     "verdict": "supported",
+     "why": "She is surprised at her own courage; fair framing."
+    },
+    "J124": {
+     "verdict": "supported",
+     "why": "Faithful paraphrase of the sister's vision."
+    },
+    "J108": {
+     "verdict": "supported",
+     "why": "She sees the Cheshire Cat after the pig leaves."
+    },
+    "J122": {
+     "verdict": "supported",
+     "why": "Matches Caterpillar's remark and breaking off bits."
+    },
+    "J119": {
+     "verdict": "partly",
+     "why": "Alice, not Mabel, sets the pig down."
+    },
+    "J099": {
+     "verdict": "partly",
+     "why": "She says her name is Alice, not Dinah."
+    },
+    "J096": {
+     "verdict": "supported",
+     "why": "Matches jumping in and falling down deep well."
+    },
+    "J095": {
+     "verdict": "partly",
+     "why": "Other direction is a March Hare, not Mabel."
+    },
+    "J116": {
+     "verdict": "supported",
+     "why": "Head won't fit; DRINK ME bottle described accurately."
+    },
+    "J104": {
+     "verdict": "supported",
+     "why": "Soldiers' and Queen's shouts match source."
+    },
+    "J092": {
+     "verdict": "supported",
+     "why": "Hatter says Time won't obey; always six o'clock."
+    },
+    "J112": {
+     "verdict": "supported",
+     "why": "Dialogue matches the Caterpillar exchange."
+    }
+   },
+   "cost_usd": 0.052892,
+   "duration_ms": 6906,
+   "wall_s": 7.4,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4868,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 697,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 4868,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 697,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 4868,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 4868
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"partly\", \"why\": \"Source says she would feel with their sorrows, not 'not share'.\"},\n{\"n\": 2, \"verdict\": \"unsupported\", \"why\": \"She concludes she must be Mabel, not Cat.\"},\n{\"n\": 3, \"verdict\": \"partly\", \"why\": \"Says sides 'will not' change size; source says they will.\"},\n{\"n\": 4, \"verdict\": \"supported\", \"why\": \"Matches waking on bank, sister brushing leaves, quote.\"},\n{\"n\": 5, \"verdict\": \"partly\", \"why\": \"It was the Rabbit, not a Queen, with the watch.\"},\n{\"n\": 6, \"verdict\": \"supported\", \"why\": \"She is surprised at her own courage; fair framing.\"},\n{\"n\": 7, \"verdict\": \"supported\", \"why\": \"Faithful paraphrase of the sister's vision.\"},\n{\"n\": 8, \"verdict\": \"supported\", \"why\": \"She sees the Cheshire Cat after the pig leaves.\"},\n{\"n\": 9, \"verdict\": \"supported\", \"why\": \"Matches Caterpillar's remark and breaking off bits.\"},\n{\"n\": 10, \"verdict\": \"partly\", \"why\": \"Alice, not Mabel, sets the pig down.\"},\n{\"n\": 11, \"verdict\": \"partly\", \"why\": \"She says her name is Alice, not Dinah.\"},\n{\"n\": 12, \"verdict\": \"supported\", \"why\": \"Matches jumping in and falling down deep well.\"},\n{\"n\": 13, \"verdict\": \"partly\", \"why\": \"Other direction is a March Hare, not Mabel.\"},\n{\"n\": 14, \"verdict\": \"supported\", \"why\": \"Head won't fit; DRINK ME bottle described accurately.\"},\n{\"n\": 15, \"verdict\": \"supported\", \"why\": \"Soldiers' and Queen's shouts match source.\"},\n{\"n\": 16, \"verdict\": \"supported\", \"why\": \"Hatter says Time won't obey; always six o'clock.\"},\n{\"n\": 17, \"verdict\": \"supported\", \"why\": \"Dialogue matches the Caterpillar exchange.\"}\n]}",
+   "verdicts_at_run_time": 17
+  },
+  {
+   "source": "alice",
+   "ids": [
+    "J114",
+    "J102",
+    "J109",
+    "J106",
+    "J110",
+    "J123",
+    "J097",
+    "J093",
+    "J098",
+    "J118",
+    "J117",
+    "J094",
+    "J121",
+    "J113",
+    "J105",
+    "J101"
+   ],
+   "verdicts": {
+    "J114": {
+     "verdict": "supported",
+     "why": "Matches the sister's picture of grown-up Alice in S1431."
+    },
+    "J102": {
+     "verdict": "supported",
+     "why": "The Caterpillar's remark and the breaking of mushroom edges match the source."
+    },
+    "J109": {
+     "verdict": "unsupported",
+     "why": "Source says she sees the Cheshire Cat, not the Mouse."
+    },
+    "J106": {
+     "verdict": "supported",
+     "why": "Alice says \"I must be Mabel after all.\""
+    },
+    "J110": {
+     "verdict": "supported",
+     "why": "Watch, waistcoat-pocket and curiosity all match S7."
+    },
+    "J123": {
+     "verdict": "supported",
+     "why": "Closed eyes, half-belief and the grown sister all match."
+    },
+    "J097": {
+     "verdict": "partly",
+     "why": "Source says \"never once considering\", not \"always once\"."
+    },
+    "J093": {
+     "verdict": "unsupported",
+     "why": "Source says Time won't do a thing he asks."
+    },
+    "J098": {
+     "verdict": "supported",
+     "why": "Quotes and politeness match S844-S845."
+    },
+    "J118": {
+     "verdict": "supported",
+     "why": "Grunting, the pig and trotting into the wood all match."
+    },
+    "J117": {
+     "verdict": "partly",
+     "why": "She could not even get her head through; the bottle part is right."
+    },
+    "J094": {
+     "verdict": "supported",
+     "why": "The bough, the question and the paw directions all match."
+    },
+    "J121": {
+     "verdict": "supported",
+     "why": "Ceiling, arm, chimney and no escape all match."
+    },
+    "J113": {
+     "verdict": "partly",
+     "why": "The Caterpillar says \"I don't see\", not \"I do see\"."
+    },
+    "J105": {
+     "verdict": "partly",
+     "why": "The Queen shouts \"That's right!\", not the White Rabbit."
+    },
+    "J101": {
+     "verdict": "partly",
+     "why": "Alice, not Pigeon, says she had a curious dream."
+    }
+   },
+   "cost_usd": 0.060980000000000006,
+   "duration_ms": 9935,
+   "wall_s": 10.36,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 5039,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1033,
+    "output_tokens_details": {
+     "thinking_tokens": 339
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 5039,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1033,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 5039,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 5039
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "raw": "```json\n{\"verdicts\": [\n{\"n\": 1, \"verdict\": \"supported\", \"why\": \"Matches the sister's picture of grown-up Alice in S1431.\"},\n{\"n\": 2, \"verdict\": \"supported\", \"why\": \"The Caterpillar's remark and the breaking of mushroom edges match the source.\"},\n{\"n\": 3, \"verdict\": \"unsupported\", \"why\": \"Source says she sees the Cheshire Cat, not the Mouse.\"},\n{\"n\": 4, \"verdict\": \"supported\", \"why\": \"Alice says \\\"I must be Mabel after all.\\\"\"},\n{\"n\": 5, \"verdict\": \"supported\", \"why\": \"Watch, waistcoat-pocket and curiosity all match S7.\"},\n{\"n\": 6, \"verdict\": \"supported\", \"why\": \"Closed eyes, half-belief and the grown sister all match.\"},\n{\"n\": 7, \"verdict\": \"partly\", \"why\": \"Source says \\\"never once considering\\\", not \\\"always once\\\".\"},\n{\"n\": 8, \"verdict\": \"unsupported\", \"why\": \"Source says Time won't do a thing he asks.\"},\n{\"n\": 9, \"verdict\": \"supported\", \"why\": \"Quotes and politeness match S844-S845.\"},\n{\"n\": 10, \"verdict\": \"supported\", \"why\": \"Grunting, the pig and trotting into the wood all match.\"},\n{\"n\": 11, \"verdict\": \"partly\", \"why\": \"She could not even get her head through; the bottle part is right.\"},\n{\"n\": 12, \"verdict\": \"supported\", \"why\": \"The bough, the question and the paw directions all match.\"},\n{\"n\": 13, \"verdict\": \"supported\", \"why\": \"Ceiling, arm, chimney and no escape all match.\"},\n{\"n\": 14, \"verdict\": \"partly\", \"why\": \"The Caterpillar says \\\"I don't see\\\", not \\\"I do see\\\".\"},\n{\"n\": 15, \"verdict\": \"partly\", \"why\": \"The Queen shouts \\\"That's right!\\\", not the White Rabbit.\"},\n{\"n\": 16, \"verdict\": \"partly\", \"why\": \"Alice, not Pigeon, says she had a curious dream.\"}\n]}\n```",
+   "verdicts_at_run_time": 16
+  }
+ ]
+}

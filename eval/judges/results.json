@@ -1,0 +1,642 @@
+{
+ "n_items": 124,
+ "n_labeled": 112,
+ "counts": {
+  "original": 56,
+  "perturbed:name": 17,
+  "perturbed:number": 5,
+  "perturbed:negation": 34,
+  "flagged": 12
+ },
+ "positive_class": "partly or unsupported (LLM); sim < 0.40 (MiniLM); digit missing from cited text (numbers)",
+ "majority_llm": "2 of 3 of ['haiku_r1', 'sonnet_r1', 'opus_r1']",
+ "majority_all5": "3 of 5 of ['minilm', 'numbers', 'haiku_r1', 'sonnet_r1', 'opus_r1']",
+ "cost_note": "API-equivalent cost reported by the Claude CLI (total_cost_usd); the CLI runs on a subscription.",
+ "local_timing": {
+  "machine": "Apple M4",
+  "model_load_s": 4.31,
+  "median_ms": 6.9,
+  "p95_ms": 11.3
+ },
+ "judges": {
+  "minilm": {
+   "tp": 3,
+   "fn": 53,
+   "fp": 1,
+   "tn": 55,
+   "recall": 5.4,
+   "precision": 75.0,
+   "f1": 10.0,
+   "false_flag_rate": 1.8,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 0
+    },
+    "name": {
+     "n": 17,
+     "caught": 3
+    },
+    "negation": {
+     "n": 34,
+     "caught": 0
+    }
+   },
+   "flagged_pool_flags": 4
+  },
+  "numbers": {
+   "tp": 5,
+   "fn": 51,
+   "fp": 0,
+   "tn": 56,
+   "recall": 8.9,
+   "precision": 100.0,
+   "f1": 16.4,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 0
+    },
+    "negation": {
+     "n": 34,
+     "caught": 0
+    }
+   },
+   "flagged_pool_flags": 0
+  },
+  "local": {
+   "tp": 8,
+   "fn": 48,
+   "fp": 1,
+   "tn": 55,
+   "recall": 14.3,
+   "precision": 88.9,
+   "f1": 24.6,
+   "false_flag_rate": 1.8,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 3
+    },
+    "negation": {
+     "n": 34,
+     "caught": 0
+    }
+   },
+   "flagged_pool_flags": 4
+  },
+  "haiku_r1": {
+   "tp": 46,
+   "fn": 10,
+   "fp": 0,
+   "tn": 56,
+   "recall": 82.1,
+   "precision": 100.0,
+   "f1": 90.2,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 16
+    },
+    "negation": {
+     "n": 34,
+     "caught": 25
+    }
+   },
+   "flagged_pool_flags": 3,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.0164,
+   "cost_per_line_usd": 0.00013,
+   "cost_per_1000_lines_usd": 0.13,
+   "batch_latency_median_s": 10.5,
+   "batch_latency_p95_s": 13.0,
+   "latency_per_line_s": 0.71,
+   "verdict_counts": {
+    "supported": 74,
+    "partly": 31,
+    "unsupported": 18,
+    "no_claim": 1,
+    "missing": 0
+   }
+  },
+  "haiku_r2": {
+   "tp": 46,
+   "fn": 10,
+   "fp": 0,
+   "tn": 56,
+   "recall": 82.1,
+   "precision": 100.0,
+   "f1": 90.2,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 16
+    },
+    "negation": {
+     "n": 34,
+     "caught": 25
+    }
+   },
+   "flagged_pool_flags": 2,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.0105,
+   "cost_per_line_usd": 8e-05,
+   "cost_per_1000_lines_usd": 0.08,
+   "batch_latency_median_s": 11.1,
+   "batch_latency_p95_s": 12.4,
+   "latency_per_line_s": 0.69,
+   "verdict_counts": {
+    "supported": 74,
+    "partly": 29,
+    "unsupported": 19,
+    "no_claim": 2,
+    "missing": 0
+   }
+  },
+  "haiku_r3": {
+   "tp": 45,
+   "fn": 11,
+   "fp": 0,
+   "tn": 56,
+   "recall": 80.4,
+   "precision": 100.0,
+   "f1": 89.1,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 16
+    },
+    "negation": {
+     "n": 34,
+     "caught": 24
+    }
+   },
+   "flagged_pool_flags": 4,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.0104,
+   "cost_per_line_usd": 8e-05,
+   "cost_per_1000_lines_usd": 0.08,
+   "batch_latency_median_s": 10.9,
+   "batch_latency_p95_s": 12.8,
+   "latency_per_line_s": 0.69,
+   "verdict_counts": {
+    "supported": 74,
+    "partly": 30,
+    "unsupported": 19,
+    "no_claim": 1,
+    "missing": 0
+   }
+  },
+  "opus_r1": {
+   "tp": 56,
+   "fn": 0,
+   "fp": 1,
+   "tn": 55,
+   "recall": 100.0,
+   "precision": 98.2,
+   "f1": 99.1,
+   "false_flag_rate": 1.8,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 17
+    },
+    "negation": {
+     "n": 34,
+     "caught": 34
+    }
+   },
+   "flagged_pool_flags": 1,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.4188,
+   "cost_per_line_usd": 0.00338,
+   "cost_per_1000_lines_usd": 3.38,
+   "batch_latency_median_s": 10.6,
+   "batch_latency_p95_s": 13.3,
+   "latency_per_line_s": 0.64,
+   "verdict_counts": {
+    "supported": 66,
+    "partly": 46,
+    "unsupported": 12,
+    "no_claim": 0,
+    "missing": 0
+   }
+  },
+  "opus_r2": {
+   "tp": 56,
+   "fn": 0,
+   "fp": 2,
+   "tn": 54,
+   "recall": 100.0,
+   "precision": 96.6,
+   "f1": 98.2,
+   "false_flag_rate": 3.6,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 17
+    },
+    "negation": {
+     "n": 34,
+     "caught": 34
+    }
+   },
+   "flagged_pool_flags": 2,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.2048,
+   "cost_per_line_usd": 0.00165,
+   "cost_per_1000_lines_usd": 1.65,
+   "batch_latency_median_s": 10.9,
+   "batch_latency_p95_s": 14.7,
+   "latency_per_line_s": 0.73,
+   "verdict_counts": {
+    "supported": 64,
+    "partly": 43,
+    "unsupported": 17,
+    "no_claim": 0,
+    "missing": 0
+   }
+  },
+  "sonnet_r1": {
+   "tp": 49,
+   "fn": 7,
+   "fp": 1,
+   "tn": 55,
+   "recall": 87.5,
+   "precision": 98.0,
+   "f1": 92.5,
+   "false_flag_rate": 1.8,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 17
+    },
+    "negation": {
+     "n": 34,
+     "caught": 27
+    }
+   },
+   "flagged_pool_flags": 0,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.1848,
+   "cost_per_line_usd": 0.00149,
+   "cost_per_1000_lines_usd": 1.49,
+   "batch_latency_median_s": 4.9,
+   "batch_latency_p95_s": 6.0,
+   "latency_per_line_s": 0.33,
+   "verdict_counts": {
+    "supported": 74,
+    "partly": 37,
+    "unsupported": 13,
+    "no_claim": 0,
+    "missing": 0
+   }
+  },
+  "sonnet_r2": {
+   "tp": 49,
+   "fn": 7,
+   "fp": 0,
+   "tn": 56,
+   "recall": 87.5,
+   "precision": 100.0,
+   "f1": 93.3,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 17
+    },
+    "negation": {
+     "n": 34,
+     "caught": 27
+    }
+   },
+   "flagged_pool_flags": 0,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.0828,
+   "cost_per_line_usd": 0.00067,
+   "cost_per_1000_lines_usd": 0.67,
+   "batch_latency_median_s": 5.3,
+   "batch_latency_p95_s": 10.8,
+   "latency_per_line_s": 0.41,
+   "verdict_counts": {
+    "supported": 75,
+    "partly": 34,
+    "unsupported": 15,
+    "no_claim": 0,
+    "missing": 0
+   }
+  },
+  "sonnet_r3": {
+   "tp": 44,
+   "fn": 12,
+   "fp": 2,
+   "tn": 54,
+   "recall": 78.6,
+   "precision": 95.7,
+   "f1": 86.3,
+   "false_flag_rate": 3.6,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 4
+    },
+    "name": {
+     "n": 17,
+     "caught": 16
+    },
+    "negation": {
+     "n": 34,
+     "caught": 24
+    }
+   },
+   "flagged_pool_flags": 0,
+   "calls": 8,
+   "lines": 124,
+   "missing_verdicts": 0,
+   "total_cost_usd": 0.0689,
+   "cost_per_line_usd": 0.00056,
+   "cost_per_1000_lines_usd": 0.56,
+   "batch_latency_median_s": 5.0,
+   "batch_latency_p95_s": 6.5,
+   "latency_per_line_s": 0.35,
+   "verdict_counts": {
+    "supported": 77,
+    "partly": 28,
+    "unsupported": 18,
+    "no_claim": 1,
+    "missing": 0
+   }
+  },
+  "majority_llm": {
+   "tp": 52,
+   "fn": 4,
+   "fp": 0,
+   "tn": 56,
+   "recall": 92.9,
+   "precision": 100.0,
+   "f1": 96.3,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 17
+    },
+    "negation": {
+     "n": 34,
+     "caught": 30
+    }
+   },
+   "flagged_pool_flags": 0
+  },
+  "majority_all5": {
+   "tp": 43,
+   "fn": 13,
+   "fp": 0,
+   "tn": 56,
+   "recall": 76.8,
+   "precision": 100.0,
+   "f1": 86.9,
+   "false_flag_rate": 0.0,
+   "by_perturbation": {
+    "number": {
+     "n": 5,
+     "caught": 5
+    },
+    "name": {
+     "n": 17,
+     "caught": 16
+    },
+    "negation": {
+     "n": 34,
+     "caught": 22
+    }
+   },
+   "flagged_pool_flags": 0
+  }
+ },
+ "stability": {
+  "haiku": {
+   "runs": 3,
+   "n": 124,
+   "same_flag_all_runs": 113,
+   "same_flag_pct": 91.1,
+   "same_verdict_all_runs": 110,
+   "kappa_r1_r2": 0.848,
+   "recall_by_run": [
+    82.1,
+    82.1,
+    80.4
+   ],
+   "false_flag_rate_by_run": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "sonnet": {
+   "runs": 3,
+   "n": 124,
+   "same_flag_all_runs": 115,
+   "same_flag_pct": 92.7,
+   "same_verdict_all_runs": 103,
+   "kappa_r1_r2": 0.95,
+   "recall_by_run": [
+    87.5,
+    87.5,
+    78.6
+   ],
+   "false_flag_rate_by_run": [
+    1.8,
+    0.0,
+    3.6
+   ]
+  },
+  "opus": {
+   "runs": 2,
+   "n": 124,
+   "same_flag_all_runs": 122,
+   "same_flag_pct": 98.4,
+   "same_verdict_all_runs": 115,
+   "kappa_r1_r2": 0.968,
+   "recall_by_run": [
+    100.0,
+    100.0
+   ],
+   "false_flag_rate_by_run": [
+    1.8,
+    3.6
+   ]
+  }
+ },
+ "kappa": {
+  "minilm|numbers": -0.052,
+  "minilm|haiku_r1": 0.033,
+  "minilm|sonnet_r1": -0.009,
+  "minilm|opus_r1": -0.025,
+  "minilm|majority_llm": -0.013,
+  "numbers|haiku_r1": 0.121,
+  "numbers|sonnet_r1": 0.117,
+  "numbers|opus_r1": 0.091,
+  "numbers|majority_llm": 0.11,
+  "haiku_r1|sonnet_r1": 0.781,
+  "haiku_r1|opus_r1": 0.755,
+  "haiku_r1|majority_llm": 0.85,
+  "sonnet_r1|opus_r1": 0.837,
+  "sonnet_r1|majority_llm": 0.933,
+  "opus_r1|majority_llm": 0.902
+ },
+ "question_recount": {
+  "draft": {
+   "published_claim_lines": 172,
+   "published_not_supported": 8,
+   "question_lines": 17,
+   "questions_not_supported": 2,
+   "statement_claim_lines": 155,
+   "statement_not_supported": 6
+  },
+  "final": {
+   "published_claim_lines": 165,
+   "published_not_supported": 8,
+   "question_lines": 16,
+   "questions_not_supported": 2,
+   "statement_claim_lines": 149,
+   "statement_not_supported": 6
+  }
+ },
+ "errors": {
+  "perturbed_missed_by_majority": [
+   {
+    "id": "J054",
+    "source": "civil",
+    "kind": "perturbed",
+    "edit": "is -> is not",
+    "text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is not impure unless it has the sanction and consent of the governed.",
+    "verdicts": {
+     "haiku_r1": "supported",
+     "sonnet_r1": "supported",
+     "opus_r1": "partly"
+    },
+    "why": {
+     "haiku_r1": "S335 states cheerful obedience to the better-informed and consent requirement",
+     "sonnet_r1": "Matches S335.",
+     "opus_r1": "Source says authority is still impure; consent needed to be just."
+    },
+    "sim": 0.615
+   },
+   {
+    "id": "J056",
+    "source": "civil",
+    "kind": "perturbed",
+    "edit": "not -> (removed)",
+    "text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but yet seen anywhere.",
+    "verdicts": {
+     "haiku_r1": "supported",
+     "sonnet_r1": "supported",
+     "opus_r1": "partly"
+    },
+    "why": {
+     "haiku_r1": "S343 says such a State prepares a more perfect, imagined but unseen State.",
+     "sonnet_r1": "Matches S343; 'yet seen' is a minor typo for 'not yet seen'.",
+     "opus_r1": "S343 says not yet seen anywhere."
+    },
+    "sim": 0.522
+   },
+   {
+    "id": "J060",
+    "source": "civil",
+    "kind": "perturbed",
+    "edit": "should -> should not",
+    "text": "He asks why every man has a conscience, then. We should not be men first, and subjects afterward. Respect the right more than the law.",
+    "verdicts": {
+     "haiku_r1": "supported",
+     "sonnet_r1": "supported",
+     "opus_r1": "partly"
+    },
+    "why": {
+     "haiku_r1": "S26 to S28 cover conscience, men before subjects, and right over law.",
+     "sonnet_r1": "Matches S26, S27, S28.",
+     "opus_r1": "Reverses S27: should be men first, subjects afterward."
+    },
+    "sim": 0.81
+   },
+   {
+    "id": "J073",
+    "source": "origin3",
+    "kind": "perturbed",
+    "edit": "are -> are not",
+    "text": "So more are not born than can possibly survive.",
+    "verdicts": {
+     "haiku_r1": "supported",
+     "sonnet_r1": "supported",
+     "opus_r1": "unsupported"
+    },
+    "why": {
+     "haiku_r1": "S46 says more individuals are produced than can possibly survive.",
+     "sonnet_r1": "S46: more individuals are produced than can survive; line's 'more are not born' is a garbled but equivalent restatement.",
+     "opus_r1": "Source says more are produced than can survive."
+    },
+    "sim": 0.601
+   }
+  ],
+  "originals_flagged_by_majority": []
+ }
+}

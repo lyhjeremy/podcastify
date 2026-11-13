@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Podcastify: a two-host episode of a whole book, every claim tied to its source</title>
-<meta name="description" content="A Python CLI that maps a whole EPUB or article to cited key points, writes a host and co-host script through claude -p, checks every line against the sentences it cites, and renders an MP3 with chapters. Evaluated against rule mode on four public-domain and CC BY-SA sources." />
+<meta name="description" content="A Python CLI that maps a whole EPUB or article to cited key points, writes a host and co-host script through claude -p, checks every line against the sentences it cites, and renders an MP3 with chapters. Evaluated against rule mode on four public-domain and CC BY-SA sources, and its fact-checkers measured on 56 lines broken on purpose." />
 <meta name="theme-color" content="#EEEDE6" />
 <meta property="og:title" content="Podcastify" />
-<meta property="og:description" content="A six-minute two-host episode of all of Alice in Wonderland, each line linked to the sentences it rests on and checked against them. LLM episodes covered 7.4 of 12 frozen key points on average; rule mode, 4.4." />
+<meta property="og:description" content="A two-host episode of a whole book, each line checked against the sentences it cites. On 56 lines broken on purpose, Opus caught 56, the pipeline's Sonnet checker 49, Haiku 46, MiniLM 3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyhjeremy.github.io/podcastify/overview/" />
 <meta property="og:image" content="https://lyhjeremy.github.io/podcastify/og.png" />
@@ -347,6 +347,57 @@
   .errs blockquote { margin: 10px 0; padding: 8px 0 8px 16px; border-left: 2px solid var(--accent2); font: italic 16px/1.5 var(--display); color: var(--ink); }
   .errs blockquote .who { font: 12px var(--mono); font-style: normal; color: var(--muted); display: block; margin-top: 4px; }
   .errs table { margin-top: 8px; }
+  /* Judge eval, 2026-11-13 */
+  #judges code { overflow-wrap: anywhere; }
+  .jt-fig, .jv { margin: 26px 0 0; }
+  .jt th button { all: unset; cursor: pointer; font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; }
+  .jt th button:focus-visible, .jv button:focus-visible, .jv-list button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .jt th button:hover { color: var(--ink); text-decoration: underline; }
+  .jt th[aria-sort] button::after { content: " \2193"; }
+  .jt th[aria-sort="ascending"] button::after { content: " \2191"; }
+  .jt td .sub, .jt td.num .sub { display: block; color: var(--muted); font-size: 11.5px; font-family: var(--sans); }
+  .jt td:first-child { font-family: var(--sans); font-weight: 600; color: var(--ink); }
+  .jv-filter { display: flex; flex-wrap: wrap; margin: 0 0 12px; }
+  .jv-filter button { font: 600 12.5px/1.2 var(--sans); padding: 8px 11px; background: transparent; color: var(--ink2); border: 1px solid var(--edge); margin: 0 -1px -1px 0; cursor: pointer; }
+  .jv-filter button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .jv-filter button:hover { color: var(--ink); border-color: var(--ink); }
+  .jv-filter button[aria-pressed="true"]:hover { color: var(--paper); }
+  .jv-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 0; border: 1px solid var(--rule); }
+  .jt-fig .ft, .jv .ft { font: 600 1.1rem/1.3 var(--display); color: var(--ink); margin: 0 0 2px; }
+  .jt-fig .fs, .jv .fs { font: 13.5px/1.4 var(--sans); color: var(--muted); margin: 0 0 12px; }
+  .jt td:first-child { min-width: 9rem; }
+  .jv-list { list-style: none; margin: 0; padding: 0; max-height: 640px; overflow-y: auto; border-right: 1px solid var(--rule); }
+  .jv-list li { margin: 0; border-bottom: 1px solid var(--rule); }
+  .jv-list button { all: unset; display: block; box-sizing: border-box; width: 100%; padding: 9px 12px; cursor: pointer; font: 13.5px/1.4 var(--sans); color: var(--ink2); }
+  .jv-list button:hover { color: var(--ink); background: var(--card); }
+  .jv-list button[aria-current="true"] { color: var(--ink); background: var(--card); font-weight: 600; }
+  .jv-list .id { display: block; font: 11.5px var(--mono); color: var(--muted); font-weight: 400; }
+  .jv-detail { padding: 14px 16px; min-width: 0; }
+  .jv-line { font: italic 1.12rem/1.45 var(--display); color: var(--ink); margin: 0 0 6px; max-width: none; }
+  .jv-orig { font: 13.5px/1.45 var(--sans); color: var(--muted); margin: 0 0 4px; max-width: none; }
+  .jv-orig s { color: var(--muted); }
+  .jv-edit { font: 12px var(--mono); color: var(--accent); margin: 0 0 12px; }
+  .jv-prev { font: 13px/1.45 var(--sans); color: var(--muted); margin: 0 0 10px; max-width: none; }
+  .jv-src { margin: 0 0 14px; padding: 10px 12px; border: 1px solid var(--rule); background: var(--card); font: 15px/1.6 var(--serif); color: var(--ink2); }
+  .jv-src mark { background: color-mix(in srgb, var(--accent2) 18%, transparent); color: var(--ink); padding: 0 1px; }
+  .jv-src .sid { font: 11px var(--mono); color: var(--accent2); margin-right: 3px; }
+  .jv-v { width: 100%; border-collapse: collapse; font: 13px/1.4 var(--sans); }
+  .jv-v th, .jv-v td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .jv-v th { font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .jv-v td.j { font-family: var(--mono); font-size: 12px; white-space: nowrap; color: var(--ink); }
+  .jv-v .vd { font: 11px var(--mono); padding: 1px 5px; border: 1px solid var(--rule); color: var(--muted); white-space: nowrap; }
+  .jv-v .vd-partly { border-color: var(--accent2); color: var(--accent2); }
+  .jv-v .vd-unsupported { border-color: var(--accent); color: var(--accent); }
+  .jv-v .ok { color: var(--accent); font-weight: 600; }
+  .jv-truth { font: 13px var(--sans); color: var(--ink2); margin: 10px 0 0; max-width: none; }
+  .jv-sk { height: 14px; margin: 10px 12px; background: var(--rule); }
+  .jv-sk--tall { height: 220px; margin: 0; }
+  @media (prefers-reduced-motion: no-preference) { .jv-sk { animation: jvsk 1.6s ease-in-out infinite; } }
+  @keyframes jvsk { 0%, 100% { opacity: 1 } 50% { opacity: .55 } }
+  .jv-next { margin: 0; padding-left: 1.2em; }
+  .jv-next li { margin: 0 0 6px; }
+  @media (max-width: 700px) { .jv-body { grid-template-columns: minmax(0, 1fr); } .jv-list { max-height: 260px; border-right: 0; border-bottom: 1px solid var(--rule); } }
+  .jv-vwrap { overflow-x: auto; }
 </style>
 
 <div class="wrap">
@@ -356,9 +407,15 @@
   </header>
 
   <section class="hero">
-    <p class="kicker">A Python command-line tool, rebuilt in October 2026</p>
+    <p class="kicker">A Python command-line tool, with its fact-checkers tested in November 2026</p>
     <h1>A two-host episode of a whole book, with every claim tied to the sentences it came from.</h1>
 
+    <p class="hero-sub result">
+      Its checkers were tested on 56 script lines broken on purpose (a number moved, a name swapped, a
+      negation flipped): Opus caught <b>all 56</b>, the pipeline's own Sonnet checker <b>49</b>, Haiku
+      <b>46</b>, and the local MiniLM similarity check <b>3</b>. <a href="#judges">The judge eval</a> has
+      every line with its sources and verdicts.
+    </p>
     <p class="hero-sub result">
       On four sources, the LLM episodes covered <b>7.4 of 12</b> frozen key points on average, against
       <b>4.4</b> for rule mode reading the same number of words. A second checker kept out of the pipeline
@@ -385,12 +442,13 @@
     </div>
     <dl class="colophon" aria-label="At a glance">
       <div><dt>Task</dt><dd>Turn a long text into a six-minute two-host episode in which every factual line cites the source sentences it rests on.</dd></div>
+      <div><dt>Judge eval</dt><dd>124 lines frozen in <code>7055fb1</code>: 56 originals, 56 copies broken by code (answer known), 12 disputed. Recall on the broken lines: Opus 100%, Sonnet 79 to 88% over 3 runs, Haiku 80 to 82%, a 3-judge majority 93%, MiniLM 5%. Cost per line $0.0025, $0.0009, $0.0001.</dd></div>
       <div><dt>Eval set</dt><dd>4 sources (all of <em>Alice</em>, Thoreau's essay, Darwin's chapter III, a pinned Wikipedia article), 12 key points each, committed in <code>db27eca</code> before any generation.</dd></div>
       <div><dt>Baseline</dt><dd>Rule mode: the source read aloud from the start, capped at the LLM episode's word count.</dd></div>
       <div><dt>Result</dt><dd>7.4 of 12 key points against 4.4. Not fully supported: 8 of 172 claim lines before repair, 8 of 165 after.</dd></div>
       <div><dt>Cost</dt><dd>$0.35 per episode, API-equivalent, from 11 <code>claude -p</code> calls (Sonnet). One fresh Great Stink episode, n&nbsp;=&nbsp;1.</dd></div>
       <div><dt>Wall time</dt><dd>3 min 43 s for that episode on an Apple M4: 1 min 51 s writing and checking, 1 min 52 s rendering audio. n&nbsp;=&nbsp;1, so no p95.</dd></div>
-      <div><dt>Main failure</dt><dd>The checkers disagree with each other: half the lines Opus flagged in the drafts were host questions, and both models misread the last paragraph of <em>Alice</em>.</dd></div>
+      <div><dt>Main failure</dt><dd>The pipeline's checker forgives errors: it passed 7 broken lines, all negations, calling one "a minor typo". A parser bug also left 33 lines unchecked on one run until it was fixed.</dd></div>
     </dl>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/podcastify">Get the tool</a>
@@ -437,9 +495,9 @@
           checkers mostly flag different lines.</p>
       </div>
       <div class="claim">
-        <div class="n">18 of 20</div>
-        <p>randomly drawn claim lines where my own reading against the source agreed with the
-          pipeline's checker on pass or fail. Only one of the 20 was a fail by my reading.</p>
+        <div class="n">56 of 56</div>
+        <p>lines broken on purpose that Opus flagged, on both of its runs. The pipeline's Sonnet checker
+          flagged 44 to 49 over three runs and missed only negations.</p>
       </div>
     </div>
   </section>
@@ -447,6 +505,139 @@
 
 <div class="wrap">
 <div class="route">
+
+  <section class="stop stop--key" id="judges">
+    <p class="eyebrow">Checking the checkers, added 2026-11-13</p>
+    <h2>56 lines broken on purpose: Opus caught all of them, the pipeline's Sonnet checker 49</h2>
+    <p>
+      The earlier check of the checkers drew 20 lines with one failure among them, which says nothing
+      about misses. So <code>eval/judges/build_set.py</code> builds a set where the answer is known
+      without anyone labeling it. It draws 56 statement lines at random from the eight saved scripts and
+      makes a copy of each with one edit done by code: a figure moved (1858 becomes 1868), a name swapped
+      for another of the same kind from the same source (Bazalgette for Doxat), or a negation added or
+      removed. The copy no longer says what its cited sentences say. The 12 other lines that an earlier
+      checker had flagged go in too, unlabeled, for agreement only. The set was frozen in commit
+      <code>7055fb1</code> before any judge ran.
+    </p>
+    <p>
+      Each judge then got the pipeline's own check prompt, a batch per source, with an original and its
+      broken copy always in different batches. Sonnet and Haiku ran three times and Opus twice, 64
+      <code>claude -p</code> calls in all.
+    </p>
+
+    <figure class="jt-fig">
+      <p class="ft">Recall on the 56 broken lines, and what each judge costs</p>
+      <p class="fs">Select a column heading to sort. Ranges are across runs.</p>
+      <div class="tablewrap" role="region" aria-label="Judge results, sortable" tabindex="0">
+        <table class="jt" id="jt">
+          <thead><tr>
+            <th scope="col"><button type="button" data-k="0">Judge</button></th>
+            <th scope="col" class="num"><button type="button" data-k="1">Recall</button></th>
+            <th scope="col" class="num"><button type="button" data-k="2">False flags</button></th>
+            <th scope="col" class="num"><button type="button" data-k="3">Negations caught</button></th>
+            <th scope="col" class="num"><button type="button" data-k="4">Same call across runs</button></th>
+            <th scope="col" class="num"><button type="button" data-k="5">Cost per line</button></th>
+            <th scope="col" class="num"><button type="button" data-k="6">Time per line</button></th>
+          </tr></thead>
+          <tbody>
+            <tr><td data-v="Opus">Opus<span class="sub">2 runs</span></td><td class="num" data-v="100">100%<span class="sub">56 of 56, both runs</span></td><td class="num" data-v="2.7">1.8 to 3.6%<span class="sub">1 and 2 of 56</span></td><td class="num" data-v="34">34 of 34</td><td class="num" data-v="98.4">98.4%<span class="sub">kappa 0.97</span></td><td class="num" data-v="0.00251">$0.0025</td><td class="num" data-v="0.68">0.68 s</td></tr>
+            <tr><td data-v="Sonnet">Sonnet, the pipeline's checker<span class="sub">3 runs</span></td><td class="num" data-v="84.5">78.6 to 87.5%<span class="sub">44 to 49 of 56</span></td><td class="num" data-v="1.8">0 to 3.6%</td><td class="num" data-v="27">24 to 27 of 34</td><td class="num" data-v="92.7">92.7%<span class="sub">kappa 0.95</span></td><td class="num" data-v="0.0009">$0.0009</td><td class="num" data-v="0.36">0.36 s</td></tr>
+            <tr><td data-v="Haiku">Haiku<span class="sub">3 runs</span></td><td class="num" data-v="81.5">80.4 to 82.1%<span class="sub">45 to 46 of 56</span></td><td class="num" data-v="0">0%</td><td class="num" data-v="25">24 to 25 of 34</td><td class="num" data-v="91.1">91.1%<span class="sub">kappa 0.85</span></td><td class="num" data-v="0.0001">$0.0001</td><td class="num" data-v="0.70">0.70 s</td></tr>
+            <tr><td data-v="Majority">Majority of the three<span class="sub">run 1 of each</span></td><td class="num" data-v="92.9">92.9%<span class="sub">52 of 56</span></td><td class="num" data-v="0">0%</td><td class="num" data-v="30">30 of 34</td><td class="num" data-v="-1">&ndash;</td><td class="num" data-v="0.0035">$0.0035</td><td class="num" data-v="0.70">0.70 s<span class="sub">run in parallel</span></td></tr>
+            <tr><td data-v="Numbers">Number check<span class="sub">local</span></td><td class="num" data-v="8.9">8.9%<span class="sub">5 of 56: all 5 number edits</span></td><td class="num" data-v="0">0%</td><td class="num" data-v="0">0 of 34</td><td class="num" data-v="100">100%</td><td class="num" data-v="0">$0</td><td class="num" data-v="0">under 1 ms</td></tr>
+            <tr><td data-v="MiniLM">MiniLM similarity under 0.40<span class="sub">local</span></td><td class="num" data-v="5.4">5.4%<span class="sub">3 of 56</span></td><td class="num" data-v="1.8">1.8%</td><td class="num" data-v="0">0 of 34</td><td class="num" data-v="100">100%</td><td class="num" data-v="0">$0</td><td class="num" data-v="0.0069">6.9 ms</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fig-cap">From <code>eval/judges/results.json</code>. Recall counts a broken line as caught when the judge says
+        partly or unsupported. False flags are the same verdicts on the 56 unbroken originals, which are presumed supported:
+        the published eval had Opus rate about 5% of claim lines partly supported, so a false flag here may be a real catch.
+        "Same call across runs" is the share of all 124 lines flagged the same way in every run, with Cohen's kappa between
+        runs 1 and 2. Cost is API-equivalent, as reported by the Claude CLI, averaged over runs (repeat runs hit the prompt
+        cache and cost less); time is batch wall time divided by lines, Apple M4. The majority costs the sum of its three judges.</p>
+    </figure>
+
+    <p style="margin-top:24px">
+      The three LLM judges agree with each other fairly well (kappa 0.76 to 0.84 between pairs, run 1) and
+      the two local checks agree with nothing (kappa between -0.05 and 0.12). MiniLM barely moves when a
+      "not" is added: its median similarity is 0.70 on the broken lines and 0.75 on the originals. The
+      majority vote did worse than Opus alone, because on four negations Opus was the only judge that read
+      the line and the source closely enough.
+    </p>
+
+    <figure class="jv" id="jv">
+      <p class="ft">Pick a line, see the sentences it cites and every judge's verdict</p>
+      <p class="fs">124 lines from <code>overview/judges.json</code>, written by <code>eval/judges/score.py</code></p>
+      <div class="jv-filter" role="group" aria-label="Filter lines">
+        <button type="button" data-f="missed" aria-pressed="true">Broken, missed by Sonnet (7)</button>
+        <button type="button" data-f="perturbed" aria-pressed="false">All broken (56)</button>
+        <button type="button" data-f="original" aria-pressed="false">Originals (56)</button>
+        <button type="button" data-f="flagged" aria-pressed="false">Earlier flags (12)</button>
+      </div>
+      <div class="jv-body">
+        <ol class="jv-list" id="jv-list" aria-label="Lines"><li><div class="jv-sk" aria-hidden="true"></div><div class="jv-sk" aria-hidden="true"></div><div class="jv-sk" aria-hidden="true"></div></li></ol>
+        <div class="jv-detail" id="jv-detail" aria-live="polite"><div class="jv-sk jv-sk--tall" aria-hidden="true"></div></div>
+      </div>
+      <p class="fig-cap">The cited sentences are highlighted inside their neighbors from the source text. For a broken line, the
+        edit is shown against the original. Verdicts are each judge's own reply, run by run; MiniLM shows the similarity it
+        computed (flag under 0.40). Source text: Project Gutenberg (public domain) and Wikipedia, Great Stink, revision
+        1381900566 (CC BY-SA 4.0).</p>
+    </figure>
+
+    <h3 style="margin-top:34px">Error analysis</h3>
+    <ol class="errs">
+      <li>
+        <h3>Sonnet reads a broken line as a typo and passes it</h3>
+        <p class="count">7 of 56 broken lines passed by Sonnet on run 1, all negations</p>
+        <blockquote>And he says such a State would prepare the way for a still more perfect one, which he has imagined but yet seen anywhere.<span class="who">J056, "not" removed. Sonnet: "Matches S343; 'yet seen' is a minor typo for 'not yet seen'." Opus: "S343 says not yet seen anywhere."</span></blockquote>
+        <blockquote>So more are not born than can possibly survive.<span class="who">J073, "not" added. Sonnet: "a garbled but equivalent restatement". Haiku: supported. Opus: unsupported.</span></blockquote>
+        <p>Sonnet's reasons show it saw the difference and forgave it. In the pipeline that charity is the failure: a
+          line read aloud with "not" in the wrong place is wrong, whatever the writer meant. Sonnet also passed
+          "Time will do a thing he asks" while quoting the source's "he won't do a thing I ask" back as its reason.</p>
+      </li>
+      <li>
+        <h3>A parser bug hid a whole run's verdicts</h3>
+        <p class="count">33 of 124 lines unchecked on Sonnet run 2 before the fix, 0 after</p>
+        <p>In two batches Sonnet wrote its JSON, then "Correction to line 10: ..." and a second, full JSON object.
+          <code>llm.parse_json</code> took the first <code>{</code> to the last <code>}</code>, which is not valid JSON, so every line
+          in those batches came back unchecked, and in the pipeline an unchecked line is kept. It now takes the last complete
+          object (a test covers it), and <code>run_judges.py reparse</code> re-read the saved replies without new calls:
+          Sonnet's run-2 recall went from 64.3% to 87.5%.</p>
+      </li>
+      <li>
+        <h3>The end of <em>Alice</em> is not misread any more</h3>
+        <p class="count">The rewrite the pipeline dropped passes on all 8 fresh runs</p>
+        <p>In October the pipeline's Sonnet check failed the rewritten last line ("Then she pictures her little sister
+          grown") and dropped it, and failed its neighbor. Both came back supported from every run of every judge
+          (the first draft wording, "She pictures Alice grown", is not in the sample). Of the 12 lines an earlier checker
+          flagged, fresh Sonnet run 1 flagged none and Opus one (Doxat's quote, "partly" on both runs). The October
+          failure looks like run-to-run noise, which is what a single checker run cannot show.</p>
+      </li>
+      <li>
+        <h3>Opus flags omissions as well as errors</h3>
+        <p class="count">1 and 2 of 56 originals flagged</p>
+        <blockquote>Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are most fertile beat the others.<span class="who">J074, original. Opus, both runs: "partly", "Omits climate; otherwise matches S146."</span></blockquote>
+        <p>Leaving something out is not an unsupported claim under the check prompt, so this is a false flag. On run 2 Opus
+          also rated "But some species really are increasing" partly, because Darwin wrote "may be"; that one is a fair catch,
+          and a reason the originals' label is only presumed.</p>
+      </li>
+    </ol>
+
+    <p>
+      Questions are now kept out of the claim-line rates (<code>grounding.is_question</code>, commit <code>7055fb1</code>): a
+      line counts as a question when every sentence in it asks, ignoring one- or two-word interjections. Recounted that way, the
+      published second-check numbers become 6 of 155 statement lines before repair and 6 of 149 after; 17 and 16 of the old
+      claim lines were questions, 2 of them flagged each time.
+    </p>
+
+    <h3 style="margin-top:34px">What I would do next</h3>
+    <ul class="jv-next">
+      <li>Have a person fill in <code>eval/judges/labeling_sheet.csv</code> (all 124 lines, blank verdict column), so the originals and the 12 disputed lines get real labels.</li>
+      <li>Add one sentence to the check prompt, "judge the line as written; do not correct it", and rerun Sonnet on the same set to see if the negation misses go.</li>
+      <li>Try a cascade: Haiku first, which never false-flagged here, then Opus only on lines Haiku passes, and measure cost against Opus on everything.</li>
+      <li>Have a model write subtler breaks (a wrong cause, a merged event, an overstated quantity), since code-made edits are the easy end.</li>
+    </ul>
+  </section>
 
   <section class="stop stop--key">
     <p class="eyebrow">How an episode is made</p>
@@ -505,7 +696,7 @@
       Each source was run three ways at a six-minute target: rule mode reading from the start until it had
       used as many words as the LLM episode, the LLM pipeline with the grounding pass, and the same LLM
       draft before the grounding pass. Before any episode existed, Opus wrote 12 key points for each source
-      from the full text; I checked the figures in them against the sources and committed them
+      from the full text, and they were committed
       (<code>eval/keypoints/</code>). Opus then marked each point as covered (1), partly covered (0.5) or
       missing in each script.
     </p>
@@ -544,19 +735,21 @@
 
   <section class="stop">
     <p class="eyebrow">Checking the checker</p>
-    <h2>Twenty lines read by hand</h2>
+    <h2>Twenty lines, read by a model (corrected 2026-11-13)</h2>
     <p>
       <code>eval/hand_check.py</code> drew 20 claim lines at random (seed 19) from the four drafts, before any
-      repair, and printed each with the sentences it cites and no verdict. I read all 20 and recorded my own
-      verdict in <code>eval/hand_check.json</code> before scoring. My reading agreed with the pipeline's
-      checker on pass or fail for <span id="hand">18 of 20</span> lines, and with Opus on 19. The two
+      repair, and printed each with the sentences it cites and no verdict. Until 2026-11-13 this section called that
+      a hand check. It was not: the verdicts in <code>eval/hand_check.json</code> were written by the Claude agent
+      that built the eval, without seeing the checkers' verdicts, so they are a third model's reading. That reading
+      agreed with the pipeline's checker on pass or fail for <span id="hand">18 of 20</span> lines, and with Opus on 19. The two
       disagreements with the pipeline went both ways: it called a correct paraphrase of the end of
       <em>Alice</em> "partly", and passed "That points at the water, not the air", an inference the cited
       sentences about John Snow's pump do not state.
     </p>
     <p>
       Twenty lines with one real failure among them says the checker passes good lines; it says little about
-      how many bad lines it misses. That would need a sample built around failures.
+      how many bad lines it misses. That would need a sample built around failures, which is what
+      <a href="#judges">the judge eval</a> above is.
     </p>
   </section>
 
@@ -617,6 +810,10 @@
           "So Parliament finally acts. How?" and "What did he make of the State after his own night in jail?". Half of the
           8 lines behind the headline rate are questions like these, so the rate says more about how a checker reads a
           question than about invented facts.</p>
+        <p><b>Fixed 2026-11-13.</b> <code>grounding.is_question</code> now keeps lines that only ask out of the claim-line
+          rates, and a "supported" on a question is recorded as no claim. Lines that state something and then ask, like
+          "So Parliament finally acts. How?", still count as claims, which is why the recount finds 2 flagged questions
+          rather than 4: 6 of 155 statement lines before repair, 6 of 149 after.</p>
       </li>
     </ol>
   </section>
@@ -656,6 +853,11 @@
       would move them by a few lines. The key points, the coverage grading, the second check and the
       listenability judge are all Claude models, and the scripts are Claude's too, so the judge may favor
       writing like its own.
+    </p>
+    <p>
+      The judge eval's broken lines are code-made edits: a moved number, a swapped name, a flipped negation.
+      They have a known answer, and they are the easy end of what a script writer gets wrong. Its 56 originals
+      are presumed supported and nobody has labeled them; the labeling sheet is in <code>eval/judges/</code>.
     </p>
     <p>
       The grounding pass, as built, did not lower the second checker's not-supported rate. It removes what
@@ -866,6 +1068,87 @@
       document.getElementById("hand").textContent = hc.agree_pipeline_pass_fail + " of " + hc.n;
     }
   }).catch(function () { document.getElementById("evalrows").innerHTML = '<tr><td colspan="7">The eval table could not be loaded; it is in overview/eval.json.</td></tr>'; });
+})();
+</script>
+
+<script>
+(function () {
+  /* Sortable judge table */
+  var tbl = document.getElementById("jt");
+  tbl.querySelectorAll("th button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = +b.getAttribute("data-k"), th = b.parentNode;
+      var asc = th.getAttribute("aria-sort") === "descending";
+      tbl.querySelectorAll("th").forEach(function (h) { h.removeAttribute("aria-sort"); });
+      th.setAttribute("aria-sort", asc ? "ascending" : "descending");
+      var body = tbl.tBodies[0], rows = Array.prototype.slice.call(body.rows);
+      rows.sort(function (r1, r2) {
+        var a = r1.cells[k].getAttribute("data-v"), c = r2.cells[k].getAttribute("data-v");
+        var na = parseFloat(a), nc = parseFloat(c), d = isNaN(na) ? a.localeCompare(c) : na - nc;
+        return asc ? d : -d;
+      });
+      rows.forEach(function (r) { body.appendChild(r); });
+    });
+  });
+
+  /* Span viewer: overview/judges.json */
+  var list = document.getElementById("jv-list"), det = document.getElementById("jv-detail");
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); };
+  var NAME = { haiku: "Haiku", sonnet: "Sonnet", opus: "Opus" };
+  var bad = function (v) { return v === "partly" || v === "unsupported"; };
+  var W, cur = "missed";
+  function pick(f) {
+    return W.items.filter(function (x) {
+      if (f === "missed") return x.kind === "perturbed" && !bad(x.verdicts.sonnet_r1.verdict);
+      return x.kind === f;
+    });
+  }
+  function drawList(f) {
+    var xs = pick(f);
+    list.innerHTML = xs.map(function (x) {
+      return '<li><button type="button" data-id="' + x.id + '"><span class="id">' + x.id + " &middot; " + esc(x.source) +
+        (x.edit ? " &middot; " + esc(x.edit) : "") + "</span>" + esc(x.text.length > 110 ? x.text.slice(0, 108) + "..." : x.text) + "</button></li>";
+    }).join("");
+    if (xs.length) show(xs[0].id);
+  }
+  function show(id) {
+    var x = W.items.filter(function (y) { return y.id === id; })[0];
+    list.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-current", b.getAttribute("data-id") === id ? "true" : "false"); });
+    var src = (x.before ? esc(x.before) + " " : "") + x.cited.map(function (c) {
+      return '<mark><span class="sid">' + esc(c[0]) + "</span>" + esc(c[1]) + "</mark>";
+    }).join(" ") + (x.after ? " " + esc(x.after) : "");
+    var rows = ['<tr><td class="j">MiniLM</td><td>' + (x.sim === null ? "&ndash;" : x.sim.toFixed(3)) + "</td><td>" +
+      (x.sim !== null && x.sim < W.threshold ? '<span class="vd vd-partly">flag</span>' : "pass") + "</td></tr>",
+      '<tr><td class="j">Numbers</td><td>' + (x.numbers_missing.length ? "missing " + esc(x.numbers_missing.join(", ")) : "&ndash;") + "</td><td>" +
+      (x.numbers_missing.length ? '<span class="vd vd-partly">flag</span>' : "pass") + "</td></tr>"];
+    ["haiku", "sonnet", "opus"].forEach(function (j) {
+      W.runs[j].forEach(function (k) {
+        var v = x.verdicts[k];
+        rows.push('<tr><td class="j">' + NAME[j] + " " + k.split("_r")[1] + '</td><td class="why">' + esc(v.why) + '</td><td><span class="vd vd-' + esc(v.verdict) + '">' + esc(v.verdict.replace("_", " ")) + "</span></td></tr>");
+      });
+    });
+    var truth = x.kind === "perturbed" ? "Known answer: not supported (edited by code). The LLM majority, run 1, " + (x.majority ? "caught it." : "missed it.")
+      : x.kind === "original" ? "Presumed answer: supported (an unedited line from a saved script). Its broken copy is in the other batch."
+      : "No known answer: an earlier checker flagged this line. It is on the labeling sheet for a person to judge.";
+    det.innerHTML = '<p class="jv-line">' + esc(x.text) + "</p>" +
+      (x.original_text ? '<p class="jv-orig">Original: ' + esc(x.original_text) + '</p><p class="jv-edit">edit: ' + esc(x.edit) + "</p>" : "") +
+      (x.prev ? '<p class="jv-prev">Previous line: ' + esc(x.prev) + "</p>" : "") +
+      '<div class="jv-src">' + src + "</div>" +
+      '<div class="jv-vwrap"><table class="jv-v"><thead><tr><th scope="col">Judge</th><th scope="col">Reason or score</th><th scope="col">Verdict</th></tr></thead><tbody>' + rows.join("") + "</tbody></table></div>" +
+      '<p class="jv-truth">' + truth + "</p>";
+  }
+  list.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-id]");
+    if (b) show(b.getAttribute("data-id"));
+  });
+  document.querySelectorAll("#jv .jv-filter button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("#jv .jv-filter button").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      cur = b.getAttribute("data-f"); drawList(cur);
+    });
+  });
+  fetch("judges.json").then(function (r) { return r.json(); }).then(function (d) { W = d; drawList(cur); })
+    .catch(function () { det.innerHTML = '<p class="jv-truth">Could not load judges.json; the same data is in eval/judges/ in the repo.</p>'; });
 })();
 </script>
 </body>

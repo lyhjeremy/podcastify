@@ -131,14 +131,29 @@ def complete_json(prompt: str, system: str, model: str | None = None, **kw):
 
 
 def parse_json(raw: str):
+    """The JSON object or array in a reply. When a reply holds several (on 2026-11-13 Sonnet
+    twice followed its verdicts with "Correction to line 10: ..." and a second, full JSON
+    object), the last complete one wins, since it is the model's final answer. Before this,
+    the whole batch failed to parse and every line in it came back unchecked."""
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw.strip())
-    for opener, closer in (("{", "}"), ("[", "]")):
-        i, j = raw.find(opener), raw.rfind(closer)
-        if i != -1 and j > i:
+    dec = json.JSONDecoder()
+    found, i = [], 0
+    while i < len(raw):
+        if raw[i] in "{[":
             try:
-                return json.loads(raw[i:j + 1])
+                obj, end = dec.raw_decode(raw, i)
             except json.JSONDecodeError:
-                pass
+                i += 1
+                continue
+            found.append(obj)
+            i = end
+        else:
+            i += 1
+    dicts = [o for o in found if isinstance(o, dict)]
+    if dicts:
+        return dicts[-1]
+    if found:
+        return found[-1]
     raise ValueError("no JSON found")
 
 

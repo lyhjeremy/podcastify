@@ -58,3 +58,12 @@ def test_negation_avoids_double_negatives_and_handles_curly_apostrophes():
     assert out == "She did see it."
     out, _ = build_set.perturb_negation("The river was foul.", "The river was foul that summer.")
     assert out == "The river was not foul."
+
+
+def test_parse_json_takes_the_last_object_when_the_model_corrects_itself():
+    import llm
+    raw = ('{"verdicts":[{"n":1,"verdict":"supported"}]}\n\nCorrection to line 1: it says "x".\n\n'
+           '{"verdicts":[{"n":1,"verdict":"partly"}]}\n```')
+    assert llm.parse_json(raw) == {"verdicts": [{"n": 1, "verdict": "partly"}]}
+    assert llm.parse_json('```json\n{"a": 1}\n```') == {"a": 1}
+    assert llm.parse_json('Here: [1, 2]') == [1, 2]

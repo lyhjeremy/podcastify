@@ -5,6 +5,7 @@
     python eval/judges/run_judges.py llm --model haiku --run 1
     python eval/judges/run_judges.py llm --model sonnet --run 1
     python eval/judges/run_judges.py llm --model opus --run 1
+    python eval/judges/run_judges.py reparse                # re-read saved replies, no calls
 
 The LLM judges get exactly the pipeline's check: grounding.CHECK_SYSTEM and
 grounding.CHECK_PROMPT, one batch per source of at most 18 lines, the previous line
@@ -85,6 +86,39 @@ def call_cli(prompt, system, model, timeout=600):
     return env, wall
 
 
+def extract(raw, ids):
+    """{item id: {"verdict", "why"}} from a reply; lines without a verdict are left out."""
+    try:
+        data = llm.parse_json(raw)
+    except Exception:  # scored as missing verdicts
+        data = {}
+    verdicts = {}
+    for v in (data.get("verdicts", []) if isinstance(data, dict) else []):
+        try:
+            n = int(v.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if 1 <= n <= len(ids):
+            verdicts[ids[n - 1]] = {"verdict": str(v.get("verdict", "")).lower().strip(), "why": v.get("why", "")}
+    return verdicts
+
+
+def reparse():
+    """Re-read every saved reply with the current llm.parse_json (no model calls). Records how
+    many verdicts the parser at run time had found, so the effect of a parser fix is visible."""
+    for path in sorted(os.listdir(OUT)):
+        if not path.endswith(".json") or path == "local.json":
+            continue
+        full = os.path.join(OUT, path)
+        d = json.load(open(full, encoding="utf-8"))
+        for b in d["batches"]:
+            b.setdefault("verdicts_at_run_time", len(b["verdicts"]))
+            b["verdicts"] = extract(b["raw"], b["ids"])
+        with open(full, "w", encoding="utf-8") as fh:
+            json.dump(d, fh, ensure_ascii=False, indent=1)
+        print(path, sum(b["verdicts_at_run_time"] for b in d["batches"]), "->", sum(len(b["verdicts"]) for b in d["batches"]))
+
+
 def run_llm(model, run):
     items, meta = load_set(), load_meta()
     dest = os.path.join(OUT, f"{model}_r{run}.json")
@@ -101,18 +135,7 @@ def run_llm(model, run):
         m = meta[source]
         prompt = grounding.CHECK_PROMPT.format(items=grounding._render(rendered), title=m["title"], author=m["author"])
         env, wall = call_cli(prompt, grounding.CHECK_SYSTEM, model)
-        try:
-            data = llm.parse_json(env.get("result", ""))
-        except Exception as e:  # recorded, scored as missing verdicts
-            data = {"error": str(e)[:200]}
-        verdicts = {}
-        for v in (data.get("verdicts", []) if isinstance(data, dict) else []):
-            try:
-                n = int(v.get("n"))
-            except (TypeError, ValueError):
-                continue
-            if 1 <= n <= len(group):
-                verdicts[ids[n - 1]] = {"verdict": str(v.get("verdict", "")).lower().strip(), "why": v.get("why", "")}
+        verdicts = extract(env.get("result", ""), ids)
         done["batches"].append({"source": source, "ids": ids, "verdicts": verdicts,
                                 "cost_usd": env.get("total_cost_usd"), "duration_ms": env.get("duration_ms"),
                                 "wall_s": round(wall, 2), "usage": env.get("usage"), "raw": env.get("result", "")})
@@ -149,12 +172,14 @@ def run_local():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("what", choices=["local", "llm", "plan"])
+    ap.add_argument("what", choices=["local", "llm", "plan", "reparse"])
     ap.add_argument("--model", default="haiku")
     ap.add_argument("--run", type=int, default=1)
     a = ap.parse_args()
     if a.what == "local":
         run_local()
+    elif a.what == "reparse":
+        reparse()
     elif a.what == "plan":
         for s, g in batches(load_set()):
             print(s, len(g), sorted(it["kind"] for it in g).count("perturbed"))

@@ -1,0 +1,767 @@
+{
+ "judge": "local",
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "threshold": 0.4,
+ "items": {
+  "J001": {
+   "sim": 0.816,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J002": {
+   "sim": 0.589,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J003": {
+   "sim": 0.884,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J004": {
+   "sim": 0.86,
+   "numbers_missing": [
+    "1874"
+   ],
+   "minilm_flag": false,
+   "numbers_flag": true
+  },
+  "J005": {
+   "sim": 0.561,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J006": {
+   "sim": 0.596,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J007": {
+   "sim": 0.949,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J008": {
+   "sim": 0.905,
+   "numbers_missing": [
+    "1866"
+   ],
+   "minilm_flag": false,
+   "numbers_flag": true
+  },
+  "J009": {
+   "sim": 0.88,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J010": {
+   "sim": 0.871,
+   "numbers_missing": [
+    "1867"
+   ],
+   "minilm_flag": false,
+   "numbers_flag": true
+  },
+  "J011": {
+   "sim": 0.754,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J012": {
+   "sim": 0.58,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J013": {
+   "sim": 0.929,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J014": {
+   "sim": 0.903,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J015": {
+   "sim": 0.839,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J016": {
+   "sim": 0.791,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J017": {
+   "sim": 0.366,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J018": {
+   "sim": 0.171,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J019": {
+   "sim": 0.831,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J020": {
+   "sim": 0.831,
+   "numbers_missing": [
+    "4"
+   ],
+   "minilm_flag": false,
+   "numbers_flag": true
+  },
+  "J021": {
+   "sim": 0.814,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J022": {
+   "sim": 0.742,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J023": {
+   "sim": 0.97,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J024": {
+   "sim": 0.949,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J025": {
+   "sim": 0.813,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J026": {
+   "sim": 0.813,
+   "numbers_missing": [
+    "1110"
+   ],
+   "minilm_flag": false,
+   "numbers_flag": true
+  },
+  "J027": {
+   "sim": 0.874,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J028": {
+   "sim": 0.86,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J029": {
+   "sim": 0.611,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J030": {
+   "sim": 0.468,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J031": {
+   "sim": 0.289,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J032": {
+   "sim": 0.134,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J033": {
+   "sim": 0.83,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J034": {
+   "sim": 0.618,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J035": {
+   "sim": 0.9,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J036": {
+   "sim": 0.907,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J037": {
+   "sim": 0.612,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J038": {
+   "sim": 0.593,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J039": {
+   "sim": 0.803,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J040": {
+   "sim": 0.801,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J041": {
+   "sim": 0.979,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J042": {
+   "sim": 0.844,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J043": {
+   "sim": 0.473,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J044": {
+   "sim": 0.47,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J045": {
+   "sim": 0.931,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J046": {
+   "sim": 0.689,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J047": {
+   "sim": 0.954,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J048": {
+   "sim": 0.932,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J049": {
+   "sim": 0.73,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J050": {
+   "sim": 0.763,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J051": {
+   "sim": 0.811,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J052": {
+   "sim": 0.816,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J053": {
+   "sim": 0.6,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J054": {
+   "sim": 0.615,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J055": {
+   "sim": 0.517,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J056": {
+   "sim": 0.522,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J057": {
+   "sim": 0.754,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J058": {
+   "sim": 0.556,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J059": {
+   "sim": 0.813,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J060": {
+   "sim": 0.81,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J061": {
+   "sim": 0.692,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J062": {
+   "sim": 0.689,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J063": {
+   "sim": 0.373,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J064": {
+   "sim": 0.716,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J065": {
+   "sim": 0.717,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J066": {
+   "sim": 0.822,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J067": {
+   "sim": 0.819,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J068": {
+   "sim": 0.743,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J069": {
+   "sim": 0.768,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J070": {
+   "sim": 0.679,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J071": {
+   "sim": 0.59,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J072": {
+   "sim": 0.605,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J073": {
+   "sim": 0.601,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J074": {
+   "sim": 0.599,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J075": {
+   "sim": 0.606,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J076": {
+   "sim": 0.882,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J077": {
+   "sim": 0.877,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J078": {
+   "sim": 0.944,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J079": {
+   "sim": 0.939,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J080": {
+   "sim": 0.573,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J081": {
+   "sim": 0.561,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J082": {
+   "sim": 0.726,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J083": {
+   "sim": 0.696,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J084": {
+   "sim": 0.499,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J085": {
+   "sim": 0.47,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J086": {
+   "sim": 0.912,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J087": {
+   "sim": 0.907,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J088": {
+   "sim": 0.713,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J089": {
+   "sim": 0.709,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J090": {
+   "sim": 0.455,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J091": {
+   "sim": 0.465,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J092": {
+   "sim": 0.658,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J093": {
+   "sim": 0.688,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J094": {
+   "sim": 0.725,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J095": {
+   "sim": 0.579,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J096": {
+   "sim": 0.624,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J097": {
+   "sim": 0.608,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J098": {
+   "sim": 0.92,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J099": {
+   "sim": 0.784,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J100": {
+   "sim": 0.753,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J101": {
+   "sim": 0.567,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J102": {
+   "sim": 0.731,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J103": {
+   "sim": 0.737,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J104": {
+   "sim": 0.831,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J105": {
+   "sim": 0.589,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J106": {
+   "sim": 0.726,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J107": {
+   "sim": 0.365,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J108": {
+   "sim": 0.653,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J109": {
+   "sim": 0.378,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J110": {
+   "sim": 0.799,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J111": {
+   "sim": 0.77,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J112": {
+   "sim": 0.661,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J113": {
+   "sim": 0.652,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J114": {
+   "sim": 0.747,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J115": {
+   "sim": 0.727,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J116": {
+   "sim": 0.572,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J117": {
+   "sim": 0.57,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J118": {
+   "sim": 0.787,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J119": {
+   "sim": 0.637,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J120": {
+   "sim": 0.32,
+   "numbers_missing": [],
+   "minilm_flag": true,
+   "numbers_flag": false
+  },
+  "J121": {
+   "sim": 0.688,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J122": {
+   "sim": 0.758,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J123": {
+   "sim": 0.786,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  },
+  "J124": {
+   "sim": 0.839,
+   "numbers_missing": [],
+   "minilm_flag": false,
+   "numbers_flag": false
+  }
+ },
+ "timing": {
+  "machine": "Apple M4",
+  "model_load_s": 4.31,
+  "median_ms": 6.9,
+  "p95_ms": 11.3
+ }
+}

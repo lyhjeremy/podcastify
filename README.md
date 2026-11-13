@@ -1,8 +1,10 @@
 # Podcastify
 
-Podcastify turns a whole book or article into a two-host podcast in which every factual line cites the source sentences it rests on. On four sources its LLM episodes covered 7.4 of 12 frozen key points against 4.4 for rule mode; an independent Opus checker found 8 of 172 claim lines not fully supported before the repair step and 8 of 165 after, so the repair did not lower the rate. A six-minute episode of a 26,640-character article cost $0.35 at API-equivalent prices (11 `claude -p` calls, measured once).
+Podcastify turns a whole book or article into a two-host podcast in which every factual line cites the source sentences it rests on. Its fact-checkers were tested on 56 script lines broken on purpose by code (a number moved, a name swapped, a negation flipped): Opus caught all 56, the pipeline's own Sonnet checker 44 to 49 over three runs, Haiku 45 to 46, MiniLM similarity 3. On four sources its LLM episodes covered 7.4 of 12 frozen key points against 4.4 for rule mode; an independent Opus checker found 8 of 172 claim lines not fully supported before the repair step and 8 of 165 after, so the repair did not lower the rate. A six-minute episode of a 26,640-character article cost $0.35 at API-equivalent prices (11 `claude -p` calls, measured once).
 
 It is a Python command-line tool. In LLM mode it reads the whole source, writes the host and co-host conversation with sentence ids on each line, checks each line against those sentences, and renders an MP3 (or M4B) with a chapter per section. Rule mode, which needs no model, reads the source aloud in two voices.
+
+![Judge eval write-up: the judge table is sorted by cost per line, then the span viewer opens broken lines the Sonnet checker passed, with the cited source sentences highlighted and each judge's verdict beside them](assets/demo.gif)
 
 [Live site](https://lyhjeremy.github.io/podcastify/) · [Write-up](https://lyhjeremy.github.io/podcastify/overview/) · [Narrative](writeup.md)
 
@@ -31,9 +33,28 @@ Four sources, each run three ways at a six-minute target: rule mode reading from
 - The pipeline's own checker (Sonnet) failed 9 of 151 claim lines on the first pass, all as "partly". Three were rewritten and kept, six dropped.
 - The second checker found 8 of 172 claim lines not fully supported before the repair and 8 of 165 after. The repair removes what the first checker flags, and the two checkers mostly flag different lines, so the grounding pass did not lower the second checker's rate.
 - Listenability, judged blind by Opus in both orders: LLM beat rule mode on all four sources. The unchecked draft beat the checked episode on three of four (the fourth was identical), because a dropped line can leave a question without its answer.
-- Hand check: I read 20 random claim lines from the drafts against their cited sentences before looking at any verdict. My reading agreed with the pipeline's checker on pass or fail for 18 of 20, and with Opus for 19. Only one of the 20 failed by my reading, so this shows the checker passes good lines; it does not measure how many bad ones it misses.
+- Model read of 20 lines (corrected 2026-11-13; earlier versions called this a hand check, but the verdicts in `eval/hand_check.json` were written by the Claude agent that built the eval): that reading agreed with the pipeline's checker on pass or fail for 18 of 20 random draft claim lines, and with Opus for 19. Only one of the 20 failed, so it says little about misses; the judge eval below measures them.
 
 Four sources and one run each: treat the grounding counts (single digits) as indicative. Full results: `eval/results/summary.json`; every line with its spans and verdicts: `eval/results/<source>.lines.json`.
+
+## Judge eval (2026-11-13)
+
+`eval/judges/build_set.py` (frozen in commit 7055fb1 before any judge ran) draws 56 statement lines at random from the eight saved scripts and makes a copy of each with one edit by code, so the copy is unsupported by construction: 5 number edits, 17 name swaps (same kind, same source), 34 negation flips. The 12 other lines an earlier checker flagged are added unlabeled. Each LLM judge gets the pipeline's own check prompt, one batch per source, with an original and its copy in different batches. 64 `claude -p` calls.
+
+| Judge | Recall on 56 broken lines | False flags on 56 originals | Negations caught | Same call across runs | Cost per line |
+|---|---|---|---|---|---|
+| Opus (2 runs) | 100% | 1.8 to 3.6% | 34 of 34 | 98.4% (kappa 0.97) | $0.0025 |
+| Sonnet, the pipeline's checker (3 runs) | 78.6 to 87.5% | 0 to 3.6% | 24 to 27 | 92.7% (kappa 0.95) | $0.0009 |
+| Haiku (3 runs) | 80.4 to 82.1% | 0% | 24 to 25 | 91.1% (kappa 0.85) | $0.0001 |
+| Majority of the three (run 1) | 92.9% | 0% | 30 | | $0.0035 |
+| Number check (local) | 8.9% (all 5 number edits) | 0% | 0 | | $0 |
+| MiniLM similarity < 0.40 (local) | 5.4% | 1.8% | 0 | | $0, 6.9 ms |
+
+Cost is API-equivalent as reported by the Claude CLI, averaged over runs. LLM judges agree with each other at kappa 0.76 to 0.84; the local checks agree with nothing (kappa -0.05 to 0.12). The majority vote did worse than Opus alone. Sonnet's misses are all negations, and its reasons show it forgave them ("'yet seen' is a minor typo for 'not yet seen'").
+
+Two fixes came out of it. `llm.parse_json` took the first `{` to the last `}`, so when Sonnet followed its JSON with "Correction to line 10: ..." and a second object, a whole batch came back unchecked (33 of 124 lines on one run); it now takes the last complete object, and `run_judges.py reparse` rescored the saved replies without new calls. And `grounding.is_question` keeps lines that only ask out of the claim-line rates: the published second-check counts become 6 of 155 statement lines before repair and 6 of 149 after.
+
+Originals are presumed supported, not labeled; `eval/judges/labeling_sheet.csv` has all 124 lines for a person to judge. Reproduce: `python eval/judges/build_set.py`, `python eval/judges/run_judges.py local`, `python eval/judges/run_judges.py llm --model haiku --run 1` (and sonnet, opus), `python eval/judges/score.py`. Results: `eval/judges/results.json`. Tests: `python -m pytest -q tests` (8 tests, also on GitHub Actions).
 
 ## How LLM mode works
 
@@ -92,7 +113,7 @@ The known failures, with examples, are pulled from the saved outputs by `eval/er
 1. Both checkers misread the last paragraph of *Alice* ("this same little sister of hers" is Alice); one correct line was dropped.
 2. The reduce step dropped all six of Darwin's worked-example key points (Origin ch. III covered 5 of 12), although the map step had found them.
 3. All four drafts ran over the 930-word target (by 3% to 38%); Great Stink came out at 7.9 minutes against 6.
-4. Host questions get claim verdicts: 4 of the 8 lines Opus flagged in the drafts are questions.
+4. Host questions got claim verdicts: 4 of the 8 lines Opus flagged in the drafts contain questions. Fixed 2026-11-13 by `grounding.is_question` (see Judge eval).
 
 ## Limitations
 
@@ -116,7 +137,7 @@ The known failures, with examples, are pulled from the saved outputs by `eval/er
 | `grounding.py` | Local and LLM checks, one repair pass, rates |
 | `llm.py` | `claude -p` wrapper with the API fallback |
 | `tts_engine.py` | edge-tts rendering, ffmpeg join, ID3 or M4B chapters |
-| `eval/` | Source fetcher, frozen key points, eval runner, hand check, web export, results |
+| `eval/` | Source fetcher, frozen key points, eval runner, model-read sample (`hand_check.py`), judge eval (`judges/`), web export, results |
 | `overview/` | The write-up page, its data, and the one committed sample (`alice.episode.mp3`, 1.8 MB) |
 
 `.gitignore` blocks audio, transcripts and episode JSON, so books and audio stay out of the repo except the sample above. Use files you own or public-domain titles, for personal listening.
