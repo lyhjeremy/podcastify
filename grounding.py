@@ -46,6 +46,22 @@ def _encoder():
     return _model
 
 
+_SENT_END = re.compile(r"(?<=[.!?])[\"')\]]*\s+")
+
+
+def is_question(text: str) -> bool:
+    """True when every sentence of the line is a question ("And then she shrinks?").
+    Such a line asks; it does not assert, so its verdict is kept out of the claim-line
+    rates. A line that states something and then asks ("The stink came first. What
+    happened in 1858?") still counts as a claim. Added 2026-11-13: before, the checker's
+    "supported" on a question was counted as a supported claim."""
+    parts = [p.strip() for p in _SENT_END.split(text.strip()) if p.strip()]
+    asks = [p for p in parts if p.rstrip("\"')]").endswith("?")]
+    # Interjections of one or two words ("Ha!", "Wait.", "Right.") neither ask nor assert.
+    rest = [p for p in parts if p not in asks and len(p.split()) > 2]
+    return bool(asks) and not rest
+
+
 def _numbers(s: str) -> set[str]:
     return {n.replace(",", "") for n in re.findall(r"\d[\d,]*(?:\.\d+)?", s)}
 
@@ -172,7 +188,13 @@ def check_script(lines: list[dict], text: str, sents: list[dict], shown: dict, r
         v = verdicts.get(n + 1, {"verdict": "unchecked", "why": "checker returned no verdict"})
         ln["check"].update(first=v["verdict"], why=v["why"], action="kept")
         ln["check"]["final"] = v["verdict"]
+        if is_question(ln["text"]):
+            ln["check"]["question"] = True
+            if v["verdict"] == "supported":
+                # The checker passed what the question presupposes; that is not a claim.
+                ln["check"]["final"] = "no_claim"
 
+    # A question is repaired only when the checker says its presupposition is wrong.
     failing = [n for n, ln in enumerate(lines) if ln["check"]["first"] in ("partly", "unsupported")]
     if not repair or not failing:
         return lines
@@ -234,7 +256,9 @@ def rates(lines: list[dict]) -> dict:
             c[v] = c.get(v, 0) + 1
         return c
 
-    claims = [ln for ln in lines if ln["check"]["first"] in ("supported", "partly", "unsupported")]
+    questions = [ln for ln in lines if is_question(ln["text"])]
+    claims = [ln for ln in lines if ln["check"]["first"] in ("supported", "partly", "unsupported")
+              and not is_question(ln["text"])]
     first = count("first", claims)
     n = len(claims) or 1
     actions = count("action", lines)
@@ -245,6 +269,8 @@ def rates(lines: list[dict]) -> dict:
     return {
         "lines": len(lines),
         "claim_lines": len(claims),
+        "question_lines": len(questions),
+        "questions_failed_first": sum(1 for ln in questions if ln["check"]["first"] in ("partly", "unsupported")),
         "unflagged_claims": sum(1 for ln in claims if not ln["src"] and ln.get("auto_src")),
         "first_pass": first,
         "unsupported_rate_first": round(first.get("unsupported", 0) / n, 3),

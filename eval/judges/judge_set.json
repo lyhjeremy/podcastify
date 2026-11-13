@@ -1,0 +1,4912 @@
+{
+ "built_by": "eval/judges/build_set.py",
+ "seed": 7,
+ "counts": {
+  "original": 56,
+  "perturbed:name": 17,
+  "perturbed:number": 5,
+  "perturbed:negation": 34,
+  "flagged": 12
+ },
+ "questions_excluded": 16,
+ "items": [
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 34,
+   "speaker": "A",
+   "text": "Disraeli left a committee room with the other members, papers in one hand and a handkerchief pressed to his nose.",
+   "prev": "By June the stench was so bad that business was affected. Curtains on the river side were soaked in lime chloride. That failed, and there were discussions about moving government to Oxford or St Albans.",
+   "src": [
+    "S72"
+   ],
+   "cited": [
+    [
+     "S72",
+     "The Examiner reported that Disraeli, on attending one of the committee rooms, left shortly afterwards with the other members of the committee, \"with a mass of papers in one hand, and with his pocket handkerchief applied to his nose\" because the smell was so bad."
+    ]
+   ],
+   "spans": [
+    [
+     11476,
+     11738
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-34",
+   "id": "J001"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 34,
+   "speaker": "A",
+   "text": "Michael Faraday left a committee room with the other members, papers in one hand and a handkerchief pressed to his nose.",
+   "prev": "By June the stench was so bad that business was affected. Curtains on the river side were soaked in lime chloride. That failed, and there were discussions about moving government to Oxford or St Albans.",
+   "src": [
+    "S72"
+   ],
+   "cited": [
+    [
+     "S72",
+     "The Examiner reported that Disraeli, on attending one of the committee rooms, left shortly afterwards with the other members of the committee, \"with a mass of papers in one hand, and with his pocket handkerchief applied to his nose\" because the smell was so bad."
+    ]
+   ],
+   "spans": [
+    [
+     11476,
+     11738
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-34",
+   "perturbation": "name",
+   "edit": "Disraeli -> Michael Faraday",
+   "original_text": "Disraeli left a committee room with the other members, papers in one hand and a handkerchief pressed to his nose.",
+   "id": "J002"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 54,
+   "speaker": "A",
+   "text": "In February 1864 Bazalgette began three embankments. The Victoria and Chelsea on the north side, the Albert on the south. He built up walls on the foreshore, ran sewer pipes inside, and infilled around them.",
+   "prev": "The sewers ran along the river too, didn't they?",
+   "src": [
+    "S124",
+    "S125",
+    "S126",
+    "S127"
+   ],
+   "cited": [
+    [
+     "S124",
+     "To provide the drainage for the low-level sewers, in February 1864 Bazalgette began building three embankments along the shores of the Thames."
+    ],
+    [
+     "S125",
+     "On the northern side he built the Victoria Embankment, which runs from Westminster to Blackfriars Bridge, and the Chelsea Embankment, running from Millbank to the Cadogan Pier at Chelsea."
+    ],
+    [
+     "S126",
+     "The southern side contains the Albert Embankment, from the Lambeth end of Westminster Bridge to Vauxhall."
+    ],
+    [
+     "S127",
+     "He ran the sewers along the banks of the Thames, building up walls on the foreshore, running the sewer pipes inside and infilling around them."
+    ]
+   ],
+   "spans": [
+    [
+     19896,
+     20038
+    ],
+    [
+     20039,
+     20226
+    ],
+    [
+     20227,
+     20332
+    ],
+    [
+     20333,
+     20475
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-54",
+   "id": "J003"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 54,
+   "speaker": "A",
+   "text": "In February 1874 Bazalgette began three embankments. The Victoria and Chelsea on the north side, the Albert on the south. He built up walls on the foreshore, ran sewer pipes inside, and infilled around them.",
+   "prev": "The sewers ran along the river too, didn't they?",
+   "src": [
+    "S124",
+    "S125",
+    "S126",
+    "S127"
+   ],
+   "cited": [
+    [
+     "S124",
+     "To provide the drainage for the low-level sewers, in February 1864 Bazalgette began building three embankments along the shores of the Thames."
+    ],
+    [
+     "S125",
+     "On the northern side he built the Victoria Embankment, which runs from Westminster to Blackfriars Bridge, and the Chelsea Embankment, running from Millbank to the Cadogan Pier at Chelsea."
+    ],
+    [
+     "S126",
+     "The southern side contains the Albert Embankment, from the Lambeth end of Westminster Bridge to Vauxhall."
+    ],
+    [
+     "S127",
+     "He ran the sewers along the banks of the Thames, building up walls on the foreshore, running the sewer pipes inside and infilling around them."
+    ]
+   ],
+   "spans": [
+    [
+     19896,
+     20038
+    ],
+    [
+     20039,
+     20226
+    ],
+    [
+     20227,
+     20332
+    ],
+    [
+     20333,
+     20475
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-54",
+   "perturbation": "number",
+   "edit": "1864 -> 1874",
+   "original_text": "In February 1864 Bazalgette began three embankments. The Victoria and Chelsea on the north side, the Albert on the south. He built up walls on the foreshore, ran sewer pipes inside, and infilled around them.",
+   "id": "J004"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 23,
+   "speaker": "B",
+   "text": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+   "prev": "After the 1854 outbreak, Snow focused on Broad Street in Soho. He removed the handle from the local water pump, and deaths fell. Later it was established that a leaking sewer ran near the well.",
+   "src": [
+    "S34",
+    "S35"
+   ],
+   "cited": [
+    [
+     "S34",
+     "Snow had removed the handle from the local water pump, thus preventing access to the contaminated water, with a resulting fall in deaths."
+    ],
+    [
+     "S35",
+     "It was later established that a leaking sewer ran near the well from which the water was drawn."
+    ]
+   ],
+   "spans": [
+    [
+     5142,
+     5279
+    ],
+    [
+     5280,
+     5375
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-23",
+   "id": "J005"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 23,
+   "speaker": "B",
+   "text": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, the air.",
+   "prev": "After the 1854 outbreak, Snow focused on Broad Street in Soho. He removed the handle from the local water pump, and deaths fell. Later it was established that a leaking sewer ran near the well.",
+   "src": [
+    "S34",
+    "S35"
+   ],
+   "cited": [
+    [
+     "S34",
+     "Snow had removed the handle from the local water pump, thus preventing access to the contaminated water, with a resulting fall in deaths."
+    ],
+    [
+     "S35",
+     "It was later established that a leaking sewer ran near the well from which the water was drawn."
+    ]
+   ],
+   "spans": [
+    [
+     5142,
+     5279
+    ],
+    [
+     5280,
+     5375
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-23",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+   "id": "J006"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 24,
+   "speaker": "A",
+   "text": "Meanwhile, by June 1856 Bazalgette had completed his definitive plans. Small local sewers about three feet wide would feed larger ones, draining into main outflow pipes eleven feet high.",
+   "prev": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+   "src": [
+    "S47"
+   ],
+   "cited": [
+    [
+     "S47",
+     "By June 1856 Bazalgette completed his definitive plans, which provided for small, local sewers about 3 feet (0.9 m) in diameter to feed into a series of larger sewers until they drained into main outflow pipes 11 feet (3.4 m) high."
+    ]
+   ],
+   "spans": [
+    [
+     7123,
+     7354
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-24",
+   "id": "J007"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 24,
+   "speaker": "A",
+   "text": "Meanwhile, by June 1866 Bazalgette had completed his definitive plans. Small local sewers about three feet wide would feed larger ones, draining into main outflow pipes eleven feet high.",
+   "prev": "So a leaking sewer, a pump, and fewer deaths once the handle came off. That points at the water, not the air.",
+   "src": [
+    "S47"
+   ],
+   "cited": [
+    [
+     "S47",
+     "By June 1856 Bazalgette completed his definitive plans, which provided for small, local sewers about 3 feet (0.9 m) in diameter to feed into a series of larger sewers until they drained into main outflow pipes 11 feet (3.4 m) high."
+    ]
+   ],
+   "spans": [
+    [
+     7123,
+     7354
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-24",
+   "perturbation": "number",
+   "edit": "1856 -> 1866",
+   "original_text": "Meanwhile, by June 1856 Bazalgette had completed his definitive plans. Small local sewers about three feet wide would feed larger ones, draining into main outflow pipes eleven feet high.",
+   "id": "J008"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 17,
+   "speaker": "A",
+   "text": "Most believed miasma carried it. The disease was deeply feared because of how fast it spread and its high fatality rates. In 1857 the government even poured lime and carbolic acid into the river to ease the stench.",
+   "prev": "And cholera was the big worry.",
+   "src": [
+    "S27",
+    "S28",
+    "S24"
+   ],
+   "cited": [
+    [
+     "S27",
+     "Miasma was believed by most to be the vector of transmission of cholera, which was on the rise in 19th-century Europe."
+    ],
+    [
+     "S28",
+     "The disease was deeply feared by all, because of the speed with which it could spread, and its high fatality rates."
+    ],
+    [
+     "S24",
+     "The smell from the river was so bad that in 1857 the government poured chalk lime, chloride of lime and carbolic acid into the river to ease the stench."
+    ]
+   ],
+   "spans": [
+    [
+     4111,
+     4229
+    ],
+    [
+     4230,
+     4345
+    ],
+    [
+     3581,
+     3733
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-17",
+   "id": "J009"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 17,
+   "speaker": "A",
+   "text": "Most believed miasma carried it. The disease was deeply feared because of how fast it spread and its high fatality rates. In 1867 the government even poured lime and carbolic acid into the river to ease the stench.",
+   "prev": "And cholera was the big worry.",
+   "src": [
+    "S27",
+    "S28",
+    "S24"
+   ],
+   "cited": [
+    [
+     "S27",
+     "Miasma was believed by most to be the vector of transmission of cholera, which was on the rise in 19th-century Europe."
+    ],
+    [
+     "S28",
+     "The disease was deeply feared by all, because of the speed with which it could spread, and its high fatality rates."
+    ],
+    [
+     "S24",
+     "The smell from the river was so bad that in 1857 the government poured chalk lime, chloride of lime and carbolic acid into the river to ease the stench."
+    ]
+   ],
+   "spans": [
+    [
+     4111,
+     4229
+    ],
+    [
+     4230,
+     4345
+    ],
+    [
+     3581,
+     3733
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-17",
+   "perturbation": "number",
+   "edit": "1857 -> 1867",
+   "original_text": "Most believed miasma carried it. The disease was deeply feared because of how fast it spread and its high fatality rates. In 1857 the government even poured lime and carbolic acid into the river to ease the stench.",
+   "id": "J010"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 67,
+   "speaker": "A",
+   "text": "He writes that with Nash and Wren, Bazalgette \"enters the pantheon of London heroes\".",
+   "prev": "And Peter Ackroyd goes even further.",
+   "src": [
+    "S166"
+   ],
+   "cited": [
+    [
+     "S166",
+     "The historian Peter Ackroyd, in his history of subterranean London, considers that \"with [John] Nash and [Christopher] Wren, Bazalgette enters the pantheon of London heroes\" because of his work, particularly the building of the Victoria and Albert Embankments."
+    ]
+   ],
+   "spans": [
+    [
+     26379,
+     26639
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-67",
+   "id": "J011"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 67,
+   "speaker": "A",
+   "text": "He writes that with Nash and Wren, Doxat \"enters the pantheon of London heroes\".",
+   "prev": "And Peter Ackroyd goes even further.",
+   "src": [
+    "S166"
+   ],
+   "cited": [
+    [
+     "S166",
+     "The historian Peter Ackroyd, in his history of subterranean London, considers that \"with [John] Nash and [Christopher] Wren, Bazalgette enters the pantheon of London heroes\" because of his work, particularly the building of the Victoria and Albert Embankments."
+    ]
+   ],
+   "spans": [
+    [
+     26379,
+     26639
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-67",
+   "perturbation": "name",
+   "edit": "Bazalgette -> Doxat",
+   "original_text": "He writes that with Nash and Wren, Bazalgette \"enters the pantheon of London heroes\".",
+   "id": "J012"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 19,
+   "speaker": "A",
+   "text": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Southwark and Vauxhall water companies.",
+   "prev": "Did anyone challenge the miasma idea?",
+   "src": [
+    "S31"
+   ],
+   "cited": [
+    [
+     "S31",
+     "During the second outbreak, John Snow, a London-based physician, noticed that the rates of death were higher in those areas supplied by the Lambeth and the Southwark and Vauxhall water companies."
+    ]
+   ],
+   "spans": [
+    [
+     4592,
+     4787
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-19",
+   "id": "J013"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 19,
+   "speaker": "A",
+   "text": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Westminster and Vauxhall water companies.",
+   "prev": "Did anyone challenge the miasma idea?",
+   "src": [
+    "S31"
+   ],
+   "cited": [
+    [
+     "S31",
+     "During the second outbreak, John Snow, a London-based physician, noticed that the rates of death were higher in those areas supplied by the Lambeth and the Southwark and Vauxhall water companies."
+    ]
+   ],
+   "spans": [
+    [
+     4592,
+     4787
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-19",
+   "perturbation": "name",
+   "edit": "Southwark -> Westminster",
+   "original_text": "John Snow, a London physician. He noticed death rates were higher in areas supplied by the Lambeth and the Southwark and Vauxhall water companies.",
+   "id": "J014"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 26,
+   "speaker": "A",
+   "text": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. London was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+   "prev": "Sounds like a big system.",
+   "src": [
+    "S48",
+    "S49",
+    "S50"
+   ],
+   "cited": [
+    [
+     "S48",
+     "A Northern and Southern Outfall Sewer were planned to manage the waste for each side of the river."
+    ],
+    [
+     "S49",
+     "London was mapped into high-, middle- and low-level areas, with a main sewer servicing each; a series of pumping stations was planned to remove the waste towards the east of the city."
+    ],
+    [
+     "S50",
+     "Bazalgette's plan was based on that of Foster, but was larger in scale, and allowed for more of a rise in population than Foster's – from 3 to 4.5 million."
+    ]
+   ],
+   "spans": [
+    [
+     7355,
+     7453
+    ],
+    [
+     7454,
+     7637
+    ],
+    [
+     7638,
+     7793
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-26",
+   "id": "J015"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 26,
+   "speaker": "A",
+   "text": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. Thames was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+   "prev": "Sounds like a big system.",
+   "src": [
+    "S48",
+    "S49",
+    "S50"
+   ],
+   "cited": [
+    [
+     "S48",
+     "A Northern and Southern Outfall Sewer were planned to manage the waste for each side of the river."
+    ],
+    [
+     "S49",
+     "London was mapped into high-, middle- and low-level areas, with a main sewer servicing each; a series of pumping stations was planned to remove the waste towards the east of the city."
+    ],
+    [
+     "S50",
+     "Bazalgette's plan was based on that of Foster, but was larger in scale, and allowed for more of a rise in population than Foster's – from 3 to 4.5 million."
+    ]
+   ],
+   "spans": [
+    [
+     7355,
+     7453
+    ],
+    [
+     7454,
+     7637
+    ],
+    [
+     7638,
+     7793
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-26",
+   "perturbation": "name",
+   "edit": "London -> Thames",
+   "original_text": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. London was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+   "id": "J016"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 66,
+   "speaker": "B",
+   "text": "And Peter Ackroyd goes even further.",
+   "prev": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life.",
+   "src": [
+    "S12"
+   ],
+   "cited": [
+    [
+     "S12",
+     "The historian Peter Ackroyd argues that Bazalgette should be considered a hero of London."
+    ]
+   ],
+   "spans": [
+    [
+     1861,
+     1950
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "no_claim",
+    "local_flag": true
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-66",
+   "id": "J017"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 66,
+   "speaker": "B",
+   "text": "And Disraeli goes even further.",
+   "prev": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life.",
+   "src": [
+    "S12"
+   ],
+   "cited": [
+    [
+     "S12",
+     "The historian Peter Ackroyd argues that Bazalgette should be considered a hero of London."
+    ]
+   ],
+   "spans": [
+    [
+     1861,
+     1950
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "no_claim",
+    "local_flag": true
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-66",
+   "perturbation": "name",
+   "edit": "Peter Ackroyd -> Disraeli",
+   "original_text": "And Peter Ackroyd goes even further.",
+   "id": "J018"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 40,
+   "speaker": "A",
+   "text": "It put responsibility for clearing up the Thames on the Metropolitan Board of Works. It allowed the Board to borrow £3 million, repaid by a three-penny levy on London households over forty years.",
+   "prev": "What did the bill do?",
+   "src": [
+    "S82"
+   ],
+   "cited": [
+    [
+     "S82",
+     "The Bill put the responsibility to clear up the Thames on the MBW, and stated that \"as far as may be possible\" the sewerage outlets should not be within the boundaries of London; it also allowed the Board to borrow £3 million, which was to be repaid from a three-penny levy on all London households for the next forty years."
+    ]
+   ],
+   "spans": [
+    [
+     13261,
+     13585
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-40",
+   "id": "J019"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 40,
+   "speaker": "A",
+   "text": "It put responsibility for clearing up the Thames on the Metropolitan Board of Works. It allowed the Board to borrow £4 million, repaid by a three-penny levy on London households over forty years.",
+   "prev": "What did the bill do?",
+   "src": [
+    "S82"
+   ],
+   "cited": [
+    [
+     "S82",
+     "The Bill put the responsibility to clear up the Thames on the MBW, and stated that \"as far as may be possible\" the sewerage outlets should not be within the boundaries of London; it also allowed the Board to borrow £3 million, which was to be repaid from a three-penny levy on all London households for the next forty years."
+    ]
+   ],
+   "spans": [
+    [
+     13261,
+     13585
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-40",
+   "perturbation": "number",
+   "edit": "3 -> 4",
+   "original_text": "It put responsibility for clearing up the Thames on the Metropolitan Board of Works. It allowed the Board to borrow £3 million, repaid by a three-penny levy on London households over forty years.",
+   "id": "J020"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "The East London Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+   "prev": "What caused it?",
+   "src": [
+    "S139"
+   ],
+   "cited": [
+    [
+     "S139",
+     "The fault lay with the East London Water Company, who discharged their sewage half a mile (800 m) downriver from their reservoir: the sewage was being carried upriver into the reservoir on the incoming tide, contaminating the area's drinking water."
+    ]
+   ],
+   "spans": [
+    [
+     21944,
+     22192
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-60",
+   "id": "J021"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "The East Southwark Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+   "prev": "What caused it?",
+   "src": [
+    "S139"
+   ],
+   "cited": [
+    [
+     "S139",
+     "The fault lay with the East London Water Company, who discharged their sewage half a mile (800 m) downriver from their reservoir: the sewage was being carried upriver into the reservoir on the incoming tide, contaminating the area's drinking water."
+    ]
+   ],
+   "spans": [
+    [
+     21944,
+     22192
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-60",
+   "perturbation": "name",
+   "edit": "London -> Southwark",
+   "original_text": "The East London Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+   "id": "J022"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 62,
+   "speaker": "A",
+   "text": "It led to acceptance that cholera was water-borne, not transmitted by miasma. And it was the last outbreak of the disease in the capital.",
+   "prev": "So that settled the argument.",
+   "src": [
+    "S140",
+    "S142"
+   ],
+   "cited": [
+    [
+     "S140",
+     "The outbreak and the diagnosis of its causes led to the acceptance that cholera was water-borne, not transmitted by miasma."
+    ],
+    [
+     "S142",
+     "It was the last outbreak of the disease in the capital."
+    ]
+   ],
+   "spans": [
+    [
+     22193,
+     22316
+    ],
+    [
+     22572,
+     22627
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-62",
+   "id": "J023"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 62,
+   "speaker": "A",
+   "text": "It led to acceptance that cholera was water-borne, transmitted by miasma. And it was the last outbreak of the disease in the capital.",
+   "prev": "So that settled the argument.",
+   "src": [
+    "S140",
+    "S142"
+   ],
+   "cited": [
+    [
+     "S140",
+     "The outbreak and the diagnosis of its causes led to the acceptance that cholera was water-borne, not transmitted by miasma."
+    ],
+    [
+     "S142",
+     "It was the last outbreak of the disease in the capital."
+    ]
+   ],
+   "spans": [
+    [
+     22193,
+     22316
+    ],
+    [
+     22572,
+     22627
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-62",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "It led to acceptance that cholera was water-borne, not transmitted by miasma. And it was the last outbreak of the disease in the capital.",
+   "id": "J024"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 48,
+   "speaker": "A",
+   "text": "Plans covered 1,100 miles of street sewers feeding 82 miles of main sewers. They were put out to tender between 1859 and 1865. Four hundred draftsmen worked on the first phase's plans.",
+   "prev": "Now the real work. How big was the project?",
+   "src": [
+    "S87",
+    "S88"
+   ],
+   "cited": [
+    [
+     "S87",
+     "Bazalgette's plans for the 1,100 miles (1,800 km) of additional street sewers (collecting both effluent and rainwater), which would feed into 82 miles (132 km) of main interconnecting sewers, were put out to tender between 1859 and 1865."
+    ],
+    [
+     "S88",
+     "Four hundred draftsmen worked on the detailed plans and sectional views for the first phase of the building process."
+    ]
+   ],
+   "spans": [
+    [
+     13917,
+     14154
+    ],
+    [
+     14155,
+     14271
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-48",
+   "id": "J025"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 48,
+   "speaker": "A",
+   "text": "Plans covered 1,110 miles of street sewers feeding 82 miles of main sewers. They were put out to tender between 1859 and 1865. Four hundred draftsmen worked on the first phase's plans.",
+   "prev": "Now the real work. How big was the project?",
+   "src": [
+    "S87",
+    "S88"
+   ],
+   "cited": [
+    [
+     "S87",
+     "Bazalgette's plans for the 1,100 miles (1,800 km) of additional street sewers (collecting both effluent and rainwater), which would feed into 82 miles (132 km) of main interconnecting sewers, were put out to tender between 1859 and 1865."
+    ],
+    [
+     "S88",
+     "Four hundred draftsmen worked on the detailed plans and sectional views for the first phase of the building process."
+    ]
+   ],
+   "spans": [
+    [
+     13917,
+     14154
+    ],
+    [
+     14155,
+     14271
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-48",
+   "perturbation": "number",
+   "edit": "1,100 -> 1,110",
+   "original_text": "Plans covered 1,100 miles of street sewers feeding 82 miles of main sewers. They were put out to tender between 1859 and 1865. Four hundred draftsmen worked on the first phase's plans.",
+   "id": "J026"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 15,
+   "speaker": "A",
+   "text": "It was the prevailing Victorian theory. It held that most communicable diseases were caused by inhaling contaminated air, such as the odour of rotting corpses or sewage.",
+   "prev": "Remind me what miasma means.",
+   "src": [
+    "S25",
+    "S26"
+   ],
+   "cited": [
+    [
+     "S25",
+     "The prevailing thought in Victorian healthcare concerning the transmission of contagious diseases was the miasma theory, which held that most communicable diseases were caused by the inhalation of contaminated air."
+    ],
+    [
+     "S26",
+     "This contamination could take the form of the odour of rotting corpses or sewage, but also rotting vegetation, or the exhaled breath of someone already diseased."
+    ]
+   ],
+   "spans": [
+    [
+     3734,
+     3948
+    ],
+    [
+     3949,
+     4110
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "greatstink-draft-15",
+   "id": "J027"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 15,
+   "speaker": "A",
+   "text": "It was not the prevailing Victorian theory. It held that most communicable diseases were caused by inhaling contaminated air, such as the odour of rotting corpses or sewage.",
+   "prev": "Remind me what miasma means.",
+   "src": [
+    "S25",
+    "S26"
+   ],
+   "cited": [
+    [
+     "S25",
+     "The prevailing thought in Victorian healthcare concerning the transmission of contagious diseases was the miasma theory, which held that most communicable diseases were caused by the inhalation of contaminated air."
+    ],
+    [
+     "S26",
+     "This contamination could take the form of the odour of rotting corpses or sewage, but also rotting vegetation, or the exhaled breath of someone already diseased."
+    ]
+   ],
+   "spans": [
+    [
+     3734,
+     3948
+    ],
+    [
+     3949,
+     4110
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "greatstink-draft-15",
+   "perturbation": "negation",
+   "edit": "was -> was not",
+   "original_text": "It was the prevailing Victorian theory. It held that most communicable diseases were caused by inhaling contaminated air, such as the odour of rotting corpses or sewage.",
+   "id": "J028"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 27,
+   "speaker": "B",
+   "text": "But the stink came before the sewers. What happened in 1858?",
+   "prev": "A Northern and a Southern Outfall Sewer were planned, one for each side of the river. London was mapped into high, middle and low-level areas, with pumping stations moving waste east. It allowed for a population of 4.5 million.",
+   "src": [
+    "S1"
+   ],
+   "cited": [
+    [
+     "S1",
+     "The Great Stink was an event in Central London during July and August 1858 in which the hot weather exacerbated the smell of untreated human waste and industrial effluent that was present on the banks of the River Thames."
+    ]
+   ],
+   "spans": [
+    [
+     0,
+     221
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "no_claim",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J029"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 37,
+   "speaker": "B",
+   "text": "So Parliament finally acts. How?",
+   "prev": "In the Commons, John Brady said members could not use the Committee Rooms or the Library because of the stench. He asked what measures were being taken.",
+   "src": [
+    "S73"
+   ],
+   "cited": [
+    [
+     "S73",
+     "The disruption to its legislative work led to questions being raised in the House of Commons."
+    ]
+   ],
+   "spans": [
+    [
+     11739,
+     11832
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "no_claim",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J030"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 43,
+   "speaker": "B",
+   "text": "So the smell basically forced their hand.",
+   "prev": "The terms favoured Bazalgette's original 1856 plan, and overcame Hall's objection to it. The bill passed into law on 2 August.",
+   "src": [
+    "S84"
+   ],
+   "cited": [
+    [
+     "S84",
+     "The leading article in The Times observed that \"Parliament was all but compelled to legislate upon the great London nuisance by the force of sheer stench\"."
+    ]
+   ],
+   "spans": [
+    [
+     13675,
+     13830
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "no_claim",
+    "local_flag": true
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J031"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 61,
+   "speaker": "B",
+   "text": "So that settled the argument.",
+   "prev": "The East London Water Company discharged sewage half a mile downriver from its reservoir. The incoming tide carried it upriver into the reservoir, contaminating drinking water.",
+   "src": [
+    "S140"
+   ],
+   "cited": [
+    [
+     "S140",
+     "The outbreak and the diagnosis of its causes led to the acceptance that cholera was water-borne, not transmitted by miasma."
+    ]
+   ],
+   "spans": [
+    [
+     22193,
+     22316
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "no_claim",
+    "local_flag": true
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J032"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 65,
+   "speaker": "A",
+   "text": "Historian John Doxat said he \"probably did more good, and saved more lives, than any single Victorian official\". The Times obituarist said the great sewer added some 20 years to Londoners' chance of life.",
+   "prev": "His work meant sewage was no longer dumped on the Thames shores and brought an end to the cholera outbreaks. His sewer system still operates, servicing a city of over nine million.",
+   "src": [
+    "S160",
+    "S165"
+   ],
+   "cited": [
+    [
+     "S160",
+     "The provision of an integrated and fully functioning sewer system for the capital, together with the associated drop in cholera cases, led the historian John Doxat to state that Bazalgette \"probably did more good, and saved more lives, than any single Victorian official\"."
+    ],
+    [
+     "S165",
+     "He continued, \"the great sewer that runs beneath Londoners ... has added some 20 years to their chance of life\"."
+    ]
+   ],
+   "spans": [
+    [
+     25081,
+     25353
+    ],
+    [
+     26266,
+     26378
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J033"
+  },
+  {
+   "source": "greatstink",
+   "script": "draft",
+   "pos": 68,
+   "speaker": "B",
+   "text": "So a foul summer pushed Parliament to act, and the sewers outlasted it. That's the Great Stink.",
+   "prev": "He writes that with Nash and Wren, Bazalgette \"enters the pantheon of London heroes\".",
+   "src": [
+    "S84",
+    "S11"
+   ],
+   "cited": [
+    [
+     "S84",
+     "The leading article in The Times observed that \"Parliament was all but compelled to legislate upon the great London nuisance by the force of sheer stench\"."
+    ],
+    [
+     "S11",
+     "His sewer system operates into the 21st century, servicing a city that has grown to a population of over nine million."
+    ]
+   ],
+   "spans": [
+    [
+     13675,
+     13830
+    ],
+    [
+     1742,
+     1860
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J034"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 38,
+   "speaker": "A",
+   "text": "A minority is powerless while it conforms. But it is irresistible when it clogs the machine by its whole weight. The State would have to choose between jailing all just men and giving up war and slavery.",
+   "prev": "But what can a few people really do?",
+   "src": [
+    "S163",
+    "S164"
+   ],
+   "cited": [
+    [
+     "S163",
+     "A minority is powerless while it conforms to the majority; it is not even a minority then; but it is irresistible when it clogs by its whole weight."
+    ],
+    [
+     "S164",
+     "If the alternative is to keep all just men in prison, or give up war and slavery, the State will not hesitate which to choose."
+    ]
+   ],
+   "spans": [
+    [
+     24754,
+     24902
+    ],
+    [
+     24903,
+     25029
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-38",
+   "id": "J035"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 38,
+   "speaker": "A",
+   "text": "A minority is powerless while it conforms. But it is irresistible when it clogs the machine by its whole weight. The State would not have to choose between jailing all just men and giving up war and slavery.",
+   "prev": "But what can a few people really do?",
+   "src": [
+    "S163",
+    "S164"
+   ],
+   "cited": [
+    [
+     "S163",
+     "A minority is powerless while it conforms to the majority; it is not even a minority then; but it is irresistible when it clogs by its whole weight."
+    ],
+    [
+     "S164",
+     "If the alternative is to keep all just men in prison, or give up war and slavery, the State will not hesitate which to choose."
+    ]
+   ],
+   "spans": [
+    [
+     24754,
+     24902
+    ],
+    [
+     24903,
+     25029
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-38",
+   "perturbation": "negation",
+   "edit": "would -> would not",
+   "original_text": "A minority is powerless while it conforms. But it is irresistible when it clogs the machine by its whole weight. The State would have to choose between jailing all just men and giving up war and slavery.",
+   "id": "J036"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 6,
+   "speaker": "A",
+   "text": "He says majorities rule not because they are likely to be right, or because it seems fairest to the minority. They rule because they are physically the strongest.",
+   "prev": "Okay. But in a democracy, the majority decides. Isn't that fair?",
+   "src": [
+    "S22"
+   ],
+   "cited": [
+    [
+     "S22",
+     "After all, the practical reason why, when the power is once in the hands of the people, a majority are permitted, and for a long period continue, to rule, is not because they are most likely to be in the right, nor because this seems fairest to the minority, but because they are physically the strongest."
+    ]
+   ],
+   "spans": [
+    [
+     3091,
+     3396
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-6",
+   "id": "J037"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 6,
+   "speaker": "A",
+   "text": "He says majorities rule because they are likely to be right, or because it seems fairest to the minority. They rule because they are physically the strongest.",
+   "prev": "Okay. But in a democracy, the majority decides. Isn't that fair?",
+   "src": [
+    "S22"
+   ],
+   "cited": [
+    [
+     "S22",
+     "After all, the practical reason why, when the power is once in the hands of the people, a majority are permitted, and for a long period continue, to rule, is not because they are most likely to be in the right, nor because this seems fairest to the minority, but because they are physically the strongest."
+    ]
+   ],
+   "spans": [
+    [
+     3091,
+     3396
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-6",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "He says majorities rule not because they are likely to be right, or because it seems fairest to the minority. They rule because they are physically the strongest.",
+   "id": "J038"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "He heartily accepts the motto, \"That government is best which governs least.\" Then he goes further. He believes the best government governs not at all, once men are prepared for it.",
+   "prev": "Let's start at the beginning. How does he open?",
+   "src": [
+    "S1",
+    "S2"
+   ],
+   "cited": [
+    [
+     "S1",
+     "I heartily accept the motto,--“That government is best which governs least;” and I should like to see it acted up to more rapidly and systematically."
+    ],
+    [
+     "S2",
+     "Carried out, it finally amounts to this, which also I believe--“That government is best which governs not at all;” and when men are prepared for it, that will be the kind of government which they will have."
+    ]
+   ],
+   "spans": [
+    [
+     0,
+     149
+    ],
+    [
+     150,
+     356
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-2",
+   "id": "J039"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "He heartily accepts the motto, \"That government is best which governs least.\" Then he goes further. He believes the best government governs at all, once men are prepared for it.",
+   "prev": "Let's start at the beginning. How does he open?",
+   "src": [
+    "S1",
+    "S2"
+   ],
+   "cited": [
+    [
+     "S1",
+     "I heartily accept the motto,--“That government is best which governs least;” and I should like to see it acted up to more rapidly and systematically."
+    ],
+    [
+     "S2",
+     "Carried out, it finally amounts to this, which also I believe--“That government is best which governs not at all;” and when men are prepared for it, that will be the kind of government which they will have."
+    ]
+   ],
+   "spans": [
+    [
+     0,
+     149
+    ],
+    [
+     150,
+     356
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-2",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "He heartily accepts the motto, \"That government is best which governs least.\" Then he goes further. He believes the best government governs not at all, once men are prepared for it.",
+   "id": "J040"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 22,
+   "speaker": "A",
+   "text": "If I have unjustly wrested a plank from a drowning man, I must restore it, though I drown myself. So this people must cease to hold slaves and make war on Mexico, though it cost them their existence.",
+   "prev": "Give me an example.",
+   "src": [
+    "S62",
+    "S65"
+   ],
+   "cited": [
+    [
+     "S62",
+     "If I have unjustly wrested a plank from a drowning man, I must restore it to him though I drown myself."
+    ],
+    [
+     "S65",
+     "This people must cease to hold slaves, and to make war on Mexico, though it cost them their existence as a people."
+    ]
+   ],
+   "spans": [
+    [
+     9416,
+     9519
+    ],
+    [
+     9633,
+     9747
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-22",
+   "id": "J041"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 22,
+   "speaker": "A",
+   "text": "If I have unjustly wrested a plank from a drowning man, I must restore it, though I drown myself. So this people must cease to hold slaves and make war on Concord, though it cost them their existence.",
+   "prev": "Give me an example.",
+   "src": [
+    "S62",
+    "S65"
+   ],
+   "cited": [
+    [
+     "S62",
+     "If I have unjustly wrested a plank from a drowning man, I must restore it to him though I drown myself."
+    ],
+    [
+     "S65",
+     "This people must cease to hold slaves, and to make war on Mexico, though it cost them their existence as a people."
+    ]
+   ],
+   "spans": [
+    [
+     9416,
+     9519
+    ],
+    [
+     9633,
+     9747
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-22",
+   "perturbation": "name",
+   "edit": "Mexico -> Concord",
+   "original_text": "If I have unjustly wrested a plank from a drowning man, I must restore it, though I drown myself. So this people must cease to hold slaves and make war on Mexico, though it cost them their existence.",
+   "id": "J042"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 43,
+   "speaker": "A",
+   "text": "He hopes. He says the State's force is not wholly brute force, but partly human. So appeal is possible, to its Maker and to the people themselves.",
+   "prev": "So is he just angry at the State, or does he hope for something?",
+   "src": [
+    "S288"
+   ],
+   "cited": [
+    [
+     "S288",
+     "But just in proportion as I regard this as not wholly a brute force, but partly a human force, and consider that I have relations to those millions as to so many millions of men, and not of mere brute or inanimate things, I see that appeal is possible, first and instantaneously, from them to the Maker of them, and, secondly, from them to themselves."
+    ]
+   ],
+   "spans": [
+    [
+     42004,
+     42355
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-43",
+   "id": "J043"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 43,
+   "speaker": "A",
+   "text": "He hopes. He says the State's force is wholly brute force, but partly human. So appeal is possible, to its Maker and to the people themselves.",
+   "prev": "So is he just angry at the State, or does he hope for something?",
+   "src": [
+    "S288"
+   ],
+   "cited": [
+    [
+     "S288",
+     "But just in proportion as I regard this as not wholly a brute force, but partly a human force, and consider that I have relations to those millions as to so many millions of men, and not of mere brute or inanimate things, I see that appeal is possible, first and instantaneously, from them to the Maker of them, and, secondly, from them to themselves."
+    ]
+   ],
+   "spans": [
+    [
+     42004,
+     42355
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-43",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "He hopes. He says the State's force is not wholly brute force, but partly human. So appeal is possible, to its Maker and to the people themselves.",
+   "id": "J044"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 30,
+   "speaker": "A",
+   "text": "No. Abolitionists should at once withdraw their support, in person and property, from the government of Massachusetts. Any man more right than his neighbors already constitutes a majority of one.",
+   "prev": "Who should act first? Do people wait for a majority?",
+   "src": [
+    "S147",
+    "S149"
+   ],
+   "cited": [
+    [
+     "S147",
+     "I do not hesitate to say, that those who call themselves abolitionists should at once effectually withdraw their support, both in person and property, from the government of Massachusetts, and not wait till they constitute a majority of one, before they suffer the right to prevail through them."
+    ],
+    [
+     "S149",
+     "Moreover, any man more right than his neighbors constitutes a majority of one already."
+    ]
+   ],
+   "spans": [
+    [
+     20948,
+     21243
+    ],
+    [
+     21338,
+     21424
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-30",
+   "id": "J045"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 30,
+   "speaker": "A",
+   "text": "No. Abolitionists should at once withdraw their support, in person and property, from the government of Mexico. Any man more right than his neighbors already constitutes a majority of one.",
+   "prev": "Who should act first? Do people wait for a majority?",
+   "src": [
+    "S147",
+    "S149"
+   ],
+   "cited": [
+    [
+     "S147",
+     "I do not hesitate to say, that those who call themselves abolitionists should at once effectually withdraw their support, both in person and property, from the government of Massachusetts, and not wait till they constitute a majority of one, before they suffer the right to prevail through them."
+    ],
+    [
+     "S149",
+     "Moreover, any man more right than his neighbors constitutes a majority of one already."
+    ]
+   ],
+   "spans": [
+    [
+     20948,
+     21243
+    ],
+    [
+     21338,
+     21424
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-30",
+   "perturbation": "name",
+   "edit": "Massachusetts -> Mexico",
+   "original_text": "No. Abolitionists should at once withdraw their support, in person and property, from the government of Massachusetts. Any man more right than his neighbors already constitutes a majority of one.",
+   "id": "J046"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 49,
+   "speaker": "A",
+   "text": "There will never be a really free and enlightened State until it recognizes the individual as a higher and independent power, from which all its own power is derived.",
+   "prev": "So what would a good State look like?",
+   "src": [
+    "S341"
+   ],
+   "cited": [
+    [
+     "S341",
+     "There will never be a really free and enlightened State, until the State comes to recognize the individual as a higher and independent power, from which all its own power and authority are derived, and treats him accordingly."
+    ]
+   ],
+   "spans": [
+    [
+     50353,
+     50578
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-49",
+   "id": "J047"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 49,
+   "speaker": "A",
+   "text": "There will always be a really free and enlightened State until it recognizes the individual as a higher and independent power, from which all its own power is derived.",
+   "prev": "So what would a good State look like?",
+   "src": [
+    "S341"
+   ],
+   "cited": [
+    [
+     "S341",
+     "There will never be a really free and enlightened State, until the State comes to recognize the individual as a higher and independent power, from which all its own power and authority are derived, and treats him accordingly."
+    ]
+   ],
+   "spans": [
+    [
+     50353,
+     50578
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-49",
+   "perturbation": "negation",
+   "edit": "never -> always",
+   "original_text": "There will never be a really free and enlightened State until it recognizes the individual as a higher and independent power, from which all its own power is derived.",
+   "id": "J048"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 16,
+   "speaker": "A",
+   "text": "When the friction comes to have its machine, and oppression and robbery are organized. A sixth of the population enslaved, and a country unjustly conquered by a foreign army.",
+   "prev": "Where is the line?",
+   "src": [
+    "S56",
+    "S57"
+   ],
+   "cited": [
+    [
+     "S56",
+     "But when the friction comes to have its machine, and oppression and robbery are organized, I say, let us not have such a machine any longer."
+    ],
+    [
+     "S57",
+     "In other words, when a sixth of the population of a nation which has undertaken to be the refuge of liberty are slaves, and a whole country is unjustly overrun and conquered by a foreign army, and subjected to military law, I think that it is not too soon for honest men to rebel and revolutionize."
+    ]
+   ],
+   "spans": [
+    [
+     7928,
+     8068
+    ],
+    [
+     8069,
+     8367
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-16",
+   "id": "J049"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 16,
+   "speaker": "A",
+   "text": "When the friction comes to have its machine, and oppression and robbery are not organized. A sixth of the population enslaved, and a country unjustly conquered by a foreign army.",
+   "prev": "Where is the line?",
+   "src": [
+    "S56",
+    "S57"
+   ],
+   "cited": [
+    [
+     "S56",
+     "But when the friction comes to have its machine, and oppression and robbery are organized, I say, let us not have such a machine any longer."
+    ],
+    [
+     "S57",
+     "In other words, when a sixth of the population of a nation which has undertaken to be the refuge of liberty are slaves, and a whole country is unjustly overrun and conquered by a foreign army, and subjected to military law, I think that it is not too soon for honest men to rebel and revolutionize."
+    ]
+   ],
+   "spans": [
+    [
+     7928,
+     8068
+    ],
+    [
+     8069,
+     8367
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-16",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "When the friction comes to have its machine, and oppression and robbery are organized. A sixth of the population enslaved, and a country unjustly conquered by a foreign army.",
+   "id": "J050"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 8,
+   "speaker": "A",
+   "text": "Only questions where expediency applies. Right and wrong should be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+   "prev": "Ouch. So what should majorities decide?",
+   "src": [
+    "S24",
+    "S25"
+   ],
+   "cited": [
+    [
+     "S24",
+     "Can there not be a government in which the majorities do not virtually decide right and wrong, but conscience?--in which majorities decide only those questions to which the rule of expediency is applicable?"
+    ],
+    [
+     "S25",
+     "Must the citizen ever for a moment, or in the least degree, resign his conscience to the legislator?"
+    ]
+   ],
+   "spans": [
+    [
+     3517,
+     3723
+    ],
+    [
+     3724,
+     3824
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-8",
+   "id": "J051"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 8,
+   "speaker": "A",
+   "text": "Only questions where expediency applies. Right and wrong should not be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+   "prev": "Ouch. So what should majorities decide?",
+   "src": [
+    "S24",
+    "S25"
+   ],
+   "cited": [
+    [
+     "S24",
+     "Can there not be a government in which the majorities do not virtually decide right and wrong, but conscience?--in which majorities decide only those questions to which the rule of expediency is applicable?"
+    ],
+    [
+     "S25",
+     "Must the citizen ever for a moment, or in the least degree, resign his conscience to the legislator?"
+    ]
+   ],
+   "spans": [
+    [
+     3517,
+     3723
+    ],
+    [
+     3724,
+     3824
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-8",
+   "perturbation": "negation",
+   "edit": "should -> should not",
+   "original_text": "Only questions where expediency applies. Right and wrong should be decided by conscience. He asks, must the citizen resign his conscience to the legislator even in the least degree?",
+   "id": "J052"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 47,
+   "speaker": "A",
+   "text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is impure unless it has the sanction and consent of the governed.",
+   "prev": "Does he reject all authority?",
+   "src": [
+    "S335"
+   ],
+   "cited": [
+    [
+     "S335",
+     "The authority of government, even such as I am willing to submit to,--for I will cheerfully obey those who know and can do better than I, and in many things even those who neither know nor can do so well,--is still an impure one: to be strictly just, it must have the sanction and consent of the governed."
+    ]
+   ],
+   "spans": [
+    [
+     49543,
+     49848
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-47",
+   "id": "J053"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 47,
+   "speaker": "A",
+   "text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is not impure unless it has the sanction and consent of the governed.",
+   "prev": "Does he reject all authority?",
+   "src": [
+    "S335"
+   ],
+   "cited": [
+    [
+     "S335",
+     "The authority of government, even such as I am willing to submit to,--for I will cheerfully obey those who know and can do better than I, and in many things even those who neither know nor can do so well,--is still an impure one: to be strictly just, it must have the sanction and consent of the governed."
+    ]
+   ],
+   "spans": [
+    [
+     49543,
+     49848
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-47",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "No. He will cheerfully obey those who know and can do better than he. But even that authority is impure unless it has the sanction and consent of the governed.",
+   "id": "J054"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 53,
+   "speaker": "A",
+   "text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but not yet seen anywhere.",
+   "prev": "A conscience first, a state second. That's the whole essay in a line.",
+   "src": [
+    "S343"
+   ],
+   "cited": [
+    [
+     "S343",
+     "A State which bore this kind of fruit, and suffered it to drop off as fast as it ripened, would prepare the way for a still more perfect and glorious State, which also I have imagined, but not yet anywhere seen."
+    ]
+   ],
+   "spans": [
+    [
+     50923,
+     51134
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-53",
+   "id": "J055"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 53,
+   "speaker": "A",
+   "text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but yet seen anywhere.",
+   "prev": "A conscience first, a state second. That's the whole essay in a line.",
+   "src": [
+    "S343"
+   ],
+   "cited": [
+    [
+     "S343",
+     "A State which bore this kind of fruit, and suffered it to drop off as fast as it ripened, would prepare the way for a still more perfect and glorious State, which also I have imagined, but not yet anywhere seen."
+    ]
+   ],
+   "spans": [
+    [
+     50923,
+     51134
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-53",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "And he says such a State would prepare the way for a still more perfect one, which he has imagined but not yet seen anywhere.",
+   "id": "J056"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 45,
+   "speaker": "A",
+   "text": "Right. There is no appeal to fire. And he says he can resist this force with some effect. He cannot, like Orpheus, change the nature of rocks and trees and beasts.",
+   "prev": "Unlike fire, I guess.",
+   "src": [
+    "S289",
+    "S291"
+   ],
+   "cited": [
+    [
+     "S289",
+     "But, if I put my head deliberately into the fire, there is no appeal to fire or to the Maker of fire, and I have only myself to blame."
+    ],
+    [
+     "S291",
+     "And, above all, there is this difference between resisting this and a purely brute or natural force, that I can resist this with some effect; but I cannot expect, like Orpheus, to change the nature of the rocks and trees and beasts."
+    ]
+   ],
+   "spans": [
+    [
+     42356,
+     42490
+    ],
+    [
+     42846,
+     43078
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-45",
+   "id": "J057"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 45,
+   "speaker": "A",
+   "text": "Right. There is no appeal to fire. And he says he can resist this force with some effect. He cannot, like Luther, change the nature of rocks and trees and beasts.",
+   "prev": "Unlike fire, I guess.",
+   "src": [
+    "S289",
+    "S291"
+   ],
+   "cited": [
+    [
+     "S289",
+     "But, if I put my head deliberately into the fire, there is no appeal to fire or to the Maker of fire, and I have only myself to blame."
+    ],
+    [
+     "S291",
+     "And, above all, there is this difference between resisting this and a purely brute or natural force, that I can resist this with some effect; but I cannot expect, like Orpheus, to change the nature of the rocks and trees and beasts."
+    ]
+   ],
+   "spans": [
+    [
+     42356,
+     42490
+    ],
+    [
+     42846,
+     43078
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-45",
+   "perturbation": "name",
+   "edit": "Orpheus -> Luther",
+   "original_text": "Right. There is no appeal to fire. And he says he can resist this force with some effect. He cannot, like Orpheus, change the nature of rocks and trees and beasts.",
+   "id": "J058"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 10,
+   "speaker": "A",
+   "text": "He asks why every man has a conscience, then. We should be men first, and subjects afterward. Respect the right more than the law.",
+   "prev": "And his answer?",
+   "src": [
+    "S26",
+    "S27",
+    "S28"
+   ],
+   "cited": [
+    [
+     "S26",
+     "Why has every man a conscience, then?"
+    ],
+    [
+     "S27",
+     "I think that we should be men first, and subjects afterward."
+    ],
+    [
+     "S28",
+     "It is not desirable to cultivate a respect for the law, so much as for the right."
+    ]
+   ],
+   "spans": [
+    [
+     3825,
+     3862
+    ],
+    [
+     3863,
+     3923
+    ],
+    [
+     3924,
+     4005
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-10",
+   "id": "J059"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 10,
+   "speaker": "A",
+   "text": "He asks why every man has a conscience, then. We should not be men first, and subjects afterward. Respect the right more than the law.",
+   "prev": "And his answer?",
+   "src": [
+    "S26",
+    "S27",
+    "S28"
+   ],
+   "cited": [
+    [
+     "S26",
+     "Why has every man a conscience, then?"
+    ],
+    [
+     "S27",
+     "I think that we should be men first, and subjects afterward."
+    ],
+    [
+     "S28",
+     "It is not desirable to cultivate a respect for the law, so much as for the right."
+    ]
+   ],
+   "spans": [
+    [
+     3825,
+     3862
+    ],
+    [
+     3863,
+     3923
+    ],
+    [
+     3924,
+     4005
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-10",
+   "perturbation": "negation",
+   "edit": "should -> should not",
+   "original_text": "He asks why every man has a conscience, then. We should be men first, and subjects afterward. Respect the right more than the law.",
+   "id": "J060"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 14,
+   "speaker": "A",
+   "text": "He says all men recognize the right of revolution, when tyranny or inefficiency is great and unendurable. Minor evils he can tolerate. All machines have their friction.",
+   "prev": "So when is it right to rebel? Every government has flaws.",
+   "src": [
+    "S51",
+    "S54"
+   ],
+   "cited": [
+    [
+     "S51",
+     "All men recognize the right of revolution; that is, the right to refuse allegiance to and to resist the government, when its tyranny or its inefficiency are great and unendurable."
+    ],
+    [
+     "S54",
+     "If one were to tell me that this was a bad government because it taxed certain foreign commodities brought to its ports, it is most probable that I should not make an ado about it, for I can do without them: all machines have their friction; and possibly this does enough good to counter-balance the evil."
+    ]
+   ],
+   "spans": [
+    [
+     7274,
+     7453
+    ],
+    [
+     7565,
+     7870
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "civil-draft-14",
+   "id": "J061"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 14,
+   "speaker": "A",
+   "text": "He says all men recognize the right of revolution, when tyranny or inefficiency is not great and unendurable. Minor evils he can tolerate. All machines have their friction.",
+   "prev": "So when is it right to rebel? Every government has flaws.",
+   "src": [
+    "S51",
+    "S54"
+   ],
+   "cited": [
+    [
+     "S51",
+     "All men recognize the right of revolution; that is, the right to refuse allegiance to and to resist the government, when its tyranny or its inefficiency are great and unendurable."
+    ],
+    [
+     "S54",
+     "If one were to tell me that this was a bad government because it taxed certain foreign commodities brought to its ports, it is most probable that I should not make an ado about it, for I can do without them: all machines have their friction; and possibly this does enough good to counter-balance the evil."
+    ]
+   ],
+   "spans": [
+    [
+     7274,
+     7453
+    ],
+    [
+     7565,
+     7870
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "civil-draft-14",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "He says all men recognize the right of revolution, when tyranny or inefficiency is great and unendurable. Minor evils he can tolerate. All machines have their friction.",
+   "id": "J062"
+  },
+  {
+   "source": "civil",
+   "script": "draft",
+   "pos": 52,
+   "speaker": "B",
+   "text": "A conscience first, a state second. That's the whole essay in a line.",
+   "prev": "He imagines a State just to all men, that treats the individual with respect as a neighbor. It would even tolerate a few living aloof from it, who still fulfill all the duties of neighbors.",
+   "src": [
+    "S27",
+    "S341"
+   ],
+   "cited": [
+    [
+     "S27",
+     "I think that we should be men first, and subjects afterward."
+    ],
+    [
+     "S341",
+     "There will never be a really free and enlightened State, until the State comes to recognize the individual as a higher and independent power, from which all its own power and authority are derived, and treats him accordingly."
+    ]
+   ],
+   "spans": [
+    [
+     3863,
+     3923
+    ],
+    [
+     50353,
+     50578
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "no_claim",
+    "local_flag": true
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J063"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 62,
+   "speaker": "A",
+   "text": "He offers consolation. The war of nature is not incessant, no fear is felt, death is generally prompt, and the vigorous, the healthy, and the happy survive and multiply.",
+   "prev": "Does he end on a grim note?",
+   "src": [
+    "S177"
+   ],
+   "cited": [
+    [
+     "S177",
+     "When we reflect on this struggle, we may console ourselves with the full belief, that the war of nature is not incessant, that no fear is felt, that death is generally prompt, and that the vigorous, the healthy, and the happy survive and multiply."
+    ]
+   ],
+   "spans": [
+    [
+     35437,
+     35684
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-62",
+   "id": "J064"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 62,
+   "speaker": "A",
+   "text": "He offers consolation. The war of nature is incessant, no fear is felt, death is generally prompt, and the vigorous, the healthy, and the happy survive and multiply.",
+   "prev": "Does he end on a grim note?",
+   "src": [
+    "S177"
+   ],
+   "cited": [
+    [
+     "S177",
+     "When we reflect on this struggle, we may console ourselves with the full belief, that the war of nature is not incessant, that no fear is felt, that death is generally prompt, and that the vigorous, the healthy, and the happy survive and multiply."
+    ]
+   ],
+   "spans": [
+    [
+     35437,
+     35684
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-62",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "He offers consolation. The war of nature is not incessant, no fear is felt, death is generally prompt, and the vigorous, the healthy, and the happy survive and multiply.",
+   "id": "J065"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 12,
+   "speaker": "A",
+   "text": "Far better. Natural Selection is \"incessantly ready for action,\" and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+   "prev": "But nature does it better?",
+   "src": [
+    "S27"
+   ],
+   "cited": [
+    [
+     "S27",
+     "But Natural Selection, as we shall hereafter see, is a power incessantly ready for action, and is as immeasurably superior to man’s feeble efforts, as the works of Nature are to those of Art."
+    ]
+   ],
+   "spans": [
+    [
+     3431,
+     3622
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-12",
+   "id": "J066"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 12,
+   "speaker": "A",
+   "text": "Far better. Natural Selection is not \"incessantly ready for action,\" and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+   "prev": "But nature does it better?",
+   "src": [
+    "S27"
+   ],
+   "cited": [
+    [
+     "S27",
+     "But Natural Selection, as we shall hereafter see, is a power incessantly ready for action, and is as immeasurably superior to man’s feeble efforts, as the works of Nature are to those of Art."
+    ]
+   ],
+   "spans": [
+    [
+     3431,
+     3622
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-12",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "Far better. Natural Selection is \"incessantly ready for action,\" and immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.",
+   "id": "J067"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 27,
+   "speaker": "B",
+   "text": "But some species really are increasing.",
+   "prev": "Malthus. He calls it the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms. There is no artificial increase of food, and no prudential restraint from marriage.",
+   "src": [
+    "S48"
+   ],
+   "cited": [
+    [
+     "S48",
+     "Although some species may be now increasing, more or less rapidly, in numbers, all cannot do so, for the world would not hold them."
+    ]
+   ],
+   "spans": [
+    [
+     7363,
+     7494
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-27",
+   "id": "J068"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 27,
+   "speaker": "B",
+   "text": "But some species really are not increasing.",
+   "prev": "Malthus. He calls it the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms. There is no artificial increase of food, and no prudential restraint from marriage.",
+   "src": [
+    "S48"
+   ],
+   "cited": [
+    [
+     "S48",
+     "Although some species may be now increasing, more or less rapidly, in numbers, all cannot do so, for the world would not hold them."
+    ]
+   ],
+   "spans": [
+    [
+     7363,
+     7494
+    ]
+   ],
+   "earlier": {
+    "opus": "partly",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-27",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "But some species really are increasing.",
+   "id": "J069"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 40,
+   "speaker": "A",
+   "text": "Climate. He believes periodical seasons of extreme cold or drought are the most effective of all checks.",
+   "prev": "What is the strongest check?",
+   "src": [
+    "S88"
+   ],
+   "cited": [
+    [
+     "S88",
+     "Climate plays an important part in determining the average numbers of a species, and periodical seasons of extreme cold or drought, I believe to be the most effective of all checks."
+    ]
+   ],
+   "spans": [
+    [
+     16014,
+     16195
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-40",
+   "id": "J070"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 40,
+   "speaker": "A",
+   "text": "Climate. He believes periodical seasons of extreme cold or drought are not the most effective of all checks.",
+   "prev": "What is the strongest check?",
+   "src": [
+    "S88"
+   ],
+   "cited": [
+    [
+     "S88",
+     "Climate plays an important part in determining the average numbers of a species, and periodical seasons of extreme cold or drought, I believe to be the most effective of all checks."
+    ]
+   ],
+   "spans": [
+    [
+     16014,
+     16195
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-40",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "Climate. He believes periodical seasons of extreme cold or drought are the most effective of all checks.",
+   "id": "J071"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 23,
+   "speaker": "B",
+   "text": "So more are born than can possibly survive.",
+   "prev": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+   "src": [
+    "S46"
+   ],
+   "cited": [
+    [
+     "S46",
+     "Hence, as more individuals are produced than can possibly survive, there must in every case be a struggle for existence, either one individual with another of the same species, or with the individuals of distinct species, or with the physical conditions of life."
+    ]
+   ],
+   "spans": [
+    [
+     6893,
+     7155
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-23",
+   "id": "J072"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 23,
+   "speaker": "B",
+   "text": "So more are not born than can possibly survive.",
+   "prev": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+   "src": [
+    "S46"
+   ],
+   "cited": [
+    [
+     "S46",
+     "Hence, as more individuals are produced than can possibly survive, there must in every case be a struggle for existence, either one individual with another of the same species, or with the individuals of distinct species, or with the physical conditions of life."
+    ]
+   ],
+   "spans": [
+    [
+     6893,
+     7155
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-23",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "So more are born than can possibly survive.",
+   "id": "J073"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 54,
+   "speaker": "A",
+   "text": "Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are most fertile beat the others, and in a few years quite supplant them.",
+   "prev": "Does he give a case with varieties?",
+   "src": [
+    "S146"
+   ],
+   "cited": [
+    [
+     "S146",
+     "In the case of varieties of the same species, the struggle will generally be almost equally severe, and we sometimes see the contest soon decided: for instance, if several varieties of wheat be sown together, and the mixed seed be resown, some of the varieties which best suit the soil or climate, or are naturally the most fertile, will beat the others and so yield more seed, and will consequently in a few years quite supplant the other varieties."
+    ]
+   ],
+   "spans": [
+    [
+     29264,
+     29714
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-54",
+   "id": "J074"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 54,
+   "speaker": "A",
+   "text": "Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are not most fertile beat the others, and in a few years quite supplant them.",
+   "prev": "Does he give a case with varieties?",
+   "src": [
+    "S146"
+   ],
+   "cited": [
+    [
+     "S146",
+     "In the case of varieties of the same species, the struggle will generally be almost equally severe, and we sometimes see the contest soon decided: for instance, if several varieties of wheat be sown together, and the mixed seed be resown, some of the varieties which best suit the soil or climate, or are naturally the most fertile, will beat the others and so yield more seed, and will consequently in a few years quite supplant the other varieties."
+    ]
+   ],
+   "spans": [
+    [
+     29264,
+     29714
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-54",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "Wheat. Sow several varieties together and resow the mixed seed. The ones that best suit the soil or are most fertile beat the others, and in a few years quite supplant them.",
+   "id": "J075"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "Many checks act at different life stages and seasons. Some one or few are generally most potent, and different checks may act on the same species in different districts.",
+   "prev": "So many checks, then.",
+   "src": [
+    "S136",
+    "S137"
+   ],
+   "cited": [
+    [
+     "S136",
+     "In the case of every species, many different checks, acting at different periods of life, and during different seasons or years, probably come into play; some one check or some few being generally the most potent, but all concurring in determining the average number or even the existence of the species."
+    ],
+    [
+     "S137",
+     "In some cases it can be shown that widely-different checks act on the same species in different districts."
+    ]
+   ],
+   "spans": [
+    [
+     27069,
+     27373
+    ],
+    [
+     27374,
+     27480
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-60",
+   "id": "J076"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "Many checks act at different life stages and seasons. Some one or few are not generally most potent, and different checks may act on the same species in different districts.",
+   "prev": "So many checks, then.",
+   "src": [
+    "S136",
+    "S137"
+   ],
+   "cited": [
+    [
+     "S136",
+     "In the case of every species, many different checks, acting at different periods of life, and during different seasons or years, probably come into play; some one check or some few being generally the most potent, but all concurring in determining the average number or even the existence of the species."
+    ],
+    [
+     "S137",
+     "In some cases it can be shown that widely-different checks act on the same species in different districts."
+    ]
+   ],
+   "spans": [
+    [
+     27069,
+     27373
+    ],
+    [
+     27374,
+     27480
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-60",
+   "perturbation": "negation",
+   "edit": "are -> are not",
+   "original_text": "Many checks act at different life stages and seasons. Some one or few are generally most potent, and different checks may act on the same species in different districts.",
+   "id": "J077"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 56,
+   "speaker": "A",
+   "text": "A corollary of the highest importance. The structure of every organic being is related, often in hidden ways, to all the beings it competes with, escapes from, or preys on.",
+   "prev": "And what is the big lesson?",
+   "src": [
+    "S158"
+   ],
+   "cited": [
+    [
+     "S158",
+     "A corollary of the highest importance may be deduced from the foregoing remarks, namely, that the structure of every organic being is related, in the most essential yet often hidden manner, to that of all other organic beings, with which it comes into competition for food or residence, or from which it has to escape, or on which it preys."
+    ]
+   ],
+   "spans": [
+    [
+     31725,
+     32065
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-56",
+   "id": "J078"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 56,
+   "speaker": "A",
+   "text": "A corollary of the highest importance. The structure of every organic being is not related, often in hidden ways, to all the beings it competes with, escapes from, or preys on.",
+   "prev": "And what is the big lesson?",
+   "src": [
+    "S158"
+   ],
+   "cited": [
+    [
+     "S158",
+     "A corollary of the highest importance may be deduced from the foregoing remarks, namely, that the structure of every organic being is related, in the most essential yet often hidden manner, to that of all other organic beings, with which it comes into competition for food or residence, or from which it has to escape, or on which it preys."
+    ]
+   ],
+   "spans": [
+    [
+     31725,
+     32065
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-56",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "A corollary of the highest importance. The structure of every organic being is related, often in hidden ways, to all the beings it competes with, escapes from, or preys on.",
+   "id": "J079"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "With a big claim. Owing to the struggle for life, any variation that is profitable to an individual, however slight, will tend to preserve that individual.",
+   "prev": "Sounds intense. Where does he start?",
+   "src": [
+    "S23"
+   ],
+   "cited": [
+    [
+     "S23",
+     "Owing to this struggle for life, any variation, however slight and from whatever cause proceeding, if it be in any degree profitable to an individual of any species, in its infinitely complex relations to other organic beings and to external nature, will tend to the preservation of that individual, and will generally be inherited by its offspring."
+    ]
+   ],
+   "spans": [
+    [
+     2518,
+     2867
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-2",
+   "id": "J080"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "With a big claim. Owing to the struggle for life, any variation that is not profitable to an individual, however slight, will tend to preserve that individual.",
+   "prev": "Sounds intense. Where does he start?",
+   "src": [
+    "S23"
+   ],
+   "cited": [
+    [
+     "S23",
+     "Owing to this struggle for life, any variation, however slight and from whatever cause proceeding, if it be in any degree profitable to an individual of any species, in its infinitely complex relations to other organic beings and to external nature, will tend to the preservation of that individual, and will generally be inherited by its offspring."
+    ]
+   ],
+   "spans": [
+    [
+     2518,
+     2867
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-2",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "With a big claim. Owing to the struggle for life, any variation that is profitable to an individual, however slight, will tend to preserve that individual.",
+   "id": "J081"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 10,
+   "speaker": "A",
+   "text": "Yes. Man can produce great results by piling up slight but useful variations, given to him by the hand of Nature.",
+   "prev": "So human breeding is the comparison.",
+   "src": [
+    "S26"
+   ],
+   "cited": [
+    [
+     "S26",
+     "We have seen that man by selection can certainly produce great results, and can adapt organic beings to his own uses, through the accumulation of slight but useful variations, given to him by the hand of Nature."
+    ]
+   ],
+   "spans": [
+    [
+     3219,
+     3430
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-10",
+   "id": "J082"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 10,
+   "speaker": "A",
+   "text": "Yes. Man cannot produce great results by piling up slight but useful variations, given to him by the hand of Nature.",
+   "prev": "So human breeding is the comparison.",
+   "src": [
+    "S26"
+   ],
+   "cited": [
+    [
+     "S26",
+     "We have seen that man by selection can certainly produce great results, and can adapt organic beings to his own uses, through the accumulation of slight but useful variations, given to him by the hand of Nature."
+    ]
+   ],
+   "spans": [
+    [
+     3219,
+     3430
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-10",
+   "perturbation": "negation",
+   "edit": "can -> cannot",
+   "original_text": "Yes. Man can produce great results by piling up slight but useful variations, given to him by the hand of Nature.",
+   "id": "J083"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 28,
+   "speaker": "A",
+   "text": "Some may be, but all cannot, for the world would not hold them.",
+   "prev": "But some species really are increasing.",
+   "src": [
+    "S48"
+   ],
+   "cited": [
+    [
+     "S48",
+     "Although some species may be now increasing, more or less rapidly, in numbers, all cannot do so, for the world would not hold them."
+    ]
+   ],
+   "spans": [
+    [
+     7363,
+     7494
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-28",
+   "id": "J084"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 28,
+   "speaker": "A",
+   "text": "Some may be, but all can, for the world would not hold them.",
+   "prev": "But some species really are increasing.",
+   "src": [
+    "S48"
+   ],
+   "cited": [
+    [
+     "S48",
+     "Although some species may be now increasing, more or less rapidly, in numbers, all cannot do so, for the world would not hold them."
+    ]
+   ],
+   "spans": [
+    [
+     7363,
+     7494
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-28",
+   "perturbation": "negation",
+   "edit": "cannot -> can",
+   "original_text": "Some may be, but all cannot, for the world would not hold them.",
+   "id": "J085"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 22,
+   "speaker": "A",
+   "text": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+   "prev": "What if nothing held them back?",
+   "src": [
+    "S45"
+   ],
+   "cited": [
+    [
+     "S45",
+     "Every being, which during its natural lifetime produces several eggs or seeds, must suffer destruction during some period of its life, and during some season or occasional year, otherwise, on the principle of geometrical increase, its numbers would quickly become so inordinately great that no country could support the product."
+    ]
+   ],
+   "spans": [
+    [
+     6564,
+     6892
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-22",
+   "id": "J086"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 22,
+   "speaker": "A",
+   "text": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would not grow so great that no country could support them.",
+   "prev": "What if nothing held them back?",
+   "src": [
+    "S45"
+   ],
+   "cited": [
+    [
+     "S45",
+     "Every being, which during its natural lifetime produces several eggs or seeds, must suffer destruction during some period of its life, and during some season or occasional year, otherwise, on the principle of geometrical increase, its numbers would quickly become so inordinately great that no country could support the product."
+    ]
+   ],
+   "spans": [
+    [
+     6564,
+     6892
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-22",
+   "perturbation": "negation",
+   "edit": "would -> would not",
+   "original_text": "Any being that produces several eggs or seeds must suffer destruction at some period. Otherwise, by geometrical increase, its numbers would grow so great that no country could support them.",
+   "id": "J087"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 50,
+   "speaker": "A",
+   "text": "The dependence of one being on another usually lies between forms remote in nature. But the struggle is almost invariably most severe between individuals of the same species.",
+   "prev": "Who struggles hardest against whom?",
+   "src": [
+    "S143",
+    "S145"
+   ],
+   "cited": [
+    [
+     "S143",
+     "The dependency of one organic being on another, as of a parasite on its prey, lies generally between beings remote in the scale of nature."
+    ],
+    [
+     "S145",
+     "But the struggle almost invariably will be most severe between the individuals of the same species, for they frequent the same districts, require the same food, and are exposed to the same dangers."
+    ]
+   ],
+   "spans": [
+    [
+     28767,
+     28905
+    ],
+    [
+     29066,
+     29263
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-50",
+   "id": "J088"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 50,
+   "speaker": "A",
+   "text": "The dependence of one being on another usually lies between forms remote in nature. But the struggle is not almost invariably most severe between individuals of the same species.",
+   "prev": "Who struggles hardest against whom?",
+   "src": [
+    "S143",
+    "S145"
+   ],
+   "cited": [
+    [
+     "S143",
+     "The dependency of one organic being on another, as of a parasite on its prey, lies generally between beings remote in the scale of nature."
+    ],
+    [
+     "S145",
+     "But the struggle almost invariably will be most severe between the individuals of the same species, for they frequent the same districts, require the same food, and are exposed to the same dangers."
+    ]
+   ],
+   "spans": [
+    [
+     28767,
+     28905
+    ],
+    [
+     29066,
+     29263
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-50",
+   "perturbation": "negation",
+   "edit": "is -> is not",
+   "original_text": "The dependence of one being on another usually lies between forms remote in nature. But the struggle is almost invariably most severe between individuals of the same species.",
+   "id": "J089"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 16,
+   "speaker": "A",
+   "text": "He uses it in a large and metaphorical sense. It includes one being depending on another. And, more important, it includes success in leaving progeny, not only the life of the individual.",
+   "prev": "So what does he mean by struggle?",
+   "src": [
+    "S36"
+   ],
+   "cited": [
+    [
+     "S36",
+     "I should premise that I use the term Struggle for Existence in a large and metaphorical sense, including dependence of one being on another, and including (which is more important) not only the life of the individual, but success in leaving progeny."
+    ]
+   ],
+   "spans": [
+    [
+     4989,
+     5238
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "origin3-draft-16",
+   "id": "J090"
+  },
+  {
+   "source": "origin3",
+   "script": "draft",
+   "pos": 16,
+   "speaker": "A",
+   "text": "He uses it in a large and metaphorical sense. It includes one being depending on another. And, more important, it includes success in leaving progeny, only the life of the individual.",
+   "prev": "So what does he mean by struggle?",
+   "src": [
+    "S36"
+   ],
+   "cited": [
+    [
+     "S36",
+     "I should premise that I use the term Struggle for Existence in a large and metaphorical sense, including dependence of one being on another, and including (which is more important) not only the life of the individual, but success in leaving progeny."
+    ]
+   ],
+   "spans": [
+    [
+     4989,
+     5238
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "origin3-draft-16",
+   "perturbation": "negation",
+   "edit": "not -> (removed)",
+   "original_text": "He uses it in a large and metaphorical sense. It includes one being depending on another. And, more important, it includes success in leaving progeny, not only the life of the individual.",
+   "id": "J091"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 42,
+   "speaker": "A",
+   "text": "Ever since, he says, Time won't do a thing he asks. It's always six o'clock now.",
+   "prev": "Yikes. What happened after that?",
+   "src": [
+    "S743",
+    "S744"
+   ],
+   "cited": [
+    [
+     "S743",
+     "“And ever since that,” the Hatter went on in a mournful tone, “he won’t do a thing I ask!"
+    ],
+    [
+     "S744",
+     "It’s always six o’clock now.”"
+    ]
+   ],
+   "spans": [
+    [
+     77766,
+     77855
+    ],
+    [
+     77856,
+     77885
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-42",
+   "id": "J092"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 42,
+   "speaker": "A",
+   "text": "Ever since, he says, Time will do a thing he asks. It's always six o'clock now.",
+   "prev": "Yikes. What happened after that?",
+   "src": [
+    "S743",
+    "S744"
+   ],
+   "cited": [
+    [
+     "S743",
+     "“And ever since that,” the Hatter went on in a mournful tone, “he won’t do a thing I ask!"
+    ],
+    [
+     "S744",
+     "It’s always six o’clock now.”"
+    ]
+   ],
+   "spans": [
+    [
+     77766,
+     77855
+    ],
+    [
+     77856,
+     77885
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-42",
+   "perturbation": "negation",
+   "edit": "won't -> will",
+   "original_text": "Ever since, he says, Time won't do a thing he asks. It's always six o'clock now.",
+   "id": "J093"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 36,
+   "speaker": "A",
+   "text": "Sitting on a bough of a tree. She asks what sort of people live nearby. It waves a paw each way. A Hatter lives one way, a March Hare the other.",
+   "prev": "Then she sees the Cheshire Cat.",
+   "src": [
+    "S608",
+    "S620",
+    "S621"
+   ],
+   "cited": [
+    [
+     "S608",
+     "And she began thinking over other children she knew, who might do very well as pigs, and was just saying to herself, “if one only knew the right way to change them--” when she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off."
+    ],
+    [
+     "S620",
+     "“What sort of people live about here?”"
+    ],
+    [
+     "S621",
+     "“In that direction,” the Cat said, waving its right paw round, “lives a Hatter: and in that direction,” waving the other paw, “lives a March Hare."
+    ]
+   ],
+   "spans": [
+    [
+     67065,
+     67335
+    ],
+    [
+     68176,
+     68214
+    ],
+    [
+     68216,
+     68362
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-36",
+   "id": "J094"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 36,
+   "speaker": "A",
+   "text": "Sitting on a bough of a tree. She asks what sort of people live nearby. It waves a paw each way. A Hatter lives one way, a Mabel the other.",
+   "prev": "Then she sees the Cheshire Cat.",
+   "src": [
+    "S608",
+    "S620",
+    "S621"
+   ],
+   "cited": [
+    [
+     "S608",
+     "And she began thinking over other children she knew, who might do very well as pigs, and was just saying to herself, “if one only knew the right way to change them--” when she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off."
+    ],
+    [
+     "S620",
+     "“What sort of people live about here?”"
+    ],
+    [
+     "S621",
+     "“In that direction,” the Cat said, waving its right paw round, “lives a Hatter: and in that direction,” waving the other paw, “lives a March Hare."
+    ]
+   ],
+   "spans": [
+    [
+     67065,
+     67335
+    ],
+    [
+     68176,
+     68214
+    ],
+    [
+     68216,
+     68362
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-36",
+   "perturbation": "name",
+   "edit": "March Hare -> Mabel",
+   "original_text": "Sitting on a bough of a tree. She asks what sort of people live nearby. It waves a paw each way. A Hatter lives one way, a March Hare the other.",
+   "id": "J095"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 4,
+   "speaker": "A",
+   "text": "Right away. Down she goes, never once considering how in the world she was to get out again. The tunnel dips so suddenly that she finds herself falling down a very deep well.",
+   "prev": "And then she just jumps in the hole?",
+   "src": [
+    "S8",
+    "S9"
+   ],
+   "cited": [
+    [
+     "S8",
+     "In another moment down went Alice after it, never once considering how in the world she was to get out again."
+    ],
+    [
+     "S9",
+     "The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well."
+    ]
+   ],
+   "spans": [
+    [
+     1363,
+     1472
+    ],
+    [
+     1474,
+     1693
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-4",
+   "id": "J096"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 4,
+   "speaker": "A",
+   "text": "Right away. Down she goes, always once considering how in the world she was to get out again. The tunnel dips so suddenly that she finds herself falling down a very deep well.",
+   "prev": "And then she just jumps in the hole?",
+   "src": [
+    "S8",
+    "S9"
+   ],
+   "cited": [
+    [
+     "S8",
+     "In another moment down went Alice after it, never once considering how in the world she was to get out again."
+    ],
+    [
+     "S9",
+     "The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well."
+    ]
+   ],
+   "spans": [
+    [
+     1363,
+     1472
+    ],
+    [
+     1474,
+     1693
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-4",
+   "perturbation": "negation",
+   "edit": "never -> always",
+   "original_text": "Right away. Down she goes, never once considering how in the world she was to get out again. The tunnel dips so suddenly that she finds herself falling down a very deep well.",
+   "id": "J097"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 44,
+   "speaker": "A",
+   "text": "Politely at first. \"My name is Alice, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+   "prev": "Let's jump to the Queen's court. How does Alice handle her?",
+   "src": [
+    "S844",
+    "S845"
+   ],
+   "cited": [
+    [
+     "S844",
+     "“My name is Alice, so please your Majesty,” said Alice very politely; but she added, to herself, “Why, they’re only a pack of cards, after all."
+    ],
+    [
+     "S845",
+     "I needn’t be afraid of them!”"
+    ]
+   ],
+   "spans": [
+    [
+     87189,
+     87332
+    ],
+    [
+     87333,
+     87362
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-44",
+   "id": "J098"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 44,
+   "speaker": "A",
+   "text": "Politely at first. \"My name is Dinah, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+   "prev": "Let's jump to the Queen's court. How does Alice handle her?",
+   "src": [
+    "S844",
+    "S845"
+   ],
+   "cited": [
+    [
+     "S844",
+     "“My name is Alice, so please your Majesty,” said Alice very politely; but she added, to herself, “Why, they’re only a pack of cards, after all."
+    ],
+    [
+     "S845",
+     "I needn’t be afraid of them!”"
+    ]
+   ],
+   "spans": [
+    [
+     87189,
+     87332
+    ],
+    [
+     87333,
+     87362
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-44",
+   "perturbation": "name",
+   "edit": "Alice -> Dinah",
+   "original_text": "Politely at first. \"My name is Alice, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+   "id": "J099"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 56,
+   "speaker": "A",
+   "text": "She finds herself on the bank, her head in her sister's lap. Her sister is brushing dead leaves from her face. Alice says, \"I've had such a curious dream!\"",
+   "prev": "And then she wakes up?",
+   "src": [
+    "S1423",
+    "S1425"
+   ],
+   "cited": [
+    [
+     "S1423",
+     "At this the whole pack rose up into the air, and came flying down upon her: she gave a little scream, half of fright and half of anger, and tried to beat them off, and found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face."
+    ],
+    [
+     "S1425",
+     "“Oh, I’ve had such a curious dream!” said Alice, and she told her sister, as well as she could remember them, all these strange Adventures of hers that you have just been reading about; and when she had finished, her sister kissed her, and said, “It was a curious dream, dear, certainly: but now run in to your tea; it’s getting late.”"
+    ]
+   ],
+   "spans": [
+    [
+     140098,
+     140438
+    ],
+    [
+     140518,
+     140853
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-56",
+   "id": "J100"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 56,
+   "speaker": "A",
+   "text": "She finds herself on the bank, her head in her sister's lap. Her sister is brushing dead leaves from her face. Pigeon says, \"I've had such a curious dream!\"",
+   "prev": "And then she wakes up?",
+   "src": [
+    "S1423",
+    "S1425"
+   ],
+   "cited": [
+    [
+     "S1423",
+     "At this the whole pack rose up into the air, and came flying down upon her: she gave a little scream, half of fright and half of anger, and tried to beat them off, and found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face."
+    ],
+    [
+     "S1425",
+     "“Oh, I’ve had such a curious dream!” said Alice, and she told her sister, as well as she could remember them, all these strange Adventures of hers that you have just been reading about; and when she had finished, her sister kissed her, and said, “It was a curious dream, dear, certainly: but now run in to your tea; it’s getting late.”"
+    ]
+   ],
+   "spans": [
+    [
+     140098,
+     140438
+    ],
+    [
+     140518,
+     140853
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-56",
+   "perturbation": "name",
+   "edit": "Alice -> Pigeon",
+   "original_text": "She finds herself on the bank, her head in her sister's lap. Her sister is brushing dead leaves from her face. Alice says, \"I've had such a curious dream!\"",
+   "id": "J101"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 28,
+   "speaker": "A",
+   "text": "Before he crawls away, he says one side of the mushroom will make her taller and the other shorter. She breaks off a bit from each edge with each hand.",
+   "prev": "Does he give her any help?",
+   "src": [
+    "S458",
+    "S461",
+    "S463"
+   ],
+   "cited": [
+    [
+     "S458",
+     "Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, “One side will make you grow taller, and the other side will make you grow shorter.”"
+    ],
+    [
+     "S461",
+     "“Of the mushroom,” said the Caterpillar, just as if she had asked it aloud; and in another moment it was out of sight."
+    ],
+    [
+     "S463",
+     "However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand."
+    ]
+   ],
+   "spans": [
+    [
+     51132,
+     51311
+    ],
+    [
+     51384,
+     51502
+    ],
+    [
+     51694,
+     51815
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": null,
+    "local_flag": null
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-28",
+   "id": "J102"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 28,
+   "speaker": "A",
+   "text": "Before he crawls away, he says one side of the mushroom will not make her taller and the other shorter. She breaks off a bit from each edge with each hand.",
+   "prev": "Does he give her any help?",
+   "src": [
+    "S458",
+    "S461",
+    "S463"
+   ],
+   "cited": [
+    [
+     "S458",
+     "Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, “One side will make you grow taller, and the other side will make you grow shorter.”"
+    ],
+    [
+     "S461",
+     "“Of the mushroom,” said the Caterpillar, just as if she had asked it aloud; and in another moment it was out of sight."
+    ],
+    [
+     "S463",
+     "However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand."
+    ]
+   ],
+   "spans": [
+    [
+     51132,
+     51311
+    ],
+    [
+     51384,
+     51502
+    ],
+    [
+     51694,
+     51815
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": null,
+    "local_flag": null
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-28",
+   "perturbation": "negation",
+   "edit": "will -> will not",
+   "original_text": "Before he crawls away, he says one side of the mushroom will make her taller and the other shorter. She breaks off a bit from each edge with each hand.",
+   "id": "J103"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 52,
+   "speaker": "A",
+   "text": "Yes. The soldiers shout, \"Their heads are gone,\" and the Queen shouts, \"That's right!\"",
+   "prev": "And the Queen believes the heads are gone.",
+   "src": [
+    "S865",
+    "S866"
+   ],
+   "cited": [
+    [
+     "S865",
+     "“Their heads are gone, if it please your Majesty!” the soldiers shouted in reply."
+    ],
+    [
+     "S866",
+     "“That’s right!” shouted the Queen."
+    ]
+   ],
+   "spans": [
+    [
+     89154,
+     89235
+    ],
+    [
+     89237,
+     89271
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-52",
+   "id": "J104"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 52,
+   "speaker": "A",
+   "text": "Yes. The soldiers shout, \"Their heads are gone,\" and the White Rabbit shouts, \"That's right!\"",
+   "prev": "And the Queen believes the heads are gone.",
+   "src": [
+    "S865",
+    "S866"
+   ],
+   "cited": [
+    [
+     "S865",
+     "“Their heads are gone, if it please your Majesty!” the soldiers shouted in reply."
+    ],
+    [
+     "S866",
+     "“That’s right!” shouted the Queen."
+    ]
+   ],
+   "spans": [
+    [
+     89154,
+     89235
+    ],
+    [
+     89237,
+     89271
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-52",
+   "perturbation": "name",
+   "edit": "Queen -> White Rabbit",
+   "original_text": "Yes. The soldiers shout, \"Their heads are gone,\" and the Queen shouts, \"That's right!\"",
+   "id": "J105"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 19,
+   "speaker": "B",
+   "text": "So she decides she must be Mabel.",
+   "prev": "She thinks over the children she knows, like Ada and Mabel. Then she tries her lessons. Four times five is twelve, she says, and London is the capital of Paris.",
+   "src": [
+    "S118",
+    "S122"
+   ],
+   "cited": [
+    [
+     "S118",
+     "I must have been changed for Mabel!"
+    ],
+    [
+     "S122",
+     "“I’m sure those are not the right words,” said poor Alice, and her eyes filled with tears again as she went on, “I must be Mabel after all, and I shall have to go and live in that poky little house, and have next to no toys to play with, and oh! ever so many lessons to learn!"
+    ]
+   ],
+   "spans": [
+    [
+     15278,
+     15313
+    ],
+    [
+     15782,
+     16058
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-19",
+   "id": "J106"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 19,
+   "speaker": "B",
+   "text": "So she decides she must be Cat.",
+   "prev": "She thinks over the children she knows, like Ada and Mabel. Then she tries her lessons. Four times five is twelve, she says, and London is the capital of Paris.",
+   "src": [
+    "S118",
+    "S122"
+   ],
+   "cited": [
+    [
+     "S118",
+     "I must have been changed for Mabel!"
+    ],
+    [
+     "S122",
+     "“I’m sure those are not the right words,” said poor Alice, and her eyes filled with tears again as she went on, “I must be Mabel after all, and I shall have to go and live in that poky little house, and have next to no toys to play with, and oh! ever so many lessons to learn!"
+    ]
+   ],
+   "spans": [
+    [
+     15278,
+     15313
+    ],
+    [
+     15782,
+     16058
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-19",
+   "perturbation": "name",
+   "edit": "Mabel -> Cat",
+   "original_text": "So she decides she must be Mabel.",
+   "id": "J107"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 35,
+   "speaker": "B",
+   "text": "Then she sees the Cheshire Cat.",
+   "prev": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+   "src": [
+    "S608"
+   ],
+   "cited": [
+    [
+     "S608",
+     "And she began thinking over other children she knew, who might do very well as pigs, and was just saying to herself, “if one only knew the right way to change them--” when she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off."
+    ]
+   ],
+   "spans": [
+    [
+     67065,
+     67335
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-35",
+   "id": "J108"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 35,
+   "speaker": "B",
+   "text": "Then she sees the Mouse.",
+   "prev": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+   "src": [
+    "S608"
+   ],
+   "cited": [
+    [
+     "S608",
+     "And she began thinking over other children she knew, who might do very well as pigs, and was just saying to herself, “if one only knew the right way to change them--” when she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off."
+    ]
+   ],
+   "spans": [
+    [
+     67065,
+     67335
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-35",
+   "perturbation": "name",
+   "edit": "Cheshire Cat -> Mouse",
+   "original_text": "Then she sees the Cheshire Cat.",
+   "id": "J109"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "A Rabbit takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch. She burns with curiosity and runs after it.",
+   "prev": "Let's start at the very beginning. How does Alice end up in Wonderland?",
+   "src": [
+    "S7"
+   ],
+   "cited": [
+    [
+     "S7",
+     "I shall be late!” (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge."
+    ]
+   ],
+   "spans": [
+    [
+     778,
+     1361
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-2",
+   "id": "J110"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 2,
+   "speaker": "A",
+   "text": "A Queen takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch. She burns with curiosity and runs after it.",
+   "prev": "Let's start at the very beginning. How does Alice end up in Wonderland?",
+   "src": [
+    "S7"
+   ],
+   "cited": [
+    [
+     "S7",
+     "I shall be late!” (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge."
+    ]
+   ],
+   "spans": [
+    [
+     778,
+     1361
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-2",
+   "perturbation": "name",
+   "edit": "Rabbit -> Queen",
+   "original_text": "A Rabbit takes a watch out of its waistcoat-pocket and looks at it. Alice has never seen a rabbit with a waistcoat-pocket or a watch. She burns with curiosity and runs after it.",
+   "id": "J111"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 26,
+   "speaker": "A",
+   "text": "No. She says, \"I'm not myself, you see.\" He answers, \"I don't see.\" She says being so many different sizes in a day is very confusing. He says it isn't.",
+   "prev": "Does he understand?",
+   "src": [
+    "S405",
+    "S406",
+    "S407",
+    "S408"
+   ],
+   "cited": [
+    [
+     "S405",
+     "“I can’t explain myself, I’m afraid, sir,” said Alice, “because I’m not myself, you see.”"
+    ],
+    [
+     "S406",
+     "“I don’t see,” said the Caterpillar."
+    ],
+    [
+     "S407",
+     "“I’m afraid I can’t put it more clearly,” Alice replied very politely, “for I can’t understand it myself to begin with; and being so many different sizes in a day is very confusing.”"
+    ],
+    [
+     "S408",
+     "“It isn’t,” said the Caterpillar."
+    ]
+   ],
+   "spans": [
+    [
+     46080,
+     46169
+    ],
+    [
+     46171,
+     46207
+    ],
+    [
+     46209,
+     46391
+    ],
+    [
+     46393,
+     46426
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-26",
+   "id": "J112"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 26,
+   "speaker": "A",
+   "text": "No. She says, \"I'm not myself, you see.\" He answers, \"I do see.\" She says being so many different sizes in a day is very confusing. He says it isn't.",
+   "prev": "Does he understand?",
+   "src": [
+    "S405",
+    "S406",
+    "S407",
+    "S408"
+   ],
+   "cited": [
+    [
+     "S405",
+     "“I can’t explain myself, I’m afraid, sir,” said Alice, “because I’m not myself, you see.”"
+    ],
+    [
+     "S406",
+     "“I don’t see,” said the Caterpillar."
+    ],
+    [
+     "S407",
+     "“I’m afraid I can’t put it more clearly,” Alice replied very politely, “for I can’t understand it myself to begin with; and being so many different sizes in a day is very confusing.”"
+    ],
+    [
+     "S408",
+     "“It isn’t,” said the Caterpillar."
+    ]
+   ],
+   "spans": [
+    [
+     46080,
+     46169
+    ],
+    [
+     46171,
+     46207
+    ],
+    [
+     46209,
+     46391
+    ],
+    [
+     46393,
+     46426
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-26",
+   "perturbation": "negation",
+   "edit": "don't -> do",
+   "original_text": "No. She says, \"I'm not myself, you see.\" He answers, \"I don't see.\" She says being so many different sizes in a day is very confusing. He says it isn't.",
+   "id": "J113"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would share their sorrows and joys, remembering the happy summer days.",
+   "prev": "What would grown-up Alice do?",
+   "src": [
+    "S1431"
+   ],
+   "cited": [
+    [
+     "S1431",
+     "Lastly, she pictured to herself how this same little sister of hers would, in the after-time, be herself a grown woman; and how she would keep, through all her riper years, the simple and loving heart of her childhood: and how she would gather about her other little children, and make their eyes bright and eager with many a strange tale, perhaps even with the dream of Wonderland of long ago: and how she would feel with all their simple sorrows, and find a pleasure in all their simple joys, remembering her own child-life, and the happy summer days."
+    ]
+   ],
+   "spans": [
+    [
+     142931,
+     143484
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": null,
+    "local_flag": null
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-60",
+   "id": "J114"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 60,
+   "speaker": "A",
+   "text": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would not share their sorrows and joys, remembering the happy summer days.",
+   "prev": "What would grown-up Alice do?",
+   "src": [
+    "S1431"
+   ],
+   "cited": [
+    [
+     "S1431",
+     "Lastly, she pictured to herself how this same little sister of hers would, in the after-time, be herself a grown woman; and how she would keep, through all her riper years, the simple and loving heart of her childhood: and how she would gather about her other little children, and make their eyes bright and eager with many a strange tale, perhaps even with the dream of Wonderland of long ago: and how she would feel with all their simple sorrows, and find a pleasure in all their simple joys, remembering her own child-life, and the happy summer days."
+    ]
+   ],
+   "spans": [
+    [
+     142931,
+     143484
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": null,
+    "local_flag": null
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-60",
+   "perturbation": "negation",
+   "edit": "would -> would not",
+   "original_text": "Gather other little children and tell them strange tales, perhaps even the dream of Wonderland. She would share their sorrows and joys, remembering the happy summer days.",
+   "id": "J115"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 8,
+   "speaker": "A",
+   "text": "No. She can't even get her head through the doorway. Then she finds a bottle with a label that says \"DRINK ME,\" beautifully printed in large letters.",
+   "prev": "But she can't fit through, can she?",
+   "src": [
+    "S50",
+    "S54"
+   ],
+   "cited": [
+    [
+     "S50",
+     "How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains, but she could not even get her head through the doorway; “and even if my head would go through,” thought poor Alice, “it would be of very little use without my shoulders."
+    ],
+    [
+     "S54",
+     "There seemed to be no use in waiting by the little door, so she went back to the table, half hoping she might find another key on it, or at any rate a book of rules for shutting people up like telescopes: this time she found a little bottle on it, (“which certainly was not here before,” said Alice,) and round the neck of the bottle was a paper label, with the words “DRINK ME,” beautifully printed on it in large letters."
+    ]
+   ],
+   "spans": [
+    [
+     6598,
+     6891
+    ],
+    [
+     7136,
+     7559
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-8",
+   "id": "J116"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 8,
+   "speaker": "A",
+   "text": "No. She can even get her head through the doorway. Then she finds a bottle with a label that says \"DRINK ME,\" beautifully printed in large letters.",
+   "prev": "But she can't fit through, can she?",
+   "src": [
+    "S50",
+    "S54"
+   ],
+   "cited": [
+    [
+     "S50",
+     "How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains, but she could not even get her head through the doorway; “and even if my head would go through,” thought poor Alice, “it would be of very little use without my shoulders."
+    ],
+    [
+     "S54",
+     "There seemed to be no use in waiting by the little door, so she went back to the table, half hoping she might find another key on it, or at any rate a book of rules for shutting people up like telescopes: this time she found a little bottle on it, (“which certainly was not here before,” said Alice,) and round the neck of the bottle was a paper label, with the words “DRINK ME,” beautifully printed on it in large letters."
+    ]
+   ],
+   "spans": [
+    [
+     6598,
+     6891
+    ],
+    [
+     7136,
+     7559
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-8",
+   "perturbation": "negation",
+   "edit": "can't -> can",
+   "original_text": "No. She can't even get her head through the doorway. Then she finds a bottle with a label that says \"DRINK ME,\" beautifully printed in large letters.",
+   "id": "J117"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 34,
+   "speaker": "A",
+   "text": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+   "prev": "I hear there's a baby that turns into something.",
+   "src": [
+    "S604",
+    "S605",
+    "S606"
+   ],
+   "cited": [
+    [
+     "S604",
+     "Alice was just beginning to think to herself, “Now, what am I to do with this creature when I get it home?” when it grunted again, so violently, that she looked down into its face in some alarm."
+    ],
+    [
+     "S605",
+     "This time there could be no mistake about it: it was neither more nor less than a pig, and she felt that it would be quite absurd for her to carry it further."
+    ],
+    [
+     "S606",
+     "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood."
+    ]
+   ],
+   "spans": [
+    [
+     66472,
+     66666
+    ],
+    [
+     66667,
+     66825
+    ],
+    [
+     66827,
+     66930
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "original",
+   "label": "supported",
+   "pair": "alice-draft-34",
+   "id": "J118"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 34,
+   "speaker": "A",
+   "text": "A pig. It grunts violently, and there's no mistake about it. Mabel sets it down and feels relieved to see it trot quietly into the wood.",
+   "prev": "I hear there's a baby that turns into something.",
+   "src": [
+    "S604",
+    "S605",
+    "S606"
+   ],
+   "cited": [
+    [
+     "S604",
+     "Alice was just beginning to think to herself, “Now, what am I to do with this creature when I get it home?” when it grunted again, so violently, that she looked down into its face in some alarm."
+    ],
+    [
+     "S605",
+     "This time there could be no mistake about it: it was neither more nor less than a pig, and she felt that it would be quite absurd for her to carry it further."
+    ],
+    [
+     "S606",
+     "So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood."
+    ]
+   ],
+   "spans": [
+    [
+     66472,
+     66666
+    ],
+    [
+     66667,
+     66825
+    ],
+    [
+     66827,
+     66930
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": false
+   },
+   "kind": "perturbed",
+   "label": "not_supported",
+   "pair": "alice-draft-34",
+   "perturbation": "name",
+   "edit": "Alice -> Mabel",
+   "original_text": "A pig. It grunts violently, and there's no mistake about it. Alice sets it down and feels relieved to see it trot quietly into the wood.",
+   "id": "J119"
+  },
+  {
+   "source": "alice",
+   "script": "draft",
+   "pos": 45,
+   "speaker": "B",
+   "text": "And then she gets bolder.",
+   "prev": "Politely at first. \"My name is Alice, so please your Majesty.\" But she tells herself, \"they're only a pack of cards, after all. I needn't be afraid of them!\"",
+   "src": [
+    "S847"
+   ],
+   "cited": [
+    [
+     "S847",
+     "“How should I know?” said Alice, surprised at her own courage."
+    ]
+   ],
+   "spans": [
+    [
+     87693,
+     87755
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "supported",
+    "local_flag": true
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J120"
+  },
+  {
+   "source": "alice",
+   "script": "final",
+   "pos": 22,
+   "speaker": "A",
+   "text": "She grows so fast that her head presses against the ceiling. Still she keeps growing, and puts one arm out of the window and one foot up the chimney. Then the bottle's effect stops, but there seems no chance of her getting out of the room again.",
+   "prev": "Later she goes the other way, right?",
+   "src": [
+    "S302",
+    "S306",
+    "S308"
+   ],
+   "cited": [
+    [
+     "S302",
+     "It did so indeed, and much sooner than she had expected: before she had drunk half the bottle, she found her head pressing against the ceiling, and had to stoop to save her neck from being broken."
+    ],
+    [
+     "S306",
+     "Still she went on growing, and, as a last resource, she put one arm out of the window, and one foot up the chimney, and said to herself “Now I can do no more, whatever happens."
+    ],
+    [
+     "S308",
+     "Luckily for Alice, the little magic bottle had now had its full effect, and she grew no larger: still it was very uncomfortable, and, as there seemed to be no sort of chance of her ever getting out of the room again, no wonder she felt unhappy."
+    ]
+   ],
+   "spans": [
+    [
+     34361,
+     34557
+    ],
+    [
+     35024,
+     35200
+    ],
+    [
+     35227,
+     35471
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J121"
+  },
+  {
+   "source": "alice",
+   "script": "final",
+   "pos": 28,
+   "speaker": "A",
+   "text": "Before he crawls away, he says one side of the mushroom will make her grow taller and the other side shorter. She then breaks off a bit of the edge with each hand.",
+   "prev": "Does he give her any help?",
+   "src": [
+    "S458",
+    "S461",
+    "S463"
+   ],
+   "cited": [
+    [
+     "S458",
+     "Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, “One side will make you grow taller, and the other side will make you grow shorter.”"
+    ],
+    [
+     "S461",
+     "“Of the mushroom,” said the Caterpillar, just as if she had asked it aloud; and in another moment it was out of sight."
+    ],
+    [
+     "S463",
+     "However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand."
+    ]
+   ],
+   "spans": [
+    [
+     51132,
+     51311
+    ],
+    [
+     51384,
+     51502
+    ],
+    [
+     51694,
+     51815
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J122"
+  },
+  {
+   "source": "alice",
+   "script": "final",
+   "pos": 58,
+   "speaker": "A",
+   "text": "She sits with closed eyes and half believes herself in Wonderland. Then she pictures her little sister grown, keeping the simple and loving heart of her childhood.",
+   "prev": "What does the sister think of it?",
+   "src": [
+    "S1430",
+    "S1431"
+   ],
+   "cited": [
+    [
+     "S1430",
+     "So she sat on, with closed eyes, and half believed herself in Wonderland, though she knew she had but to open them again, and all would change to dull reality--the grass would be only rustling in the wind, and the pool rippling to the waving of the reeds--the rattling teacups would change to tinkling sheep-bells, and the Queen’s shrill cries to the voice of the shepherd boy--and the sneeze of the baby, the shriek of the Gryphon, and all the other queer noises, would change (she knew) to the confused clamour of the busy farm-yard--while the lowing of the cattle in the distance would take the place of the Mock Turtle’s heavy sobs."
+    ],
+    [
+     "S1431",
+     "Lastly, she pictured to herself how this same little sister of hers would, in the after-time, be herself a grown woman; and how she would keep, through all her riper years, the simple and loving heart of her childhood: and how she would gather about her other little children, and make their eyes bright and eager with many a strange tale, perhaps even with the dream of Wonderland of long ago: and how she would feel with all their simple sorrows, and find a pleasure in all their simple joys, remembering her own child-life, and the happy summer days."
+    ]
+   ],
+   "spans": [
+    [
+     142293,
+     142929
+    ],
+    [
+     142931,
+     143484
+    ]
+   ],
+   "earlier": {
+    "opus": null,
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J123"
+  },
+  {
+   "source": "alice",
+   "script": "final",
+   "pos": 60,
+   "speaker": "A",
+   "text": "She'd gather other little children about her and make their eyes bright with strange tales, perhaps even the dream of Wonderland. She'd feel their simple sorrows and joys, remembering her own child-life and the happy summer days.",
+   "prev": "What would grown-up Alice do?",
+   "src": [
+    "S1431"
+   ],
+   "cited": [
+    [
+     "S1431",
+     "Lastly, she pictured to herself how this same little sister of hers would, in the after-time, be herself a grown woman; and how she would keep, through all her riper years, the simple and loving heart of her childhood: and how she would gather about her other little children, and make their eyes bright and eager with many a strange tale, perhaps even with the dream of Wonderland of long ago: and how she would feel with all their simple sorrows, and find a pleasure in all their simple joys, remembering her own child-life, and the happy summer days."
+    ]
+   ],
+   "spans": [
+    [
+     142931,
+     143484
+    ]
+   ],
+   "earlier": {
+    "opus": "supported",
+    "sonnet": "partly",
+    "local_flag": false
+   },
+   "kind": "flagged",
+   "label": null,
+   "id": "J124"
+  }
+ ]
+}

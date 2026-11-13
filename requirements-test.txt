@@ -1,0 +1,2 @@
+# Only what the offline tests need (python -m pytest -q tests).
+pytest>=8.0
